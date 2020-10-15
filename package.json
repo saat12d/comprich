@@ -4,7 +4,8 @@
   "description": "CompRich website for project to help students enroll in competitions in a new way",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Saatvik Sharma",
   "license": "ISC",
