@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="../assets/img//favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    CompRich
+    Comprich
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -109,8 +109,14 @@
                         <label for="school">Which school are you from?</label>
                         <select id="school" class="form-control" aria-placeholder="School" name="user[school]">
                             <option value="gma">Gems Modern Academy</option>
-                            <option value="dia">Dubai Internation Academy</option>
+                            <option value="dia">Dubai International Academy</option>
+                            <option value="eijs">Emirates International School Jumeirah</option>
+                            <option value="other">Other</option>
                         </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="country">Country</label>
+                      <input type="text" class="form-control" placeholder="Country" name="user[country]">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="year">Which year/grade are you in?</label>
@@ -156,9 +162,11 @@
     <script>
       $(document).ready(() => {
         $('#acDisplay').hide();
+        $('#acButton').show();
         $('#acButton').click(e => {
           e.preventDefault();
           $('#acDisplay').toggle();
+          $('#acForm').remove();
         })
       })
     </script>

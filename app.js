@@ -129,14 +129,16 @@ app.get('/new', middleware.isAdmin, (req, res) => {
 app.post('/competitions', middleware.isAdmin, upload.array('images', 4), async function(req, res){
     console.log(req.files);
     req.body.competition.images = [];
-    for(const file of req.files){
-        await cloudinary.v2.uploader.upload(file.path, (err, result) => {
-            req.body.competition.images.push({
-                url: result.secure_url,
-                public_id: result.public_id
+    if(req.files && req.files[0]){
+        for(const file of req.files){
+            await cloudinary.v2.uploader.upload(file.path, (err, result) => {
+                req.body.competition.images.push({
+                    url: result.secure_url,
+                    public_id: result.public_id
+                })
+                console.log('uploaded')
             })
-            console.log('uploaded')
-        })
+        }
     }
     req.body.competition.fromClubName = req.user.repOf;
     Competition.create(req.body.competition, (err, comp) => {
@@ -234,7 +236,7 @@ app.get('/register', (req, res) => {
 app.post('/register', upload.single('image'), async function(req, res){
     let newUser = new User(req.body.user);
     newUser.username = req.body.username;
-    if(req.file.path.length > 1){
+    if(req.file){
         await cloudinary.v2.uploader.upload(req.file.path, (err, result) => {
             console.log('reached');
             newUser.pfImage = result.secure_url;
