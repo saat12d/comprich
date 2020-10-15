@@ -1,0 +1,52 @@
+<%- include('partials/static-header') %>
+
+<div class="container">
+    <div style="display: inline;">
+        <h1>All Competitions</h1>
+        <form action="/competitions" method="GET" class="form-inline mt-3">
+            <div class="form-group mr-3">
+                <input class="form-control mr-3" type="text" name="search" placeholder="Competition Search">
+                <button class="btn btn-outline-primary">Search <i class="fa fa-search"></i></button>
+            </div>
+            <br>
+            <form action="/competitions" method="GET">
+                <div class="form-group ml-2">
+                    <label class="mr-2" for="">Sort By:     </label>
+                    <select name="filter" id="" class="form-control mr-3">
+                        <option value="year">Year/Grade</option>
+                        <option value="upcoming">Upcoming Competitions</option>
+                        <option value="over">Finished Competitions</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline-primary">Filter</button>
+            </form>
+        </form>
+    </div>
+    <hr>
+
+    <div class="row text-center mb-4 px-2" style="display: flex; flex-wrap: wrap;">
+        <% for(let competition of competitions){ %>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="<%= competition.images[0].url %>" class="card-img-top image-thumb" alt="Competition Image">
+                    <div class="card-body">
+                    <h4 class="card-title"><%= competition.title %></h4>
+                    </div>
+                    <p>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </p>
+
+                    <p>
+                        <a href="/competitions/<%= competition._id %>" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
+                    </p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

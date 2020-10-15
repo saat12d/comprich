@@ -1,0 +1,46 @@
+<%- include('partials/static-header') %>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1 class="col-md-12 text-center">Edit Your Profile</h1>
+
+        <div class="col-xs-12 col-md-6 col-lg-4" style="margin: 25px auto;">
+            <form action="/my-profile?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" name="user[firstName]" placeholder="First Name" value="<%= user.firstName %>">
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control" name="user[lastName]" placeholder="Last Name" value="<%= user.lastName %>">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year Level</label>
+                    <select id="year" class="form-control" name="user[yearLevel]">
+                        <% for(let i = 1; i < 13; i++){ %>
+                            <option value="<%= i + 1 %>">Year <%= i + 1 %> / Grade <%= i %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">School</label>
+                    <select id="school" class="form-control" aria-placeholder="School" name="user[school]" aria-valuenow="<%= user.school %>">
+                        <option value="gma">Gems Modern Academy</option>
+                        <option value="dia">Dubai Internation Academy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" name="user[email]" value="<%= user.email %>">
+                </div>
+                <div class="form-group">
+                    <label for="">Profile Picture</label>
+                    <input type="file" class="form-control-file" name="image" accept="image/*">
+                </div>
+                <button class="btn btn-primary btn-block">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

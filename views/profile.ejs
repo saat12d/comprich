@@ -1,0 +1,32 @@
+<%- include('partials/static-header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="<%= user.pfImage %>" alt="" class="card-img-top" style="min-height: 40vh; max-height: 120vh">
+            </div>
+            <a href="/my-profile/edit" class="btn btn-outline-warning btn-block btn-round">Edit</a>
+            <h3 class="mb-2">Details: </h3>
+            <ul style="list-style: none;">
+                <li><p>School: <%= user.school %></p></li>
+                <li><p>Year/Grade: Year <%= user.yearLevel %> / Grade<%= user.yearLevel - 1 %></p></li>
+                <li><p>Email: <%= user.email %></p></li>
+            </ul>
+            <h5>Role: <%= user.isOwner || user.isAdmin ? 'Admin' : 'Standard User' %></h5>
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-2"><%= user.firstName %> <%= user.lastName %></h1>
+            <p class="lead"><%= user.username %></p>
+
+            <h3>Enrolled Competitions: </h3>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>
