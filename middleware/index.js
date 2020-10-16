@@ -12,6 +12,13 @@ middleware.isLoggedIn = function(req, res, next){
     res.redirect('/login');
 }
 
+middleware.isNotLoggedIn = function(req, res, next){
+    if(req.isAuthenticated()){
+        return res.redirect('/competitions');
+    }
+    next();
+}
+
 middleware.isAdmin = function(req, res, next){
     if(req.isAuthenticated() && (req.user.isAdmin || req.user.isOwner)){
         return next();

@@ -91,11 +91,11 @@ const adminCodes = [
 
 // ROUTES
 
-app.get('/', (req, res) => {
-    res.render('index')
+app.get('/', middleware.isNotLoggedIn, (req, res) => {
+    res.render('index');
 })
 
-app.get('/competitions', (req, res) => {
+app.get('/competitions', middleware.isLoggedIn, (req, res) => {
     let renderComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
