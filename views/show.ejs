@@ -37,6 +37,11 @@
                             <button class="btn btn-danger">Delete</button>
                         </form>
                     <% } %>
+                    <p class="lead mt-3">Category:
+                        <% for(let [index, cat] of comp.category.entries()){ %>
+                            <span><%= cat %><%= index == comp.category.length - 1 ? " " : ", " %></span>
+                        <% } %>
+                    </p>
                     <hr>
                     <p class="card-text"><%= comp.desc %></p>
                     <p>Happening on: <%= comp.date.toLocaleDateString() %></p>

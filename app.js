@@ -95,7 +95,8 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/competitions', middleware.isLoggedIn, (req, res) => {
+app.get('/competitions', (req, res) => {
+    let renderComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
         Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex}, ]}, (err, foundComps) => {
@@ -103,7 +104,7 @@ app.get('/competitions', middleware.isLoggedIn, (req, res) => {
                 console.log(err);
                 return res.redirect('/');
             }
-            res.render('competitions', {competitions: foundComps});
+            return res.render('competitions', {competitions: foundComps})
         })
     } else {
         Competition.find({}, (err, comps) => {
@@ -117,6 +118,9 @@ app.get('/competitions', middleware.isLoggedIn, (req, res) => {
             if(req.query.filter == 'over'){
                 comps = isOver(comps);
             }
+            if(req.query.sort){
+                comps = sortByCategory(comps, req.query.sort)
+            }
             res.render('competitions', {competitions: comps})
         })
     }
@@ -128,6 +132,7 @@ app.get('/new', middleware.isAdmin, (req, res) => {
 
 app.post('/competitions', middleware.isAdmin, upload.array('images', 4), async function(req, res){
     console.log(req.files);
+    console.log(req.body.competition);
     req.body.competition.images = [];
     if(req.files && req.files[0]){
         for(const file of req.files){
@@ -356,6 +361,13 @@ function isOver(inputArr){
         }
     }
     return overComps;
+}
+
+function sortByCategory(comps, sort){
+    console.log(comps);
+    comps = comps.filter(comp => comp.category.includes(sort));
+    console.log(comps);
+    return comps;
 }
 
 
