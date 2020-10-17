@@ -86,7 +86,8 @@ app.use((req, res, next) => {
 
 const adminCodes = [
     {club: "Debate", code: 'admin@debate123'},
-    {club: "DIAMUN", code: 'admin@diamun456'}
+    {club: "DIAMUN", code: 'admin@diamun456'},
+    {club: 'Owner', code: 'owner123'}
 ]
 
 // ROUTES
@@ -158,7 +159,7 @@ app.post('/competitions', middleware.isAdmin, upload.array('images', 4), async f
     })
 })
 
-app.get('/competitions/:id', (req, res) => {
+app.get('/competitions/:id', middleware.isLoggedIn, (req, res) => {
     Competition.findById(req.params.id, (err, foundComp) => {
         if(err){
             console.log(err);
@@ -258,6 +259,7 @@ app.post('/register', upload.single('image'), async function(req, res){
     if(req.body.adminCode == 'owner123'){
         newUser.isOwner = true;
         newUser.isAdmin = true;
+        newUser.repOf = "Owner"
     }
     User.register(newUser, req.body.password, async(err, user) => {
         if(err){

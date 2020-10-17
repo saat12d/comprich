@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><%= comp.title %></h4>
                     <p><em>Posted by <%= comp.fromClubName %></em></p>
-                    <% if(currentUser && (currentUser.isOwner || currentUser.repOf.toLowerCase() == comp.fromClubName.toLowerCase())){ %>
+                    <% if((currentUser && currentUser.repOf.toLowerCase() == comp.fromClubName.toLowerCase()) || currentUser.isOwner){ %>
                         <a class="btn btn-warning" href="/competitions/<%= comp._id %>/edit">Edit</a>
                         <form method="POST" action="/competitions/<%= comp._id %>?_method=DELETE" style="display: inline;">
                             <button class="btn btn-danger">Delete</button>
