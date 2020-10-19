@@ -1,40 +1,41 @@
 <%- include('partials/static-header') %>
 
 <div class="container">
-    <div style="display: inline;">
-        <h1 class="display-4 mb-4">All Competitions</h1>
-        <form action="/competitions" method="GET" class="form-inline float-left">
-            <div class="form-group mr-3">
-                <input class="form-control mr-3" type="text" name="search" placeholder="Competition Search">
+    <h1 class="display-4 mb-4">All Competitions</h1>
+
+    <div class="d-flex justify-content-between">
+        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block float-left">
+            <div class="form-group">
+                <input class="form-control" type="text" name="search" placeholder="Competition Search">
                 <button class="btn btn-outline-primary">Search <i class="fa fa-search"></i></button>
             </div>
-            <br>
-            <form action="/competitions" method="GET">
-                <div class="form-group ml-2">
-                    <label class="mr-2" for="">Sort By:     </label>
-                    <select name="filter" id="" class="form-control mr-3">
-                        <option value="0">Filter Options</option>
-                        <option value="upcoming">Upcoming Competitions</option>
-                        <option value="over">Finished Competitions</option>
-                    </select>
-                </div>
+        </form>
+        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block">
+            <div class="form-group">
+                <label class="" for="">Sort By:     </label>
+                <select name="filter" id="" class="form-control">
+                    <option value="0">Filter Options</option>
+                    <option value="upcoming">Upcoming Competitions</option>
+                    <option value="over">Finished Competitions</option>
+                </select>
                 <button class="btn btn-outline-primary">Filter</button>
-            </form>
-            <form action="/competitions" method="GET" class="form-inline">
-                <div class="form-group ml-3">
-                    <label for="" class="mr-2">Category: </label>
-                    <select class="form-control mr-3" name="sort" id="">
-                        <option value="0">Categories</option>
-                        <option value="MUN">MUN</option>
-                        <option value="Debate / Public Speaking">Debate / Public Speaking</option>
-                        <option value="Science">Science</option>
-                        <option value="Writing">Writing</option>
-                        <option value="Business">Business</option>
-                        <option value="Art / Design">Art / Design</option>
-                    </select>
-                </div>
+            </div>
+        </form>
+        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block">
+            <div class="form-group">
+                <label for="" class="">Category: </label>
+                <select class="form-control" name="sort" id="">
+                    <option value="0">Categories</option>
+                    <option value="MUN">MUN</option>
+                    <option value="Debate / Public Speaking">Debate / Public Speaking</option>
+                    <option value="Science">Science</option>
+                    <option value="Writing">Writing</option>
+                    <option value="Business">Business</option>
+                    <option value="Art / Design">Art / Design</option>
+                </select>
                 <button class="btn btn-outline-primary">Search</button>
-            </form>
+
+            </div>
         </form>
     </div>
     <hr>

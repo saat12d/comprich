@@ -2,15 +2,17 @@ const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new mongoose.Schema({
-    username: String,
+    username: {type: String, unique: true, required: true},
     password: String,
     yearLevel: Number,
     firstName: String,
     lastName: String,
-    email: String,
+    email: {type: String, unique: true, required: true},
     pfImage: String,
     image_id: String,
     school: String,
+    resetPasswordToken: String,
+    resetPasswordExpires: Date,
     isOwner: {type: Boolean, default: false},
     isAdmin: {type: Boolean, default: false},
     repOf: {type: String, default: " "},

@@ -7,8 +7,8 @@ middleware.isLoggedIn = function(req, res, next){
     if(req.isAuthenticated()){
         return next();
     }
-    console.log('YOU DO NOT HAVE PERMISSION TO DO THAT!!!');
-    req.flash('error', "You do not have permission to do that.");
+    console.log('YOU NEED TO BE LOGGED IN TO DO THAT');
+    req.flash('error', "You need to be logged in to do that.");
     res.redirect('/login');
 }
 

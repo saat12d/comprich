@@ -6,6 +6,9 @@ const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const locus = require('locus');
 const dotenv = require('dotenv');
+const async = require('async');
+const nodemailer = require('nodemailer');
+const crypto = require('crypto');
 
 const middleware = require('./middleware/index');
 
@@ -59,6 +62,7 @@ const upload = multer({ storage: storage, fileFilter: imageFilter})
 
 const cloudinary = require('cloudinary');
 const { checkCompOwnership } = require('./middleware/index');
+const { Z_DATA_ERROR } = require('zlib');
 cloudinary.config({ 
   cloud_name: process.env.CLOUD_NAME, 
   api_key: process.env.CLOUDINARY_API_KEY, 
@@ -235,7 +239,7 @@ app.delete('/competitions/:id', middleware.checkCompOwnership, async function(re
 
 // AUTH ROUTES
 
-app.get('/register', (req, res) => {
+app.get('/register', middleware.isNotLoggedIn, (req, res) => {
     res.render('register');
 })
 
@@ -275,7 +279,7 @@ app.post('/register', upload.single('image'), async function(req, res){
     })
 })
 
-app.get('/login', (req, res) => {
+app.get('/login', middleware.isNotLoggedIn, (req, res) => {
     res.render('login');
 })
 
@@ -290,6 +294,130 @@ app.get("/logout", (req, res) => {
     console.log('Logged you out!');
     res.redirect("/");
 })
+
+app.get('/forgot', middleware.isNotLoggedIn, (req, res) => {
+    res.render('forgot');
+})
+
+app.post('/forgot', (req, res, next) => {
+    async.waterfall([
+        function(done){
+            crypto.randomBytes(20, (err, buf) => {
+                var token = buf.toString('hex');
+                done(err, token);
+            })
+        },
+        function(token, done){
+            User.findOne({email: req.body.email}, (err, user) => {
+                if(!user){
+                    req.flash('error', 'No account with that email address exists.');
+                    return res.redirect('/forgot');
+                }
+
+                user.resetPasswordToken = token;
+                user.resetPasswordExpires = Date.now() + 3600000;
+
+                user.save(err => {
+                    done(err, token, user);
+                })
+            })
+        },
+        function(token, user, done){
+            let smtpTransport = nodemailer.createTransport({
+                service: 'Gmail',
+                auth: {
+                    user: 'comprichapp@gmail.com',
+                    pass: process.env.GMAILPW
+                }
+            });
+            let mailOptions = {
+                to: user.email,
+                from: 'comprichapp@gmail.com',
+                subject: 'Comprich Password Reset',
+                text: 'You are receiving this because you (or someone else) have requested the reset of your password. \n' + 
+                    'Please click on the following link, or paste this into your browser to complete the process.\n' + 
+                    'http://' + req.headers.host + '/reset/' + token + '\n\n' +
+                    'If you did not request this, please ignore this email and our password will remain unchanged. \n\n' + 
+                    'Regards, \n' + 
+                    'Comprich Tech Support'
+            };
+            smtpTransport.sendMail(mailOptions, (err) => {
+                console.log('mail sent');
+                req.flash('success', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+                done(err, 'done');
+            })
+        }
+    ], function(err){
+        if(err){
+            return next(err);
+        }
+        res.redirect('/forgot');
+    })
+})
+
+app.get('/reset/:token', (req, res) => {
+    User.findOne({resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, (err, user) => {
+        if(!user){
+            req.flash('error', 'Password reset token is invalid or has expired.');
+            return res.redirect('/forgot');
+        }
+        res.render('reset', {token: req.params.token});
+    })
+})
+
+app.post('/reset/:token', (req, res) => {
+    async.waterfall([
+        function(done){
+            User.findOne({resetPasswordToken: req.params.token, resetPasswordExpires: {$gt: Date.now()}}, (err, user) => {
+                if(!user){
+                    req.flash('error', 'Password token is invalid or has expired.');
+                    return res.redirect('back');
+                }
+                if(req.body.password === req.body.confirm){
+                    user.setPassword(req.body.password, (err) => {
+                        user.resetPasswordExpires = undefined;
+                        user.resetPasswordToken = undefined;
+
+                        user.save(function(err){
+                            req.logIn(user, function(err){
+                                done(err, user);
+                            });
+                        });
+                    });
+                } else {
+                    req.flash('error', 'Passwords do not match.');
+                    return res.redirect('back');
+                }
+            });
+        },
+        function(user, done){
+            let smtpTransport = nodemailer.createTransport({
+                service: 'Gmail',
+                auth: {
+                    user: 'comprichapp@gmail.com',
+                    pass: process.env.GMAILPW
+                }
+            });
+            let mailOptions = {
+                to: user.email,
+                from: 'comprichapp@gmail.com',
+                subject: 'Your password has been changed',
+                text: 'Hello, \n\n' + 
+                    'This is a confirmation that the password for your account ' + user.email + ' as just been changed \n\n' + 
+                    'If you did not authorize this password change, please get in touch with the Comprich team. \n\n' + 
+                    'Regards, \n' + 
+                    'Comprich Tech Support'
+            };
+            smtpTransport.sendMail(mailOptions, (err) => {
+                req.flash('success', 'Your password has been changed successfully.');
+                done(err);
+            })
+        }
+    ], function(err){
+        res.redirect('/competitions');
+    }
+    );
+});
 
 app.get('/my-profile', middleware.isLoggedIn, (req, res) => {
     User.findById(req.user._id, (err, user) => {

@@ -1,0 +1,21 @@
+<%- include('partials/auth-header') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 ml-auto mr-auto">
+            <div class="card card-register" style="height: 200px;">
+                <h3 class="title mx-auto" style="color: white">Forgot Password?</h3>
+                <form class="register-form" action="/forgot" method="POST">
+                    <div class="form-group mt-4">
+                        <label for="">Enter your Email</label>
+                        <input type="email" class="form-control" placeholder="Email" name="email" autofocus required>
+                    </div>
+                    <button class="btn btn-danger btn-block btn-round mt-5">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

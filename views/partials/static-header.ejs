@@ -23,6 +23,17 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
 </head>
+<% if(error && error.length > 0){ %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+    <%= console.log(error) %>
+  </div>
+<% } %>
+<% if(success && success.length > 0){ %>
+  <div class="alert alert-success" role="alert">
+    <%= success %>
+  </div>
+<% } %>
 
 <body class="landing-page sidebar-collapse">
   <!-- Navbar -->
@@ -30,7 +41,7 @@
     <div class="container-fluid" >
       <div class="navbar-translate">
         <a class="navbar-brand" href="/" rel="tooltip" title="Coded by Creative Tim" data-placement="bottom">
-          <img src="/img/logo2.jpeg" alt="" height="60vh" width="230vw">
+          <img src="/img/logo2.jpeg" alt="" height="60vh" width="200vw">
           <!-- CompRich -->
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +76,7 @@
         <% if(currentUser){ %>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <img class="rounded-circle" src="<%= currentUser.pfImage %>" style="transform: scale(0.8);" alt="">
+              <img class="rounded" src="<%= currentUser.pfImage %>" style="max-height: 10vh; max-width: 10vw" alt="">
               <a class="nav-link" style="display: inline;" href="/my-profile"><%= currentUser.username %></a>
               <a href="/my-profile" style="display: inline;" class="nav-link">My Profile</a>
             </li>
