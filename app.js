@@ -179,11 +179,12 @@ app.get('/competitions/:id', middleware.isLoggedIn, (req, res) => {
             console.log(err);
             return res.redirect('back');
         }
-        Rating.find({comp: {id: foundComp._id}}, (err, rating) => {
+        Rating.find({comp_title: foundComp.title}, (err, rating) => {
             if(err){
                 req.flash('error', err.message);
                 return res.redirect('back')
             }
+            console.log(rating);
             res.render('competitions/show', {comp: foundComp, ratings: rating})
         })
     })
@@ -250,6 +251,31 @@ app.delete('/competitions/:id', middleware.checkCompOwnership, async function(re
         req.flash('success', 'Successfully deleted competition');
         console.log('Deleted competition');
         return res.redirect('/competitions');
+    })
+})
+
+app.post('/competitions/:id/rating', (req, res) => {
+    Competition.findById(req.params.id, (err, competition) => {
+        if(err){
+            req.flash('error', err.message);
+            return res.redirect('/competitions/' + comp._id);
+        }
+        Rating.create(req.body.rating, (err, rating) => {
+            if(err){
+                console.log(err);
+                req.flash('error', err.message);
+                return res.redirect('back');
+            }
+            rating.author.id = req.user._id;
+            rating.author.username = req.user.username;
+            rating.comp.id = competition._id;
+            rating.comp_title = competition.title;
+            rating.save();
+            competition.ratings.push(rating);
+            competition.save();
+            req.flash('success', 'Competition rated successfully.')
+            return res.redirect('/competitions/' + req.params.id);
+        })
     })
 })
 
@@ -479,30 +505,6 @@ app.put('/my-profile', upload.single('image'), middleware.isLoggedIn, async (req
             return res.redirect('back');
         }
         res.redirect('/my-profile');
-    })
-})
-
-app.post('/competitions/:id/rating', (req, res) => {
-    Competition.findById(req.params.id, (err, competition) => {
-        if(err){
-            req.flash('error', err.message);
-            return res.redirect('/competitions/' + comp._id);
-        }
-        Rating.create(req.body.rating, (err, rating) => {
-            if(err){
-                console.log(err);
-                req.flash('error', err.message);
-                return res.redirect('back');
-            }
-            rating.author.id = req.user._id;
-            rating.author.username = req.user.username;
-            rating.comp.id = competition._id;
-            rating.save();
-            competition.ratings.push(rating);
-            competition.save();
-            req.flash('success', 'Competition rated successfully.')
-            return res.redirect('/competitions/' + req.params.id);
-        })
     })
 })
 

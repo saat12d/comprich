@@ -37,14 +37,19 @@
                             <button class="btn btn-danger">Delete</button>
                         </form>
                     <% } %>
+
                     <% let avg = 0 %>
                     <% for(let rating of ratings){ %>
                        <% avg += rating.rating %>
                     <% } %>
                     <% avg = avg / ratings.length %>
                     <p>
-                        <% for(let i = 1; i <= 5; i++){ %>
-                            <span class="<%= avg > i ? 'fas' : 'far' %> fa-star"></span>
+                        <% if(avg == 0){ %>
+                            <span>No ratings yet.</span>
+                        <% } else { %>
+                            <% for(let i = 1; i <= 5; i++){ %>
+                                <span class="<%= avg > i ? 'fas' : 'far' %> fa-star"></span>
+                            <% } %> %>
                         <% } %>
                     </p>
                     <p class="lead mt-3">Category:
