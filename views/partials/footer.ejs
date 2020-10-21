@@ -37,6 +37,12 @@
   <script src="/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
   <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
   <script src="/js/paper-kit.js?v=2.2.0" type="text/javascript"></script>
+  <script>
+    window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      console.log('Page load time is '+ loadTime);
+    }
+  </script>
 </body>
 
 </html>
