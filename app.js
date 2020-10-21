@@ -13,7 +13,8 @@ const crypto = require('crypto');
 const middleware = require('./middleware/index');
 
 const User = require('./models/user');
-const Competition = require('./models/competition')
+const Competition = require('./models/competition');
+const Rating = require('./models/rating');
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
@@ -63,6 +64,7 @@ const upload = multer({ storage: storage, fileFilter: imageFilter})
 const cloudinary = require('cloudinary');
 const { checkCompOwnership } = require('./middleware/index');
 const { Z_DATA_ERROR } = require('zlib');
+const rating = require('./models/rating');
 cloudinary.config({ 
   cloud_name: process.env.CLOUD_NAME, 
   api_key: process.env.CLOUDINARY_API_KEY, 
@@ -85,6 +87,7 @@ app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.error = req.flash('error');
     res.locals.success = req.flash('success');
+    res.locals.flag = false;
     next();
 });
 
@@ -109,7 +112,7 @@ app.get('/competitions', middleware.isLoggedIn, (req, res) => {
                 console.log(err);
                 return res.redirect('/');
             }
-            return res.render('competitions', {competitions: foundComps})
+            return res.render('competitions/competitions', {competitions: foundComps})
         })
     } else {
         Competition.find({}, (err, comps) => {
@@ -126,13 +129,20 @@ app.get('/competitions', middleware.isLoggedIn, (req, res) => {
             if(req.query.sort){
                 comps = sortByCategory(comps, req.query.sort)
             }
-            res.render('competitions', {competitions: comps})
+            Rating.find({}, (err, rating) => {
+                if(err){
+                    console.log(err);
+                    req.flash('error'. err.message);
+                    return res.redirect('back');
+                }
+                res.render('competitions/competitions', {competitions: comps, ratings: rating})
+            })
         })
     }
 })
 
 app.get('/new', middleware.isAdmin, (req, res) => {
-    res.render('new');
+    res.render('competitions/new', {flag: true});
 })
 
 app.post('/competitions', middleware.isAdmin, upload.array('images', 4), async function(req, res){
@@ -164,12 +174,18 @@ app.post('/competitions', middleware.isAdmin, upload.array('images', 4), async f
 })
 
 app.get('/competitions/:id', middleware.isLoggedIn, (req, res) => {
-    Competition.findById(req.params.id, (err, foundComp) => {
+    Competition.findById(req.params.id).populate('ratings').exec((err, foundComp) => {
         if(err){
             console.log(err);
             return res.redirect('back');
         }
-        res.render('show', {comp: foundComp})
+        Rating.find({comp: {id: foundComp._id}}, (err, rating) => {
+            if(err){
+                req.flash('error', err.message);
+                return res.redirect('back')
+            }
+            res.render('competitions/show', {comp: foundComp, ratings: rating})
+        })
     })
 })
 
@@ -179,7 +195,7 @@ app.get('/competitions/:id/edit', middleware.checkCompOwnership, (req, res) => {
             console.log(err);
             return res.redirect('back');
         }
-        res.render('edit', {comp: foundComp});
+        res.render('competitions/edit', {comp: foundComp});
     })
 })
 
@@ -240,7 +256,7 @@ app.delete('/competitions/:id', middleware.checkCompOwnership, async function(re
 // AUTH ROUTES
 
 app.get('/register', middleware.isNotLoggedIn, (req, res) => {
-    res.render('register');
+    res.render('user/register');
 })
 
 app.post('/register', upload.single('image'), async function(req, res){
@@ -268,19 +284,20 @@ app.post('/register', upload.single('image'), async function(req, res){
     User.register(newUser, req.body.password, async(err, user) => {
         if(err){
             console.log(err);
-            return res.render("register");
+            return res.render("user/register");
        }
        console.log(user);
        console.log('reached here');
        passport.authenticate("local")(req, res, function(){
-           console.log('reached2')
+           console.log('reached2');
+           req.flash('success', 'Welcome to Comprich, ' + user.username);
            res.redirect("/competitions");
        })
     })
 })
 
 app.get('/login', middleware.isNotLoggedIn, (req, res) => {
-    res.render('login');
+    res.render('user/login');
 })
 
 app.post("/login", passport.authenticate("local", {
@@ -292,11 +309,12 @@ app.post("/login", passport.authenticate("local", {
 app.get("/logout", (req, res) => {
     req.logout();
     console.log('Logged you out!');
+    req.flash('success', 'Logged you out')
     res.redirect("/");
 })
 
 app.get('/forgot', middleware.isNotLoggedIn, (req, res) => {
-    res.render('forgot');
+    res.render('user/forgot');
 })
 
 app.post('/forgot', (req, res, next) => {
@@ -361,7 +379,7 @@ app.get('/reset/:token', (req, res) => {
             req.flash('error', 'Password reset token is invalid or has expired.');
             return res.redirect('/forgot');
         }
-        res.render('reset', {token: req.params.token});
+        res.render('user/reset', {token: req.params.token});
     })
 })
 
@@ -403,7 +421,7 @@ app.post('/reset/:token', (req, res) => {
                 from: 'comprichapp@gmail.com',
                 subject: 'Your password has been changed',
                 text: 'Hello, \n\n' + 
-                    'This is a confirmation that the password for your account ' + user.email + ' as just been changed \n\n' + 
+                    'This is a confirmation that the password for your account ' + user.email + ' has just been changed \n\n' + 
                     'If you did not authorize this password change, please get in touch with the Comprich team. \n\n' + 
                     'Regards, \n' + 
                     'Comprich Tech Support'
@@ -425,7 +443,7 @@ app.get('/my-profile', middleware.isLoggedIn, (req, res) => {
             console.log(err);
             return res.redirect('back');
         }
-        res.render('profile', {user: user});
+        res.render('user/profile', {user: user});
     })
 })
 
@@ -435,7 +453,7 @@ app.get('/my-profile/edit', middleware.isLoggedIn, (req, res) => {
             console.log(err);
             return red.redirect('back');
         }
-        res.render('profile-edit', {user: user});
+        res.render('user/profile-edit', {user: user});
     })
 })
 
@@ -460,6 +478,30 @@ app.put('/my-profile', upload.single('image'), middleware.isLoggedIn, async (req
             return res.redirect('back');
         }
         res.redirect('/my-profile');
+    })
+})
+
+app.post('/competitions/:id/rating', (req, res) => {
+    Competition.findById(req.params.id, (err, competition) => {
+        if(err){
+            req.flash('error', err.message);
+            return res.redirect('/competitions/' + comp._id);
+        }
+        Rating.create(req.body.rating, (err, rating) => {
+            if(err){
+                console.log(err);
+                req.flash('error', err.message);
+                return res.redirect('back');
+            }
+            rating.author.id = req.user._id;
+            rating.author.username = req.user.username;
+            rating.comp.id = competition._id;
+            rating.save();
+            competition.ratings.push(rating);
+            competition.save();
+            req.flash('success', 'Competition rated successfully.')
+            return res.redirect('/competitions/' + req.params.id);
+        })
     })
 })
 

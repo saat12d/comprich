@@ -11,7 +11,15 @@ const competitionSchema = new mongoose.Schema({
     signupLink: String,
     smLink: String,
     fromClubName: String,
-    signUpLastDate: Date
+    signUpLastDate: Date,
+    ratings: [
+        {
+            id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Rating'
+            }
+        }
+    ]
 })
 
 module.exports = mongoose.model('Competition', competitionSchema);
