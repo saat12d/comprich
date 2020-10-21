@@ -284,7 +284,8 @@ app.post('/register', upload.single('image'), async function(req, res){
     User.register(newUser, req.body.password, async(err, user) => {
         if(err){
             console.log(err);
-            return res.render("user/register");
+            req.flash('error', err.message)
+            return res.redirect('/register')
        }
        console.log(user);
        console.log('reached here');
