@@ -14,7 +14,8 @@ const ratingSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Competitions'
         }
-    }
+    },
+    comp_title: String
 });
 
 module.exports = mongoose.model('Rating', ratingSchema);

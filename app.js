@@ -372,7 +372,7 @@ app.post('/forgot', (req, res, next) => {
                 service: 'Gmail',
                 auth: {
                     user: 'comprichapp@gmail.com',
-                    pass: process.env.GMAILPW
+                    pass: 'comprich123'
                 }
             });
             let mailOptions = {
@@ -440,7 +440,7 @@ app.post('/reset/:token', (req, res) => {
                 service: 'Gmail',
                 auth: {
                     user: 'comprichapp@gmail.com',
-                    pass: process.env.GMAILPW
+                    pass: 'comprich123'
                 }
             });
             let mailOptions = {
