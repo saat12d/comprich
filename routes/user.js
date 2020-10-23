@@ -23,6 +23,12 @@ const LocalStrategy = require('passport-local');
 
 const cloudinary = require('cloudinary');
 
+const adminCodes = [
+    {club: "Debate", code: 'admin@debate123'},
+    {club: "DIAMUN", code: 'admin@diamun456'},
+    {club: 'Owner', code: 'owner123'}
+]
+
 cloudinary.config({ 
   cloud_name: process.env.CLOUD_NAME, 
   api_key: process.env.CLOUDINARY_API_KEY, 
