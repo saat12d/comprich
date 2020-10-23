@@ -10,16 +10,16 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                       <label for="fname">First Name</label>
-                      <input class="form-control" type="text" id="fname" name="user[firstName]" placeholder="First Name">
+                      <input class="form-control" type="text" id="fname" name="user[firstName]" placeholder="First Name" required>
                   </div>
                   <div class="form-group col-md-6">
                       <label for="lname">Last Name</label>
-                      <input class="form-control" type="text" id="lname" name="user[lastName]" placeholder="Last Name">
+                      <input class="form-control" type="text" id="lname" name="user[lastName]" placeholder="Last Name" required>
                   </div>
               
                   <div class="form-group col-md-6">
                       <label>Email</label>
-                      <input type="text" class="form-control" name="user[email]" placeholder="Email">     
+                      <input type="email" class="form-control" name="user[email]" placeholder="Email" required>     
                   </div>
                   <div class="form-group col-md-6">
                       <label for="pfp">Profile Picture</label>
@@ -27,7 +27,7 @@
                   </div>
                   <div class="form-group col-md-6">
                       <label for="school">Which school are you from?</label>
-                      <select id="school" class="form-control" aria-placeholder="School" name="user[school]">
+                      <select id="school" class="form-control" aria-placeholder="School" name="user[school]" required>
                           <option value="0">Select school</option>
                           <option value="GEMS Modern Academy">Gems Modern Academy</option>
                           <option value="Dubai International Academy">Dubai International Academy</option>
@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="country">Country</label>
-                    <select class="form-control" id="currency" name="currency">
+                    <select class="form-control" id="currency" name="country" required>
                       <option value="0">Select country</option>
                       <option value="Afghanistan">Afghanistan</option>
                       <option value="Aland Islands">Aland Islands</option>
@@ -295,7 +295,7 @@
                   </div>
                   <div class="form-group col-md-6">
                       <label for="year">Which year/grade are you in?</label>
-                      <select id="year" class="form-control" name="user[yearLevel]">
+                      <select id="year" class="form-control" name="user[yearLevel]" required>
                           <option value="0">Select grade level</option>
                           <% for(let i = 6; i < 13; i++){ %>
                               <option value="<%= i + 1 %>">Year <%= i + 1 %> / Grade <%= i %></option>
@@ -352,6 +352,7 @@
         console.log('Page load time is '+ loadTime);
       }
     </script>
+    
 </body>
 
 </html>

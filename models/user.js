@@ -11,18 +11,21 @@ const userSchema = new mongoose.Schema({
     pfImage: String,
     image_id: String,
     school: String,
+    country: String,
     resetPasswordToken: String,
     resetPasswordExpires: Date,
     isOwner: {type: Boolean, default: false},
     isAdmin: {type: Boolean, default: false},
     repOf: {type: String, default: " "},
-    signedUpFor: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Competition"
-        },
-        title: String
-    }
+    signedUpFor: [
+        {
+            id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Competition"
+            },
+            title: String
+        }
+    ]
 })
 
 userSchema.plugin(passportLocalMongoose);

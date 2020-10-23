@@ -73,11 +73,15 @@
                 </div>
                 <div class="form-group">
                     <label for="">Location</label>
-                    <input type="text" name="competition[location]" class="form-control" placeholder="Competition Location">
+                    <input type="text" name="competition[location]" class="form-control" placeholder="Competition Location" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Date</label>
+                    <label for="">Competition Date</label>
                     <input type="date" name="competition[date]" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Sign Up Date</label>
+                    <input type="date" name="competition[signUpLastDate]" class="form-control" placeholder="DD/MM/YYYY" required>
                 </div>
                 <div class="form-group">
                     <label for="images">Images</label>
@@ -88,12 +92,22 @@
                     <textarea class="form-control" name="competition[details]" id="" rows="8" placeholder="Additional Details"></textarea>
                 </div>
                 <div class="form-group">
+                    <label for="">Price</label>
+                    <input type="text" class="form-control" name="competition[price]" placeholder="$100 / AED 300">
+                    <em>Leave blank if competition is free.</em>
+                </div>
+                <div class="form-group">
                     <label for="signupLink">Sign up Link</label>
                     <input class="form-control" type="text" name="competition[signupLink]" placeholder="Sign Up Link" required>
                 </div>
                 <div class="form-group">
                     <label for="signupLink">Social Media Link</label>
                     <input type="text" class="form-control" name="competition[smLink]" placeholder="Social Media Link">
+                </div>
+                <div class="form-group">
+                    <label for="">Competition Website Link</label>
+                    <input type="text" class="form-control" name="competition[websiteLink]" placeholder="Website Link">
+                    <em>Leave blank if club does not have website.</em>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>

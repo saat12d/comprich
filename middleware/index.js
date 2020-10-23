@@ -50,4 +50,23 @@ middleware.checkCompOwnership = function(req, res, next){
     }
 }
 
+middleware.hasSignedUp = function(req, res, next){
+    if(req.isAuthenticated()){
+        Competition.findById(req.params.id).populate('users').exec((err, comp) => {
+            if(err){
+                console.log(err);
+                req.flash('error', err.message);
+                return res.redirect('/competitions');
+            }
+            for(let item of comp.signedUp){
+                if(item.equals(req.user._id)){
+                    req.flash('error', 'You have already signed up for this competition.');
+                    return res.redirect('/competitions/' + comp._id);
+                }
+            }
+            next();
+        });
+    }
+}
+
 module.exports = middleware;
