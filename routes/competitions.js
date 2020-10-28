@@ -23,6 +23,7 @@ const LocalStrategy = require('passport-local');
 const upload = require('../multer.js');
 
 const cloudinary = require('cloudinary');
+const { render } = require('ejs');
 
 cloudinary.config({ 
   cloud_name: process.env.CLOUD_NAME, 
@@ -33,55 +34,79 @@ cloudinary.config({
 const adminCodes = [
     {club: "Debate", code: 'admin@debate123'},
     {club: "DIAMUN", code: 'admin@diamun456'},
-    {club: 'Owner', code: 'owner123'}
+    {club: 'Owner', code: 'owner123'},
+    {club: 'Test1', code: 'tester1'},
+    {club: 'Test2', code: 'tester2'},
+    {club: 'Test3', code: 'tester3'}
 ]
 
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index');
 })
 
-router.get('/competitions', middleware.isLoggedIn, (req, res) => {
+router.get('/competitions', middleware.isLoggedIn, async (req, res) => {
     let renderComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-        Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex}, ]}, (err, foundComps) => {
-            if(err){
-                console.log(err);
-                return res.redirect('/');
+        await Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex},]}).then(foundComps => {
+            renderComps = [];
+            for(let comp of foundComps){
+                renderComps.push(comp)
             }
-            return res.render('competitions/competitions', {competitions: foundComps})
+            console.log('searching...');
+        }).catch((err) => {
+            if(err){
+                req.flash('error', err.message);
+                console.log('ERROR: ' + err.message);
+                return res.redirect('back');
+            }
         })
+
     } else {
-        Competition.find({}, (err, comps) => {
+        await Competition.find({}).then(comps => {
+            renderComps = [];
+            for(let comp of comps){
+                renderComps.push(comp)
+            }
+        }).catch((err) => {
             if(err){
-                console.log(err);
-                return res.redirect('/');
+                req.flash('error', err.message);
+                console.log('ERROR: ' + err.message);
+                return res.redirect('back');
             }
-            if(req.query.filter == 'upcoming'){
-                comps = bubbleSort(comps);
-            }
-            if(req.query.filter == 'over'){
-                comps = isOver(comps);
-            }
-            if(req.query.filter == 'paid'){
-                comps = arePaid(comps)
-            }
-            if(req.query.filter == 'free'){
-                comps = areFree(comps);
-            }
-            if(req.query.sort){
-                comps = sortByCategory(comps, req.query.sort)
-            }
-            Rating.find({}, (err, rating) => {
-                if(err){
-                    console.log(err);
-                    req.flash('error'. err.message);
-                    return res.redirect('back');
-                }
-                res.render('competitions/competitions', {competitions: comps, ratings: rating})
-            })
         })
+        // console.log('render - ' + renderComps)
     }
+    if(req.query.filter && req.query.filter !== '0'){
+        console.log('in filter');
+        if(req.query.filter == 'upcoming'){
+            renderComps = bubbleSort(renderComps);
+        }
+        if(req.query.filter == 'over'){
+            renderComps = isOver(renderComps);
+        }
+        if(req.query.filter == 'paid'){
+            renderComps = arePaid(renderComps)
+        }
+        if(req.query.filter == 'free'){
+            renderComps = areFree(renderComps);
+        }
+    }
+
+    if(req.query.sort && req.query.sort !== '0'){
+        console.log('in sort')
+        renderComps = sortByCategory(renderComps, req.query.sort)
+    }
+    
+    Rating.find({}).then((rating) => {
+        res.render('competitions/competitions', {competitions: renderComps, ratings: rating})
+    }).catch((err) => {
+        if(err){
+            req.flash('error', err.message);
+            console.log('ERROR: ' + err.message);
+            return res.redirect('back');
+        }
+    })
 })
 
 router.get('/new', middleware.isAdmin, (req, res) => {

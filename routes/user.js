@@ -85,7 +85,9 @@ router.get('/login', middleware.isNotLoggedIn, (req, res) => {
 
 router.post("/login", passport.authenticate("local", {
     successRedirect: "/competitions",
-    failureRedirect: "/login"
+    failureRedirect: "/login",
+    failureFlash: true,
+    successFlash: 'Welcome to Comprich'
 }), (req, res) => {
 });
 
@@ -127,8 +129,8 @@ router.post('/forgot', (req, res, next) => {
             let smtpTransport = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
-                    user: 'comprichrouter@gmail.com',
-                    pass: 'comprich123'
+                    user: process.env.GMAILACC,
+                    pass: process.env.GMAILPW
                 }
             });
             let mailOptions = {
@@ -195,8 +197,8 @@ router.post('/reset/:token', (req, res) => {
             let smtpTransport = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
-                    user: 'comprichrouter@gmail.com',
-                    pass: 'comprich123'
+                    user: process.env.GMAILACC,
+                    pass: process.env.GMAILPW
                 }
             });
             let mailOptions = {

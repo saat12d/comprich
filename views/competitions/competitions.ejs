@@ -3,31 +3,29 @@
 
 <div class="container">
     <h1 class="display-4 mb-4">All Competitions</h1>
-    <% competitions.reverse() %>
-    <div class="d-flex justify-content-between">
-        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block float-left">
-            <div class="form-group">
-                <input class="form-control" type="text" name="search" placeholder="Competition Search">
-                <button class="btn btn-outline-primary">Search <i class="fa fa-search"></i></button>
+    <% if(competitions){ %>
+        <% competitions.reverse() %>
+    <% } %>
+    <div class="">
+        <form action="/competitions" method="GET" class="form-inline">
+            <div class="form-group col-md-4">
+                <input class="form-control w-100" type="text" name="search" placeholder="Competition Search">
             </div>
-        </form>
-        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block">
-            <div class="form-group">
-                <label class="" for="">Sort By:     </label>
-                <select name="filter" id="" class="form-control">
+            <br>
+            <div class="form-group col-md-3">
+                <!-- <label class="" for="">Sort By:     </label> -->
+                <select name="filter" id="" class="form-control w-100">
                     <option value="0">Filter Options</option>
                     <option value="upcoming">Upcoming Competitions</option>
                     <option value="over">Finished Competitions</option>
                     <option value="free">Free Competitions</option>
                     <option value="paid">Paid Competitions</option>
                 </select>
-                <button class="btn btn-outline-primary">Filter</button>
             </div>
-        </form>
-        <form action="/competitions" method="GET" class="form-inline d-lg-inline d-md-block">
-            <div class="form-group">
-                <label for="" class="">Category: </label>
-                <select class="form-control" name="sort" id="">
+            <br>
+            <div class="form-group col-md-3">
+                <!-- <label for="" class="">Category: </label> -->
+                <select class="form-control w-100" name="sort" id="">
                     <option value="0">Categories</option>
                     <option value="MUN">MUN</option>
                     <option value="Debate / Public Speaking">Debate / Public Speaking</option>
@@ -36,8 +34,9 @@
                     <option value="Business">Business</option>
                     <option value="Art / Design">Art / Design</option>
                 </select>
-                <button class="btn btn-outline-primary">Search</button>
-
+            </div>
+            <div class="form-group col-md-2">
+                <button class="btn btn-outline-primary">Apply</button>
             </div>
         </form>
     </div>
