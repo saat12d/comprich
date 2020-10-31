@@ -9,6 +9,7 @@ const dotenv = require('dotenv');
 const async = require('async');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
+const secure = require('express-force-https');
 
 const middleware = require('./middleware/index');
 
@@ -46,6 +47,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(flash());
 app.use(methodOverride("_method"));
+app.use(secure);
 
 dotenv.config();
 
