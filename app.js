@@ -22,6 +22,8 @@ const LocalStrategy = require('passport-local');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
+const mongoSanitize = express('express-mongo-sanitize');
+
 // Requiring routes
 const compRoutes = require('./routes/competitions.js');
 const userRoutes = require('./routes/user.js');
@@ -56,7 +58,7 @@ cloudinary.config({
 });
 
 // PASSPORT CONFIGURATION
-app.set('trust proxy', 1)
+app.set('trust proxy', 1);
 
 app.use(session({
     secret: "Tata nano is a legend and the all-powerful",
