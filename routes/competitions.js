@@ -277,7 +277,7 @@ router.post('/competitions/:id/signup', middleware.hasSignedUp, (req, res) => {
             comp.signedUp.push(user_details);
             comp.save();
         })
-        res.redirect(comp.signupLink);
+        res.redirect('https://' + comp.signupLink);
     })
 })
 
