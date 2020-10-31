@@ -19,6 +19,8 @@ const Rating = require('./models/rating');
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 // Requiring routes
 const compRoutes = require('./routes/competitions.js');
@@ -54,10 +56,14 @@ cloudinary.config({
 });
 
 // PASSPORT CONFIGURATION
-app.use(require("express-session")({
+app.set('trust proxy', 1)
+
+app.use(session({
     secret: "Tata nano is a legend and the all-powerful",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({mongooseConnection: mongoose.connection}),
+    cookie: {maxAge: 180 * 60 * 1000, secure: true}
 }));
 app.use(passport.initialize());
 app.use(passport.session());
