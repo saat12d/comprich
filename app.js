@@ -23,7 +23,7 @@ const LocalStrategy = require('passport-local');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
-const mongoSanitize = express('express-mongo-sanitize');
+const mongoSanitize = require('express-mongo-sanitize');
 
 // Requiring routes
 const compRoutes = require('./routes/competitions.js');
@@ -48,6 +48,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(flash());
 app.use(methodOverride("_method"));
 app.use(secure);
+app.use(mongoSanitize());
 
 dotenv.config();
 
