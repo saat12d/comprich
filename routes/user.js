@@ -30,7 +30,7 @@ const adminCodes = [
     {club: 'Test1', code: 'tester1'},
     {club: 'Test2', code: 'tester2'},
     {club: 'Test3', code: 'tester3'},
-    {club: 'Model United Nations, Emirates International School', code: 'admin@eisjmun_fe3d5'}
+    {club: 'Model United Nations, Emirates International School Jumeirah', code: 'admin@eisjmun_fe3d5'}
 ]
 
 cloudinary.config({ 
