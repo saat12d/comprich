@@ -32,7 +32,10 @@ const adminCodes = [
     {club: 'Test3', code: 'tester3'},
     {club: 'Emirates International School Jumeirah Model United Nations', code: 'admin@eisjmun_fe3d5'},
     {club: 'Inspire Science', code: 'admin@inspireScience_qt8b1'},
-    {club: 'TEDx@Dubai Inernational School', code: 'admin@tedxdia_bh7v3'}
+    {club: 'TEDx@Dubai Inernational School', code: 'admin@tedxdia_bh7v3'},
+    {club: 'GEMS Modern Academy Debate Society', code: 'admin@gmadebate_ji4x0'},
+    {club: 'Challenge The Youth Model United Nations', code: 'admin@cytmun_df5s5'},
+    {club: 'Capture Art', code: 'admin@captureart_vn2z8'}
 ]
 
 cloudinary.config({ 
