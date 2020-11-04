@@ -104,7 +104,7 @@
                 <% } %>
                 <% if(comp.websiteLink !== ''){ %>
                     <li class="list-group-item">
-                        <% if(comp.websiteLink.substring(0, 4) == 'https' || comp.websiteLink.substring(0, 3) == 'http'){
+                        <% if(comp.websiteLink.substring(0, 4) == 'https' || comp.websiteLink.substring(0, 3) == 'http'){ %>
                             <a href="<%= comp.websiteLink %>" target="_blank">Competition Website</a>
                         <% } else { %>
                             <a href="https://<%= comp.websiteLink %>" target="_blank">Competition Website</a>
