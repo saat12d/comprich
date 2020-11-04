@@ -30,7 +30,7 @@ const adminCodes = [
     {club: 'GEMS Modern Academy Debate Society', code: 'admin@gmadebate_ji4x0'},
     {club: 'Challenge The Youth Model United Nations', code: 'admin@cytmun_df5s5'},
     {club: 'Capture Art', code: 'admin@captureart_vn2z8'},
-    {club: 'Dubai International Academy', code: 'admin@diamun_b7za9'},
+    {club: 'Dubai International Academy Model United Nations', code: 'admin@diamun_b7za9'},
     {club: 'MARVERT', code: 'admin@marvert_j4k5u'}
 ]
 
