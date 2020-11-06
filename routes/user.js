@@ -31,7 +31,9 @@ const adminCodes = [
     {club: 'Challenge The Youth Model United Nations', code: 'admin@cytmun_df5s5'},
     {club: 'Capture Art', code: 'admin@captureart_vn2z8'},
     {club: 'Dubai International Academy Model United Nations', code: 'admin@diamun_b7za9'},
-    {club: 'MARVERT', code: 'admin@marvert_j4k5u'}
+    {club: 'MARVERT', code: 'admin@marvert_j4k5u'},
+    {club: 'Dubai International Academy Design Club (DIATech)', code: 'admin@diadesign_qw4d3'},
+    {club: 'Dubai International Academy Tech Club (DIADesign)', code: 'admin@diatech_mc2za9'}
 ]
 
 cloudinary.config({ 
