@@ -280,7 +280,7 @@ router.post('/competitions/:id/signup', middleware.hasSignedUp, (req, res) => {
         if(comp.signupLink.substring(0, 4) == 'https' || comp.signupLink.substring(0, 3) == 'http'){
             res.redirect(comp.signupLink);
         } else {
-            res.redirect('https://' + comp.signupLink);
+            res.redirect(comp.signupLink);
         }
     })
 })
