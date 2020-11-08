@@ -86,7 +86,7 @@ router.post('/register', upload.single('image'), async function(req, res){
     })
 })
 
-router.get('/login', middleware.isNotLoggedIn, (req, res) => {
+router.get('/login', (req, res) => {
     res.render('user/login');
 })
 
@@ -286,7 +286,9 @@ router.post('/:id/remove', middleware.isLoggedIn, (req, res) => {
                 req.flash('error', err.message);
                 return res.redirect('back');
             }
+            console.log(user);
             user.signedUpFor = user.signedUpFor.filter(c => comp.title !== c.title);
+            console.log(user);
             user.save();
             comp.signedUp = comp.signedUp.filter(u => u.id !== user._id);
             comp.save();
