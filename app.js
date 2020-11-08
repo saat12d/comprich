@@ -88,14 +88,6 @@ app.use('/', indexRoutes);
 app.use('/', compRoutes);
 app.use('/', userRoutes);
 
-app.get('*', function(req, res){
-    if(res.status(404)){
-        req.flash('error', 'Sorry, page not found.')
-        return res.redirect('/');
-    }
-});
-
-
 app.listen(process.env.PORT, () => {
     console.log("CompRich server has started on port " + process.env.PORT);
 }) 
