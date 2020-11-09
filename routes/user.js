@@ -290,11 +290,23 @@ router.post('/:id/remove', middleware.isLoggedIn, (req, res) => {
             user.signedUpFor = user.signedUpFor.filter(c => comp.title !== c.title);
             console.log(user);
             user.save();
-            comp.signedUp = comp.signedUp.filter(u => u.id !== user._id);
+            comp.signedUp = remove(comp.signedUp, user);
             comp.save();
         })
         return res.redirect('/my-profile');
     })
 })
+
+function remove(arr, user){
+    outArr = [];
+    for(let sign of arr){
+        if(sign.id == user._id){
+            continue;
+        } else {
+            outArr.push(sign);
+        }
+    }
+    return outArr;
+}
 
 module.exports = router;
