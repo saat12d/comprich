@@ -34,7 +34,8 @@ const adminCodes = [
     {club: 'MARVERT', code: 'admin@marvert_j4k5u'},
     {club: 'Dubai International Academy Design Club (DIATech)', code: 'admin@diadesign_qw4d3'},
     {club: 'Dubai International Academy Tech Club (DIADesign)', code: 'admin@diatech_mc2za9'},
-    {club: 'Business Minds', code: 'admin@businessminds_yu9vb'}
+    {club: 'Business Minds', code: 'admin@businessminds_yu9vb'},
+    {club: 'Emirates Youth Platform', code: 'admin@emyouthplat_xk2qa8'}
 ]
 
 cloudinary.config({ 
