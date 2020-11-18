@@ -294,7 +294,7 @@ function bubbleSort(inputArr){
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len - 1; j++) {
             console.log(inputArr[j]);
-            if (inputArr[j].date > inputArr[j + 1].date) {
+            if (inputArr[j].date < inputArr[j + 1].date) {
                 let tmp = inputArr[j];
                 inputArr[j] = inputArr[j + 1];
                 inputArr[j + 1] = tmp;
