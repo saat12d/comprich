@@ -25,7 +25,7 @@
                 <% for(let comp of user.signedUpFor){ %>
                     <li class="mb-3">
                         <p class="lead mb-3" style="display: inline">
-                            <%= comp.title %>
+                            <%= comp.title %> <span>( Unverified )</span>
                         <form action="/<%= comp.id %>/remove" method="POST" style="display: inline;">
                             <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                         </form>
