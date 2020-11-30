@@ -55,14 +55,14 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="/competitions" class="nav-link"><i class="nc-icon nc-layout-11"></i> Competitions</a>
+            <a href="/competitions" class="nav-link"><i class="nc-icon nc-layout-11"></i>Events</a>
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link"><i class="nc-icon nc-book-bookmark"></i> Contact Us</a>
           </li>
             <% if(currentUser && currentUser.isAdmin){ %>
               <li class="nav-item">
-                <a href="/new" class="nav-link">New Competition</a>
+                <a href="/new" class="nav-link">New Event</a>
               </li>
             <% } %>
             <% if(currentUser){ %>
