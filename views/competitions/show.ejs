@@ -119,7 +119,6 @@
                     <% break; %>
                 <% } %>
             <% } %>
-            <!-- <% if(comp.date < Date.now() && check){ %> -->
                 <% if(!flag){ %>
                     <form action="/competitions/<%= comp._id %>/rating" method="POST">
                         <!-- Change starability-basic to different class to see animations. -->
@@ -161,9 +160,6 @@
                     </p>
                     <p>Rating already submitted</p>
                 <% } %>
-            <!-- <% } else { %> -->
-                <!-- <p>You can only rate after competition date has elapsed and if you have signed up.</p> -->
-            <!-- <% } %> -->
         </div>
     </div>
 </div>
