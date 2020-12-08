@@ -31,14 +31,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const adminCodes = [
-    {club: "Debate", code: 'admin@debate123'},
-    {club: "DIAMUN", code: 'admin@diamun456'},
-    {club: 'Owner', code: 'owner123'},
-    {club: 'Test1', code: 'tester1'},
-    {club: 'Test2', code: 'tester2'},
-    {club: 'Test3', code: 'tester3'}
-]
+
 
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index');
