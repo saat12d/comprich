@@ -51,7 +51,8 @@ const adminCodes = [
     },
     { club: "Business Minds", code: "admin@businessminds_yu9vb" },
     { club: "Emirates Youth Platform", code: "admin@emyouthplat_xk2qa8" },
-    {club: "India's International Movement to Unite Nations", code: "admin@iimun_jb4w8"}
+    {club: "India's International Movement to Unite Nations", code: "admin@iimun_jb4w8"},
+    {club: 'Abstract Art', code: 'admin@absart_bg7u2'}
 ];
 
 cloudinary.config({
