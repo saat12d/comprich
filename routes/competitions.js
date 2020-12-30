@@ -37,7 +37,114 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index');
 })
 
-router.get('/competitions', middleware.isLoggedIn, async (req, res) => {
+// router.get('/competitions', async (req, res) => {
+//     let renderComps;
+//     let pages;
+//     var perPage = 8;
+//     var pageQuery = parseInt(req.query.page);
+//     var pageNumber = pageQuery ? pageQuery : 1;
+//     if(req.query.search){
+//         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+//         await Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex},]}).skip((perPage * pageNumber) - perPage).limit(perPage).then(async (foundComps) => {
+//             let cnt;
+//             await Competition.count((err, count) => {
+//                 if(err){
+//                     console.log(err);
+//                     req.flash('error', err.message);
+//                     return res.redirect('back');
+//                 }
+//                 cnt = count;
+//             })
+//             renderComps = [];
+//             for(let comp of foundComps){
+//                 renderComps.push(comp);
+//             }
+//             pages = Math.ceil(cnt / perPage);
+//             console.log(pages);
+//             console.log('searching...');
+//             // }).catch(err => {
+//             //     if(err){
+//             //         req.flash('error', err.message);
+//             //         console.log('ERROR: ' + err.message);
+//             //         return res.redirect('back'); 
+//             //     }
+//             // })
+//         }).catch((err) => {
+//             if(err){
+//                 req.flash('error', err.message);
+//                 console.log('ERROR: ' + err.message);
+//                 return res.redirect('back');
+//             }
+//         })
+
+//     } else {
+//         await Competition.find({}).skip((perPage * pageNumber) - perPage).limit(perPage).then(async (comps) => {
+//             let cnt = 0;
+//             await Competition.count((err, count) => {
+//                 if(err){
+//                     console.log(err);
+//                     req.flash('error', err.message);
+//                     return res.redirect('back');
+//                 }
+//                 cnt = count;
+//                 console.log('counting')
+//             })
+//             renderComps = [];
+//             for(let comp of comps){
+//                 renderComps.push(comp)
+//             }
+//             pages = Math.ceil(cnt / perPage);
+//             console.log(cnt);
+//             console.log(pages);
+//             console.log('searching');
+//         }).catch((err) => {
+//             if(err){
+//                 req.flash('error', err.message);
+//                 console.log('ERROR: ' + err.message);
+//                 return res.redirect('back');
+//             }
+//         })
+//         // console.log('render - ' + renderComps)
+//     }
+//     if(req.query.filter && req.query.filter !== '0'){
+//         console.log('in filter');
+//         if(req.query.filter == 'upcoming'){
+//             renderComps = bubbleSort(renderComps);
+//         }
+//         if(req.query.filter == 'over'){
+//             renderComps = isOver(renderComps);
+//         }
+//         if(req.query.filter == 'paid'){
+//             renderComps = arePaid(renderComps)
+//         }
+//         if(req.query.filter == 'free'){
+//             renderComps = areFree(renderComps);
+//         }
+//     }
+
+//     if(req.query.sort && req.query.sort !== '0'){
+//         console.log('in sort')
+//         renderComps = sortByCategory(renderComps, req.query.sort)
+//     }
+//     console.log(req.query)
+//     Rating.find({}).then((rating) => {
+//         res.render('competitions/competitions', {
+//             competitions: renderComps,
+//             ratings: rating,
+//             current: pageNumber,
+//             pages: pages,
+//             query: req.query
+//         })
+//     }).catch((err) => {
+//         if(err){
+//             req.flash('error', err.message);
+//             console.log('ERROR: ' + err.message);
+//             return res.redirect('back');
+//         }
+//     })
+// })
+
+router.get('/competitions', async (req, res) => {
     let renderComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -136,7 +243,7 @@ router.post('/competitions', middleware.isAdmin, upload.array('images', 4), asyn
     })
 })
 
-router.get('/competitions/:id', middleware.isLoggedIn, (req, res) => {
+router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
     Competition.findById(req.params.id).populate('ratings').exec((err, foundComp) => {
         if(err){
             console.log(err);
@@ -275,6 +382,22 @@ router.post('/competitions/:id/signup', middleware.hasSignedUp, (req, res) => {
         } else {
             res.redirect(comp.signupLink);
         }
+    })
+})
+
+router.post('/competitions/:id/feedback', middleware.isLoggedIn, (req, res) => {
+    Competition.findById(req.params.id, (err, comp) => {
+        if(err){
+            console.log(err);
+            req.flash('error', err.message);
+            return res.redirect('back');
+        }
+        let feedback = {text: req.body.feedback}
+        comp.feedback.push(feedback);
+        comp.save();
+        console.log(comp);
+        req.flash('success', 'Message sent successfully!');
+        return res.redirect('/competitions/' + req.params.id);
     })
 })
 
