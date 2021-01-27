@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const ratingSchema = new mongoose.Schema({
     rating: Number,
@@ -16,6 +16,6 @@ const ratingSchema = new mongoose.Schema({
         }
     },
     comp_title: String
-});
+})
 
-module.exports = mongoose.model('Rating', ratingSchema);
+module.exports = mongoose.model('Rating', ratingSchema)
