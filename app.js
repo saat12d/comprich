@@ -90,5 +90,5 @@ app.use('/', userRoutes);
 
 
 app.listen(process.env.PORT, () => {
-    console.log("CompRich server has started on port " + process.env.PORT);
+    console.log("CompRich server started on port " + process.env.PORT);
 }) 
