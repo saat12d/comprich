@@ -54,7 +54,8 @@ const adminCodes = [
     {club: "India's International Movement to Unite Nations", code: "admin@iimun_jb4w8"},
     {club: 'Abstract Art', code: 'admin@absart_bg7u2'},
     {club: 'Cosmos Championship', code: 'admin@cosmos_hu2w5'},
-    {club: 'Decisive', code: 'admin@decisive_bv9k3'}
+    {club: 'Decisive', code: 'admin@decisive_bv9k3'},
+    {club: 'Admin', code: 'outreach@comprich_admin'}
 ];
 
 cloudinary.config({
