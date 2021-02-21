@@ -1,0 +1,6 @@
+Results of xmllint linter (version 20910)
+See documentation on https://nvuillam.github.io/mega-linter/descriptors/xml_xmllint/
+-----------------------------------------------
+
+✅ [SUCCESS] .idea/modules.xml
+✅ [SUCCESS] .idea/vcs.xml
