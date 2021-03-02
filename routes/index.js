@@ -5,8 +5,15 @@ const middleware = require('../middleware/index');
 
 const Message = require('../models/message.js');
 
+let firstTime = true;
+
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
-    res.render('index');
+    if(firstTime){
+        firstTime = false;
+        return res.redirect('/competitions');
+    }
+    // firstTime = true;
+    return res.render('index');
 })
 
 router.post('/messages', (req, res) => {
