@@ -12,7 +12,7 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
         firstTime = false;
         return res.redirect('/competitions');
     }
-    // firstTime = true;
+    firstTime = true;
     return res.render('index');
 })
 
