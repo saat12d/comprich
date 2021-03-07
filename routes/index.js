@@ -8,12 +8,11 @@ const Message = require('../models/message.js');
 let firstTime = true;
 
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
-    if(firstTime){
-        firstTime = false;
-        return res.redirect('/competitions');
-    }
-    firstTime = true;
-    return res.render('index');
+    return res.redirect('/competitions');
+})
+
+router.get('/home', middleware.isNotLoggedIn, (req, res) => {
+    return res.render('index.ejs');
 })
 
 router.post('/messages', (req, res) => {
