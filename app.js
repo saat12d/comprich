@@ -29,7 +29,18 @@ const mongoSanitize = require('express-mongo-sanitize');
 const compRoutes = require('./routes/competitions.js');
 const userRoutes = require('./routes/user.js');
 const indexRoutes = require('./routes/index.js');
+const blogRoutes = require('./routes/blogs.js');
 
+// mongoose.connect('mongodb://localhost:27017/comprich', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true, 
+//     useFindAndModify: false, 
+//     useCreateIndex: true
+// }).then(() => {
+//     console.log('Connected to DB');
+// }).catch(err => {
+//     console.log('ERROR: ' + err.message);
+// })
 
 mongoose.connect('mongodb+srv://Saatvik:comp@richDBUser@comprich.jp7iu.mongodb.net/Comprich?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -53,6 +64,7 @@ app.use(mongoSanitize());
 dotenv.config();
 
 const cloudinary = require('cloudinary');
+const blog = require('./models/blog');
 
 cloudinary.config({ 
   cloud_name: process.env.CLOUD_NAME, 
@@ -84,9 +96,20 @@ app.use((req, res, next) => {
     next();
 });
 
+User.find({}, (err, users) => {
+    let i = 0;
+    users.forEach((user) => {
+        if(i > 144){
+            console.log(user.email + ',');
+        }
+        i++;
+    })
+})
+
 app.use('/', indexRoutes);
 app.use('/', compRoutes);
 app.use('/', userRoutes);
+app.use('/', blogRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log("CompRich server has started on port " + process.env.PORT);

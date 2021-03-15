@@ -28,6 +28,15 @@ middleware.isAdmin = function(req, res, next){
     res.redirect('/');
 }
 
+middleware.isBlogger = function(req, res, next){
+    if(req,isAuthenticated() && (req.user.isBlogger || req.user.isOwner)){
+        return next();
+    }
+    console.log('YOU DO NOT HAVE PERMISSION TO DO THAT!!!');
+    req.flash('error', "You do not have permission to do that.");
+    res.redirect('/');
+}
+
 middleware.checkCompOwnership = function(req, res, next){
     if(req.isAuthenticated()){
         Competition.findById(req.params.id, (err, comp) => {
