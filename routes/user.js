@@ -55,7 +55,7 @@ const adminCodes = [
     {club: 'Abstract Art', code: 'admin@absart_bg7u2'},
     {club: 'Cosmos Championship', code: 'admin@cosmos_hu2w5'},
     {club: 'Decisive', code: 'admin@decisive_bv9k3'},
-    {club: 'Admin', code: 'outreach@comprich_admin'}
+    {club: 'Admin', code: 'outreach@comprich_admin'},
 ];
 
 cloudinary.config({
@@ -90,7 +90,12 @@ router.post("/register", upload.single("image"), async function (req, res) {
     if (req.body.adminCode == "owner123") {
         newUser.isOwner = true;
         newUser.isAdmin = true;
+        newUser.isBlogger = true;
         newUser.repOf = "Owner";
+    }
+    if(req.body.adminCode == 'blogger@comprich_5g7b'){
+        newUser.isBlogger = true;
+        newUser.repOf = "Blogger";
     }
     User.register(newUser, req.body.password, async (err, user) => {
         if (err) {
@@ -178,7 +183,7 @@ router.post("/forgot", (req, res, next) => {
                         "/reset/" +
                         token +
                         "\n\n" +
-                        "If you did not request this, please ignore this email and our password will remain unchanged. \n\n" +
+                        "If you did not request this, please ignore this email and your password will remain unchanged. \n\n" +
                         "Regards, \n" +
                         "Comprich Tech Support",
                 };

@@ -7,6 +7,7 @@ const competitionSchema = new mongoose.Schema({
     category: Array,
     images: [{url: String, public_id: String}],
     details: String,
+    dateDecided: {type: Boolean, default: true},
     date: Date,
     price: {type: String, default: 'None'},
     signupLink: String,
@@ -31,6 +32,12 @@ const competitionSchema = new mongoose.Schema({
             fname: String,
             lname: String,
             username: String
+        }
+    ],
+    feedback: [
+        {
+            text: String,
+            email: String
         }
     ]
 })

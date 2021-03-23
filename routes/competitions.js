@@ -17,9 +17,6 @@ const User = require('../models/user');
 const Competition = require('../models/competition');
 const Rating = require('../models/rating');
 
-const passport = require('passport');
-const LocalStrategy = require('passport-local');
-
 const upload = require('../multer.js');
 
 const cloudinary = require('cloudinary');

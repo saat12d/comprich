@@ -96,15 +96,15 @@ app.use((req, res, next) => {
     next();
 });
 
-User.find({}, (err, users) => {
-    let i = 0;
-    users.forEach((user) => {
-        if(i > 144){
-            console.log(user.email + ',');
-        }
-        i++;
-    })
-})
+// User.find({}, (err, users) => {
+//     let i = 0;
+//     users.forEach((user) => {
+//         if(i > 144){
+//             console.log(user.email + ',');
+//         }
+//         i++;
+//     })
+// })
 
 app.use('/', indexRoutes);
 app.use('/', compRoutes);
