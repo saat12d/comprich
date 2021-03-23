@@ -1,0 +1,38 @@
+const mongoose = require('mongoose')
+
+const competitionSchema = new mongoose.Schema({
+  title: { type: String, unique: true },
+  desc: String,
+  location: String,
+  category: Array,
+  images: [{ url: String, public_id: String }],
+  details: String,
+  date: Date,
+  price: { type: String, default: 'None' },
+  signupLink: String,
+  smLink: String,
+  websiteLink: { type: String, default: 'none' },
+  fromClubName: String,
+  signUpLastDate: Date,
+  ratings: [
+    {
+      id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Rating'
+      }
+    }
+  ],
+  signedUp: [
+    {
+      id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+      },
+      fname: String,
+      lname: String,
+      username: String
+    }
+  ]
+})
+
+module.exports = mongoose.model('Competition', competitionSchema)

@@ -1,0 +1,754 @@
+Results of scss-lint linter (version ERROR)
+See documentation on https://nvuillam.github.io/mega-linter/descriptors/css_scss_lint/
+-----------------------------------------------
+
+❌ [ERROR] assets/scss/paper-kit.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_alerts.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_badges.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_buttons.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_cards.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_carousel.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_checkbox-radio.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_dropdown.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_examples.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_footers.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_headers.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_icons.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_images.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_inputs.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_labels.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_misc.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_mixins.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_modal.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_navbars.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_nucleo-icons.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_nucleo-outline.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_pagination.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_progress-bars.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_responsive.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_sections.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_sidebar.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_sliders.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_social-buttons.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_switch.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_tabs-navs.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_tags.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_tooltips-and-popovers.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_typography.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/_variables.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/cards/_card-plain.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/cards/_card-profile.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/cards/_card-register.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_alerts.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_buttons.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_inputs.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_labels.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_navbars.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_popovers.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_tabs.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_transparency.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/mixins/_vendor-prefixes.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/plugins/_plugin-bootstrap-switch.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/plugins/_plugin-datepicker.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/plugins/_plugin-nouislider.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+
+❌ [ERROR] assets/scss/paper-kit/plugins/_plugin-perfect-scrollbar.scss
+    /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- json (LoadError)
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint/reporter/json_reporter.rb:1:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:32:in `block in <top (required)>'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `each'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/lib/scss_lint.rb:31:in `<top (required)>'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+    	from /usr/lib/ruby/gems/2.7.0/gems/scss_lint-0.59.0/bin/scss-lint:3:in `<top (required)>'
+    	from /usr/bin/scss-lint:23:in `load'
+    	from /usr/bin/scss-lint:23:in `<main>'
+

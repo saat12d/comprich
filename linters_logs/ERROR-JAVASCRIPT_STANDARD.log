@@ -1,0 +1,112 @@
+Results of standard linter (version 15.0.1)
+See documentation on https://nvuillam.github.io/mega-linter/descriptors/javascript_standard/
+-----------------------------------------------
+
+❌ [ERROR] app.js
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      app.js:7:7: 'locus' is assigned a value but never used.
+      app.js:9:7: 'async' is assigned a value but never used.
+      app.js:10:7: 'nodemailer' is assigned a value but never used.
+      app.js:11:7: 'crypto' is assigned a value but never used.
+      app.js:14:7: 'middleware' is assigned a value but never used.
+      app.js:18:7: 'Competition' is assigned a value but never used.
+      app.js:19:7: 'Rating' is assigned a value but never used.
+      app.js:44:24: Use path.join() or path.resolve() instead of string concatenation.
+
+✅ [SUCCESS] assets/js/core/bootstrap.min.js
+✅ [SUCCESS] assets/js/core/jquery.min.js
+✅ [SUCCESS] assets/js/core/popper.min.js
+❌ [ERROR] assets/js/paper-kit.js
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      assets/js/paper-kit.js:306:10: Parsing error: Identifier 'debounce' has already been declared
+
+✅ [SUCCESS] assets/js/paper-kit.min.js
+❌ [ERROR] assets/js/plugins/bootstrap-datepicker.js
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      assets/js/plugins/bootstrap-datepicker.js:46:7: Expected an error object to be thrown.
+      assets/js/plugins/bootstrap-datepicker.js:49:7: Expected an error object to be thrown.
+      assets/js/plugins/bootstrap-datepicker.js:831:52: 'use24Hours' is not modified in this loop.
+      assets/js/plugins/bootstrap-datepicker.js:1358:22: Do not access Object.prototype method 'hasOwnProperty' from target object.
+      assets/js/plugins/bootstrap-datepicker.js:1367:30: Do not access Object.prototype method 'hasOwnProperty' from target object.
+      assets/js/plugins/bootstrap-datepicker.js:1428:15: 'blur' is not defined.
+      assets/js/plugins/bootstrap-datepicker.js:1472:43: Unnecessary escape character: \[.
+      assets/js/plugins/bootstrap-datepicker.js:1474:39: Unnecessary escape character: \[.
+      assets/js/plugins/bootstrap-datepicker.js:1747:13: Expected an error object to be thrown.
+      assets/js/plugins/bootstrap-datepicker.js:2329:13: Expected an error object to be thrown.
+      assets/js/plugins/bootstrap-datepicker.js:2367:13: Expected an error object to be thrown.
+
+❌ [ERROR] assets/js/plugins/bootstrap-switch.js
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      assets/js/plugins/bootstrap-switch.js:11:39: 'define' is not defined.
+      assets/js/plugins/bootstrap-switch.js:12:5: 'define' is not defined.
+      assets/js/plugins/bootstrap-switch.js:28:12: Expected newline between test and consequent of ternary expression.
+      assets/js/plugins/bootstrap-switch.js:28:36: Expected newline between consequent and alternate of ternary expression.
+      assets/js/plugins/bootstrap-switch.js:168:60: Unexpected mix of '||' and '&&'.
+      assets/js/plugins/bootstrap-switch.js:168:111: Unexpected mix of '||' and '&&'.
+      assets/js/plugins/bootstrap-switch.js:513:13: 'callback' is assigned a value but never used.
+
+✅ [SUCCESS] assets/js/plugins/moment.min.js
+✅ [SUCCESS] assets/js/plugins/nouislider.min.js
+❌ [ERROR] middleware/index.js - FIXED
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      middleware/index.js:2:7: 'User' is assigned a value but never used.
+      middleware/index.js:39:29: Expected '===' and instead saw '=='.
+
+✅ [SUCCESS] models/competition.js - FIXED
+✅ [SUCCESS] models/message.js - FIXED
+✅ [SUCCESS] models/rating.js - FIXED
+✅ [SUCCESS] models/user.js - FIXED
+✅ [SUCCESS] multer.js - FIXED
+❌ [ERROR] routes/competitions.js - FIXED
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      routes/competitions.js:3:7: 'bodyParser' is assigned a value but never used.
+      routes/competitions.js:4:7: 'mongoose' is assigned a value but never used.
+      routes/competitions.js:5:7: 'methodOverride' is assigned a value but never used.
+      routes/competitions.js:6:7: 'flash' is assigned a value but never used.
+      routes/competitions.js:7:7: 'locus' is assigned a value but never used.
+      routes/competitions.js:8:7: 'dotenv' is assigned a value but never used.
+      routes/competitions.js:9:7: 'async' is assigned a value but never used.
+      routes/competitions.js:10:7: 'nodemailer' is assigned a value but never used.
+      routes/competitions.js:11:7: 'crypto' is assigned a value but never used.
+      routes/competitions.js:12:7: 'open' is assigned a value but never used.
+      routes/competitions.js:20:7: 'passport' is assigned a value but never used.
+      routes/competitions.js:21:7: 'LocalStrategy' is assigned a value but never used.
+      routes/competitions.js:26:9: 'render' is assigned a value but never used.
+      routes/competitions.js:34:7: 'adminCodes' is assigned a value but never used.
+      routes/competitions.js:81:26: Expected '===' and instead saw '=='.
+      routes/competitions.js:84:26: Expected '===' and instead saw '=='.
+      routes/competitions.js:87:26: Expected '===' and instead saw '=='.
+      routes/competitions.js:90:26: Expected '===' and instead saw '=='.
+      routes/competitions.js:121:54: Expected error to be handled.
+      routes/competitions.js:180:63: Expected error to be handled.
+      routes/competitions.js:186:56: Expected error to be handled.
+      routes/competitions.js:215:61: Expected error to be handled.
+      routes/competitions.js:229:46: 'comp' is not defined.
+      routes/competitions.js:263:13: Identifier 'comp_details' is not in camel case.
+      routes/competitions.js:270:13: Identifier 'user_details' is not in camel case.
+      routes/competitions.js:279:41: Expected '===' and instead saw '=='.
+      routes/competitions.js:279:87: Expected '===' and instead saw '=='.
+      routes/competitions.js:333:27: Expected '===' and instead saw '=='.
+      routes/competitions.js:333:54: Expected '===' and instead saw '=='.
+
+✅ [SUCCESS] routes/index.js - FIXED
+❌ [ERROR] routes/user.js - FIXED
+    standard: Use JavaScript Standard Style (https://standardjs.com)
+      routes/user.js:3:7: 'bodyParser' is assigned a value but never used.
+      routes/user.js:4:7: 'mongoose' is assigned a value but never used.
+      routes/user.js:5:7: 'methodOverride' is assigned a value but never used.
+      routes/user.js:6:7: 'flash' is assigned a value but never used.
+      routes/user.js:7:7: 'locus' is assigned a value but never used.
+      routes/user.js:8:7: 'dotenv' is assigned a value but never used.
+      routes/user.js:19:7: 'Rating' is assigned a value but never used.
+      routes/user.js:22:7: 'LocalStrategy' is assigned a value but never used.
+      routes/user.js:52:56: Expected error to be handled.
+      routes/user.js:65:26: Expected '===' and instead saw '=='.
+      routes/user.js:118:47: Expected error to be handled.
+      routes/user.js:166:101: Expected error to be handled.
+      routes/user.js:178:105: Expected error to be handled.
+      routes/user.js:184:47: Expected error to be handled.
+      routes/user.js:188:23: Expected error to be handled.
+      routes/user.js:223:6: Expected error to be handled.
+      routes/user.js:243:14: 'red' is not defined.
+

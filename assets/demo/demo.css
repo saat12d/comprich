@@ -3,7 +3,7 @@
 }
 
 .tim-white-buttons {
-  background-color: #777777;
+  background-color: #777;
 }
 
 .typography-line {
@@ -70,12 +70,12 @@
 .demo-icons body {
   font-size: 1.6rem;
   font-family: sans-serif;
-  color: #333333;
+  color: #333;
   background: white;
 }
 
 .demo-icons a {
-  color: #608CEE;
+  color: #608cee;
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@
 
 .demo-icons section h2 {
   border-bottom: 1px solid #e2e2e2;
-  padding: 0 0 1em .2em;
+  padding: 0 0 1em 0.2em;
   margin-bottom: 1em;
 }
 
@@ -124,7 +124,7 @@
   float: left;
   padding: 16px 0;
   text-align: center;
-  border-radius: .25em;
+  border-radius: 0.25em;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   transition: background 0.2s;
@@ -144,7 +144,7 @@
 .demo-icons ul input {
   display: inline-block;
   font-size: 1rem;
-  color: #999999;
+  color: #999;
   -webkit-user-select: auto;
   -moz-user-select: auto;
   -ms-user-select: auto;
@@ -164,7 +164,7 @@
 
 .demo-icons ul p::selection,
 .demo-icons ul em::selection {
-  background: #608CEE;
+  background: #608cee;
   color: #efefef;
 }
 
@@ -221,7 +221,7 @@
 }
 
 #notifications {
-  background-color: #FFFFFF;
+  background-color: #fff;
   display: block;
   width: 100%;
   position: relative;
@@ -249,7 +249,7 @@
 
 #buttons .btn,
 #javascriptComponents .btn {
-  margin: 0 0px 10px;
+  margin: 0 0 10px;
 }
 
 .space-100 {
@@ -260,12 +260,13 @@
 
 .be-social {
   padding-bottom: 20px;
+
   /*     border-bottom: 1px solid #aaa; */
   margin: 0 auto 40px;
 }
 
 .txt-white {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .txt-gray {
@@ -291,14 +292,14 @@
 .logo-container .logo {
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   width: 50px;
   float: left;
 }
 
 .logo-container .brand {
   font-size: 16px;
-  color: #FFFFFF;
+  color: #fff;
   line-height: 18px;
   float: left;
   margin-left: 10px;
@@ -320,7 +321,7 @@
 }
 
 .navbar-small .logo-container .brand {
-  color: #333333;
+  color: #333;
 }
 
 .fixed-section {
@@ -342,11 +343,11 @@
   font-size: 14px;
   padding: 2px;
   display: block;
-  color: #666666;
+  color: #666;
 }
 
 .fixed-section li a.active {
-  color: #00bbff;
+  color: #0bf;
 }
 
 .fixed-section.float {
@@ -372,13 +373,14 @@
     height: 640px;
     overflow: hidden;
   }
+
   .parallax .parallax-image img {
     height: 100%;
     width: auto;
   }
 }
 
-/*.separator{
+/* .separator{
     content: "Separator";
     color: #FFFFFF;
     display: block;
@@ -393,7 +395,7 @@
 }
 .separator.separator-gray{
     background-color: #EEEEEE;
-}*/
+} */
 
 .social-buttons-demo .btn {
   margin-right: 5px;
@@ -439,6 +441,7 @@
   .btn-morphing {
     margin-bottom: 10px;
   }
+
   .parallax .motto {
     top: 170px;
     margin-top: 0;
@@ -452,14 +455,14 @@
 /*      transitions */
 
 .presentation .front,
-.presentation .front:after,
+.presentation .front::after,
 .presentation .front .btn,
 .logo-container .logo,
 .logo-container .brand {
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #images h4 {
@@ -494,15 +497,15 @@
 }
 
 .navbar-default.navbar-small .logo-container .brand {
-  color: #333333;
+  color: #333;
 }
 
 .navbar-transparent.navbar-small .logo-container .brand {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .navbar-default.navbar-small .logo-container .brand {
-  color: #333333;
+  color: #333;
 }
 
 .sharing-area {
@@ -523,7 +526,7 @@
 }
 
 .section-tabs {
-  background: #EEEEEE;
+  background: #eee;
 }
 
 .section-pagination {
@@ -546,7 +549,7 @@
   text-decoration: none;
 }
 
-.section-examples a+a {
+.section-examples a + a {
   margin-top: 30px;
 }
 
@@ -554,8 +557,8 @@
   margin-top: 30px;
 }
 
-.components-page .wrapper>.header,
-.tutorial-page .wrapper>.header {
+.components-page .wrapper > .header,
+.tutorial-page .wrapper > .header {
   height: 500px;
   padding-top: 128px;
   background-size: cover;
@@ -564,7 +567,7 @@
 
 .components-page .title,
 .tutorial-page .title {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .brand .h1-seo {
