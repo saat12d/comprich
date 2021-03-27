@@ -51,6 +51,10 @@ router.get('/blogs/1', (req, res) => {
   res.render('blogs/temp/one');
 })
 
+router.get('/blogs/2', (req, res) => {
+  res.render('blogs/temp/two');
+})
+
 // // GET - blog display page
 // router.get('/blogs/:id', (req, res) => {
 //     Blog.findById(req.params.id, (err, blog) => {
