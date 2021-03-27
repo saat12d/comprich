@@ -26,7 +26,6 @@ const MongoStore = require('connect-mongo')(session)
 const mongoSanitize = require('express-mongo-sanitize')
 
 // Requiring routes
-<<<<<<< HEAD
 const compRoutes = require('./routes/competitions.js');
 const userRoutes = require('./routes/user.js');
 const indexRoutes = require('./routes/index.js');
@@ -42,11 +41,6 @@ const blogRoutes = require('./routes/blogs.js');
 // }).catch(err => {
 //     console.log('ERROR: ' + err.message);
 // })
-=======
-const compRoutes = require('./routes/competitions.js')
-const userRoutes = require('./routes/user.js')
-const indexRoutes = require('./routes/index.js')
->>>>>>> 313edb7af88a2aaec0d51337485e64d382c3986a
 
 mongoose.connect('mongodb+srv://Saatvik:comp@richDBUser@comprich.jp7iu.mongodb.net/Comprich?retryWrites=true&w=majority', {
   useNewUrlParser: true,
@@ -69,12 +63,8 @@ app.use(mongoSanitize())
 
 dotenv.config()
 
-<<<<<<< HEAD
 const cloudinary = require('cloudinary');
 const blog = require('./models/blog');
-=======
-const cloudinary = require('cloudinary')
->>>>>>> 313edb7af88a2aaec0d51337485e64d382c3986a
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
