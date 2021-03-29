@@ -55,6 +55,7 @@ const adminCodes = [
     {club: 'Abstract Art', code: 'admin@absart_bg7u2'},
     {club: 'Cosmos Championship', code: 'admin@cosmos_hu2w5'},
     {club: 'Decisive', code: 'admin@decisive_bv9k3'},
+    {club: 'Mindchamps', code: 'admin@mindchamps_kp2t4'}
     {club: 'Admin', code: 'outreach@comprich_admin'},
 ];
 
