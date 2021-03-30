@@ -193,7 +193,24 @@ router.get('/competitions', async (req, res) => {
         renderComps = sortByCategory(renderComps, req.query.sort)
     }
 
-    return res.render('competitions/competitions', { competitions: renderComps})
+    // Rating.find({}).then((rating) => {
+    //     res.render('competitions/competitions', { competitions: renderComps, ratings: rating })
+    // }).catch((err) => {
+    //     if (err) {
+    //         req.flash('error', err.message)
+    //         console.log('ERROR: ' + err.message)
+    //         return res.redirect('back')
+    //     }
+    // })
+
+    Rating.find({}, (err, rating) => {
+        if (err) {
+            req.flash('error', err.message)
+            console.log('ERROR: ' + err.message)
+            return res.redirect('back')
+        }
+        res.render('competitions/competitions', { competitions: renderComps, ratings: rating })
+    })
 })
 
 router.get('/new', middleware.isAdmin, (req, res) => {
