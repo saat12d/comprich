@@ -65,28 +65,7 @@
                         <div class="card-body">
                             <h4 class="card-title"><%= competition.title %></h4>
                         </div>
-                        <% if(ratings){ %>
-                            <% let avg = 0 %>
-                            <% let cnt = 0; %>
-                            <% for(let rating of ratings){ %>
-                                <% for(let compRating of competition.ratings){ %>
-                                    <% if(rating.comp_title == competition.title){ %>
-                                        <% cnt++ %>
-                                        <% avg += rating.rating %>
-                                    <% } %>
-                                <% } %>
-                            <% } %>
-                            <% if(avg !== 0){ %>
-                                <% avg = avg / cnt %>
-                            <% } %>
-                            <p>
-                                <% if(avg !== 0){ %>
-                                    <% for(let i = 1; i <= 5; i++){ %>
-                                        <span class="<%= avg >= i ? 'fas' : 'far' %> fa-star"></span>
-                                    <% } %>
-                                <% } %>
-                            </p>
-                        <% } %>
+                
                         <p>
                             <a href="/competitions/<%= competition._id %>" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
                         </p>
@@ -100,28 +79,7 @@
                         <div class="card-body">
                         <h4 class="card-title"><%= competition.title %></h4>
                         </div>
-                        <% if(ratings){ %>
-                            <% let avg = 0 %>
-                            <% let cnt = 0; %>
-                            <% for(let rating of ratings){ %>
-                                <% for(let compRating of competition.ratings){ %>
-                                    <% if(rating.comp_title == competition.title){ %>
-                                        <% cnt++ %>
-                                        <% avg += rating.rating %>
-                                    <% } %>
-                                <% } %>
-                            <% } %>
-                            <% if(avg !== 0){ %>
-                                <% avg = avg / cnt %>
-                            <% } %>
-                            <p>
-                                <% if(avg !== 0){ %>
-                                    <% for(let i = 1; i <= 5; i++){ %>
-                                        <span class="<%= avg >= i ? 'fas' : 'far' %> fa-star"></span>
-                                    <% } %>
-                                <% } %>
-                            </p>
-                        <% } %>
+                    
                         <p>
                             <a href="/competitions/<%= competition._id %>" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
                         </p>
