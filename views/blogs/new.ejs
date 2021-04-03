@@ -5,19 +5,41 @@
         <h1 class="col-md-12 text-center">Add a Blog Post</h1>
 
         <div class="col-12" style="margin: 25px auto;">
-            <form action="/blogs" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" placeholder="Title" id="title" class="form-control" name="blog[title]" required>
-                </div>
-                <div class="form-group">
-                    <label for="body">Body</label>
-                    <textarea name="blog[body]" id="body" class="form-control" cols="30" rows="15" placeholder="Body"></textarea>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                </div>
+<!--            <form action="/blogs" method="POST" enctype="multipart/form-data">-->
+<!--                <div class="form-group">-->
+<!--                    <label for="title">Title</label>-->
+<!--                    <input type="text" placeholder="Title" id="title" class="form-control" name="blog[title]" required>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="body">Body</label>-->
+<!--                    <textarea name="blog[body]" id="body" class="form-control" cols="30" rows="15" placeholder="Body"></textarea>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>-->
+<!--                </div>-->
+<!--            </form>-->
+
+            <form action="https://www.comprich.org/blogs" method="POST">
+                <div id="editor-container"></div>
+                <input name="editor" type="hidden">
+                <button class="btn btn-primary" type="submit">Submit blog</button>
             </form>
+            <script src="https://cdn.quilljs.com/1.3.6/quill.js">
+            <script>
+                var quill = new Quill('#editor-container', {
+                    placeholder: 'Your blog content...',
+                    theme: 'snow'
+                } );
+
+                var form = document.querySelector('form');
+                form.onsubmit = function() {
+                    // Populate hidden form on submit
+                    var about = document.querySelector('input[name=editor]');
+                    about.value = JSON.stringify(quill.root.innerHTML);
+
+                    console.log("Submitting: "+quill.root.innerHTML)
+                };
+            </script>
         </div>
     </div>
 </div>
