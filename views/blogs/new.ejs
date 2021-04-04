@@ -24,7 +24,12 @@
                 <input name="editor" type="hidden">
                 <button class="btn btn-primary" type="submit">Submit blog</button>
             </form>
-            <script src="https://cdn.quilljs.com/1.3.6/quill.js">
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
             <script>
                 var quill = new Quill('#editor-container', {
                     placeholder: 'Your blog content...',
@@ -40,8 +45,5 @@
                     console.log("Submitting: "+quill.root.innerHTML)
                 };
             </script>
-        </div>
-    </div>
-</div>
 
 <%- include('../partials/footer') %>
