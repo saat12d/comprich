@@ -30,22 +30,28 @@ router.get('/blogs/new', (req, res) => {
 })
 
 // // POST - creating blog
-// router.post('/blogs', (req, res) => {
-//     console.log(req.body.blog);
-//     // req.body.blog.date = Date.now();
-//     // req.body.blog.author = req.user.firstName + " " + req.user.lastName;
-//     Blog.create(req.body.blog, (err, blog) => {
-//       if(err){
-//         console.log(err);
-//         req.flash('error', err.messsage);
-//         return res.redirect('back');
-//       }
-//       console.log(blog)
-//       console.log('successfully created blog');
-//       req.flash('success', 'Successfully Added Blog');
-//       return res.redirect('/blogs');
-//     })
-// })
+router.post('/blogs', (req, res) => {
+    console.log(req.body)
+    console.log(req.body.blog);
+    // req.body.blog.date = Date.now();
+    // req.body.blog.author = req.user.firstName + " " + req.user.lastName;
+    let newBlog = {
+      body: req.body.editor,
+      title: req.body.title,
+      date: Date.now()
+    }
+    Blog.create(newBlog, (err, blog) => {
+      if(err){
+        console.log(err);
+        req.flash('error', err.messsage);
+        return res.redirect('back');
+      }
+      console.log(blog)
+      console.log('successfully created blog');
+      req.flash('success', 'Successfully Added Blog');
+      return res.redirect('/blogs');
+    })
+})
 
 router.get('/blogs/1', (req, res) => {
   res.render('blogs/temp/one');
