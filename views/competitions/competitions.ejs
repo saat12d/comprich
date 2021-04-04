@@ -9,7 +9,7 @@
     <div class="">
         <form action="/competitions" method="GET" class="form-inline">
             <div class="form-group col-md-4">
-                <input class="form-control w-100" type="text" name="search" placeholder="Competition Search">
+                <input class="form-control w-100" type="text" name="search" placeholder="Competition Search" value="">
             </div>
             <br>
             <div class="form-group col-md-3">
@@ -43,16 +43,28 @@
     <hr>
 
     <div class="row text-center mb-4 mt-4 px-2" style="display: flex; flex-wrap: wrap;">
-        <% for(let competition of competitions){ %>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <% if(competition.date < Date.now()){ %>
-                    <div class="card" style="background: #cccccc">
-                <% } else { %>
-                    <div class="card">
-                <% } %>
-                    <img src="<%= competition.images[0].url %>" class="card-img-top" style="min-height: 25vh; max-height: 35vh" alt="Competition Image">
+        <ul class="nav nav-tabs" style="margin-right:60%;">
+            <li class="nav-item">
+              <a class="nav-link active" id="up" aria-current="page" role="tab" data-toggle="tab" href="#upcoming">Upcoming</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" id="finish" data-toggle="tab" role="tab" href="#finished">Finished</a>
+            </li>
+        </ul>
+        <% let upcoming = [] %>
+        <% let finished = [] %>
+        <% for(let competition of competitions) { %>
+            <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
+        <% } %>
+
+        <div class="row text-center mb-4 mt-4 px-2" id="pageLoad" style="display: flex; flex-wrap: wrap;">
+            <% for(let competition of upcoming) {%>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                <img src="<%= competition.images[0].url %>" class="card-img-top" style="min-height: 25vh; max-height: 35vh" alt="Competition Image">
                     <div class="card-body">
-                    <h4 class="card-title"><%= competition.title %></h4>
+                        <h4 class="card-title"><%= competition.title %></h4>
                     </div>
                     <% if(ratings){ %>
                         <% let avg = 0 %>
@@ -81,10 +93,97 @@
                     </p>
                 </div>
             </div>
-        <% } %>
+            <% } %>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="upcoming">
+                <div class="row text-center mb-4 mt-4 px-2" style="display: flex; flex-wrap: wrap;">
+                <% for(let competition of upcoming) {%>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                    <img src="<%= competition.images[0].url %>" class="card-img-top" style="min-height: 25vh; max-height: 35vh" alt="Competition Image">
+                        <div class="card-body">
+                            <h4 class="card-title"><%= competition.title %></h4>
+                        </div>
+                        <% if(ratings){ %>
+                            <% let avg = 0 %>
+                            <% let cnt = 0; %>
+                            <% for(let rating of ratings){ %>
+                                <% for(let compRating of competition.ratings){ %>
+                                    <% if(rating.comp_title == competition.title){ %>
+                                        <% cnt++ %>
+                                        <% avg += rating.rating %>
+                                    <% } %>
+                                <% } %>
+                            <% } %>
+                            <% if(avg !== 0){ %>
+                                <% avg = avg / cnt %>
+                            <% } %>
+                            <p>
+                                <% if(avg !== 0){ %>
+                                    <% for(let i = 1; i <= 5; i++){ %>
+                                        <span class="<%= avg >= i ? 'fas' : 'far' %> fa-star"></span>
+                                    <% } %>
+                                <% } %>
+                            </p>
+                        <% } %>
+                        <p>
+                            <a href="/competitions/<%= competition._id %>" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+            <div role="tabpanel" class="tab-pane fade" id="finished">
+            <div class="row text-center mb-4 mt-4 px-2" style="display: flex; flex-wrap: wrap;">
+            <% for(let competition of finished) {%>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                    <img src="<%= competition.images[0].url %>" class="card-img-top" style="min-height: 25vh; max-height: 35vh" alt="Competition Image">
+                        <div class="card-body">
+                        <h4 class="card-title"><%= competition.title %></h4>
+                        </div>
+                        <% if(ratings){ %>
+                            <% let avg = 0 %>
+                            <% let cnt = 0; %>
+                            <% for(let rating of ratings){ %>
+                                <% for(let compRating of competition.ratings){ %>
+                                    <% if(rating.comp_title == competition.title){ %>
+                                        <% cnt++ %>
+                                        <% avg += rating.rating %>
+                                    <% } %>
+                                <% } %>
+                            <% } %>
+                            <% if(avg !== 0){ %>
+                                <% avg = avg / cnt %>
+                            <% } %>
+                            <p>
+                                <% if(avg !== 0){ %>
+                                    <% for(let i = 1; i <= 5; i++){ %>
+                                        <span class="<%= avg >= i ? 'fas' : 'far' %> fa-star"></span>
+                                    <% } %>
+                                <% } %>
+                            </p>
+                        <% } %>
+                        <p>
+                            <a href="/competitions/<%= competition._id %>" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
+                        </p>
+                    </div>
+                    </div>
+                <% } %> 
+            </div>
+        </div>
     </div>
-        
 
 </div>
 
+<script>
+    document.getElementById('up').addEventListener('click', function(){
+        document.getElementById('pageLoad').style.display = 'none';
+    })
+    document.getElementById('finish').addEventListener('click', function(){
+        document.getElementById('pageLoad').style.display = 'none';
+    })
+</script>
 <%- include('../partials/footer') %>
