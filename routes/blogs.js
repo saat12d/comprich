@@ -24,10 +24,10 @@ router.get('/blogs', (req, res) => {
     return res.render('blogs/index');
 })
 
-// // GET - blog forms
-// router.get('/blogs/new', (req, res) => {
-//     return res.render('blogs/new');
-// })
+// GET - blog forms
+router.get('/blogs/new', (req, res) => {
+    return res.render('blogs/new');
+})
 
 // // POST - creating blog
 // router.post('/blogs', (req, res) => {
