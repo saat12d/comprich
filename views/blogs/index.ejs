@@ -1,26 +1,49 @@
 <%- include('../partials/static-header') %>
 
+<% blogs.reverse() %>
+
 <div class="container">
     <h1 class="display-4 mb-4">Comprich Blog</h1>
     <hr class="mb-5">
-    <a href="/blogs/1">
-      <div class="card mb-3" style="max-width: 60vw;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://mail.google.com/mail/u/0?ui=2&ik=d399b5491c&attid=0.1&permmsgid=msg-f:1694303594492246604&th=178360247360ba4c&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-S2ALHVVojg9z352KCkOSNa4f51kCieQitp5WXzB4WlSM9uq4Utx4OdhapR2HOcsmFSMdZM8YZD68r0-e51UZfB3OuXnMgbiEYtU97JnaWYeIEG25qGbUiJEE&disp=emb" alt="..." style='height: 100%; width: 100%; object-fit: contain'>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body" href="/blogs/1">
-              <h5 class="card-title mb-2">The Relation Between Competition and Innovation</h5>
-              <p class="card-text">The question we have before us is- How does competition birth innovation? The Merriam-Webster dictionary defines...</p>
-              <p class="card-text"><small class="text-muted">15 March, 2021</small></p>
+
+    <% for(blog of blogs){ %>
+        <a href="/blogs/<%= blog._id %>">
+          <div class="card mb-3" style="max-width: 60vw; max-height: 20vh;">
+            <div class="row g-0">
+              <div class="col-md-4" style=" text-align: center;">
+                <img src="<%= blog.image %>" alt="..." style='max-height: 20vh; max-width: 100%; object-fit: contain;'>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body" href="/blogs/<%= blog._id %>">
+                  <h5 class="card-title mb-2"><%= blog.title %></h5>
+                  <!-- <p class="card-text">Competition exists so that all the parties participating perform well and better rather than conquer. It lives to...</p> -->
+                  <p class="card-text"><small class="text-muted"><%= blog.date %></small></p>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
-    </div>
-    </a>
+        </a>
+        <!-- <a href="/blogs/<%= blog._id %>">
+          <div class="card mb-3" style="max-width: 60vw; max-height: 20vh;">
+            <div class="row g-0">
+              <div class="col-md-4" style=" text-align: center;">
+                <img src="<%= blog.image %>" alt="..." style='max-height: 20vh; max-width: 100%; object-fit: contain;'>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body" href="/blogs/<%= blog._id %>">
+                  <h5 class="card-title mb-2"><%= blog.title %></h5>
+                  <p class="card-text">Competition exists so that all the parties participating perform well and better rather than conquer. It lives to...</p>
+                  <p class="card-text"><small class="text-muted"><%= blog.date %></small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+        </a> -->
+
+    <% } %>
+
     <a href="/blogs/2">
-      <div class="card mb-3" style="max-width: 60vw; float: right;">
+      <div class="card mb-3" style="max-width: 60vw;">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="/img/Illo-Failure-848701b.png" alt="..." style='height: 100%; width: 100%; object-fit: contain'>
@@ -35,6 +58,24 @@
         </div>
     </div>
     </a>
+
+    <a href="/blogs/1">
+      <div class="card mb-3" style="max-width: 60vw; float: right;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://mail.google.com/mail/u/0?ui=2&ik=d399b5491c&attid=0.1&permmsgid=msg-f:1694303594492246604&th=178360247360ba4c&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-S2ALHVVojg9z352KCkOSNa4f51kCieQitp5WXzB4WlSM9uq4Utx4OdhapR2HOcsmFSMdZM8YZD68r0-e51UZfB3OuXnMgbiEYtU97JnaWYeIEG25qGbUiJEE&disp=emb" alt="..." style='height: 100%; width: 100%; object-fit: contain'>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" href="/blogs/1">
+              <h5 class="card-title mb-2">The Relation Between Competition and Innovation</h5>
+              <p class="card-text">The question we have before us is- How does competition birth innovation? The Merriam-Webster dictionary defines...</p>
+              <p class="card-text"><small class="text-muted">15 March, 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    
 </div>
 
   <!--   Core JS Files   -->

@@ -21,7 +21,14 @@ cloudinary.config({
 
 // GET - blog home page
 router.get('/blogs', (req, res) => {
-    return res.render('blogs/index');
+    Blog.find({}, (err, blogs) => {
+      if(err){
+        console.log(err);
+        req.flash('error', err.messsage);
+        return res.redirect('back');
+      }
+      return res.render('blogs/index', {blogs, blogs});
+    })
 })
 
 // GET - blog forms
@@ -30,15 +37,21 @@ router.get('/blogs/new', (req, res) => {
 })
 
 // // POST - creating blog
-router.post('/blogs', (req, res) => {
-    console.log(req.body)
-    console.log(req.body.blog);
-    // req.body.blog.date = Date.now();
-    // req.body.blog.author = req.user.firstName + " " + req.user.lastName;
+router.post('/blogs', upload.single('image'), async (req, res) => {
+    console.log(req.file)
+    req.body.image = "";
+    if (req.file) {
+        await cloudinary.v2.uploader.upload(req.file.path, (err, result) => {
+            req.body.image = result.secure_url;
+            console.log('uploaded')
+      })
+    }
+
     let newBlog = {
       body: req.body.editor,
       title: req.body.title,
-      date: Date.now()
+      date: Date.now(),
+      image: req.body.image,
     }
     Blog.create(newBlog, (err, blog) => {
       if(err){
@@ -61,16 +74,16 @@ router.get('/blogs/2', (req, res) => {
   res.render('blogs/temp/two');
 })
 
-// // GET - blog display page
-// router.get('/blogs/:id', (req, res) => {
-//     Blog.findById(req.params.id, (err, blog) => {
-//       if(err){
-//         console.log(err);
-//         req.flash('error', err.message);
-//         return res.redirect('/blogs');
-//       }
-//       return res.render('blogs/show', {blog: blog});
-//     })
-// })
+// GET - blog display page
+router.get('/blogs/:id', (req, res) => {
+    Blog.findById(req.params.id, (err, blog) => {
+      if(err){
+        console.log(err);
+        req.flash('error', err.message);
+        return res.redirect('/blogs');
+      }
+      return res.render('blogs/show', {blog: blog});
+    })
+})
 
 module.exports = router;
