@@ -29,7 +29,7 @@ middleware.isAdmin = function (req, res, next) {
 }
 
 middleware.isBlogger = function(req, res, next){
-    if(req,isAuthenticated() && (req.user.isBlogger || req.user.isOwner)){
+    if(req.isAuthenticated() && (req.user.isBlogger || req.user.isOwner)){
         return next();
     }
     console.log('YOU DO NOT HAVE PERMISSION TO DO THAT!!!');
