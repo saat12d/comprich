@@ -12,7 +12,7 @@
                 <div class="carousel-inner" style="max-height: 85vh">
                   <% for(let [index, image] of comp.images.entries()){ %>
                     <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
-                        <img class="d-block w-100" src="<%= image.url %>" alt="Third slide">
+                        <img class="d-block w-100" src="<%= image.url %>" alt="Third slide" style="max-width: 100%;max-height: 100%">
                     </div>
                   <% } %>
                 </div>
