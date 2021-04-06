@@ -84,6 +84,11 @@
               <a href="/new" class="nav-link"> New Event</a>
             </li>
           <% } %>
+          <% if(currentUser && (currentUser.isBlogger || currentUser.isOwner)){ %>
+            <li class="nav-item">
+              <a href="/blogs/new" class="nav-link"> New Blog</a>
+            </li>
+          <% } %>
           <% if(currentUser){ %>
             <li class="nav-item">
               <a href="/logout" class="nav-link">Logout</a>

@@ -32,12 +32,16 @@ router.get('/blogs', (req, res) => {
 })
 
 // GET - blog forms
-router.get('/blogs/new', (req, res) => {
+router.get('/blogs/new', middleware.isBlogger, (req, res) => {
     return res.render('blogs/new');
 })
 
+// add middleware
+// add author for blog
+// add new button for blog
+
 // // POST - creating blog
-router.post('/blogs', upload.single('image'), async (req, res) => {
+router.post('/blogs', middleware.isBlogger, upload.single('image'), async (req, res) => {
     console.log(req.file)
     req.body.image = "";
     if (req.file) {
@@ -52,6 +56,7 @@ router.post('/blogs', upload.single('image'), async (req, res) => {
       title: req.body.title,
       date: Date.now(),
       image: req.body.image,
+      author: req.user.firstName + " " + req.user.lastName
     }
     Blog.create(newBlog, (err, blog) => {
       if(err){

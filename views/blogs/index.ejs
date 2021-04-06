@@ -17,7 +17,7 @@
                 <div class="card-body" href="/blogs/<%= blog._id %>">
                   <h5 class="card-title mb-2"><%= blog.title %></h5>
                   <!-- <p class="card-text">Competition exists so that all the parties participating perform well and better rather than conquer. It lives to...</p> -->
-                  <p class="card-text"><small class="text-muted"><%= blog.date %></small></p>
+                  <p class="card-text"><small class="text-muted"><%= blog.date.toDateString() %></small></p>
                 </div>
               </div>
             </div>
