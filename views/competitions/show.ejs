@@ -12,7 +12,7 @@
                 <div class="carousel-inner" style="max-height: 85vh">
                   <% for(let [index, image] of comp.images.entries()){ %>
                     <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
-                        <img class="d-block w-100" src="<%= image.url %>" alt="Third slide">
+                        <img class="d-block w-100" src="<%= image.url %>" alt="Third slide" style="max-height: 60vh; max-width: 100vw; object-fit: contain;">
                     </div>
                   <% } %>
                 </div>
@@ -71,37 +71,37 @@
             </div>
         </div>
         <div class="col-md-3 mt-5">
-          <div class="list-group mb-4">
-              <% let flag2 = false; %>
-              <% for(let c of currentUser.signedUpFor){ %>
-                  <% if(c.title === comp.title){ %>
-                      <% flag2 = true; %>
-                     <%  break; %>
-                  <% } %>
-              <% } %>
-              <% if(comp.signUpLastDate > Date.now()){ %>
-                  <% if(!flag2){ %>
-                      <li class="list-group-item mb-3" style="padding: 0 0; border: 0;">
-                          <form action="/competitions/<%= comp._id %>/signup" method="POST">
-                              <button class="btn btn-primary btn-block" target="_blank">Sign Up</button>
-                          </form>
-                      </li>
-                  <% } else { %>
-                      <p class="lead mb-3">Already signed up.</p>
-                      <p> <em>If not signed up, visit your profile to remove from list of competitions.</em></p>
-                  <% } %>
-              <% } else { %>
-                  <p>Sign up date has passed.</p>
-              <% } %>
-              <% if(comp.smLink){ %>
-                  <li class="list-group-item"><a href="<%= comp.smLink %>" target="_blank">Competition Social Media</a></li>
-              <% } %>
-              <% if(comp.websiteLink !== ''){ %>
-                  <li class="list-group-item">
-                      <a href="<%= comp.websiteLink %>" target="_blank">Competition Website</a>
-                  </li>
-              <% } %>
-          </div>
+            <div class="list-group mb-4">
+                <% let flag2 = false; %>
+                <% for(let c of currentUser.signedUpFor){ %>
+                    <% if(c.title === comp.title){ %>
+                        <% flag2 = true; %>
+                       <%  break; %>
+                    <% } %>
+                <% } %>
+                <% if(comp.signUpLastDate > Date.now()){ %>
+                    <% if(!flag2){ %>
+                        <li class="list-group-item mb-3" style="padding: 0 0; border: 0;">
+                            <form action="/competitions/<%= comp._id %>/signup" method="POST">
+                                <button class="btn btn-primary btn-block" target="_blank">Sign Up</button>
+                            </form>
+                        </li>
+                    <% } else { %>
+                        <p class="lead mb-3">Already signed up.</p>
+                        <p> <em>If not signed up, visit your profile to remove from list of competitions.</em></p>
+                    <% } %>
+                <% } else { %>
+                    <p>Sign up date has passed.</p>
+                <% } %>
+                <% if(comp.smLink){ %>
+                    <li class="list-group-item"><a href="<%= comp.smLink %>" target="_blank">Competition Social Media</a></li>
+                <% } %>
+                <% if(comp.websiteLink !== ''){ %>
+                    <li class="list-group-item">
+                        <a href="<%= comp.websiteLink %>" target="_blank">Competition Website</a>
+                    </li>
+                <% } %>
+            </div>
           <% let flag = false; %>
           <% for(let rating of ratings){ %>
               <% if(rating.author.username == currentUser.username){ %>
