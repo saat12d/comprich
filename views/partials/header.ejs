@@ -38,6 +38,7 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/css/paper-kit.css?v=2.2.0" rel="stylesheet" />
   <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="../../assets/css/notifications.css" />
 </head>
 
 <% if(error && error.length > 0){ %>
@@ -97,6 +98,11 @@
             <% } %>
         </ul>
         <ul class="navbar-nav ml-auto">
+          <% if(currentUser){ %>
+          <li class="nav-item">
+            <a href="/notifications" class="nav-link" id="noti-bell"><i class="fas fa-bell"></i></a>
+          </li>
+          <% } %>
               <li class="nav-item">
                 <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/comprichapp/" target="_blank">
                   <i class="fa fa-instagram"></i>
