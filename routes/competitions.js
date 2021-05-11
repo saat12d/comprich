@@ -28,6 +28,9 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
+// add variable to keep track opf new comps added, use to send notifications
+let newComps = 0;
+
 
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index')
@@ -213,11 +216,11 @@ router.get('/competitions', async (req, res) => {
     })
 })
 
-router.get('/new', middleware.isAdmin, (req, res) => {
+router.get('/new',  (req, res) => {
     res.render('competitions/new', { flag: true })
 })
 
-router.post('/competitions', middleware.isAdmin, upload.array('images', 4), async function (req, res) {
+router.post('/competitions',  upload.array('images', 4), async function (req, res) {
     console.log(req.files)
     console.log(req.body.competition)
     req.body.competition.images = []
@@ -241,6 +244,21 @@ router.post('/competitions', middleware.isAdmin, upload.array('images', 4), asyn
         } else {
             console.log(comp)
             console.log('successfully created comp')
+            newComps++;
+            if(newComps === 3){
+                User.find({}, (err, user) => {
+                    if(err){
+                        console.log(err);
+                        req.flash('error', err.message);
+                        res.redirect('back');
+                    } else {
+                        user.notifications.push({
+                            test: '3 new events have been added!',
+                            link: 'www.comprich.org/competitions'
+                        })
+                    }
+                })
+            }
             req.flash('success', 'Successfully added competition.')
             res.redirect('/competitions')
         }
