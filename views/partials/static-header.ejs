@@ -105,11 +105,12 @@
         <% if(currentUser){ %>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a href="/notifications" class="nav-link" id="noti-bell"><i class="fa fa-bell" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
               <img class="rounded" src="<%= currentUser.pfImage %>" style="max-height: 10vh; max-width: 10vw" alt="">
               <a class="nav-link" style="display: inline;" href="/my-profile"><%= currentUser.username %></a>
               <a href="/my-profile" style="display: inline;" class="nav-link">My Profile</a>
-            </li>
-            <li class="nav-item">
             </li>
           </ul>
         <% } else { %>
