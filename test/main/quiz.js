@@ -4,9 +4,6 @@ const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
-const choiceC = document.getElementById("C");
-const counter = document.getElementById("counter");
-const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 
@@ -85,7 +82,6 @@ function renderQuestion(){
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>"+ q.question +"</p>";
-    qImg.innerHTML = "<img src="+ q.imgSrc +">";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
 
@@ -99,8 +95,7 @@ function startQuiz(){
     renderQuestion();
     quiz.style.display = "block";
     renderProgress();
-    renderCounter();
-    TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+     // 1000ms = 1s
 }
 
 // render progress
@@ -110,40 +105,17 @@ function renderProgress(){
     }
 }
 
-// counter render
 
-// function renderCounter(){
-//     if(count <= questionTime){
-//         counter.innerHTML = count;
-//         timeGauge.style.width = count * gaugeUnit + "px";
-//         count++
-//     }else{
-//         count = 0;
-//         // change progress color to red
-//         answerIsWrong();
-//         if(runningQuestion < lastQuestion){
-//             runningQuestion++;
-//             renderQuestion();
-//         }else{
-//             // end the quiz and show the score
-//             clearInterval(TIMER);
-//             scoreRender();
-//         }
-//     }
-// }
-
-// checkAnwer
 
 function checkAnswer(answer){
-    if( answer == questions[runningQuestion].correct){
-        // answer is correct
-        score++;
-        // change progress color to green
+    if( answer == questions[runningQuestion].choiceA){
+       
+        score++; //send data to mainml file
+        
         answerIsCorrect();
     }else{
-        // answer is wrong
-        // change progress color to red
-        answerIsWrong();
+        
+        answerIsCorrect();
     }
     count = 0;
     if(runningQuestion < lastQuestion){
