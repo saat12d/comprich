@@ -16,19 +16,19 @@ myJSON = myJSON.substr(10,20);
 const final_number = parseFloat(myJSON);
 
 var final_decision = (0); //compares values to mindset line as discussed previously and outputs most suitable option
-if (output > 0.4) {
+if (final_number > 0.4) {
     final_decision = "Art";
-} else if (0.4 > output > 0.3) {
+} else if (0.4 > final_number > 0.3) {
     final_decision = "Writing";
-} else if (0.3 > output > 0.1) {
+} else if (0.3 > final_number > 0.1) {
     final_decision = "Debating";
-} else if (0.1 > output > 0) {
+} else if (0.1 > final_number > 0) {
     final_decision = "Business";
-} else if (0 > output > -0.1) {
+} else if (0 > final_number > -0.1) {
     final_decision = "Science";
-} else if (-0.1 > output > -0.13) {
+} else if (-0.1 > final_number > -0.13) {
     final_decision = "Maths";
-} else if (-0.13 > output) {
+} else if (-0.13 > final_number) {
     final_decision = "Computer Science";
 }
 
