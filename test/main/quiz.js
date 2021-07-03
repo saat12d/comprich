@@ -101,15 +101,9 @@ function renderProgress(){
 
 
 
-function checkAnswer(answer){
-    if (answer == questions[runningQuestion].choiceA){
-       
-        score++; //send data to mainml file
-        
-        answerIsCorrect();
-    }else{
-        
-        answerIsCorrect();
+function checkAnswer(){
+    { 
+        answerIsComplete();
     }
     count = 0;
     if(runningQuestion < lastQuestion){
@@ -122,22 +116,16 @@ function checkAnswer(answer){
 }
 
 // answer is correct
-function answerIsCorrect(){
+function answerIsComplete(){
     document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
 }
 
-// answer is Wrong
-function answerIsWrong(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
-}
+
 
 // score render
 function scoreRender(){
-    scoreDiv.style.display = "block";
-    
-    // choose the image based on the scorePerCent
-    let img = "img/5.png";
-    
+    scoreDiv.style.display = "block";  
+    let img = "img/5.png"; 
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>Thanks!</p>";
 }
