@@ -5,31 +5,32 @@ net.train([ //trains Neural Network on examples of inputs from quiz (FYI, comput
   { input: { one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven:0, eight:0 }, output: {number: 0.13} }, //Business
   { input: { one: 1, two: 1, three: 1, four: 1, five: 1, six: 1, seven:1, eight:1 }, output: {number: -0.13} }, //Maths
   { input: { one: 1, two: 0, three: 1, four: 0, five: 1, six: 0, seven:1, eight:0 }, output: {number: 0.01} }, //Debating
-  { input: { one: 0, two: 1, three: 0, four: 1, five: 0, six: 1, seven:0, eight:1 }, output: {number:0.41} }, //Writing
-  { input: { one: 1, two: 1, three: 0, four: 1, five: 1, six: 0, seven:1, eight:1 }, output: {number:0.47} }, //Art
+  { input: { one: 0, two: 1, three: 0, four: 1, five: 0, six: 1, seven:0, eight:1 }, output: {number:0.21} }, //Writing
   { input: { one: 1, two: 0, three: 1, four: 1, five: 1, six: 1, seven:0, eight:0 }, output: {number: -0.19} }, //Computer Science
 ]);
 
-var output = net.run({one: 0, two: 1, three: 1, four: 1, five: 0, six: 1, seven:0, eight:1}); //converts object output to str then to float
+
+
+var output = net.run({one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven:0, eight:1}); //converts object output to str then to float
 var myJSON = JSON.stringify(output);
 myJSON = myJSON.substr(10,20);
 const final_number = parseFloat(myJSON);
 
-var final_decision = (0); //compares values to mindset line as discussed previously and outputs most suitable option
+ //compares values to mindset line as discussed previously and outputs most suitable option
 if (final_number > 0.4) {
-    final_decision = "Art";
+    output = "Art";
 } else if (0.4 > final_number > 0.3) {
-    final_decision = "Writing";
+    output = "Writing";
 } else if (0.3 > final_number > 0.1) {
-    final_decision = "Debating";
+    output = "Debating";
 } else if (0.1 > final_number > 0) {
-    final_decision = "Business";
+    output = "Business";
 } else if (0 > final_number > -0.1) {
-    final_decision = "Science";
+    output = "Science";
 } else if (-0.1 > final_number > -0.13) {
-    final_decision = "Maths";
+    output = "Maths";
 } else if (-0.13 > final_number) {
-    final_decision = "Computer Science";
+    output = "Computer Science";
 }
 
-console.log(final_decision);
+console.log(output);
