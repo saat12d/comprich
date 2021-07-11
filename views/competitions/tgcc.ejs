@@ -1,11 +1,9 @@
 <%- include('../partials/static-header') %>
-
 <style>
     p{
         font-weight: 500;
     }
 </style>
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -66,7 +64,7 @@
                         <% } %>
                     </p>
                     <% if(comp.price){ %>
-                        <p>Price: <%= comp.price %></p>
+                        <p><strong> Price: <%= comp.price %></strong></p>
                     <% } %>
                     <hr>
                     <p class="card-text"><%= comp.desc %></p>
@@ -80,18 +78,11 @@
         <div class="col-md-3 mt-5">
             <div class="list-group mb-4">
                 <% let flag2 = false; %>
-                <% for(let c of currentUser.signedUpFor){ %>
-                    <% if(c.title === comp.title){ %>
-                        <% flag2 = true; %>
-                       <%  break; %>
-                    <% } %>
-                <% } %>
+                <!--  -->
                 <% if(comp.signUpLastDate > Date.now()){ %>
                     <% if(!flag2){ %>
                         <li class="list-group-item mb-3" style="padding: 0 0; border: 0;">
-                            <form action="/competitions/<%= comp._id %>/signup" method="POST">
-                                <button class="btn btn-primary btn-block" target="_blank">Sign Up</button>
-                            </form>
+                                <a class="btn btn-primary btn-block" target="_blank"  href="<%= comp.signupLink %>"> Sign Up </a>
                         </li>
                     <% } else { %>
                         <p class="lead mb-3">Already signed up.</p>
@@ -109,66 +100,8 @@
                     </li>
                 <% } %>
             </div>
-          <% let flag = false; %>
-          <% for(let rating of ratings){ %>
-              <% if(rating.author.username == currentUser.username){ %>
-                  <% flag = true; %>
-                  <% break; %>
-                  <%= console.log(rating) %>
-              <% } %>
-          <% } %>
-          <% let check = false %>
-          <% for(let co of currentUser.signedUpFor){ %>
-              <% if(co.title === comp.title){ %>
-                  <% check = true; %>
-                  <% break; %>
-              <% } %>
-          <% } %>
-          <% if(comp.date < Date.now() && check){ %>
-              <% if(!flag){ %>
-                  <form action="/competitions/<%= comp._id %>/rating" method="POST">
-                      <!-- Change starability-basic to different class to see animations. -->
-                      <fieldset class="starability-basic">
-                        <legend>Rating:</legend>
-                        <input type="radio" id="no-rate" class="input-no-rate" name="rating[rating]" value="0" checked aria-label="No rating." />
-                  
-                        <input type="radio" id="rate1" name="rating[rating]" value="1" />
-                        <label for="rate1">1 star.</label>
-                  
-                        <input type="radio" id="rate2" name="rating[rating]" value="2" />
-                        <label for="rate2">2 stars.</label>
-                  
-                        <input type="radio" id="rate3" name="rating[rating]" value="3" />
-                        <label for="rate3">3 stars.</label>
-                  
-                        <input type="radio" id="rate4" name="rating[rating]" value="4" />
-                        <label for="rate4">4 stars.</label>
-                  
-                        <input type="radio" id="rate5" name="rating[rating]" value="5" />
-                        <label for="rate5">5 stars.</label>
-                  
-                        <!-- <span class="starability-focus-ring"></span> -->
-                      </fieldset>
-                      <button class="btn btn-warning btn-sm mt-2">Submit Rating</button>
-                  </form>
-              <% } else { %>
-                  
-                  <% let currentRating; %>
-                  <% for(let rating of ratings){ %>
-                      <% if(rating.author.username == currentUser.username){ %>
-                          <% currentRating = rating %>
-                          <% break; %>
-                      <% } %>
-                  <% } %>
-  
-                  <p class="starability-result" data-rating="<%= currentRating.rating %>">
-                    Rated: <%= currentRating.rating %> stars
-                  </p>
-                  <p>Rating already submitted</p>
-              <% } %>
-          <% } else { %>
-              <p>You can only rate after competition date has elapsed and if you have signed up.</p>
-          <% } %>
+          
+          
       </div>
     </div>
     <div class="row">

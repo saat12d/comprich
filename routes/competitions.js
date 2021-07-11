@@ -265,6 +265,22 @@ router.post('/competitions',  upload.array('images', 4), async function (req, re
     })
 })
 
+router.get('/competitions/tgcc',  (req, res) => {
+    Competition.findById('60eab8bd077199001727c157').populate('ratings').exec((err, foundComp) => {
+        if (err) {
+            console.log(err)
+            return res.redirect('back')
+        }
+        Rating.find({ comp_title: foundComp.title }, (err, rating) => {
+            if (err) {
+                req.flash('error', err.message)
+                return res.redirect('back')
+            }
+            res.render('competitions/tgcc', { comp: foundComp, ratings: rating })
+        })
+    })
+})
+
 router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
     Competition.findById(req.params.id).populate('ratings').exec((err, foundComp) => {
         if (err) {
