@@ -1,5 +1,4 @@
-
-
+let arr = [];
 // select all elements
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
@@ -84,11 +83,9 @@ function renderQuestion(){
 
 }
 
-function sendAndCheck(){
-   //use this for exporting answer choices to mainML.js 
-}
 
 start.addEventListener("click",startQuiz);
+
 
 // start quiz
 function startQuiz(){
@@ -108,7 +105,12 @@ function renderProgress(){
 
 
 
-function checkAnswer(){
+function checkAnswer(answer){
+    if( answer == questions[runningQuestion].choiceA){
+        arr.push(0);
+    } else if( answer == questions[runningQuestion].choiceB){
+        arr.push(1);
+    }
     answerIsComplete();
     count = 0;
     if(runningQuestion < lastQuestion){
@@ -132,26 +134,6 @@ function scoreRender(){
     scoreDiv.style.display = "block";  
     let img = "img/5.png";
     scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>Thank you for taking this short personality test</p>";
+    scoreDiv.innerHTML += "<p>"+8+"</p>";
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
