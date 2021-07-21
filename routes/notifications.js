@@ -1,5 +1,6 @@
 const express = require("express");
-const router = express.Router()
+const router = express.Router();
+const middleware = require('../middleware/index')
 
 router.get("/notifications", (req, res) => {
     return res.render("notifications.ejs")
