@@ -8,8 +8,8 @@ router.get("/notifications", (req, res) => {
 // We only want access to notifications if user is logged in but since i could not
 // login on localhost i made the notifications route accessible without logging in 
 
-// router.get('/notifications', middleware.isLoggedIn, (req, res) => {
-//     return res.render('notifications.ejs');
-// })
+router.get('/notifications', middleware.isLoggedIn, (req, res) => {
+    return res.render('notifications.ejs');
+})
 
 module.exports = router;

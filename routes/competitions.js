@@ -144,6 +144,7 @@ router.post('/competitions',  upload.array('images', 4), async function (req, re
             if(stats.latestCompsAdded == 3){
                 let user = await User.find({});
                 user.notifications.push({
+                    title: 'New Competitions!',
                     text: '3 new events have been added!',
                     link: 'www.comprich.org/competitions'
                 })

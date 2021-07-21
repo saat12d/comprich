@@ -13,13 +13,16 @@
 <div class="col-12">
   <div id="notiDisplay" class="row text-center mb-4 mt-4 px-2" style="display: flex; flex-wrap: wrap; margin-left: 15%;">
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 mb-4">
-      <a href="#"><div class="card" href="#">
-        <div class="card-body">
-          <h4 class="card-title">dummy notification 1</h4>
-          <p class="card-text">this is the notification content enter stuff here</p>
-          <a href="#" class="btn btn-primary">This is the link</a>
-        </div>
-      </div></a>
+      <% for(let notification of currentUser.notifications){ %>
+        <a href="#"><div class="card" href="#">
+          <div class="card-body">
+            <h4 class="card-title"><%= notification.title %></h4>
+            <p class="card-text"><%= notification.text %></p>
+            <a href="<%= notification.link %>" class="btn btn-primary">Check it out!</a>
+          </div>
+        </a>
+      <% } %>
+
       <a href="#"><div class="card" href="#">
         <div class="card-body">
           <h4 class="card-title">dummy notification 2</h4>
