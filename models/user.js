@@ -50,6 +50,12 @@ const userSchema = new mongoose.Schema({
             },
             title: String
         }
+    ],
+    notifications: [
+        {
+            text: String,
+            link: String
+        }
     ]
 })
 

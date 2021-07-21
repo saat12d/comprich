@@ -100,7 +100,7 @@ app.use((req, res, next) => {
 // User.find({}, (err, users) => {
 //     let i = 0;
 //     users.forEach((user) => {
-//         if(i > 144){
+//         if(i > 200){
 //             console.log(user.email + ',');
 //         }
 //         i++;
@@ -111,7 +111,7 @@ app.use('/', indexRoutes);
 app.use('/', compRoutes);
 app.use('/', userRoutes);
 app.use('/', blogRoutes);
-// app.use('/', notiRoutes);
+app.use('/', notiRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('CompRich server started on port ' + process.env.PORT)

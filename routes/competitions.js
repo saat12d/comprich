@@ -16,11 +16,13 @@ const middleware = require('../middleware/index')
 const User = require('../models/user')
 const Competition = require('../models/competition')
 const Rating = require('../models/rating')
+const Stats = require('../models/stats');
 
 const upload = require('../multer.js');
 
 const cloudinary = require('cloudinary')
 const { render } = require('ejs')
+const stats = require('../models/stats')
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -28,120 +30,14 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-// add variable to keep track opf new comps added, use to send notifications
-let newComps = 0;
+
+// Stats.create({latestCompsAdded: 0, name: "Main"});
+// Stats.create({latestCompsAdded: 0, name: "Test"});
 
 
 router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index')
 })
-
-// router.get('/competitions', async (req, res) => {
-//     let renderComps;
-//     let pages;
-//     var perPage = 8;
-//     var pageQuery = parseInt(req.query.page);
-//     var pageNumber = pageQuery ? pageQuery : 1;
-//     if(req.query.search){
-//         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-//         await Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex},]}).skip((perPage * pageNumber) - perPage).limit(perPage).then(async (foundComps) => {
-//             let cnt;
-//             await Competition.count((err, count) => {
-//                 if(err){
-//                     console.log(err);
-//                     req.flash('error', err.message);
-//                     return res.redirect('back');
-//                 }
-//                 cnt = count;
-//             })
-//             renderComps = [];
-//             for(let comp of foundComps){
-//                 renderComps.push(comp);
-//             }
-//             pages = Math.ceil(cnt / perPage);
-//             console.log(pages);
-//             console.log('searching...');
-//             // }).catch(err => {
-//             //     if(err){
-//             //         req.flash('error', err.message);
-//             //         console.log('ERROR: ' + err.message);
-//             //         return res.redirect('back'); 
-//             //     }
-//             // })
-//         }).catch((err) => {
-//             if(err){
-//                 req.flash('error', err.message);
-//                 console.log('ERROR: ' + err.message);
-//                 return res.redirect('back');
-//             }
-//         })
-
-//     } else {
-//         await Competition.find({}).skip((perPage * pageNumber) - perPage).limit(perPage).then(async (comps) => {
-//             let cnt = 0;
-//             await Competition.count((err, count) => {
-//                 if(err){
-//                     console.log(err);
-//                     req.flash('error', err.message);
-//                     return res.redirect('back');
-//                 }
-//                 cnt = count;
-//                 console.log('counting')
-//             })
-//             renderComps = [];
-//             for(let comp of comps){
-//                 renderComps.push(comp)
-//             }
-//             pages = Math.ceil(cnt / perPage);
-//             console.log(cnt);
-//             console.log(pages);
-//             console.log('searching');
-//         }).catch((err) => {
-//             if(err){
-//                 req.flash('error', err.message);
-//                 console.log('ERROR: ' + err.message);
-//                 return res.redirect('back');
-//             }
-//         })
-//         // console.log('render - ' + renderComps)
-//     }
-//     if(req.query.filter && req.query.filter !== '0'){
-//         console.log('in filter');
-//         if(req.query.filter == 'upcoming'){
-//             renderComps = bubbleSort(renderComps);
-//         }
-//         if(req.query.filter == 'over'){
-//             renderComps = isOver(renderComps);
-//         }
-//         if(req.query.filter == 'paid'){
-//             renderComps = arePaid(renderComps)
-//         }
-//         if(req.query.filter == 'free'){
-//             renderComps = areFree(renderComps);
-//         }
-//     }
-
-//     if(req.query.sort && req.query.sort !== '0'){
-//         console.log('in sort')
-//         renderComps = sortByCategory(renderComps, req.query.sort)
-//     }
-//     console.log(req.query)
-//     Rating.find({}).then((rating) => {
-//         res.render('competitions/competitions', {
-//             competitions: renderComps,
-//             ratings: rating,
-//             current: pageNumber,
-//             pages: pages,
-//             query: req.query
-//         })
-//     }).catch((err) => {
-//         if(err){
-//             req.flash('error', err.message);
-//             console.log('ERROR: ' + err.message);
-//             return res.redirect('back');
-//         }
-//     })
-// })
 
 router.get('/competitions', async (req, res) => {
     let renderComps;
@@ -236,29 +132,26 @@ router.post('/competitions',  upload.array('images', 4), async function (req, re
         }
     }
     req.body.competition.fromClubName = req.user.repOf
-    Competition.create(req.body.competition, (err, comp) => {
+    Competition.create(req.body.competition, async (err, comp) => {
         if (err) {
             console.log(err)
             req.flash('error', err.message)
             res.redirect('back')
         } else {
             console.log(comp)
-            console.log('successfully created comp')
-            newComps++;
-            if(newComps === 3){
-                User.find({}, (err, user) => {
-                    if(err){
-                        console.log(err);
-                        req.flash('error', err.message);
-                        res.redirect('back');
-                    } else {
-                        user.notifications.push({
-                            test: '3 new events have been added!',
-                            link: 'www.comprich.org/competitions'
-                        })
-                    }
+            console.log('successfully created comp');
+            stats = await Stats.find({name: 'Admin'});
+            if(stats.latestCompsAdded == 3){
+                let user = await User.find({});
+                user.notifications.push({
+                    text: '3 new events have been added!',
+                    link: 'www.comprich.org/competitions'
                 })
+                user.save();
+                stats.latestCompsAdded = 0;
+                stats.save();
             }
+            
             req.flash('success', 'Successfully added competition.')
             res.redirect('/competitions')
         }
