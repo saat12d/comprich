@@ -1,5 +1,5 @@
 /* jshint esversion: 6 */
-let arr = [];
+var arr = [];
 // select all elements
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
@@ -104,13 +104,19 @@ function renderProgress() {
     }
 }
 
+function AnswerA() {
+    document.getElementById("A").innerHTML = arr.push(0);
+}
 
+function AnswerB() {
+    document.getElementById("B").innerHTML = arr.push(1);
+}
 
 function checkAnswer(answer) {
     if (answer == questions[runningQuestion].choiceA) {
-        arr.push('0');
+        AnswerA();
     } else if (answer == questions[runningQuestion].choiceB) {
-        arr.push('1');
+        AnswerB();
     }
     answerIsComplete();
     count = 0;
@@ -121,7 +127,7 @@ function checkAnswer(answer) {
         // end the quiz and show the score
         scoreRender();
     }
-    console.log(arr);
+    console.log(arr); //remove once done with debugging
 }
 
 // answer is correct
