@@ -1,7 +1,6 @@
-/* jshint esversion: 6 */
-const brain = require('brain.js'); //dont convert to "import" in es6 or else it won't work
-const net = new brain.NeuralNetwork();
-
+/* jshint esversion:6 */
+const brain = require('brain.js');
+const net = brain.NeuralNetwork();
 net.train([ //trains Neural Network on examples of inputs from quiz (FYI, computed the following values in Jupyter Notebooks in Python)
     { input: { one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven: 0, eight: 0 }, output: { number: 0.13 } }, //Business
     { input: { one: 1, two: 1, three: 1, four: 1, five: 1, six: 1, seven: 1, eight: 1 }, output: { number: -0.13 } }, //Maths
@@ -11,8 +10,7 @@ net.train([ //trains Neural Network on examples of inputs from quiz (FYI, comput
 ]);
 
 
-
-var output = net.run({ one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven: 0, eight: 1 }); //converts object output to str then to float
+var output = net.run({ one: 1, two: 1, three: 1, four: 1, five: 1, six: 1, seven: 1, eight:1}); //converts object output to str then to float
 var myJSON = JSON.stringify(output);
 myJSON = myJSON.substr(10, 20);
 const final_number = parseFloat(myJSON);
@@ -33,5 +31,3 @@ if (final_number > 0.4) {
 } else if (-0.13 > final_number) {
     output = "Computer Science";
 }
-
-console.log(output);
