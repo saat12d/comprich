@@ -36,6 +36,10 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
     res.render('index')
 })
 
+router.get('/home', (req, res) => {
+    res.render('index');
+})
+
 // router.get('/competitions', async (req, res) => {
 //     let renderComps;
 //     let pages;
