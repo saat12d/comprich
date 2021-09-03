@@ -107,6 +107,10 @@ app.use((req, res, next) => {
 //     })
 // })
 
+app.get('/survey', (req, res) => {
+  res.render('survey');
+})
+
 app.use('/', indexRoutes);
 app.use('/', compRoutes);
 app.use('/', userRoutes);
