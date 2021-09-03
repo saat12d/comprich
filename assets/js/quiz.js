@@ -15,6 +15,7 @@ const choiceB = document.getElementById("B");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 
+
 // net.train([ //trains Neural Network on examples of inputs from quiz (FYI, computed the following values in Jupyter Notebooks in Python)
 //     { input: { one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven: 0, eight: 0 }, output: { number: 0.13 } }, //Business
 //     { input: { one: 1, two: 1, three: 1, four: 1, five: 1, six: 1, seven: 1, eight: 1 }, output: { number: -0.13 } }, //Maths
@@ -107,6 +108,7 @@ function checkAnswer() {
         runningQuestion++;
         renderQuestion();
     } else {
+
         scoreRender();
     }
 }
@@ -124,6 +126,7 @@ function scoreRender() {
     scoreDiv.style.display = "block";
     let img = "img/5.png";
     scoreDiv.innerHTML = "<img src=" + img + ">";
-    scoreDiv.innerHTML += "<p>" + arr  + "</p>";
+    scoreDiv.innerHTML += "<p>Thank you</p>";
 
 }
+
