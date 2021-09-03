@@ -423,6 +423,52 @@ router.post('/competitions/:id/signup', middleware.hasSignedUp, (req, res) => {
     })
 })
 
+router.get('/competitions/tgcc/signup', (req, res) => {
+    Competition.findById('60eab8bd077199001727c157', (err, comp) => {
+        if (err) {
+            console.log(err)
+            req.flash('error', err.message)
+            return res.redirect('back')
+        }
+        console.log('found it')
+        // User.findById(req.user._id, (err, user) => {
+        //     if (err) {
+        //         console.log(err)
+        //         req.flash('error', err.message)
+        //         return res.redirect('/back')
+        //     }
+        //     const comp_details = {
+        //         id: comp._id,
+        //         title: comp.title
+        //     }
+        //     user.signedUpFor.push(comp_details)
+        //     user.save()
+
+        //     const user_details = {
+        //         id: user._id,
+        //         lname: user.lastName,
+        //         fname: user.firstName,
+        //         username: user.username
+        //     }
+        //     comp.signedUp.push(user_details)
+        //     comp.save()
+        // })
+        const newClick = {
+            click: 'clicked'
+        }
+        console.log('new click')
+        comp.signedUp.push(newClick)
+        comp.save()
+        console.log('new click added')
+        if (comp.signupLink.substring(0, 4) == 'https' || comp.signupLink.substring(0, 3) == 'http') {
+            res.redirect(comp.signupLink)
+        } else {
+            res.redirect(comp.signupLink);
+        }
+    })
+})
+
+
 router.post('/competitions/:id/feedback', middleware.isLoggedIn, (req, res) => {
     Competition.findById(req.params.id, (err, comp) => {
         if(err){

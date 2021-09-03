@@ -41,75 +41,119 @@
   <link rel="stylesheet" href="../../assets/css/notifications.css" />
 </head>
 
-<% if(error && error.length > 0){ %>
-  <div class="alert alert-danger" role="alert">
-    <%= error %>
-  </div>
-<% } %>
-<% if(success && success.length > 0){ %>
-  <div class="alert alert-success" role="alert">
-    <%= success %>
-  </div>
-<% } %>
+<style>
 
+body {
+    background-color: rgb(230, 222, 200);
+}
 
-<body class="landing-page sidebar-collapse">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="300" style="margin-bottom: 50px !important;">
-    <div class="container-fluid" >
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="/home" rel="tooltip" title="Comprich" data-placement="bottom">
-          <img src="/img/comprichlogowhite.jpeg" alt="" height="70vh" width="230vw">
-          <!-- CompRich -->
-        </a>
-        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="/competitions" class="nav-link"><i class="nc-icon nc-layout-11"></i> Events</a>
-          </li>
-          <li class="nav-item">
-            <a href="/blogs" class="nav-link"> Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link"><i class="nc-icon nc-book-bookmark"></i> Contact Us</a>
-          </li>
-            <% if(currentUser && currentUser.isAdmin){ %>
-              <li class="nav-item">
-                <a href="/new" class="nav-link"> New Event</a>
-              </li>
-            <% } %>
-            <% if(currentUser){ %>
-              <li class="nav-item">
-                <a href="/logout" class="nav-link">Logout</a>
-              </li>
-            <% } else { %>
-              <li class="nav-item">
-                <a href="/login" class="nav-link">Login</a>
-              </li>
-              <li class="nav-item">
-                <a href="/register" class="nav-link">Sign Up</a>
-              </li>
-            <% } %>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <% if(currentUser){ %>
-          <li class="nav-item">
-            <a href="/notifications" class="nav-link" id="noti-bell"><i class="fas fa-bell"></i></a>
-          </li>
-          <% } %>
-              <li class="nav-item">
-                <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/comprichapp/" target="_blank">
-                  <i class="fa fa-instagram"></i>
-                  <p class="d-lg-none">Instagram</p>
-                </a>
-              </li>
-        </ul>
-      </div>
+    #clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: rgb(230, 185, 37);
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rgb(143, 128, 89);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+</style>
+
+<body>
+    <div class="container text-center  align-items-center">
+        <h1 class="display-2">Sorry, the site is under maintenance.</h1>
+        <h3 class="mb-5">Please check in after 48 hours to start your competitive journey</h3>
+
+        <div id="clockdiv" class="col-md-8 mt-4" style="width: 100%; transform: scale(1.5)">
+            <div>
+              <span class="days"></span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div>
+              <span class="hours"></span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div>
+              <span class="minutes"></span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+              <span class="seconds"></span>
+              <div class="smalltext">Seconds</div>
+            </div>
+        </div>
     </div>
-  </nav>
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-md-6 mt-5" style="display: block; margin: 20px auto">
+                <img src="img/comprichlogosmall.png" style="max-width: 100%; height: 30vh; display: block; margin: 0 auto; border-radius: 30px;" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function getTimeRemaining(endtime) {
+        const total = Date.parse(endtime) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(total / (1000 * 60 * 60 * 24));
+        
+        return {
+            total,
+            days,
+            hours,
+            minutes,
+            seconds
+        };
+    }
+
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const daysSpan = clock.querySelector('.days');
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+const deadline = new Date('August 21 2021 11:59:59 GMT+0400');
+initializeClock('clockdiv', deadline);
+</script>
+
+</html>
+

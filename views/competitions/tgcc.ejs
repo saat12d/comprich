@@ -83,7 +83,9 @@
                 <% if(comp.signUpLastDate > Date.now()){ %>
                     <% if(!flag2){ %>
                         <li class="list-group-item mb-3" style="padding: 0 0; border: 0;">
-                                <a class="btn btn-primary btn-block" target="_blank"  href="<%= comp.signupLink %>"> Sign Up </a>
+                            <form action="/competitions/tgcc/signup">
+                                <button class="btn btn-primary btn-block" target="_blank"> Sign Up </button>
+                            </form>
                         </li>
                     <% } else { %>
                         <p class="lead mb-3">Already signed up.</p>

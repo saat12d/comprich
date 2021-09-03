@@ -11,6 +11,7 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
     return res.redirect('/competitions');
 })
 
+
 router.get('/home', middleware.isNotLoggedIn, (req, res) => {
     return res.render('index.ejs');
 })
