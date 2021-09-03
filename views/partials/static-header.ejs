@@ -79,6 +79,7 @@
           <li class="nav-item">
             <a href="/blogs" class="nav-link">Blog</a>
           </li>
+
           <% if(currentUser && currentUser.isAdmin){ %>
             <li class="nav-item">
               <a href="/new" class="nav-link"> New Event</a>
@@ -90,6 +91,9 @@
             </li>
           <% } %>
           <% if(currentUser){ %>
+            <li class="nav-item">
+              <a href="/survey" class="nav-link">Recommendation Quiz</a>
+            </li>
             <li class="nav-item">
               <a href="/logout" class="nav-link">Logout</a>
             </li>
