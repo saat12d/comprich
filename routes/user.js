@@ -294,7 +294,7 @@ router.post("/reset/:token", (req, res) => {
     );
 });
 
-router.get("/my-profile", middleware.isLoggedIn, (req, res) => {
+router.get("/my-profile", middleware.isLoggedIn, (req, res) => { 
     User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err);
@@ -303,6 +303,16 @@ router.get("/my-profile", middleware.isLoggedIn, (req, res) => {
         res.render("user/profile", { user: user });
     });
 });
+
+// router.get("/onlinecv", middleware.isLoggedIn, (req, res) => { 
+//     User.findById(req.user._id, (err, user) => {
+//         if (err) {
+//             console.log(err);
+//             return res.redirect("back");
+//         }
+//         res.render("user/online-cv", { user: user });
+//     });
+// });
 
 router.get("/my-profile/edit", middleware.isLoggedIn, (req, res) => {
     User.findById(req.user._id, (err, user) => {

@@ -28,6 +28,7 @@
                             <%= comp.title %> <span>( Unverified )</span>
                         <form action="/<%= comp.id %>/remove" method="POST" style="display: inline;">
                             <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#verifyModal">Verify</button>
                         </form>
                         </p>
                     </li>
@@ -37,8 +38,31 @@
     </div>
 </div>
 
-
-
-
+<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Verification Form</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <h6 style="text-align: center;">TGCC Competition</h6><!-- Add autofill for competition name I'm having a database bug on my machine-->
+                <div class="form-group">
+                    <label for="awardsWon">Awards Won (if any):</label>
+                    <input type="text" class="form-control" id="awardsWon" placeholder="Enter here">
+                </div>
+                <div class="form-group">
+                    <label for="skillsGained">Skills Gained (if any):</label>
+                    <input type="text" class="form-control" id="skillsGained" placeholder="Enter here">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin: 8px;">Close</button>
+                    <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">Submit</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
 
 <%- include('../partials/footer') %>
