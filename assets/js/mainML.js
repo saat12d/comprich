@@ -3,23 +3,23 @@ const brain = require('brain.js');
 const net = new brain.NeuralNetwork();
 
 
-net.train([ //trains Neural Network on examples of inputs from quiz (FYI, computed the following values in Jupyter Notebooks in Python)
+net.train([ //trains Neural Network on examples of inputs from quiz
     { input: { one: 0, two: 0, three: 0, four: 0, five: 0, six: 0, seven: 0, eight: 0 }, output: { number: 0.13 } }, //Business
     { input: { one: 1, two: 1, three: 1, four: 1, five: 1, six: 1, seven: 1, eight: 1 }, output: { number: -0.13 } }, //Maths
     { input: { one: 1, two: 0, three: 1, four: 0, five: 1, six: 0, seven: 1, eight: 0 }, output: { number: 0.01 } }, //Debating
     { input: { one: 0, two: 1, three: 0, four: 1, five: 0, six: 1, seven: 0, eight: 1 }, output: { number: 0.21 } }, //Writing
     { input: { one: 1, two: 0, three: 1, four: 1, five: 1, six: 1, seven: 0, eight: 0 }, output: { number: -0.19 } }, //Computer Science
 ]);
-
+var arr = [];
 
 var output = net.run({ 
     one: 1, 
-    two: 0, 
+    two: 1, 
     three: 0, 
-    four:0, 
-    five:0, 
-    six:0, 
-    seven:1, 
+    four: 0, 
+    five: 0, 
+    six: 1, 
+    seven: 0, 
     eight: 1
 }); //converts object output to str then to float
 var myJSON = JSON.stringify(output);

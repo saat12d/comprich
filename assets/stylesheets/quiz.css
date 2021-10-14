@@ -64,8 +64,18 @@ body {
   left: 240px;
   top: 125px;
   padding: 10px;
-  margin: 0 auto
+  margin: 0 auto;
   float: left;
+  display: block
+}
+#finish {
+  max-width: 1000px;
+  /* position: absolute; */
+  left: 0px;
+  top: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  float: right;
   display: block
 }
 .choice {
