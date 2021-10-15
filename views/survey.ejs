@@ -131,15 +131,13 @@
       <div id="quiz" style="display: none">
         <div id="question"></div>
         <div id="choices">
-          <div class="choice" id="A" onclick="checkAnswer(''), arr.push(0)"></div>
-          <div class="choice" id="B" onclick="checkAnswer(''), arr.push(1)"></div>
+          <div class="choice" id="A" onclick="checkAnswer(''), addA() "></div>
+          <div class="choice" id="B" onclick="checkAnswer(''), addB()"></div>
         </div>
-        <div id="finish" class="choice" onclick="finishQuiz()">Finish</div>
         <div id="progress"></div>
       </div>
       <div id="scoreContainer" style="display: none"></div>
     </div>
-    <script src="/js/mainML.js"></script>
     <script src="/js/quiz.js"></script>
 
  <%- include('partials/footer') %>
