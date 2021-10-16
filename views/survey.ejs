@@ -127,11 +127,16 @@
         </div>
       </div>
     </nav>
-    <div id="container">
-      <div id="start">Start Quiz!</div>
-      <div id="quiz" style="display: none">
+    
+    <div class="container" style="border-radius: 10px; width: 80vw; height: 70vh; align-items: center; overflow:scroll;">
+      <h1 style="text-align: center;" id="title1">Recommendation Quiz</h1>
+      <h5 style="text-align: center; margin-top: 3%;" id="title2">Tell us more about yourself and we will recommend you competitions!</h5>
+      <div class="col text-center">
+      <button type="button" class="btn btn-info" id="startButton" style="margin-top: 15%; width: 60%;">Start Quiz</button>
+      </div>
+      <div id="quiz" style="display: none; width: auto; height: 58%;align-items: center; margin-top: 3%;">
         <div id="question"></div>
-        <div id="choices">
+        <div id="choices" style="border: 1px black;">
           <div class="choice" id="A" onclick="checkAnswer('')"></div>
           <div class="choice" id="B" onclick="checkAnswer('')"></div>
         </div>
@@ -139,6 +144,8 @@
       </div>
       <div id="scoreContainer" style="display: none"></div>
     </div>
+
+
     <script src="/js/mainML.js"></script>
     <script src="/js/quiz.js"></script>
 
