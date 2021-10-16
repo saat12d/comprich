@@ -55,37 +55,38 @@ body {
 #choices {
   width: auto;
   /* position: absolute; */
-  padding: 10px;
   height: 10%;
-  margin: 0 auto;
   margin-top: 5%;
-  border: 2px solid black;
+}
+
+#finish {
+  max-width: 1000px;
+  position: absolute;
+  left: 0px;
+  top: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  float: right;
+  display: block
 }
 
 .choice {
-  display: inline-block;
-  max-width: 300px;
-  min-width: 135px;
   text-align: center;
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
   transition: 300ms;
-  margin: auto;
+  min-width: 100px;
 }
+
 .choice:hover {
   border: 1px solid grey;
   background: #51cbce;
 }
 
-#A {
-  margin-left: 20%;
-}
-
 #B {
-  float: right;
-  margin-right: 20%;
+  margin-top: 5px;
 }
 
 #counter {
@@ -105,6 +106,7 @@ body {
   margin-top: -10px;
   margin-left: 25px;
 }
+
 #progress {
   width: auto;
   padding-right: 1%;
