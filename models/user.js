@@ -59,7 +59,8 @@ const userSchema = new mongoose.Schema({
             awards: String
         }
     ],
-    recScore: Number
+    recScore: Number,
+    hasTakenRec: {type: Boolean, default: false}
 })
 
 userSchema.plugin(passportLocalMongoose)

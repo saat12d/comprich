@@ -160,6 +160,7 @@ function answerIsComplete() {
 function scoreRender() {
     quiz.style.display = "none"
     scoreDiv.style.display = "block";
+    let personal_output = "";
     if (finalNumber > 0.4) {
         personal_output = "Art";
     } else if (0.4 > finalNumber && finalNumber > 0.3) {
@@ -175,5 +176,6 @@ function scoreRender() {
     } else if (-0.13 > finalNumber) {
         personal_output = "Computer Science";
     }
-    scoreDiv.innerHTML += "<p>"+personal_output+"</p>";
+    scoreDiv.innerHTML += "<p>You are well suited towards <span>"+personal_output+"</span> competitions.</p><br><p>Head over to the competitions page to unlock your true potential!</p>";
+    console.log(personal_output);
 }
