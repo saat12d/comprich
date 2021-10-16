@@ -383,6 +383,14 @@ router.post("/:id/remove", middleware.isLoggedIn, (req, res) => {
     });
 });
 
+router.post('/recScore', async (req, res) => {
+    await User.findById(req.user._id, (err, user) => {
+        user.recScore = req.body.recScore;
+        user.save()
+    })
+    return res.redirect('/competitions');
+})
+
 function remove(arr, user) {
     outArr = [];
     for (let sign of arr) {

@@ -91,10 +91,12 @@ function renderQuestion() {
 
 function addA(){
     finalNumber += questions[runningQuestion].scoreA;
+    console.log(finalNumber)
 }
 
 function addB(){
     finalNumber += questions[runningQuestion].scoreB;
+    console.log(finalNumber)
 }
 
 start.addEventListener("click", startQuiz);
@@ -143,15 +145,15 @@ function scoreRender() {
     scoreDiv.style.display = "block";
     if (finalNumber > 0.4) {
         personal_output = "Art";
-    } else if (0.4 > finalNumber > 0.3) {
+    } else if (0.4 > finalNumber && finalNumber > 0.3) {
         personal_output = "Writing";
-    } else if (0.3 > finalNumber > 0.1) {
+    } else if (0.3 > finalNumber && finalNumber > 0.1) {
         personal_output = "Debating";
-    } else if (0.1 > finalNumber > 0) {
+    } else if (0.1 > finalNumber && finalNumber > 0) {
         personal_output = "Business";
-    } else if (0 > finalNumber > -0.1) {
+    } else if (0 > finalNumber && finalNumber > -0.1) {
         personal_output = "Science";
-    } else if (-0.1 > finalNumber > -0.13) {
+    } else if (-0.1 > finalNumber && finalNumber > -0.13) {
         personal_output = "Maths";
     } else if (-0.13 > finalNumber) {
         personal_output = "Computer Science";

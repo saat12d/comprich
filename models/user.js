@@ -50,7 +50,16 @@ const userSchema = new mongoose.Schema({
             },
             title: String
         }
-    ]
+    ],
+    cv: [
+        {
+            competition: String,
+            date: Date,
+            skills: String,
+            awards: String
+        }
+    ],
+    recScore: Number
 })
 
 userSchema.plugin(passportLocalMongoose)

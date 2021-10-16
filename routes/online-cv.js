@@ -5,6 +5,10 @@ router.get("/onlinecv", (req, res) => {
     return res.render("online-cv.ejs")
 })
 
+router.post('/onlinecv', (req, res) => {
+    
+})
+
 module.exports = router;
 
 // FIELDS TO BE ENTERED:
