@@ -1,9 +1,12 @@
 
 /*jshint esversion:6 */
-
-
-
-const start = document.getElementById("start");
+var arr = [];
+// select all elements
+// const brain = require('brain.js');
+// const net = new brain.NeuralNetwork();
+const start = document.getElementById("startButton");
+const title1 = document.getElementById("title1");
+const title2 = document.getElementById("title2");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
@@ -11,10 +14,6 @@ const choiceB = document.getElementById("B");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 var finalNumber = 0;
-
-
-
-
 
 
 
@@ -83,7 +82,7 @@ let runningQuestion = 0;
 // render a question
 function renderQuestion() {
     let qs = questions[runningQuestion];
-    question.innerHTML = "<p>" + qs.question + "</p>";
+    question.innerHTML = "<h6>" + qs.question + "</h6>";
     choiceA.innerHTML = qs.choiceA;
     choiceB.innerHTML = qs.choiceB;
 
@@ -104,6 +103,9 @@ start.addEventListener("click", startQuiz);
 
 // start quiz
 function startQuiz() {
+
+    title1.style.display = "none";
+    title2.style.display = "none";
     start.style.display = "none";
     renderQuestion();
     quiz.style.display = "block";
@@ -112,8 +114,14 @@ function startQuiz() {
 }
 
 // render progress
+// function renderProgress() {
+//     for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
+//         progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
+//     }
+// }
+
 function renderProgress() {
-    for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
+    for (let qIndex = lastQuestion; qIndex >= 0; qIndex--) {
         progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
     }
 }
@@ -141,7 +149,16 @@ function answerIsComplete() {
 
 
 // score render
+// function scoreRender() {
+//     scoreDiv.style.display = "block";
+//     let img = "img/5.png";
+//     scoreDiv.innerHTML = "<img src=" + img + ">";
+//     scoreDiv.innerHTML += "<p>Thank you</p>";
+
+// }
+
 function scoreRender() {
+    quiz.style.display = "none"
     scoreDiv.style.display = "block";
     if (finalNumber > 0.4) {
         personal_output = "Art";
@@ -159,5 +176,4 @@ function scoreRender() {
         personal_output = "Computer Science";
     }
     scoreDiv.innerHTML += "<p>"+personal_output+"</p>";
-
 }

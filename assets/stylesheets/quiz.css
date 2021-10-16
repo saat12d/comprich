@@ -1,34 +1,27 @@
 body {
   font-size: 20px;
-  font-family: monospace;
 }
 
 #container {
   margin: 20px auto;
   background-color: white;
-  height: 70vh;
-  width: 50vw;
   border-radius: 5px;
   box-shadow: 0px 5px 15px 0px;
-  position: relative;
 }
+
 #start {
   font-size: 1.5em;
   font-weight: bolder;
-  word-break: break-all;
-  width: 100px;
-  height: 150px;
-  border: 2px solid lightgrey;
   text-align: center;
   cursor: pointer;
-  position: absolute;
-  left: 300px;
-  top: 50px;
-  color: lightgrey;
+  margin-top: 5%;
+  height: 10%;
+  width: 80%;
+  transition: 300ms;
 }
 #start:hover {
-  border: 3px solid lightseagreen;
-  color: lightseagreen;
+  border: 2px solid #51cbce;
+  background-color: #51cbce;
 }
 
 #qImg {
@@ -45,29 +38,27 @@ body {
 }
 
 #question {
-  width: 500px;
-  height: 125px;
+  width: auto;
+  margin: 0 auto;
+  margin-top: 5%;
   /* position: absolute; */
-  right: 0;
-  top: 0;
-  display: block
+  display: block;
+  text-align: center;
 }
-#question p {
+
+#question h6 {
   margin: 0;
   padding: 15px;
   font-size: 1.25em;
 }
 
 #choices {
-  max-width: 1000px;
+  width: auto;
   /* position: absolute; */
-  left: 240px;
-  top: 125px;
-  padding: 10px;
-  margin: 0 auto;
-  float: left;
-  display: block
+  height: 10%;
+  margin-top: 5%;
 }
+
 #finish {
   max-width: 1000px;
   /* position: absolute; */
@@ -78,19 +69,24 @@ body {
   float: right;
   display: block
 }
+
 .choice {
-  display: inline-block;
-  max-width: 300px;
-  min-width: 135px;
   text-align: center;
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
+  transition: 300ms;
+  min-width: 100px;
 }
+
 .choice:hover {
-  border: 2px solid grey;
-  font-weight: bold;
+  border: 1px solid grey;
+  background: #51cbce;
+}
+
+#B {
+  margin-top: 5px;
 }
 
 #counter {
@@ -110,23 +106,23 @@ body {
   margin-top: -10px;
   margin-left: 25px;
 }
+
 #progress {
-  width: 500px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  padding: 5px;
-  text-align: right;
+  width: auto;
+  padding-right: 1%;
+  margin-top: 13%;
 }
+
 .prog {
   width: 25px;
   height: 25px;
   border: 1px solid #000;
-  display: inline-block;
   border-radius: 50%;
   margin-left: 5px;
   margin-right: 5px;
+  float: right;
 }
+
 #scoreContainer {
   margin: 20px auto;
   background-color: white;
