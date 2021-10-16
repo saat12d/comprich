@@ -61,7 +61,7 @@ body {
 
 #finish {
   max-width: 1000px;
-  position: absolute;
+  /* position: absolute; */
   left: 0px;
   top: 200px;
   padding: 10px;
