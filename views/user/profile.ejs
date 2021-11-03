@@ -51,12 +51,10 @@
                                         <label for="skillsGained">Skills Gained (if any):</label>
                                         <input type="text" class="form-control" id="skillsGained" name="cv[skills]" placeholder="Enter here">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" style="display: hidden">
                                         <input type="text" class="form-control" id="skillsGained" name="cv[competition]" value="<%= comp.title %>">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="skillsGained" name="cv[date]" value="<%= comp.date %>">
-                                    </div>
+
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin: 8px;">Close</button>
                                         <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">Submit</button>
