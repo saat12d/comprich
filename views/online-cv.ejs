@@ -11,12 +11,12 @@
     <div class="card">
         <img src="/img/default-avatar.png" id="pfp" src="" alt="Profile Picture" class="card-img-top" style="min-height: 45vh; max-height: 120vh">
     </div>
-    <h1>Saatvik Sharma</h1>
+    <h1><%= user.firstName %> <%= user.lastName %></h1>
     <h3>Details:</h3>
     <ul style="list-style: none;">
-        <li><p>School: GEMS Modern Academy</p></li>
-        <li><p>Year/Grade: Year 12/Grade 11</p></li>
-        <li><p>Email: abc@gmail.com</p></li>
+        <li><p>School: <%= user.school %></p></li>
+        <li><p>Year/Grade: <%= user.school %></p></li>
+        <li><p>Email: <%= user.email %></p></li>
     </ul>
 </div>
 

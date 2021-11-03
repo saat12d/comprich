@@ -42,14 +42,14 @@
                             </div>
                             <div class="modal-body">
                                 <form>
-                                    <h6 style="text-align: center;">TGCC Competition</h6><!-- Add autofill for competition name I'm having a database bug on my machine-->
+                                    <h6 style="text-align: center;"><%= comp.title %></h6><!-- Add autofill for competition name I'm having a database bug on my machine-->
                                     <div class="form-group">
                                         <label for="awardsWon">Awards Won (if any):</label>
-                                        <input type="text" class="form-control" id="awardsWon" placeholder="Enter here">
+                                        <input type="text" class="form-control" id="awardsWon" name="cv[awards]" placeholder="Enter here">
                                     </div>
                                     <div class="form-group">
                                         <label for="skillsGained">Skills Gained (if any):</label>
-                                        <input type="text" class="form-control" id="skillsGained" placeholder="Enter here">
+                                        <input type="text" class="form-control" id="skillsGained" name="cv[skills]" placeholder="Enter here">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin: 8px;">Close</button>
