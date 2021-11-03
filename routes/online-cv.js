@@ -12,7 +12,7 @@ router.get("/onlinecv", middleware.isLoggedIn, (req, res) => {
             console.log(err);
             return res.redirect("back");
         }
-        return res.render("online-cv.ejs")
+        return res.render("online-cv.ejs", {user: user})
     })
 })
 
