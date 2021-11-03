@@ -16,14 +16,21 @@ router.get("/onlinecv", middleware.isLoggedIn, (req, res) => {
     })
 })
 
-// router.post('/onlinecv', (req, res) => {
-//     req.user.body.cv = {
-//         awards: req.body.cv.awards,
-//         skills: req.body.cv.skills,
-
-//     }
-//     User.findByIdAndUpdate(req.user._id, req.user.body)
-// })
+router.post('/onlinecv', (req, res) => {
+    req.user.body.cv = {
+        awards: req.body.cv.awards,
+        skills: req.body.cv.skills,
+        competition: req.body.cv.comp
+    }
+    User.findByIdAndUpdate(req.user._id, req.user.body, (err, user) => {
+        if (err) {
+            console.log(err);
+            return res.redirect("back");
+        }
+        console.log(user);
+        res.redirect("/onlinecv");
+    })
+})
 
 module.exports = router;
 
