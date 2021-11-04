@@ -18,9 +18,9 @@ router.get("/onlinecv", middleware.isLoggedIn, (req, res) => {
 
 router.post('/onlinecv', (req, res) => {
     req.user.body.cv = {
-        awards: req.body.cv.awards,
-        skills: req.body.cv.skills,
-        competition: req.body.cv.comp
+        awards: req.body.awards,
+        skills: req.body.skills,
+        competition: req.body.comp
     }
     User.findByIdAndUpdate(req.user._id, req.user.body, (err, user) => {
         if (err) {
