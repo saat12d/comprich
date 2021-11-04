@@ -17,7 +17,7 @@ router.get("/onlinecv", middleware.isLoggedIn, (req, res) => {
 })
 
 router.post('/onlinecv', (req, res) => {
-    req.user.body.cv = {
+    req.user.cv = {
         awards: req.body.awards,
         skills: req.body.skills,
         competition: req.body.comp
