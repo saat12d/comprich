@@ -17,16 +17,17 @@ router.get("/onlinecv", middleware.isLoggedIn, (req, res) => {
 })
 
 router.post('/onlinecv', (req, res) => {
-    req.user.cv = {
-        awards: req.body.awards,
-        skills: req.body.skills,
-        competition: req.body.comp
-    }
-    User.findByIdAndUpdate(req.user._id, req.user.body, (err, user) => {
+    User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err);
             return res.redirect("back");
         }
+        user.cv.push({
+            awards: req.body.awards,
+            skills: req.body.skills,
+            competition: req.body.comp
+        })
+        user.save();
         console.log(user);
         res.redirect("/onlinecv");
     })
