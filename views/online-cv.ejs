@@ -23,7 +23,7 @@
 <div class="col-md-6" style="margin-left: 3%; margin-top: -2%; overflow-y: scroll; overflow-x: scroll;">
     <h1>Competitions Completed</h1><hr>
     <div style="overflow-y: scroll;">
-      <% for (let cv of user.cv){
+      <% for (let cv of user.cv){ %>
         <a href="#"><div class="card" href="#">
           <div class="card-body">
             <h4 class="card-title mb-3"><%= cv.competition %></h4>
@@ -34,7 +34,7 @@
           </div>
         </div>
       </a>
-      } %>
+      <% } %>
 
     
     </div>
