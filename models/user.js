@@ -48,12 +48,14 @@ const userSchema = new mongoose.Schema({
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Competition'
             },
-            title: String
+            title: String,
+            verified: {type: Boolean, default: false}
         }
     ],
     cv: [
         {
             competition: String,
+            comp_id: String,
             date: Date,
             skills: String,
             awards: String

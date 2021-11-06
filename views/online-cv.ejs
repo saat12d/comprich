@@ -23,32 +23,20 @@
 <div class="col-md-6" style="margin-left: 3%; margin-top: -2%; overflow-y: scroll; overflow-x: scroll;">
     <h1>Competitions Completed</h1><hr>
     <div style="overflow-y: scroll;">
-    <a href="#"><div class="card" href="#">
-        <div class="card-body">
-          <h4 class="card-title mb-3">TGCC</h4>
-            <p class="" style="font-weight: 400;">Skills Gained: Presentation, Business mindset</p>
-            <p class=""  style="font-weight: 400;">Awards Won: Regional Case Winner</p>
+      <% for (let cv of user.cv){
+        <a href="#"><div class="card" href="#">
+          <div class="card-body">
+            <h4 class="card-title mb-3"><%= cv.competition %></h4>
+              <p class="" style="font-weight: 400;">Skills Gained: <%= cv.skills %></p>
+              <p class=""  style="font-weight: 400;">Awards Won: <%= cv.awards %></p>
+  
+            <a href="#" class="btn btn-black">Link to competition</a>
+          </div>
+        </div>
+      </a>
+      } %>
 
-          <a href="#" class="btn btn-black">Link to competition</a>
-        </div>
-      </div></a>
-    <a href="#"><div class="card" href="#">
-        <div class="card-body">
-          <h4 class="card-title mb-3">Youth Financial Analysis Competition</h4>
-            <p class="" style="font-weight: 400;">Skills Gained: Financial Literacy, Economic Analysis</p>
-            <p class=""  style="font-weight: 400;">Awards Won: None</p>
-          <a href="#" class="btn btn-black">Link to competition</a>
-        </div>
-      </div></a>
     
-    <a href="#"><div class="card" href="#">
-        <div class="card-body">
-          <h4 class="card-title mb-3">NASA CineSpace</h4>
-          <p style="font-weight: 400;">Skills Gained: Filmmaking</p>
-          <p class=""  style="font-weight: 400;">Awards Won: None</p>
-          <a href="#" class="btn btn-black">Link to competition</a>
-        </div>
-      </div></a>
     </div>
 </div>
 
