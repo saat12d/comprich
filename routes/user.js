@@ -60,7 +60,8 @@ const adminCodes = [
     {club: 'BEES Club', code: 'admin@bees_yp8w4'},
     {club: 'Global Investor Challenge', code: 'admin@gic_hz2f9'},
     {club: 'Finatic', code: 'admin@fin_x3a93'},
-    {club: 'TGCC', code: 'admin@tgcc_j3b27'}
+    {club: 'TGCC', code: 'admin@tgcc_j3b27'},
+    {club: 'HGEC', code: 'admin@hgec_u834g'}
 ];
 
 cloudinary.config({
