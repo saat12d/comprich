@@ -148,6 +148,9 @@ router.get('/home', (req, res) => {
 // })
 
 router.get('/competitions', async (req, res) => {
+    Competition.find({title: 'Modern World Debates'}, (err, comp) => {
+        console.log(comp);
+    })
     let renderComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -269,8 +272,40 @@ router.post('/competitions',  upload.array('images', 4), async function (req, re
     })
 })
 
-router.get('/competitions/tgcc',  (req, res) => {
-    Competition.findById('60eab8bd077199001727c157').populate('ratings').exec((err, foundComp) => {
+// router.get('/competitions/tgcc',  (req, res) => {
+//     Competition.findById('60eab8bd077199001727c157').populate('ratings').exec((err, foundComp) => {
+//         if (err) {
+//             console.log(err)
+//             return res.redirect('back')
+//         }
+//         Rating.find({ comp_title: foundComp.title }, (err, rating) => {
+//             if (err) {
+//                 req.flash('error', err.message)
+//                 return res.redirect('back')
+//             }
+//             res.render('competitions/tgcc', { comp: foundComp, ratings: rating })
+//         })
+//     })
+// })
+
+router.get('/competitions/modernworlddebates',  (req, res) => {
+    Competition.findById('61a3c5a6a94b930018ae035f').populate('ratings').exec((err, foundComp) => {
+        if (err) {
+            console.log(err)
+            return res.redirect('back')
+        }
+        Rating.find({ comp_title: foundComp.title }, (err, rating) => {
+            if (err) {
+                req.flash('error', err.message)
+                return res.redirect('back')
+            }
+            res.render('competitions/tgcc', { comp: foundComp, ratings: rating })
+        })
+    })
+})
+
+router.get('/competitions/hgec',  (req, res) => {
+    Competition.findById('61a429f8a94b930018ae0365').populate('ratings').exec((err, foundComp) => {
         if (err) {
             console.log(err)
             return res.redirect('back')
@@ -427,36 +462,37 @@ router.post('/competitions/:id/signup', middleware.hasSignedUp, (req, res) => {
     })
 })
 
-router.get('/competitions/tgcc/signup', (req, res) => {
-    Competition.findById('60eab8bd077199001727c157', (err, comp) => {
+router.get('/competitions/hgec/signup', (req, res) => {
+    Competition.findById('61a429f8a94b930018ae0365', (err, comp) => {
         if (err) {
             console.log(err)
             req.flash('error', err.message)
             return res.redirect('back')
         }
         console.log('found it')
-        // User.findById(req.user._id, (err, user) => {
-        //     if (err) {
-        //         console.log(err)
-        //         req.flash('error', err.message)
-        //         return res.redirect('/back')
-        //     }
-        //     const comp_details = {
-        //         id: comp._id,
-        //         title: comp.title
-        //     }
-        //     user.signedUpFor.push(comp_details)
-        //     user.save()
+        const newClick = {
+            click: 'clicked'
+        }
+        console.log('new click')
+        comp.signedUp.push(newClick)
+        comp.save()
+        console.log('new click added')
+        if (comp.signupLink.substring(0, 4) == 'https' || comp.signupLink.substring(0, 3) == 'http') {
+            res.redirect(comp.signupLink)
+        } else {
+            res.redirect(comp.signupLink);
+        }
+    })
+})
 
-        //     const user_details = {
-        //         id: user._id,
-        //         lname: user.lastName,
-        //         fname: user.firstName,
-        //         username: user.username
-        //     }
-        //     comp.signedUp.push(user_details)
-        //     comp.save()
-        // })
+router.get('/competitions/mwd/signup', (req, res) => {
+    Competition.findById('61a3c5a6a94b930018ae035f', (err, comp) => {
+        if (err) {
+            console.log(err)
+            req.flash('error', err.message)
+            return res.redirect('back')
+        }
+        console.log('found it')
         const newClick = {
             click: 'clicked'
         }

@@ -83,9 +83,16 @@
                 <% if(comp.signUpLastDate > Date.now()){ %>
                     <% if(!flag2){ %>
                         <li class="list-group-item mb-3" style="padding: 0 0; border: 0;">
-                            <form action="/competitions/tgcc/signup">
-                                <button class="btn btn-primary btn-block" target="_blank"> Sign Up </button>
+                          <% if(comp.title == "Harvard Crimson Global Essay Competition"){ %>
+                            <form action="/competitions/hgec/signup">
+                              <button class="btn btn-primary btn-block" target="_blank"> Sign Up </button>
                             </form>
+                          <% } else { %>
+                            <form action="/competitions/mwd/signup">
+                              <button class="btn btn-primary btn-block" target="_blank"> Sign Up </button>
+                          </form>
+                          <% } %>
+
                         </li>
                     <% } else { %>
                         <p class="lead mb-3">Already signed up.</p>
