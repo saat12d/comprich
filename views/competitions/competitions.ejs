@@ -81,8 +81,8 @@
         <% for(let competition of competitions) { %>
             <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
         <% } %>
-        <% let hgec = upcoming[0] %>
-        <% let mwd = upcoming[1] %>
+        <% let hgec = upcoming[4] %>
+        <% let mwd = upcoming[5] %>
         <% upcoming = upcoming.slice(2, upcoming.length - 1) %>
         
 
