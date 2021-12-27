@@ -83,7 +83,8 @@
         <% } %>
         <% let hgec = upcoming[4] %>
         <% let mwd = upcoming[5] %>
-        <% upcoming = upcoming.slice(2, upcoming.length - 1) %>
+        <% let first = upcoming.slice(0, 4) %>
+        <% upcoming = [...first, upcoming.slice(5, upcoming.length - 1)] %>
         
 
         <!-- <div class="row text-center mb-4 mt-4 px-2" id="pageLoad" style="display: flex; flex-wrap: wrap;"> -->
