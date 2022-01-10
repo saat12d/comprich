@@ -81,10 +81,16 @@
         <% for(let competition of competitions) { %>
             <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
         <% } %>
-        <% let hgec = upcoming[6] %>
-        <% let first = upcoming.slice(0, 6) %>
-        <% upcoming = [...first, upcoming.slice(6, upcoming.length - 1)] %>
+        <%= console.log('UPCOMING') %>
         <%= console.log(upcoming) %>
+        <% let hgec %>
+        <% for(let i = 0; i < upcoming.length; i++){ %>
+            <% if(upcoming[i].title == 'Harvard Crimson Global Essay Competition'){ %>
+                <% hgec = upcoming[i]; %>
+                <% break; %>
+            <% } %>
+        <% } %>
+        <% upcoming = upcoming.filter(comp => comp.title != "Harvard Crimson Global Essay Competition") %>
         
 
         <!-- <div class="row text-center mb-4 mt-4 px-2" id="pageLoad" style="display: flex; flex-wrap: wrap;"> -->
