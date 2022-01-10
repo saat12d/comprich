@@ -81,10 +81,9 @@
         <% for(let competition of competitions) { %>
             <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
         <% } %>
-        <% let hgec = upcoming[4] %>
-        <% let mwd = upcoming[5] %>
-        <% let first = upcoming.slice(0, 4) %>
-        <% upcoming = [...first, upcoming.slice(5, upcoming.length - 1)] %>
+        <% let hgec = upcoming[6] %>
+        <% let first = upcoming.slice(0, 6) %>
+        <% upcoming = [...first, upcoming.slice(6, upcoming.length - 1)] %>
         <%= console.log(upcoming) %>
         
 
@@ -128,39 +127,7 @@
                 <!-- mwd -->
                 <!-- <div id="upcomingDisplay" class="row text-center mb-4 mt-4 px-2" style="display: flex; flex-wrap: wrap;"> -->
                     <!-- hgec comp -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card">
-                        <img src="<%= mwd.images[0].url %>" class="card-img-top" style="min-height: 25vh; max-height: 35vh" alt="Competition Image">
-                            <div class="card-body">
-                                <h4 class="card-title"><%= mwd.title %></h4>
-                            </div>
-                            <% if(ratings){ %>
-                                <% let avg = 0 %>
-                                <% let cnt = 0; %>
-                                <% for(let rating of ratings){ %>
-                                    <% for(let compRating of mwd.ratings){ %>
-                                        <% if(rating.comp_title == mwd.title){ %>
-                                            <% cnt++ %>
-                                            <% avg += rating.rating %>
-                                        <% } %>
-                                    <% } %>
-                                <% } %>
-                                <% if(avg !== 0){ %>
-                                    <% avg = avg / cnt %>
-                                <% } %>
-                                <p>
-                                    <% if(avg !== 0){ %>
-                                        <% for(let i = 1; i <= 5; i++){ %>
-                                            <span class="<%= avg >= i ? 'fas' : 'far' %> fa-star"></span>
-                                        <% } %>
-                                    <% } %>
-                                </p>
-                            <% } %>
-                            <p>
-                                <a href="/competitions/modernworlddebates" class="btn btn-primary" style="margin-bottom: 10px;">Learn More</a>
-                            </p>
-                        </div>
-                    </div>
+                   
 
                 <% for(let competition of upcoming) {%>
                     <% if(competition.images !== undefined){ %>
