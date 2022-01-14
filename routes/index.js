@@ -13,7 +13,7 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
 
 
 router.get('/home', middleware.isNotLoggedIn, (req, res) => {
-    return res.render('index_updated.ejs');
+    return res.render('index.ejs');
 })
 
 router.post('/messages', (req, res) => {
