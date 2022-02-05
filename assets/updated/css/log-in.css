@@ -1,0 +1,286 @@
+/* screen - log-in */
+
+.log-in {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1141px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.log-in .overlap-group2 {
+  height: 2051px;
+  margin-left: -255px;
+  margin-top: -205.61px;
+  position: relative;
+  width: 2491px;
+}
+
+.log-in .blob {
+  height: 2051px;
+  left: 858px;
+  position: absolute;
+  top: 0;
+  width: 1633px;
+}
+
+.log-in .rectangle-21 {
+  background-color: var(--black);
+  height: 1000px;
+  left: 255px;
+  position: absolute;
+  top: 347px;
+  width: 584px;
+}
+
+.log-in .forgot-password {
+  left: 1215px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 1031px;
+  white-space: nowrap;
+}
+
+.log-in .dont-have-an-account-sign-up {
+  left: 1131px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 1079px;
+  white-space: nowrap;
+}
+
+.log-in .overlap-group {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  left: 1178px;
+  min-width: 271px;
+  padding: 0 11.3px;
+  position: absolute;
+  top: 922px;
+}
+
+.log-in .log-in-1 {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 248px;
+}
+
+.log-in .fields {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 995px;
+  min-height: 260px;
+  position: absolute;
+  top: 604px;
+  width: 635px;
+}
+
+.log-in .username {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  width: 639px;
+}
+
+.log-in .username-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.log-in .overlap-group1 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-1@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 635px;
+  padding: 23px 41px;
+}
+
+.log-in .johndoe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.log-in .password {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  min-height: 118px;
+  width: 639px;
+}
+
+.log-in .password-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.log-in .overlap-group-1 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 635px;
+  padding: 23px 41px;
+}
+
+.log-in .text-1 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.log-in .required-fields {
+  left: 1225px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 538px;
+  white-space: nowrap;
+}
+
+.log-in .x3-d {
+  height: 1000px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 550px;
+  width: 1000px;
+}
+
+.log-in .log-in-to-comprich-here {
+  left: 373px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 612px;
+  white-space: nowrap;
+}
+
+.log-in .welcome-back {
+  left: 375px;
+  letter-spacing: 0;
+  line-height: 90px;
+  position: absolute;
+  top: 413px;
+  width: 379px;
+}
+
+.log-in .doodle-3-1 {
+  height: 200px;
+  left: 273px;
+  object-fit: cover;
+  position: absolute;
+  top: 686px;
+  width: 200px;
+}
+
+.log-in .doodle-5-1 {
+  height: 250px;
+  left: 589px;
+  object-fit: cover;
+  position: absolute;
+  top: 1097px;
+  width: 250px;
+}
+
+.log-in .exit-button {
+  height: 40px;
+  left: 1693px;
+  position: absolute;
+  top: 395px;
+  width: 41px;
+}
+
+.log-in .header {
+  align-items: flex-end;
+  background-color: var(--white);
+  box-shadow: 0px 20px 35px #0000000d;
+  display: flex;
+  height: 141px;
+  justify-content: flex-end;
+  left: 255px;
+  min-width: 1538px;
+  padding: 34.9px 54px;
+  position: absolute;
+  top: 206px;
+}
+
+.log-in .logo-5 {
+  height: 51px;
+  margin-bottom: 2.13px;
+  object-fit: cover;
+  width: 370px;
+}
+
+.log-in .group-8 {
+  align-items: center;
+  display: flex;
+  margin-left: 353px;
+  min-width: 702px;
+}
+
+.log-in .about-us {
+  letter-spacing: 0;
+  margin-top: 1.87px;
+  min-height: 19px;
+  width: 135px;
+}
+
+.log-in .hub {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 56px;
+}
+
+.log-in .our-blog {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 138px;
+}
+
+.log-in .overlap-group-2 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 55px;
+  margin-left: 58px;
+  min-width: 193px;
+  padding: 18.1px 43px;
+}
+
+.log-in .sign-up {
+  letter-spacing: 0;
+  min-height: 19px;
+  width: 107px;
+}

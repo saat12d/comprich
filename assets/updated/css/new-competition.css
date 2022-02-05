@@ -1,0 +1,662 @@
+/* screen - new-competition */
+
+.new-competition {
+  align-items: center;
+  background-color: var(--romance);
+  display: flex;
+  flex-direction: column;
+  height: 2864px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.new-competition .header {
+  align-items: flex-end;
+  background-color: var(--white);
+  box-shadow: 0px 20px 35px #0000000d;
+  display: flex;
+  height: 141px;
+  justify-content: flex-end;
+  min-width: 1538px;
+  padding: 34.9px 54px;
+}
+
+.new-competition .logo-5 {
+  height: 51px;
+  margin-bottom: 2.13px;
+  object-fit: cover;
+  width: 370px;
+}
+
+.new-competition .group-8 {
+  align-items: center;
+  display: flex;
+  margin-left: 353px;
+  min-width: 702px;
+}
+
+.new-competition .about-us {
+  letter-spacing: 0;
+  margin-top: 1.87px;
+  min-height: 19px;
+  width: 135px;
+}
+
+.new-competition .hub {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 56px;
+}
+
+.new-competition .our-blog {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 138px;
+}
+
+.new-competition .overlap-group {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 55px;
+  margin-left: 58px;
+  min-width: 193px;
+  padding: 12.1px 39px;
+}
+
+.new-competition .hi-john {
+  letter-spacing: 0;
+  min-height: 25px;
+  min-width: 115px;
+}
+
+.new-competition .new-competition-1 {
+  letter-spacing: 0;
+  line-height: 90px;
+  margin-bottom: -3px;
+  margin-right: 1.0px;
+  margin-top: 99px;
+  min-height: 87px;
+  text-align: center;
+  white-space: nowrap;
+  width: 987px;
+}
+
+.new-competition .new-competition-item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5.0px;
+  margin-top: 41px;
+  min-height: 118px;
+  width: 765px;
+}
+
+.new-competition .name-of-competition {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group8 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-5@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.new-competition .place {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.new-competition .description {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5.0px;
+  margin-top: 41px;
+  min-height: 249px;
+  width: 765px;
+}
+
+.new-competition .description-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group7 {
+  align-items: flex-start;
+  background-image: url(../img/rectangle-11-4@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 206px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 25px 40px;
+}
+
+.new-competition .description-2 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.new-competition .category {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 391.0px;
+  margin-top: 41px;
+  min-height: 328px;
+  width: 369px;
+}
+
+.new-competition .category-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .check-box-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 27px;
+  margin-top: 6px;
+  min-width: 112px;
+}
+
+.new-competition .outline {
+  height: 31px;
+  margin-left: -2px;
+  margin-top: -2px;
+  width: 31px;
+}
+
+.new-competition .mun {
+  align-self: center;
+  height: 25px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.new-competition .check-box-2 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 15px;
+  min-width: 338px;
+}
+
+.new-competition .debate-public-speaking {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .check-box {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 15px;
+  min-width: 133px;
+}
+
+.new-competition .science {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .writing {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .check-box-3 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 15px;
+  min-width: 285px;
+}
+
+.new-competition .business-economics {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .check-box-4 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 15px;
+  min-width: 188px;
+}
+
+.new-competition .art-design {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .check-box-5 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 15px;
+  min-width: 116px;
+}
+
+.new-competition .other {
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.new-competition .location {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group6 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-3@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.new-competition .location-1 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.new-competition .due-date {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group5 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-2@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.new-competition .phone {
+  color: transparent;
+  font-family: var(--font-family-josefin_sans);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.new-competition .image {
+  align-items: flex-start;
+  display: flex;
+  height: 37px;
+  margin-right: 391.0px;
+  margin-top: 41px;
+  min-width: 369px;
+}
+
+.new-competition .image-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .image-placeholder {
+  height: 50px;
+  margin-right: 424.66px;
+  margin-top: 6px;
+  object-fit: cover;
+  width: 336px;
+}
+
+.new-competition .price {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.0px;
+  margin-top: 41px;
+  min-height: 156px;
+  width: 767px;
+}
+
+.new-competition .surname {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group4 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-1@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.new-competition .x100-aed-300 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.new-competition .leave-blank-if-competition-is-free {
+  color: var(--black-2);
+  font-family: var(--font-family-josefin_sans-italic);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 10px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.new-competition .competition-link {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.0px;
+  margin-top: 41px;
+  min-height: 184px;
+  width: 767px;
+}
+
+.new-competition .competition-link-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.new-competition .overlap-group3 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.new-competition .https {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.new-competition .use-social-media-lin {
+  color: var(--black-2);
+  font-family: var(--font-family-josefin_sans-italic);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 10px;
+  min-height: 56px;
+  width: 761px;
+}
+
+.new-competition .add-button {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 2.0px;
+  margin-top: 60px;
+  min-width: 158px;
+}
+
+.new-competition .overlap-group2 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 79px;
+  min-width: 156px;
+  padding: 24px 44px;
+}
+
+.new-competition .add {
+  letter-spacing: 0;
+  min-height: 30px;
+  min-width: 68px;
+}
+
+.new-competition .footer {
+  align-items: flex-start;
+  display: flex;
+  height: 609px;
+  margin-left: 5.0px;
+  margin-top: 97px;
+  min-width: 1539px;
+}
+
+.new-competition .overlap-group1 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-10@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 609px;
+  padding: 15px 59.0px;
+  width: 1537px;
+}
+
+.new-competition .flex-row {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  margin-left: 0.8px;
+  margin-top: 35px;
+  min-width: 1354px;
+}
+
+.new-competition .logo-1 {
+  height: 90px;
+  object-fit: cover;
+  width: 432px;
+}
+
+.new-competition .overlap-group-1 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  justify-content: flex-end;
+  margin-bottom: 0.85px;
+  margin-left: 619px;
+  min-width: 304px;
+  padding: 25.4px 46px;
+}
+
+.new-competition .get-started {
+  letter-spacing: 0;
+  min-height: 26px;
+  width: 211px;
+}
+
+.new-competition .vector-10 {
+  height: 2px;
+  margin-top: 45px;
+  width: 1418px;
+}
+
+.new-competition .group-container {
+  align-items: flex-start;
+  display: flex;
+  height: 246px;
+  margin-right: 11.0px;
+  margin-top: 55px;
+  min-width: 1337px;
+}
+
+.new-competition .group-17 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 116px;
+  width: 219px;
+}
+
+.new-competition .follow-us {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.new-competition .socials {
+  height: 46px;
+  margin-left: 2.5px;
+  margin-top: 39px;
+  width: 136px;
+}
+
+.new-competition .group-18 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 367px;
+  min-height: 201px;
+  width: 221px;
+}
+
+.new-competition .site {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.new-competition .home-about-contact {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 145px;
+  width: 185px;
+}
+
+.new-competition .group-20 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 155px;
+  width: 221px;
+}
+
+.new-competition .services {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.new-competition .hub-blog {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 99px;
+  width: 185px;
+}
+
+.new-competition .group-19 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 246px;
+  width: 221px;
+}
+
+.new-competition .company {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.new-competition .our-team-join-us-partnerships {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 19px;
+  min-height: 193px;
+  width: 185px;
+}
+
+.new-competition .x2021-comprich-ma {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: 60px;
+  margin-left: 2.0px;
+  margin-top: 25px;
+  min-height: 81px;
+  text-align: center;
+  width: 693px;
+}

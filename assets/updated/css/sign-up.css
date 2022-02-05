@@ -1,0 +1,473 @@
+/* screen - sign-up */
+
+.sign-up {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1141px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.sign-up .overlap-group7 {
+  height: 2051px;
+  margin-left: -255px;
+  margin-top: -205.61px;
+  position: relative;
+  width: 2491px;
+}
+
+.sign-up .blob {
+  height: 2051px;
+  left: 858px;
+  position: absolute;
+  top: 0;
+  width: 1633px;
+}
+
+.sign-up .rectangle-21 {
+  background-color: var(--black);
+  height: 1000px;
+  left: 255px;
+  position: absolute;
+  top: 347px;
+  width: 584px;
+}
+
+.sign-up .already-have-an-account-log-in {
+  left: 1124px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 1242px;
+  white-space: nowrap;
+}
+
+.sign-up .overlap-group-1 {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  left: 1177px;
+  min-width: 271px;
+  padding: 0 11.3px;
+  position: absolute;
+  top: 1133px;
+}
+
+.sign-up .sign-up-1 {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 248px;
+}
+
+.sign-up .fields {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 932px;
+  min-height: 550px;
+  position: absolute;
+  top: 526px;
+  width: 761px;
+}
+
+.sign-up .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 118px;
+  min-width: 765px;
+}
+
+.sign-up .username {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .username-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group6 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-4@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.sign-up .johndoe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .password {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 23px;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .password-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group5 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-3@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.sign-up .text-2 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .st-name-container {
+  align-items: flex-start;
+  display: flex;
+  height: 118px;
+  margin-top: 25px;
+  min-width: 765px;
+}
+
+.sign-up .first-name {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .first-name-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group4 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-2@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.sign-up .name {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .last-name {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 23px;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .last-name-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group3 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-1@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.sign-up .doe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .email {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 27px;
+  min-height: 118px;
+  width: 765px;
+}
+
+.sign-up .email-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.sign-up .johndoegmailcom {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.sign-up .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 118px;
+  margin-top: 26px;
+  min-width: 765px;
+}
+
+.sign-up .year-grade {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .year-grade-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .overlap-group {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 30px;
+  box-shadow: 3px 3px 15px #00000026;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 19px 23px;
+}
+
+.sign-up .year-11-grade-10 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 2.0px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .frame {
+  align-self: flex-end;
+  height: 35px;
+  margin-left: 30px;
+  width: 35px;
+}
+
+.sign-up .country {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 23px;
+  min-height: 118px;
+  width: 371px;
+}
+
+.sign-up .country-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.sign-up .place {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 2.0px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.sign-up .required-fields {
+  left: 1225px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 460px;
+  white-space: nowrap;
+}
+
+.sign-up .x3-d {
+  height: 1000px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 550px;
+  width: 1000px;
+}
+
+.sign-up .sign-up-to-comprich {
+  left: 373px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 612px;
+  width: 350px;
+}
+
+.sign-up .join-comprich {
+  left: 375px;
+  letter-spacing: 0;
+  line-height: 90px;
+  position: absolute;
+  top: 413px;
+  width: 379px;
+}
+
+.sign-up .doodle-3-1 {
+  height: 200px;
+  left: 273px;
+  object-fit: cover;
+  position: absolute;
+  top: 686px;
+  width: 200px;
+}
+
+.sign-up .doodle-5-1 {
+  height: 250px;
+  left: 589px;
+  object-fit: cover;
+  position: absolute;
+  top: 1097px;
+  width: 250px;
+}
+
+.sign-up .exit-button {
+  height: 40px;
+  left: 1693px;
+  position: absolute;
+  top: 395px;
+  width: 41px;
+}
+
+.sign-up .header {
+  align-items: flex-end;
+  background-color: var(--white);
+  box-shadow: 0px 20px 35px #0000000d;
+  display: flex;
+  height: 141px;
+  justify-content: flex-end;
+  left: 255px;
+  min-width: 1538px;
+  padding: 34.9px 54px;
+  position: absolute;
+  top: 206px;
+}
+
+.sign-up .logo-5 {
+  height: 51px;
+  margin-bottom: 2.13px;
+  object-fit: cover;
+  width: 370px;
+}
+
+.sign-up .group-8 {
+  align-items: center;
+  display: flex;
+  margin-left: 353px;
+  min-width: 702px;
+}
+
+.sign-up .about-us {
+  letter-spacing: 0;
+  margin-top: 1.87px;
+  min-height: 19px;
+  width: 135px;
+}
+
+.sign-up .hub {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 56px;
+}
+
+.sign-up .our-blog {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 138px;
+}
+
+.sign-up .overlap-group-2 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 55px;
+  margin-left: 58px;
+  min-width: 193px;
+  padding: 18.1px 43px;
+}
+
+.sign-up .sign-up-2 {
+  letter-spacing: 0;
+  min-height: 19px;
+  width: 107px;
+}

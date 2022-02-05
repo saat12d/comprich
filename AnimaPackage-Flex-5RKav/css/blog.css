@@ -1,0 +1,412 @@
+/* screen - blog */
+
+.blog {
+  align-items: flex-start;
+  background-color: var(--romance);
+  display: flex;
+  height: 3786px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.blog .overlap-group5 {
+  height: 4058px;
+  margin-left: -303px;
+  margin-top: -272px;
+  position: relative;
+  width: 3264px;
+}
+
+.blog .blobs {
+  height: 3936px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3264px;
+}
+
+.blog .title {
+  left: 805px;
+  letter-spacing: 0;
+  line-height: 90px;
+  position: absolute;
+  text-align: center;
+  top: 552px;
+  white-space: nowrap;
+}
+
+.blog .overlap-group1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 0px -20px 35px #0000000d;
+  display: flex;
+  flex-direction: column;
+  left: 304px;
+  min-height: 472px;
+  padding: 60px 0;
+  position: absolute;
+  top: 3163px;
+  width: 1537px;
+}
+
+.blog .ready-to-work-with-comprich {
+  letter-spacing: 0;
+  min-height: 34px;
+  text-align: center;
+  width: 699px;
+}
+
+.blog .overlap-group-1 {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  margin-right: 1.0px;
+  margin-top: 49px;
+  min-width: 302px;
+  padding: 0 12.6px;
+}
+
+.blog .back-to-top {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 276px;
+}
+
+.blog .overlap-group2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-10@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  left: 304px;
+  min-height: 609px;
+  padding: 15px 59.0px;
+  position: absolute;
+  top: 3449px;
+  width: 1537px;
+}
+
+.blog .flex-row {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  margin-left: 0.8px;
+  margin-top: 35px;
+  min-width: 1354px;
+}
+
+.blog .logo-1 {
+  height: 90px;
+  object-fit: cover;
+  width: 432px;
+}
+
+.blog .overlap-group-2 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  justify-content: flex-end;
+  margin-bottom: 0.85px;
+  margin-left: 619px;
+  min-width: 304px;
+  padding: 25.4px 46px;
+}
+
+.blog .get-started {
+  letter-spacing: 0;
+  min-height: 26px;
+  width: 211px;
+}
+
+.blog .vector-10 {
+  height: 2px;
+  margin-top: 45px;
+  width: 1418px;
+}
+
+.blog .group-container {
+  align-items: flex-start;
+  display: flex;
+  height: 246px;
+  margin-right: 11.0px;
+  margin-top: 55px;
+  min-width: 1337px;
+}
+
+.blog .group-17 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 116px;
+  width: 219px;
+}
+
+.blog .follow-us {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.blog .socials {
+  height: 46px;
+  margin-left: 2.5px;
+  margin-top: 39px;
+  width: 136px;
+}
+
+.blog .group-18 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 367px;
+  min-height: 201px;
+  width: 221px;
+}
+
+.blog .site {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.blog .home-about-contact {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 145px;
+  width: 185px;
+}
+
+.blog .group-20 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 155px;
+  width: 221px;
+}
+
+.blog .services {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.blog .hub-blog {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 99px;
+  width: 185px;
+}
+
+.blog .group-19 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 246px;
+  width: 221px;
+}
+
+.blog .company {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.blog .our-team-join-us-partnerships {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 19px;
+  min-height: 193px;
+  width: 185px;
+}
+
+.blog .x2021-comprich-ma {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: 60px;
+  margin-left: 2.0px;
+  margin-top: 25px;
+  min-height: 81px;
+  text-align: center;
+  width: 693px;
+}
+
+.blog .blogs {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 435px;
+  min-height: 1970px;
+  position: absolute;
+  top: 781px;
+  width: 1282px;
+}
+
+.blog .overlap-group-3 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 10.26px 10.26px 15.39px #00000026;
+  display: flex;
+  min-width: 1282px;
+}
+
+.blog .image-1 {
+  height: 346px;
+  object-fit: cover;
+  width: 426px;
+}
+
+.blog .flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 51px;
+  margin-top: 7.0px;
+  min-height: 291px;
+  width: 740px;
+}
+
+.blog .date {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: -6px;
+  min-height: 22px;
+  white-space: nowrap;
+}
+
+.blog .enter-the-harvard-cr {
+  letter-spacing: 0;
+  line-height: 50px;
+  margin-top: 16px;
+  min-height: 93px;
+  width: 740px;
+}
+
+.blog .by-naomi-ninan {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 16px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.blog .are-you-a-student-wh {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-top: 16px;
+  min-height: 100px;
+  width: 740px;
+}
+
+.blog .overlap-group {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 10.26px 10.26px 15.39px #00000026;
+  display: flex;
+  margin-top: 60px;
+  min-width: 1282px;
+}
+
+.blog .x3-d {
+  height: 500px;
+  left: 185px;
+  object-fit: cover;
+  position: absolute;
+  top: 376px;
+  width: 500px;
+}
+
+.blog .x3-d-2 {
+  height: 325px;
+  left: 1491px;
+  position: absolute;
+  top: 448px;
+  width: 350px;
+}
+
+.blog .header {
+  align-items: flex-end;
+  background-color: var(--white);
+  box-shadow: 0px 20px 35px #0000000d;
+  display: flex;
+  height: 141px;
+  justify-content: flex-end;
+  left: 303px;
+  min-width: 1538px;
+  padding: 34.9px 54px;
+  position: absolute;
+  top: 272px;
+}
+
+.blog .logo-5 {
+  height: 51px;
+  margin-bottom: 2.13px;
+  object-fit: cover;
+  width: 370px;
+}
+
+.blog .group-8 {
+  align-items: center;
+  display: flex;
+  margin-left: 353px;
+  min-width: 702px;
+}
+
+.blog .about-us {
+  letter-spacing: 0;
+  margin-top: 1.87px;
+  min-height: 19px;
+  width: 135px;
+}
+
+.blog .hub {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 56px;
+}
+
+.blog .our-blog {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 138px;
+}
+
+.blog .overlap-group-4 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 55px;
+  margin-left: 58px;
+  min-width: 193px;
+  padding: 18.1px 43px;
+}
+
+.blog .sign-up {
+  letter-spacing: 0;
+  min-height: 19px;
+  width: 107px;
+}
+
+.blog .x3-d-3 {
+  height: 100px;
+  left: 623px;
+  position: absolute;
+  top: 597px;
+  width: 76px;
+}

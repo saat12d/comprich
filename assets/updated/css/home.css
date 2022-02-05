@@ -1,0 +1,773 @@
+/* screen - home */
+
+.home {
+  align-items: flex-start;
+  background-color: var(--romance);
+  display: flex;
+  height: 4241px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.home .overlap-group9 {
+  align-items: flex-start;
+  background-image: url(../img/blobs@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -554px;
+  margin-top: -4.47px;
+  min-height: 4581px;
+  padding: 4.5px 554.0px;
+  width: 3146px;
+}
+
+.home .header {
+  align-items: flex-end;
+  background-color: var(--white);
+  box-shadow: 0px 20px 35px #0000000d;
+  display: flex;
+  height: 141px;
+  justify-content: flex-end;
+  min-width: 1538px;
+  padding: 34.9px 54px;
+}
+
+.home .logo-5 {
+  height: 51px;
+  margin-bottom: 2.13px;
+  object-fit: cover;
+  width: 370px;
+}
+
+.home .group-8 {
+  align-items: center;
+  display: flex;
+  margin-left: 353px;
+  min-width: 702px;
+}
+
+.home .about-us {
+  letter-spacing: 0;
+  margin-top: 1.87px;
+  min-height: 19px;
+  width: 135px;
+}
+
+.home .hub {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 56px;
+}
+
+.home .our-blog {
+  letter-spacing: 0;
+  margin-left: 58px;
+  margin-top: 0;
+  min-height: 19px;
+  width: 138px;
+}
+
+.home .overlap-group-2 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 55px;
+  margin-left: 58px;
+  min-width: 193px;
+  padding: 1.5vh 2.2vw;
+}
+
+.home .sign-up {
+  letter-spacing: 0;
+  min-height: 19px;
+  width: 107px;
+}
+
+.home .overlap-group12 {
+  height: 793px;
+  margin-left: 161.0px;
+  margin-top: 66px;
+  position: relative;
+  width: 1342px;
+}
+
+.home .overlap-group6 {
+  height: 793px;
+  left: 567px;
+  position: absolute;
+  top: 0;
+  width: 775px;
+}
+
+.home .card-2 {
+  height: 397px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 330px;
+}
+
+.home .card-1 {
+  height: 462px;
+  left: 445px;
+  position: absolute;
+  top: 331px;
+  width: 330px;
+}
+
+.home .x3-d-1 {
+  height: 667px;
+  left: 32px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  width: 610px;
+}
+
+.home .group-10 {
+  height: 137px;
+  left: 436px;
+  position: absolute;
+  top: 16px;
+  width: 339px;
+}
+
+.home .connecting-you-and-opportunities {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 571px;
+  position: absolute;
+  top: 128px;
+  width: 611px;
+}
+
+.home .connecting-you-and-o {
+  letter-spacing: 0;
+  line-height: 80px;
+  min-height: 459px;
+  width: 609px;
+}
+
+.home .span0 {
+  line-height: 90px;
+}
+
+.home .span2 {
+  line-height: 60px;
+}
+
+.home .span {
+  line-height: 55px;
+}
+
+.home .overlap-group-3 {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 79px;
+  justify-content: flex-end;
+  margin-top: 33px;
+  min-width: 304px;
+  padding: 2vh 2.5vw;
+}
+
+.home .get-started-1 {
+  letter-spacing: 0;
+  min-height: 27px;
+  width: 211px;
+}
+
+.home .overlap-group10 {
+  height: 991px;
+  margin-top: 26px;
+  position: relative;
+  width: 1538px;
+}
+
+.home .overlap-group5 {
+  height: 837px;
+  left: 0;
+  position: absolute;
+  top: 154px;
+  width: 1538px;
+}
+
+.home .rectangle-9 {
+  background-color: var(--black);
+  border-radius: 40px;
+  height: 719px;
+  left: 0;
+  position: absolute;
+  top: 118px;
+  width: 1538px;
+}
+
+.home .how-we-help-you-succeed {
+  color: var(--white);
+  font-family: var(--font-family-josefin_sans);
+  font-size: 55px;
+  font-weight: 600;
+  height: 77px;
+  left: 778px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 190px;
+  width: 653px;
+}
+
+.home .we-live-in-a-world-w {
+  left: 778px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 286px;
+  width: 641px;
+}
+
+.home .span-1 {
+  line-height: 35px;
+}
+
+.home .saly-2 {
+  height: 793px;
+  left: 117px;
+  position: absolute;
+  top: 0;
+  width: 599px;
+}
+
+.home .overlap-group-4 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  justify-content: flex-end;
+  left: 768px;
+  min-width: 304px;
+  padding: 2vh 2.5vw;
+  position: absolute;
+  top: 669px;
+}
+
+.home .get-started {
+  letter-spacing: 0;
+  min-height: 26px;
+  width: 211px;
+}
+
+.home .register-to-discover {
+  color: var(--white);
+  font-family: var(--font-family-josefin_sans);
+  font-size: 32px;
+  font-weight: 600;
+  left: 778px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 594px;
+  width: 699px;
+}
+
+.home .icons {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 135px;
+  min-height: 243px;
+  position: absolute;
+  top: 0;
+  width: 1284px;
+}
+
+.home .group-15 {
+  align-self: center;
+  height: 87px;
+  margin-right: 19.0px;
+  margin-top: -2px;
+  width: 1109px;
+}
+
+.home .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 133px;
+  margin-top: 25px;
+  min-width: 1268px;
+}
+
+.home .flex-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 108px;
+  width: 238px;
+}
+
+.home .get-started-2 {
+  letter-spacing: 0;
+  margin-right: 7.0px;
+  min-height: 34px;
+  text-align: center;
+  width: 217px;
+}
+
+.home .sign-up-unlock-vast-competitions {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 12px;
+  min-height: 62px;
+  text-align: center;
+  width: 238px;
+}
+
+.home .flex-col-1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 113px;
+  min-height: 133px;
+  width: 238px;
+}
+
+.home .discover {
+  letter-spacing: 0;
+  margin-left: 1.0px;
+  min-height: 34px;
+  text-align: center;
+  width: 217px;
+}
+
+.home .x-best {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 12px;
+  min-height: 87px;
+  text-align: center;
+  width: 238px;
+}
+
+.home .flex-col-2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 83px;
+  min-height: 133px;
+  width: 276px;
+}
+
+.home .succeed {
+  letter-spacing: 0;
+  margin-left: 1.0px;
+  min-height: 34px;
+  text-align: center;
+  width: 217px;
+}
+
+.home .attend-competitions {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 12px;
+  min-height: 87px;
+  text-align: center;
+  width: 276px;
+}
+
+.home .flex-col-3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 82px;
+  min-height: 133px;
+  width: 238px;
+}
+
+.home .repeat {
+  letter-spacing: 0;
+  margin-left: 1.0px;
+  min-height: 34px;
+  text-align: center;
+  width: 217px;
+}
+
+.home .latest-competitions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60.0px;
+  margin-top: 103px;
+  min-height: 746px;
+  width: 1421px;
+}
+
+.home .overlap-group4 {
+  height: 181px;
+  margin-right: 4.0px;
+  position: relative;
+  width: 1101px;
+}
+
+.home .latest-competitions-1 {
+  left: 163px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 774px;
+}
+
+.home .were-dedicated-to-o {
+  color: var(--black);
+  font-family: var(--font-family-josefin_sans);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 35px;
+  position: absolute;
+  text-align: center;
+  top: 106px;
+  width: 1101px;
+}
+
+.home .gallery {
+  align-items: center;
+  display: flex;
+  height: 500px;
+  margin-right: 4.0px;
+  margin-top: 65px;
+  min-width: 1417px;
+}
+
+.home .frame {
+  height: 80px;
+  width: 80px;
+}
+
+.home .overlap-group1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  display: flex;
+  flex-direction: column;
+  margin-left: 33px;
+  min-height: 500px;
+  width: 347px;
+}
+
+.home .image-41 {
+  height: 348px;
+  margin-left: 0.28px;
+  object-fit: cover;
+  width: 348px;
+}
+
+.home .tiger-global-case-competition {
+  letter-spacing: 0;
+  margin-left: 1.48px;
+  margin-top: 20px;
+  min-height: 46px;
+  text-align: center;
+  width: 238px;
+}
+
+.home .overlap-group {
+  align-items: flex-end;
+  background-color: var(--black);
+  border-radius: 50px;
+  display: flex;
+  height: 43px;
+  justify-content: flex-end;
+  margin-left: 0.28px;
+  margin-top: 20px;
+  min-width: 181px;
+  padding: 12.7px 23.1px;
+}
+
+.home .learn-more {
+  letter-spacing: 0;
+  min-height: 16px;
+  text-align: center;
+  width: 134px;
+}
+
+.home .overlap-group-1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  display: flex;
+  flex-direction: column;
+  margin-left: 74px;
+  min-height: 500px;
+  width: 347px;
+}
+
+.home .frame-1 {
+  height: 80px;
+  margin-left: 35px;
+  width: 80px;
+}
+
+.home .what-inspires-us {
+  align-items: flex-start;
+  display: flex;
+  height: 341px;
+  margin-left: 100.0px;
+  margin-top: 82px;
+  min-width: 1337px;
+}
+
+.home .group-27 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15.03px;
+  min-height: 206px;
+  width: 793px;
+}
+
+.home .what-inspires-us-to {
+  color: var(--black);
+  font-family: var(--font-family-josefin_sans);
+  font-size: 55px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 65px;
+  min-height: 145px;
+  width: 789px;
+}
+
+.home .learn-our-mission-and-meet-the-team {
+  color: #d66142;
+  font-family: var(--font-family-josefin_sans);
+  font-size: var(--font-size-xxxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 27px;
+  min-height: 34px;
+  text-decoration: underline;
+  width: 699px;
+}
+
+.home .saly-31 {
+  height: 342px;
+  margin-left: 44px;
+  margin-top: -0.39px;
+  width: 500px;
+}
+
+.home .overlap-group-container {
+  height: 895px;
+  margin-left: 1.0px;
+  margin-top: 57px;
+  position: relative;
+  width: 1538px;
+}
+
+.home .overlap-group7 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 0px -20px 35px #0000000d;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 472px;
+  padding: 60px 0;
+  position: absolute;
+  top: 0;
+  width: 1537px;
+}
+
+.home .ready-to-work-with-comprich {
+  letter-spacing: 0;
+  min-height: 34px;
+  text-align: center;
+  width: 699px;
+}
+
+.home .overlap-group-5 {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  margin-left: 1.0px;
+  margin-top: 49px;
+  min-width: 550px;
+  padding: 0 23px;
+}
+
+.home .explore-competition-hub {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 503px;
+}
+
+.home .overlap-group8 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-10@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  left: 1px;
+  min-height: 609px;
+  padding: 15px 59.0px;
+  position: absolute;
+  top: 286px;
+  width: 1537px;
+}
+
+.home .flex-row-1 {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  margin-left: 0.8px;
+  margin-top: 35px;
+  min-width: 1354px;
+}
+
+.home .logo-1 {
+  height: 90px;
+  object-fit: cover;
+  width: 432px;
+}
+
+.home .overlap-group-6 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  justify-content: flex-end;
+  margin-bottom: 0.85px;
+  margin-left: 619px;
+  min-width: 304px;
+  padding: 25.4px 46px;
+}
+
+.home .vector-10 {
+  height: 2px;
+  margin-top: 45px;
+  width: 1418px;
+}
+
+.home .group-container {
+  align-items: flex-start;
+  display: flex;
+  height: 246px;
+  margin-right: 11.0px;
+  margin-top: 55px;
+  min-width: 1337px;
+}
+
+.home .group-17 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 116px;
+  width: 219px;
+}
+
+.home .follow-us {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.home .socials {
+  height: 46px;
+  margin-left: 2.5px;
+  margin-top: 39px;
+  width: 136px;
+}
+
+.home .group-18 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 367px;
+  min-height: 201px;
+  width: 221px;
+}
+
+.home .site {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.home .home-about-contact {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 145px;
+  width: 185px;
+}
+
+.home .group-20 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 155px;
+  width: 221px;
+}
+
+.home .services {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.home .hub-blog {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 22px;
+  min-height: 99px;
+  width: 185px;
+}
+
+.home .group-19 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  min-height: 246px;
+  width: 221px;
+}
+
+.home .company {
+  letter-spacing: 0;
+  min-height: 34px;
+  width: 217px;
+}
+
+.home .our-team-join-us-partnerships {
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-top: 19px;
+  min-height: 193px;
+  width: 185px;
+}
+
+.home .x2021-comprich-ma {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: 60px;
+  margin-left: 2.0px;
+  margin-top: 25px;
+  min-height: 81px;
+  text-align: center;
+  width: 693px;
+}

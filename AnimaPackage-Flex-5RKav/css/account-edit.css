@@ -1,0 +1,576 @@
+/* screen - account-edit */
+
+.account-edit {
+  align-items: flex-start;
+  background-color: var(--romance);
+  display: flex;
+  height: 996px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.account-edit .overlap-group8 {
+  height: 2051px;
+  margin-left: -726px;
+  margin-top: -500.61px;
+  position: relative;
+  width: 1836px;
+}
+
+.account-edit .blob {
+  height: 2051px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1633px;
+}
+
+.account-edit .hello-john {
+  left: 1071px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 579px;
+  width: 609px;
+}
+
+.account-edit .account-info {
+  height: 77px;
+  left: 1071px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 694px;
+  width: 653px;
+}
+
+.account-edit .first-name {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1071px;
+  min-height: 118px;
+  position: absolute;
+  top: 782px;
+  width: 371px;
+}
+
+.account-edit .username {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group-2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.account-edit .johndoe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .first-name-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1071px;
+  min-height: 118px;
+  position: absolute;
+  top: 1070px;
+  width: 765px;
+}
+
+.account-edit .email {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group1 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-1@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 761px;
+  padding: 23px 40px;
+}
+
+.account-edit .johndoegmailcom {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 680px;
+}
+
+.account-edit .last-name {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1465px;
+  min-height: 118px;
+  position: absolute;
+  top: 782px;
+  width: 371px;
+}
+
+.account-edit .password {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group2 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-2@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.account-edit .text-3 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .first-name-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1071px;
+  min-height: 118px;
+  position: absolute;
+  top: 925px;
+  width: 371px;
+}
+
+.account-edit .first-name-3 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group3 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-3@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.account-edit .name {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .last-name-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1465px;
+  min-height: 118px;
+  position: absolute;
+  top: 925px;
+  width: 371px;
+}
+
+.account-edit .last-name-2 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group4 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-4@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+.account-edit .doe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .first-name-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1071px;
+  min-height: 118px;
+  position: absolute;
+  top: 1214px;
+  width: 371px;
+}
+
+.account-edit .year-grade {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .overlap-group {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 30px;
+  box-shadow: 3px 3px 15px #00000026;
+  display: flex;
+  height: 75px;
+  justify-content: flex-end;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 19px 23px;
+}
+
+.account-edit .year-11-grade-10 {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 2.0px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .frame {
+  align-self: flex-end;
+  height: 35px;
+  margin-left: 30px;
+  width: 35px;
+}
+
+.account-edit .last-name-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1465px;
+  min-height: 118px;
+  position: absolute;
+  top: 1214px;
+  width: 371px;
+}
+
+.account-edit .country {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+.account-edit .place {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 2.0px;
+  white-space: nowrap;
+  width: 238px;
+}
+
+.account-edit .overlap-group7 {
+  align-items: center;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 79px;
+  justify-content: flex-end;
+  left: 1071px;
+  min-width: 156px;
+  padding: 0 38px;
+  position: absolute;
+  top: 1375px;
+}
+
+.account-edit .save {
+  letter-spacing: 0;
+  min-height: 27px;
+  width: 79px;
+}
+
+.account-edit .group-38 {
+  align-items: flex-start;
+  background-color: var(--black);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  left: 772px;
+  min-height: 937px;
+  padding: 38px 33px;
+  position: absolute;
+  top: 530px;
+  width: 217px;
+}
+
+.account-edit .logo-4 {
+  height: 51px;
+  margin-top: 2px;
+  width: 61px;
+}
+
+.account-edit .dashboard {
+  align-items: center;
+  display: flex;
+  margin-top: 248px;
+  min-width: 149px;
+}
+
+.account-edit .frame-1 {
+  height: 35px;
+  width: 35px;
+}
+
+.account-edit .compete {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 3.0px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.account-edit .cv {
+  align-items: center;
+  display: flex;
+  margin-top: 40px;
+  min-width: 82px;
+}
+
+.account-edit .cv-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 1.0px;
+  min-height: 30px;
+  min-width: 35px;
+  white-space: nowrap;
+}
+
+.account-edit .account {
+  align-items: flex-end;
+  display: flex;
+  margin-top: 40px;
+  min-width: 136px;
+}
+
+.account-edit .account-1 {
+  color: #ecc739;
+  font-family: var(--font-family-josefin_sans);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  min-height: 30px;
+  min-width: 89px;
+  white-space: nowrap;
+}
+
+.account-edit .settings {
+  align-items: center;
+  display: flex;
+  margin-left: 4px;
+  margin-top: 40px;
+  min-width: 134px;
+}
+
+.account-edit .settings-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 1.0px;
+  margin-left: 7px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.account-edit .log-out {
+  align-items: center;
+  display: flex;
+  margin-top: 265px;
+  min-width: 141px;
+}
+
+.account-edit .log-out-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 1.0px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 94px;
+}
+
+.account-edit .group-44 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 81px;
+  margin-top: 54px;
+  min-height: 899px;
+  width: 288px;
+}
+
+.account-edit .overlap-group1-1 {
+  height: 491px;
+  position: relative;
+  width: 288px;
+}
+
+.account-edit .rectangle-16 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 271px;
+  left: 0;
+  position: absolute;
+  top: 220px;
+  width: 288px;
+}
+
+.account-edit .overlap-group-3 {
+  align-items: center;
+  background-color: var(--black);
+  border-radius: 50px;
+  display: flex;
+  height: 79px;
+  left: 33px;
+  min-width: 222px;
+  padding: 0 37px;
+  position: absolute;
+  top: 376px;
+}
+
+.account-edit .get-link {
+  letter-spacing: 0;
+  min-height: 27px;
+  width: 148px;
+}
+
+.account-edit .invite-friends {
+  left: 33px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 311px;
+  width: 226px;
+}
+
+.account-edit .saly-3 {
+  height: 280px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 280px;
+}
+
+.account-edit .group-36 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 38px;
+  min-height: 370px;
+  width: 288px;
+}
+
+.account-edit .overlap-group2-1 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 166px;
+  position: relative;
+  width: 288px;
+}
+
+.account-edit .interest-quiz {
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 215px;
+}
+
+.account-edit .overlap-group-1 {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 66px;
+  left: 49px;
+  min-width: 191px;
+  padding: 21.4px 21px;
+  position: absolute;
+  top: 83px;
+}
+
+.account-edit .place-1 {
+  letter-spacing: 0;
+  min-height: 23px;
+  text-align: center;
+  width: 148px;
+}
+
+.account-edit .overlap-group1-2 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 166px;
+  margin-top: 38px;
+  position: relative;
+  width: 288px;
+}
+
+.account-edit .online-cv {
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 215px;
+}
+
+.account-edit .update {
+  letter-spacing: 0;
+  min-height: 23px;
+  text-align: center;
+  width: 148px;
+}

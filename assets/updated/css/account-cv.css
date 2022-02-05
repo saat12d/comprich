@@ -1,0 +1,349 @@
+/* screen - account-cv */
+
+.account-cv {
+  align-items: flex-start;
+  background-color: var(--romance);
+  display: flex;
+  height: 996px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.account-cv .overlap-group4 {
+  height: 2051px;
+  margin-left: -726px;
+  margin-top: -500.61px;
+  position: relative;
+  width: 2264px;
+}
+
+.account-cv .blob {
+  height: 2051px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1633px;
+}
+
+.account-cv .frame-7 {
+  align-items: flex-start;
+  display: flex;
+  height: 996px;
+  left: 726px;
+  padding: 29px 46px;
+  position: absolute;
+  top: 501px;
+  width: 1538px;
+}
+
+.account-cv .side-bar {
+  align-items: flex-start;
+  background-color: var(--black);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 937px;
+  padding: 38px 33px;
+  width: 217px;
+}
+
+.account-cv .logo-4 {
+  height: 51px;
+  margin-top: 2px;
+  width: 61px;
+}
+
+.account-cv .dashboard {
+  align-items: center;
+  display: flex;
+  margin-top: 248px;
+  min-width: 149px;
+}
+
+.account-cv .frame {
+  height: 35px;
+  width: 35px;
+}
+
+.account-cv .compete {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 3.0px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.account-cv .cv {
+  align-items: center;
+  display: flex;
+  margin-top: 40px;
+  min-width: 82px;
+}
+
+.account-cv .cv-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 1.0px;
+  min-height: 30px;
+  min-width: 35px;
+  white-space: nowrap;
+}
+
+.account-cv .account {
+  align-items: flex-end;
+  display: flex;
+  margin-top: 40px;
+  min-width: 136px;
+}
+
+.account-cv .account-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  min-height: 30px;
+  min-width: 89px;
+  white-space: nowrap;
+}
+
+.account-cv .settings {
+  align-items: center;
+  display: flex;
+  margin-left: 4px;
+  margin-top: 40px;
+  min-width: 134px;
+}
+
+.account-cv .settings-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 1.0px;
+  margin-left: 7px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.account-cv .log-out {
+  align-items: center;
+  display: flex;
+  margin-top: 265px;
+  min-width: 141px;
+}
+
+.account-cv .log-out-1 {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 1.0px;
+  min-height: 24px;
+  white-space: nowrap;
+  width: 94px;
+}
+
+.account-cv .flex-col {
+  align-items: flex-end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 82px;
+  margin-top: 11.0px;
+  min-height: 899px;
+  width: 1134px;
+}
+
+.account-cv .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 495px;
+  min-width: 1134px;
+}
+
+.account-cv .flex-col-1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 471px;
+  width: 653px;
+}
+
+.account-cv .hello-john {
+  letter-spacing: 0;
+  min-height: 74px;
+  width: 609px;
+}
+
+.account-cv .online-cv {
+  height: 77px;
+  letter-spacing: 0;
+  margin-top: 41px;
+  width: 653px;
+}
+
+.account-cv .won-section {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  min-height: 109px;
+  width: 611px;
+}
+
+.account-cv .tion {
+  letter-spacing: 0;
+  line-height: 35px;
+  min-height: 35px;
+  white-space: nowrap;
+}
+
+.account-cv .awards-won-first-pl {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-right: 4px;
+  margin-top: 4px;
+  min-height: 70px;
+  min-width: 562px;
+}
+
+.account-cv .won-section-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 41px;
+  min-height: 109px;
+  width: 538px;
+}
+
+.account-cv .awards-won-first-pl-1 {
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-left: 45px;
+  margin-top: 4px;
+  min-height: 70px;
+}
+
+.account-cv .overlap-group3 {
+  height: 491px;
+  margin-left: 193px;
+  position: relative;
+  width: 288px;
+}
+
+.account-cv .rectangle-16 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 271px;
+  left: 0;
+  position: absolute;
+  top: 220px;
+  width: 288px;
+}
+
+.account-cv .overlap-group-1 {
+  align-items: center;
+  background-color: var(--black);
+  border-radius: 50px;
+  display: flex;
+  height: 79px;
+  left: 33px;
+  min-width: 222px;
+  padding: 0 37px;
+  position: absolute;
+  top: 376px;
+}
+
+.account-cv .get-link {
+  letter-spacing: 0;
+  min-height: 27px;
+  width: 148px;
+}
+
+.account-cv .invite-friends {
+  left: 33px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 311px;
+  width: 226px;
+}
+
+.account-cv .saly-3 {
+  height: 280px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 280px;
+}
+
+.account-cv .overlap-group2 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 166px;
+  margin-top: 34px;
+  position: relative;
+  width: 288px;
+}
+
+.account-cv .interest-quiz {
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 215px;
+}
+
+.account-cv .overlap-group {
+  align-items: flex-end;
+  background-color: var(--sunglow);
+  border-radius: 50px;
+  display: flex;
+  height: 66px;
+  left: 49px;
+  min-width: 191px;
+  padding: 21.4px 21px;
+  position: absolute;
+  top: 83px;
+}
+
+.account-cv .place {
+  letter-spacing: 0;
+  min-height: 23px;
+  text-align: center;
+  width: 148px;
+}
+
+.account-cv .overlap-group1 {
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  height: 166px;
+  margin-top: 38px;
+  position: relative;
+  width: 288px;
+}
+
+.account-cv .online-cv-1 {
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 215px;
+}
+
+.account-cv .update {
+  letter-spacing: 0;
+  min-height: 23px;
+  text-align: center;
+  width: 148px;
+}
