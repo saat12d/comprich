@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "CompRich website for project to help students enroll in competitions in a new way",
   "main": "app.js",
+  "engines": {
+    "node": "v12.18.2",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
