@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1538, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="updated/img/comprichlogosmall.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="updated/css/home.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
-    <title>Comprich</title>
-  </head>
-  <body style="margin: 0; background: #fffefd">
-    <input type="hidden" id="anPageName" name="page" value="home" />
-    <div class="container-center-horizontal">
-      <div class="home screen">
-        <div class="overlap-group9">
-          <div class="header">
-            <img class="logo-5" src="updated/img/logo-5@2x.png" />
-            <div class="group-8 josefinsans-bold-black-25px">
-              <div class="about-us"><a href="/about">ABOUT US</a></div>
-              <div class="hub"><a href="/competitions">HUB</a></div>
-              <div class="our-blog"><a href="/blog">OUR BLOG</a></div>
-              <div class="overlap-group-2"><a href="/register"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></a> </div>
-            </div>
-          </div>
+<%- include('partials/header') %>
+<input type="hidden" id="anPageName" name="page" value="home" />
+
           <div class="overlap-group12">
             <div class="overlap-group6">
               <img class="card-2" src="updated/img/card-2@2x.svg" />
@@ -151,54 +127,4 @@
                 </div>
               </a>
             </div>
-            <div class="overlap-group8">
-              <div class="flex-row-1">
-                <img class="logo-1" src="updated/img/logo-1@2x.png" />
-                <a href="/register">
-                    <div class="overlap-group-6">
-                        <div class="get-started josefinsans-bold-black-30px">GET STARTED</div>
-                    </div>
-                </a>
-              </div>
-              <img class="vector-10" src="updated/img/vector-10@1x.svg" />
-              <div class="group-container">
-                <div class="group-17">
-                  <div class="follow-us josefinsans-semi-bold-white-40px">Follow Us</div>
-                  <a href="https://www.instagram.com/comprichapp/" target="_blank">
-                    <img class="socials" src="updated/img/socials@2x.svg" />
-                  </a>
-                </div>
-                <div class="group-18">
-                  <div class="site josefinsans-semi-bold-white-40px">Site</div>
-                  <div class="home-about-contact josefinsans-normal-white-30px">
-                      <a href="/home">Home</a><br />
-                      <a href="/about">About</a><br />
-                      <a href="/contact">Contact</a>
-                  </div>
-                </div>
-                <div class="group-20">
-                  <div class="services josefinsans-semi-bold-white-40px">Services</div>
-                  <div class="hub-blog josefinsans-normal-white-30px">
-                      <a href="/competitions">Hub</a><br />
-                      <a href="/blog">Blog</a>
-                  </div>
-                </div>
-                <div class="group-19">
-                  <div class="company josefinsans-semi-bold-white-40px">Company</div>
-                  <div class="our-team-join-us-partnerships josefinsans-normal-white-30px">
-                    <a href="/about#team">Our Team</a><br />
-                    <a href="/contact">Join Us</a><br />
-                    <a href="/partners">Partnerships</a>
-                  </div>
-                </div>
-              </div>
-              <div class="x2021-comprich-ma josefinsans-normal-white-28px">
-                © 2021 Comprich | Made with 💛 by students
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+<%- include('partials/footer') %>
