@@ -216,7 +216,7 @@ router.get('/competitions', async (req, res) => {
             console.log('ERROR: ' + err.message)
             return res.redirect('back')
         }
-        res.render('competitions/competitions', { competitions: renderComps, ratings: rating })
+        res.render('updated/comps', { competitions: renderComps, ratings: rating })
     })
 })
 

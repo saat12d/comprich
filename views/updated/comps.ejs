@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1538, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="updated/css/hub.css" />
+    <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #fffefd">
+    <input type="hidden" id="anPageName" name="page" value="hub" />
+
+    <div class="container-center-horizontal">
+      <div class="hub screen">
+        <div class="overlap-group6">
+          <div class="overlap-group7">
+            <div class="rectangle-11"></div>
+            <div class="competition-hub josefinsans-semi-bold-white-80px">Competition Hub</div>
+            <div class="tools">
+              <div class="picked-for-you">
+                <div class="picked-for-you-1 josefinsans-semi-bold-black-35px">Picked for You</div>
+                <div class="frame">
+                  <div class="overlap-group"></div>
+                </div>
+              </div>
+              <a href="/survey"><img class="interest-quiz" src="updated/img/interest-quiz@2x.svg" /></a>
+              <a href="/onlinecv"><img class="online-cv" src="updated/img/online-cv@2x.svg" /></a>
+            </div>
+            <div class="filter">
+              <form action="/competitions" method="GET" style="display: flex; flex-direction: row; justify-content: center;">
+                <div class="overlap-group3">
+                  <img class="frame-1" src="updated/img/frame@2x.svg" />
+                  <div class="search"><input type="text" class="search" name="search" placeholder="Search" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%"></div>
+                </div>
+                <div class="overlap-group2">
+                  <div class="filter-1 valign-text-middle josefinsans-normal-black-25px">
+                    <select name="filter" id="" aria-placeholder="Filter">
+                      <option value="0">Filter Options</option>
+                      <option value="free">Free Competitions</option>
+                      <option value="paid">Paid Competitions</option>
+                  </select>
+                  </div>
+                  <img class="frame-2" src="updated/img/frame-2@2x.svg" />
+                </div>
+                <div class="overlap-group1">
+                  <div class="category valign-text-middle josefinsans-normal-black-25px">
+                    <select name="sort" id="">
+                      <option value="0">Category</option>
+                      <option value="MUN">MUN</option>
+                      <option value="Debate / Public Speaking">Debate / Public Speaking</option>
+                      <option value="Science">Science</option>
+                      <option value="Writing">Writing</option>
+                      <option value="Business">Business</option>
+                      <option value="Art / Design">Art / Design</option>
+                  </select>
+                  </div>
+                  <img class="frame-3" src="updated/img/frame-1@2x.svg" />
+                </div>
+                <button style="border: none; outline: none; background: none;"><div class="overlap-group-1"><div class="find josefinsans-bold-black-30px">FIND</div></div></button>
+              </form>
+            </div>
+            <div class="browse-opportunities josefinsans-semi-bold-white-25px">
+              Browse opportunities around the world and use our tools to find what’s best for you.
+            </div>
+            <div class="header">
+              <img class="logo-5" src="updated/img/logo-5@2x.png" />
+              <div class="group-8 josefinsans-bold-black-25px">
+                <div class="about-us">ABOUT US</div>
+                <div class="hub-1">HUB</div>
+                <div class="our-blog">OUR BLOG</div>
+                <div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="group-33">
+            <div class="flex-col">
+              <div class="all-upcoming josefinsans-semi-bold-black-35px">All Upcoming</div>
+              <img class="line-3" src="updated/img/line-3@2x.svg" />
+            </div>
+            <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div>
+            <div class="past-competitions josefinsans-semi-bold-black-35px-3">Past Competitions</div>
+          </div>
+          
+
+          <% let upcoming = [] %>
+          <% let finished = [] %>
+          <% for(let competition of competitions) { %>
+              <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
+          <% } %>
+
+
+
+          <div class="home">
+            <% for(let i = 0; i < upcoming.length; i+=3){ %>
+              <% if(upcoming[i+2] == undefined || upcoming[i + 1] == undefined || upcoming[i] == undefined){ %>
+                <% break %>
+              <% } %>
+              <% let comps = [upcoming[i], upcoming[i + 1], upcoming[i + 2]] %>
+              <div class="gallery" style="padding-left: 100px">
+                <% for(competition of comps){ %>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="<%= competition.images[0].url %>" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= competition.title %>
+                    </div>
+                    <a href="/competitions/<%= competition._id %>">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                      </div>
+                    </a>
+                  </div>
+                <% } %>
+              </div>
+              <% } %>
+          </div>
+
+          
+          <div class="group-container">
+            <div class="group-55">
+              <div class="overlap-group1-1">
+                <div class="rectangle"></div>
+                <img class="saly-17" src="updated/img/saly-17@2x.png" />
+                <div class="start-your-own-competitive-journey josefinsans-semi-bold-black-35px">
+                  Start your own competitive journey
+                </div>
+                <div class="overlap-group-3">
+                  <div class="open-profile josefinsans-bold-black-30px">OPEN PROFILE</div>
+                </div>
+              </div>
+              <div class="overlap-group2-1">
+                <div class="rectangle"></div>
+                <img class="saly-10" src="updated/img/saly-10@2x.png" />
+                <div class="share-your-wins josefinsans-semi-bold-black-35px">Share your wins</div>
+                <div class="overlap-group-4">
+                  <div class="let-us-know josefinsans-bold-black-30px">LET US KNOW</div>
+                </div>
+              </div>
+            </div>
+            <div class="overlap-group4">
+              <div class="ready-to-work-with-comprich josefinsans-semi-bold-black-45px">
+                Ready to work with Comprich?
+              </div>
+              <div class="overlap-group-5"><div class="back-to-top josefinsans-bold-black-30px">BACK TO TOP</div></div>
+            </div>
+            <div class="overlap-group5">
+              <div class="flex-row">
+                <img class="logo-1" src="updated/img/logo-1@2x.png" />
+                <div class="overlap-group-6">
+                  <div class="get-started josefinsans-bold-black-30px">GET STARTED</div>
+                </div>
+              </div>
+              <img class="vector-10" src="updated/img/vector-10@1x.svg" />
+              <div class="group-container-1">
+                <div class="group-17">
+                  <div class="follow-us josefinsans-semi-bold-white-40px">Follow Us</div>
+                  <img class="socials" src="updated/img/socials@2x.svg" />
+                </div>
+                <div class="group-18">
+                  <div class="site josefinsans-semi-bold-white-40px">Site</div>
+                  <div class="home-about-contact josefinsans-normal-white-30px">Home<br />About<br />Contact</div>
+                </div>
+                <div class="group-20">
+                  <div class="services josefinsans-semi-bold-white-40px">Services</div>
+                  <div class="hub-blog josefinsans-normal-white-30px">Hub<br />Blog</div>
+                </div>
+                <div class="group-19">
+                  <div class="company josefinsans-semi-bold-white-40px">Company</div>
+                  <div class="our-team-join-us-partnerships josefinsans-normal-white-30px">
+                    Our Team<br />Join Us<br />Partnerships
+                  </div>
+                </div>
+              </div>
+              <div class="x2021-comprich-ma josefinsans-normal-white-28px">
+                © 2021 Comprich | Made with 💛 by students
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

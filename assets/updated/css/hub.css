@@ -1,3 +1,5 @@
+
+
 /* screen - hub */
 
 .hub {
@@ -701,4 +703,99 @@
   min-height: 81px;
   text-align: center;
   width: 693px;
+}
+
+/* styles for cards */
+
+.home .gallery {
+  align-items: center;
+  display: flex;
+  height: 500px;
+  margin-right: 4.0px;
+  margin-top: 65px;
+  min-width: 1417px;
+}
+
+
+.home .frame {
+  height: 80px;
+  width: 80px;
+}
+
+.home .overlap-group1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  display: flex;
+  flex-direction: column;
+  /* margin-right: 33px; */
+  margin: 0 auto;
+  min-height: 500px;
+  width: 347px;
+}
+
+.home .image-41 {
+  height: 100%;
+  margin-left: 0.28px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.home .tiger-global-case-competition {
+  letter-spacing: 0;
+  margin-left: 1.48px;
+  margin-top: 20px;
+  min-height: 46px;
+  text-align: center;
+  width: 238px;
+}
+
+.home .overlap-groupx {
+  align-items: flex-end;
+  background-color: var(--black);
+  border-radius: 50px;
+  display: flex;
+  height: 43px;
+  justify-content: flex-end;
+  margin-left: 0.28px;
+  margin-top: 20px;
+  min-width: 181px;
+  padding: 12.7px 23.1px;
+}
+
+.home .learn-more {
+  letter-spacing: 0;
+  min-height: 16px;
+  text-align: center;
+  width: 134px;
+}
+
+.home .overlap-group-1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 5px 5px 15px #00000026;
+  display: flex;
+  flex-direction: column;
+  margin-left: 74px;
+  min-height: 500px;
+  width: 347px;
+}
+
+.home .frame-1 {
+  height: 80px;
+  margin-left: 35px;
+  width: 80px;
+}
+
+
+/* added styles */
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font: inherit;
+  appearance: none;
+  width: 100%;
 }
