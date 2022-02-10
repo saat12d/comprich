@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="updated/css/hub.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
+    <title>Comprich | Competitions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   </head>
   <body style="margin: 0; background: #fffefd">
     <input type="hidden" id="anPageName" name="page" value="hub" />
@@ -68,20 +70,27 @@
             <div class="header">
               <img class="logo-5" src="updated/img/logo-5@2x.png" />
               <div class="group-8 josefinsans-bold-black-25px">
-                <div class="about-us">ABOUT US</div>
-                <div class="hub-1">HUB</div>
-                <div class="our-blog">OUR BLOG</div>
-                <div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div>
+                <a href="/about"><div class="about-us">ABOUT US</div></a>
+                <a href="/competitions"><div class="hub-1">HUB</div></a>
+                <a href="/blog"><div class="our-blog">OUR BLOG</div></a>
+                <a href="/register"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
               </div>
             </div>
           </div>
           <div class="group-33">
-            <div class="flex-col">
-              <div class="all-upcoming josefinsans-semi-bold-black-35px">All Upcoming</div>
-              <img class="line-3" src="updated/img/line-3@2x.svg" />
-            </div>
+            <a href="#upcoming" id="up">
+              <div class="flex-col">
+                <div class="all-upcoming josefinsans-semi-bold-black-35px">All Upcoming</div>
+                <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" />
+              </div>
+            </a>
             <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div>
-            <div class="past-competitions josefinsans-semi-bold-black-35px-3">Past Competitions</div>
+            <a href="#finished" id="finish">
+              <div class="flex-col">
+                <div class="past-competitions josefinsans-semi-bold-black-35px-3">Past Competitions</div>
+                <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" />
+              </div>
+            </a>
           </div>
           
 
@@ -93,7 +102,7 @@
 
 
 
-          <div class="home">
+          <div class="home" id="upcomingDisplay">
             <% for(let i = 0; i < upcoming.length; i+=3){ %>
               <% if(upcoming[i+2] == undefined || upcoming[i + 1] == undefined || upcoming[i] == undefined){ %>
                 <% break %>
@@ -117,8 +126,32 @@
               <% } %>
           </div>
 
+          <div class="home" id="finishedDisplay">
+            <% for(let i = 0; i < finished.length; i+=3){ %>
+              <% if(finished[i+2] == undefined || finished[i + 1] == undefined || finished[i] == undefined){ %>
+                <% break %>
+              <% } %>
+              <% let comps = [finished[i], finished[i + 1], finished[i + 2]] %>
+              <div class="gallery" style="padding-left: 100px">
+                <% for(competition of comps){ %>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="<%= competition.images[0].url %>" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= competition.title %>
+                    </div>
+                    <a href="/competitions/<%= competition._id %>">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                      </div>
+                    </a>
+                  </div>
+                <% } %>
+              </div>
+              <% } %>
+          </div>
+
           
-          <div class="group-container">
+          <div class="group-container" style="max-height: 200px">
             <div class="group-55">
               <div class="overlap-group1-1">
                 <div class="rectangle"></div>
@@ -182,4 +215,38 @@
       </div>
     </div>
   </body>
+
+
+<script>
+  $(document).ready(() => {
+      $('#finishedDisplay').hide();
+
+      $('#up').click(function(){
+          $('#finishedDisplay').hide();
+          $('#upcomingDisplay').show();
+          $('.past-competitions').css({
+            'color': ' var(--black-5)'
+          })
+          $('.all-upcoming').css({
+            'color': ' var(--black)'
+          })
+          $('#finishLine').hide();
+          $('#upLine').show();
+          // alert('clicked');
+      })
+      $('#finish').click(function(){
+          $('#upcomingDisplay').hide();
+          $('#finishedDisplay').show();
+          $('.past-competitions').css({
+            'color': ' var(--black)'
+          })
+          $('.all-upcoming').css({
+            'color': ' var(--black-5)'
+          })
+          $('#finishLine').show();
+          $('#upLine').hide();
+          // alert('clicked')
+      })
+  })
+</script>
 </html>

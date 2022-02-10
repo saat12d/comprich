@@ -338,6 +338,10 @@
   width: 218px;
 }
 
+.hub #finishLine {
+  width: 16vw;
+}
+
 .hub .for-you {
   letter-spacing: 0;
   margin-left: 68px;
@@ -349,6 +353,7 @@
   letter-spacing: 0;
   margin-left: 68px;
   min-height: 35px;
+  min-width: 24vw;
 }
 
 .hub .card-container {
