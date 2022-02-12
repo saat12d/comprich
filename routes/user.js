@@ -119,7 +119,7 @@ router.post("/register", upload.single("image"), async function (req, res) {
 });
 
 router.get("/login", (req, res) => {
-    res.render("user/login");
+    res.render("updated/login");
 });
 
 router.post(
