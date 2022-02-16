@@ -72,7 +72,7 @@ cloudinary.config({
 // AUTH ROUTES
 
 router.get("/register", middleware.isNotLoggedIn, (req, res) => {
-    res.render("user/register");
+    res.render("updated/register");
 });
 
 router.post("/register", upload.single("image"), async function (req, res) {
