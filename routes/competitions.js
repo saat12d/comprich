@@ -221,7 +221,7 @@ router.get('/competitions', async (req, res) => {
 })
 
 router.get('/new',  (req, res) => {
-    res.render('competitions/new', { flag: true })
+    res.render('updated/new', { flag: true })
 })
 
 router.post('/competitions',  upload.array('images', 4), async function (req, res) {
@@ -285,7 +285,7 @@ router.get('/competitions/tgcc',  (req, res) => {
     })
 })
 
-router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
+router.get('/competitions/:id',  (req, res) => {
     Competition.findById(req.params.id).populate('ratings').exec((err, foundComp) => {
         if (err) {
             console.log(err)
@@ -296,7 +296,7 @@ router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
                 req.flash('error', err.message)
                 return res.redirect('back')
             }
-            res.render('competitions/show', { comp: foundComp, ratings: rating })
+            res.render('updated/show', { comp: foundComp, ratings: rating })
         })
     })
 })
