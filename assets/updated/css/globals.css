@@ -48,3 +48,8 @@ html {
 .socials {
   width: 68px
 }
+
+.sm-links {
+  display: flex;
+  flex-direction: row;
+}

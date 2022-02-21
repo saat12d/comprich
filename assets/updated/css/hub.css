@@ -6,8 +6,8 @@
   align-items: flex-start;
   background-color: var(--romance);
   display: flex;
-  height: 3786px;
-  overflow: hidden;
+  /* height: 3786px; */
+  /* overflow: hidden; */
   width: 1538px;
 }
 

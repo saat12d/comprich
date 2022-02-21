@@ -5,7 +5,7 @@
   background-color: var(--romance);
   display: flex;
   flex-direction: column;
-  height: 2864px;
+  /* height: 2864px; */
   overflow: hidden;
   width: 1538px;
 }
@@ -571,15 +571,21 @@
 .new-competition .follow-us {
   letter-spacing: 0;
   min-height: 34px;
-  width: 217px;
+  width: 1000px;
 }
 
 .new-competition .socials {
   height: 46px;
   margin-left: 2.5px;
   margin-top: 39px;
-  width: 136px;
+  /* width: 136px; */
+  /* display: inline; */
 }
+
+/* .sm-links {
+  display: flex;
+  flex-direction: row;
+} */
 
 .new-competition .group-18 {
   align-items: flex-start;
