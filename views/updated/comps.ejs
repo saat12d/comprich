@@ -73,7 +73,11 @@
                 <a href="/about"><div class="about-us">ABOUT US</div></a>
                 <a href="/competitions"><div class="hub-1">HUB</div></a>
                 <a href="/blog"><div class="our-blog">OUR BLOG</div></a>
-                <a href="/register"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
+                <% if(currentUser){ %>
+                  <a href="/myprofile"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></div></a>
+                <% } else { %>
+                  <a href="/register"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
+                <% } %>
               </div>
             </div>
           </div>

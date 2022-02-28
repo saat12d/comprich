@@ -4,13 +4,13 @@
   align-items: flex-start;
   background-color: var(--romance);
   display: flex;
-  height: 996px;
-  overflow: hidden;
+  /* height: 100000px; */
+  /* overflow: hidden; */
   width: 1538px;
 }
 
 .account-compete .overlap-group6 {
-  height: 2051px;
+  /* height: 2051px; */
   margin-left: -726px;
   margin-top: -500.61px;
   position: relative;
@@ -18,9 +18,9 @@
 }
 
 .account-compete .blob {
-  height: 2051px;
+  /* height: 2051px; */
   left: 0;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   width: 1633px;
 }

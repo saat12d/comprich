@@ -294,14 +294,15 @@ router.post("/reset/:token", (req, res) => {
     );
 });
 
-router.get("/my-profile", middleware.isLoggedIn, (req, res) => { 
-    User.findById(req.user._id, (err, user) => {
-        if (err) {
-            console.log(err);
-            return res.redirect("back");
-        }
-        res.render("user/profile", { user: user });
-    });
+router.get("/my-profile", (req, res) => { 
+    // User.findById(req.user._id, (err, user) => {
+    //     if (err) {
+    //         console.log(err);
+    //         return res.redirect("back");
+    //     }
+        // res.render("updated/profile", { user: user });
+        res.render("updated/profile");
+    // });
 });
 
 // router.get("/onlinecv", middleware.isLoggedIn, (req, res) => { 
@@ -320,7 +321,7 @@ router.get("/my-profile/edit", middleware.isLoggedIn, (req, res) => {
             console.log(err);
             return red.redirect("back");
         }
-        res.render("user/profile-edit", { user: user });
+        res.render("updated/profile-edit", { user: user });
     });
 });
 
