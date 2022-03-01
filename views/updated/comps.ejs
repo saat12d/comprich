@@ -163,9 +163,12 @@
                 <div class="start-your-own-competitive-journey josefinsans-semi-bold-black-35px">
                   Start your own competitive journey
                 </div>
-                <div class="overlap-group-3">
-                  <div class="open-profile josefinsans-bold-black-30px">OPEN PROFILE</div>
-                </div>
+                <a href="/my-profile">
+                  <div class="overlap-group-3">
+                    <div class="open-profile josefinsans-bold-black-30px">OPEN PROFILE</div>
+                  </div>
+                </a>
+
               </div>
               <div class="overlap-group2-1">
                 <div class="rectangle"></div>
@@ -180,7 +183,7 @@
               <div class="ready-to-work-with-comprich josefinsans-semi-bold-black-45px">
                 Ready to work with Comprich?
               </div>
-              <div class="overlap-group-5"><div class="back-to-top josefinsans-bold-black-30px">BACK TO TOP</div></div>
+              <div class="overlap-group-5" id="scrollTop" onclick="topFunction()"><div class="back-to-top josefinsans-bold-black-30px">BACK TO TOP</div></div>
             </div>
             <div class="overlap-group5">
               <div class="flex-row">
@@ -261,6 +264,27 @@
           $('#upLine').hide();
           // alert('clicked')
       })
-  })
+
+      //Get the button:
+      mybutton = document.getElementById("scrollTop");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      // window.onscroll = function() {scrollFunction()};
+
+      // function scrollFunction() {
+      //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      //     mybutton.style.display = "block";
+      //   } else {
+      //     mybutton.style.display = "none";
+      //   }
+      // }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        alert('clicked')
+      }
+        })
 </script>
 </html>

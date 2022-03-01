@@ -100,29 +100,31 @@
           </div>
           <img class="doodle-2-2" src="updated/img/doodle-2-2@2x.png" />
           <div class="form">
-            <div class="contact-us josefinsans-semi-bold-black-80px">Contact Us</div>
-            <div class="flex-row-1">
-              <div class="flex-col">
-                <div class="place josefinsans-normal-black-25px-2">Name</div>
-                <div class="overlap-group">
-                  <img class="frame-4" src="updated/img/frame-4@2x.svg" />
-                  <div class="place-1 valign-text-middle josefinsans-normal-black-25px-3">Name</div>
+            <form action="/messages" method="POST">
+              <div class="contact-us josefinsans-semi-bold-black-80px">Contact Us</div>
+              <div class="flex-row-1">
+                <div class="flex-col">
+                  <div class="place josefinsans-normal-black-25px-2">Name</div>
+                  <div class="overlap-group1">
+                    <img class="frame-5" src="updated/img/frame-5@2x.svg" />
+                    <input class="josefinsans-normal-black-25px" type="text" name="message[name]" placeholder="Name" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+                  </div>
+                </div>
+                <div class="flex-col-1">
+                  <div class="email josefinsans-normal-black-25px-2">Email</div>
+                  <div class="overlap-group1">
+                    <img class="frame-5" src="updated/img/frame-5@2x.svg" />
+                    <input class="josefinsans-normal-black-25px" type="text" name="message[email]" placeholder="Email" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+                  </div>
                 </div>
               </div>
-              <div class="flex-col-1">
-                <div class="email josefinsans-normal-black-25px-2">Email</div>
-                <div class="overlap-group1">
-                  <img class="frame-5" src="updated/img/frame-5@2x.svg" />
-                  <div class="email-1 valign-text-middle josefinsans-normal-black-25px-3">Email</div>
-                </div>
+              <div class="message josefinsans-normal-black-25px-2">Message</div>
+              <div class="overlap-group4">
+                <textarea name="message[body]" id="" class="josefinsans-normal-black-25px" rows="7" placeholder="Tell us your thoughts..." required style="border: none; width: 100%; height: 100%; outline: none;"></textarea>
               </div>
+              <button style="cursor: pointer;"><div class="overlap-group2-1"><div class="send-message josefinsans-bold-black-30px">SEND MESSAGE</div></div></button>
+            </form>
             </div>
-            <div class="message josefinsans-normal-black-25px-2">Message</div>
-            <div class="overlap-group4">
-              <div class="tell-us-your-thoughts josefinsans-normal-black-25px-3">Tell us your thoughts...</div>
-            </div>
-            <div class="overlap-group2-1"><div class="send-message josefinsans-bold-black-30px">SEND MESSAGE</div></div>
-          </div>
           <img class="saly-27" src="updated/img/saly-27@2x.png" />
           <img class="blob" src="updated/img/blob@1x.svg" />
           <img class="saly-13" src="updated/img/saly-13@1x.png" />
