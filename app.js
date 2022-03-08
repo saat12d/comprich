@@ -109,7 +109,7 @@ app.use((req, res, next) => {
 // })
 
 app.get('/survey', (req, res) => {
-  res.render('survey');
+  res.render('updated/survey');
 })
 
 app.use('/', indexRoutes);
