@@ -3,6 +3,7 @@ const router = express.Router({ mergeParams: true })
 
 const middleware = require('../middleware/index')
 
+const Competition = require('../models/competition.js')
 const Message = require('../models/message.js')
 
 let firstTime = true;
@@ -12,8 +13,9 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
 })
 
 
-router.get('/home', (req, res) => {
-    return res.render('updated/index.ejs');
+router.get('/home', async (req, res) => {
+    comps = await Competition.find({})
+    return res.render('updated/index.ejs', {comps: comps});
 })
 
 router.get('/about', (req, res) => {

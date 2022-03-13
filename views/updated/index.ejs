@@ -78,34 +78,23 @@
               </div>
             </div>
             <div class="gallery">
+              <% comps.reverse() %>
               <img class="frame" src="updated/img/frame@2x.svg" />
-              <div class="overlap-group1">
-                <img class="image-41" src="updated/img/image-41@2x.png" />
-                <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                  Tiger Global Case Competition
+              <% for(let i = 0; i < 3; i++){ %>
+                <div class="overlap-group1">
+                  <img class="image-41" src="<%= comps[i].images[0].url %>" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    <%= comps[i].title %>
+                  </div>
+                  <a href="/competitions/<%= comps[i]._id %>">
+                    <div class="overlap-group">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                    </div>
+                  </a>
                 </div>
-                <div class="overlap-group">
-                  <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                </div>
-              </div>
-              <div class="overlap-group-1">
-                <img class="image-41" src="updated/img/image-41@2x.png" />
-                <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                  Tiger Global Case Competition
-                </div>
-                <div class="overlap-group">
-                  <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                </div>
-              </div>
-              <div class="overlap-group-1">
-                <img class="image-41" src="updated/img/image-41@2x.png" />
-                <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                  Tiger Global Case Competition
-                </div>
-                <div class="overlap-group">
-                  <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                </div>
-              </div>
+              <% } %>
+              
+              
               <img class="frame-1" src="updated/img/frame-1@2x.svg" />
             </div>
           </div>

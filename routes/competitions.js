@@ -285,7 +285,7 @@ router.get('/competitions/tgcc',  (req, res) => {
     })
 })
 
-router.get('/competitions/:id',  (req, res) => {
+router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
     Competition.findById(req.params.id).populate('ratings').exec((err, foundComp) => {
         if (err) {
             console.log(err)
