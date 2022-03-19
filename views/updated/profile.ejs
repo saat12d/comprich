@@ -63,32 +63,40 @@
               </div>
               <div class="overlap-group-container">
                 <% for(let comp of user.signedUpFor){ %>
-                  <!-- <div class="overlap-group3"> -->
-                    <!-- <img class="image-41" src="<%= comp %>" /> -->
-                    <!-- <div style="display: block"> -->
-                      <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                        <%= comp.title %>
-                      </div>
-                      <div class="overlap-group">
-                        <% if(comp.verified){ %>
-                          <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
-                        <% } else { %>
-                          <div class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
-                        <% } %>
-                      </div>
-                    <!-- </div> -->
-
-                  <!-- </div> -->
-
-                  <!-- <div class="won-section">
-                    <div class="tion josefinsans-semi-bold-black-35px">Tiger Global Case Competition</div>
-                    <div class="awards-won-first-pl josefinsans-bold-black-25px-2">
-                      <span class="josefinsans-bold-black-25px-2">Awards Won</span
-                      ><span class="josefinsans-normal-black-25px-2">: First Place<br /></span
-                      ><span class="josefinsans-bold-black-25px-2">Skills Gained</span
-                      ><span class="josefinsans-normal-black-25px-2">: Public Speaking, Financial Analysis</span>
+                  
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= comp.title %>
                     </div>
-                  </div> -->
+                    <div class="overlap-group">
+                      <% if(comp.verified){ %>
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
+                      <% } else { %>
+                        <button style="cursor: pointer;" id="cv-form-button">
+                          <div class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
+                        </button>
+                      <% } %>
+                    </div>
+                    <div id="cv-form" style="display: none;">
+                      <form action="/onlinecv" method="POST">
+                        <div class="form-group">
+                            <label for="awardsWon">Awards Won (if any):</label>
+                            <input type="text" class="form-control" id="awardsWon" name="awards" placeholder="Enter here">
+                        </div>
+                        <div class="form-group">
+                            <label for="skillsGained">Skills Gained (if any):</label>
+                            <input type="text" class="form-control" id="skillsGained" name="skills" placeholder="Enter here">
+                        </div>
+                        <div class="form-group" style="display: none">
+                            <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
+                        </div>
+  
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin: 8px;">Close</button>
+                            <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+
                 <% } %>
               </div>
               <!-- <div class="overlap-group5">
@@ -124,4 +132,20 @@
       </div>
     </div>
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(() => {
+    $('#cv-form').hide();
+    $('cv-form-button').click(e => {
+      e.preventDefault();
+      $('#cv-form').toggle();
+    })
+  })
+
+    // button = document.getElementById("cv-form-button");
+    // cvform = document.getElementById("cv-form");
+
+
+  </script>
 </html>
