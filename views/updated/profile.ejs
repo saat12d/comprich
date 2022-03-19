@@ -71,7 +71,7 @@
                       <% if(comp.verified){ %>
                         <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
                       <% } else { %>
-                        <button style="cursor: pointer; outline: none; border: none; background: none;" id="cv-form-button">
+                        <button style="cursor: pointer;" id="cv-form-button">
                           <div class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
                         </button>
                       <% } %>
@@ -103,7 +103,7 @@
                         <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
   
                         <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">
-                          <div class="overlap-group-1"><div class="sign-up-1 josefinsans-bold-black-10px">Add to CV</div></div>                        </button>
+                          Add to CV</button>
                       </form>
                     </div>
 
@@ -146,8 +146,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
   $(document).ready(() => {
-    // $('#cv-form').hide();
-    $('cv-form-button').click(e => {
+    $('#cv-form').hide();
+    $('#cv-form-button').click(e => {
       e.preventDefault();
       $('#cv-form').toggle();
     })
