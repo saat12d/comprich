@@ -6,15 +6,14 @@ const User = require("../models/user");
 const middleware = require("../middleware/index");
 
 
-router.get("/onlinecv",  (req, res) => {
-    // User.findById(req.user._id, (err, user) => {
-    //     if (err) {
-    //         console.log(err);
-    //         return res.redirect("back");
-    //     }
-        // return res.render("updated/online-cv.ejs", {user: user})
-        return res.render("updated/online-cv.ejs")
-    // })
+router.get("/onlinecv", middleware.isLoggedIn,  (req, res) => {
+    User.findById(req.user._id, (err, user) => {
+        if (err) {
+            console.log(err);
+            return res.redirect("back");
+        }
+        return res.render("updated/online-cv.ejs", {user: user})
+    })
 })
 
 router.post('/onlinecv', (req, res) => {

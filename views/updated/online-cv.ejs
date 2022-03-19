@@ -43,18 +43,21 @@
             <div class="flex-col">
               <div class="flex-row">
                 <div class="flex-col-1">
-                  <div class="hello-john josefinsans-semi-bold-black-80px">Hello John!</div>
+                  <div class="hello-john josefinsans-semi-bold-black-80px">Hello <%= user.firstName %>!</div>
                   <div class="online-cv valign-text-middle josefinsans-semi-bold-black-50px">Online CV</div>
-                  <div class="won-section">
-                    <div class="tion josefinsans-semi-bold-black-35px">Tiger Global Case Competition</div>
-                    <div class="awards-won-first-pl josefinsans-bold-black-25px-2">
-                      <span class="josefinsans-bold-black-25px-2">Awards Won</span
-                      ><span class="josefinsans-normal-black-25px-2">: First Place<br /></span
-                      ><span class="josefinsans-bold-black-25px-2">Skills Gained</span
-                      ><span class="josefinsans-normal-black-25px-2">: Public Speaking, Financial Analysis</span>
-                    </div>
-                  </div>
-                  <div class="won-section-1">
+                  <% for(cv of user.cv){ %>
+                    <div class="won-section">
+                        <div class="tion josefinsans-semi-bold-black-35px"><%= cv.competition %></div>
+                        <div class="awards-won-first-pl josefinsans-bold-black-25px-2">
+                          <span class="josefinsans-bold-black-25px-2">Awards Won</span
+                          ><span class="josefinsans-normal-black-25px-2">: <%= cv.awards %><br /></span
+                          ><span class="josefinsans-bold-black-25px-2">Skills Gained</span
+                          ><span class="josefinsans-normal-black-25px-2">: <%= cv.skills %></span>
+                        </div>
+                      </div>
+                  <% } %>
+                  
+                  <!-- <div class="won-section-1">
                     <div class="tion josefinsans-semi-bold-black-35px">NFTE World Series of Innovation</div>
                     <div class="awards-won-first-pl-1 josefinsans-bold-black-25px-2">
                       <span class="josefinsans-bold-black-25px-2">Awards Won</span
@@ -62,7 +65,7 @@
                       ><span class="josefinsans-bold-black-25px-2">Skills Gained</span
                       ><span class="josefinsans-normal-black-25px-2">: Product Pitch</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="overlap-group3">
                   <div class="rectangle-16"></div>
