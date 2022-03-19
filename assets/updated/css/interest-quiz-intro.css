@@ -310,3 +310,102 @@
   min-height: 25px;
   min-width: 115px;
 }
+
+
+.interest-quiz-intro .overlap-group8 {
+  align-items: flex-start;
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  left: 1069px;
+  min-width: 720px;
+  padding: 21.5px 26.5px;
+  position: absolute;
+  top: 840px;
+}
+
+.interest-quiz-intro .false {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 658px;
+}
+
+.interest-quiz-intro .overlap-group9 {
+  align-items: flex-start;
+  border-radius: 50px;
+  display: flex;
+  height: 77px;
+  left: 1069px;
+  min-width: 720px;
+  padding: 21.5px 26.5px;
+  position: absolute;
+  top: 720px;
+}
+
+.interest-quiz-intro .place {
+  letter-spacing: 0;
+  min-height: 27px;
+  text-align: center;
+  width: 658px;
+}
+
+.interest-quiz-intro .i-get-frustrated-ver {
+  left: 889px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 527px;
+  width: 1080px;
+}
+
+.interest-quiz-intro .saly-22-1 {
+  height: 328px;
+  left: 785px;
+  object-fit: cover;
+  position: absolute;
+  top: 829px;
+  width: 290px;
+}
+
+.interest-quiz-intro .saly-22-copy-1 {
+  height: 322px;
+  left: 1777px;
+  object-fit: cover;
+  position: absolute;
+  top: 840px;
+  width: 304px;
+}
+
+.interest-quiz-intro .progress-bar {
+  align-items: flex-start;
+  display: flex;
+  height: 35px;
+  left: 1233px;
+  min-width: 392px;
+  position: absolute;
+  top: 1026px;
+}
+
+.interest-quiz-intro .ellipse-6 {
+  background-color: var(--black);
+  border-radius: 17.5px;
+  height: 35px;
+  width: 35px;
+}
+
+.interest-quiz-intro .ellipse {
+  background-color: var(--black);
+  border-radius: 17.5px;
+  height: 35px;
+  margin-left: 16px;
+  width: 35px;
+}
+
+.interest-quiz-intro .ellipse-1 {
+  border-radius: 17.5px;
+  height: 35px;
+  margin-left: 16px;
+  width: 35px;
+}

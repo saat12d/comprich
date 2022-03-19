@@ -7,8 +7,11 @@
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
     <link rel="stylesheet" type="text/css" href="updated/css/interest-quiz-intro.css" />
+    <link rel="stylesheet" type="text/css" href="updated/css/interest-quiz-questions.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
+    <link rel="stylesheet" href="/stylesheets/quiz.css" />
+
   </head>
   <body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="interest-quiz-intro" />
@@ -46,10 +49,45 @@
             </div>
           </div>
           <img class="blob" src="updated/img/blob@1x.svg" />
-          <div class="interest-quiz josefinsans-semi-bold-black-80px">Interest Quiz</div>
-          <div class="tell-us-more-about-y">Tell us more about yourself and we’ll recommend you competitions!</div>
-          <img class="saly-22" src="updated/img/saly-22@2x.png" />
-          <div class="overlap-group2"><div class="start-quiz josefinsans-bold-black-30px">START QUIZ</div></div>
+          <div class="interest-quiz josefinsans-semi-bold-black-80px" id="title1">Interest Quiz</div>
+          <div class="tell-us-more-about-y" id="title2">Tell us more about yourself and we’ll recommend you competitions!</div>
+          <img id="img1" class="saly-22" src="updated/img/saly-22@2x.png" />
+          <button id="startButton" style="cursor: pointer;"><div class="overlap-group2"><div class="start-quiz josefinsans-bold-black-30px">START QUIZ</div></div></button>
+          <!-- <div id="quiz" style="display: none; width: auto; height: 58%;align-items: center; margin-top: 3%;">
+            <div id="question"></div>
+            <div id="choices">
+              <div class="choice" id="A" onclick="checkAnswer(''), addA()"></div>
+              <div class="choice" id="B" onclick="checkAnswer(''), addB()"></div>
+            </div>
+            <div id="progress"></div>
+          </div>
+          <div id="scoreContainer" style="display: none"></div> -->
+
+          <!-- NEW STUFF -->
+          <div class="quiz" style="display: none; width: auto; height: 58%;align-items: center; margin-top: 3%;">
+            <div class="overlap-group8 border-3-5px-black">
+              <div class="false josefinsans-normal-black-30px choice" id="A" onclick="checkAnswer(''), addA()"></div>
+            </div>
+            <div class="overlap-group9 border-3-5px-black">
+              <div class="place josefinsans-normal-black-30px choice" id="B" onclick="checkAnswer(''), addB()"></div>
+            </div>
+            <div class="i-get-frustrated-ver josefinsans-normal-black-45px question">
+            </div>
+          </div>
+
+          <img class="saly-22-1" src="updated/img/saly-22-1@2x.png" />
+          <img class="saly-22-copy-1" src="updated/img/saly-22-copy-1@2x.png" />
+          <div class="progress">
+            <!-- <div class="ellipse-6"></div>
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+            <div class="ellipse-1 border-3-5px-black"></div>
+            <div class="ellipse-1 border-3-5px-black"></div>
+            <div class="ellipse-1 border-3-5px-black"></div>
+            <div class="ellipse-1 border-3-5px-black"></div>
+            <div class="ellipse-1 border-3-5px-black"></div> -->
+          </div>
+          
           <div class="header">
             <img class="logo-5" src="updated/img/logo-5@2x.png" />
             <div class="group-8 josefinsans-bold-black-25px">
@@ -62,5 +100,8 @@
         </div>
       </div>
     </div>
+
+    <!-- <script type="module" src="/js/mainML.js"></script> -->
+    <script src="/js/quiz.js"></script>
   </body>
 </html>

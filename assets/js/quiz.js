@@ -7,6 +7,7 @@ var arr = [];
 const start = document.getElementById("startButton");
 const title1 = document.getElementById("title1");
 const title2 = document.getElementById("title2");
+const img1 = document.getElementById("img1");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
@@ -107,6 +108,7 @@ function startQuiz() {
     title1.style.display = "none";
     title2.style.display = "none";
     start.style.display = "none";
+    img1.style.display = "none"
     renderQuestion();
     quiz.style.display = "block";
     renderProgress();

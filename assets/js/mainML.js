@@ -1,5 +1,5 @@
 /* jshint esversion:6 */
-const brain = require('brain.js');
+import brain from 'brain-js';
 const net = new brain.NeuralNetwork();
 
 

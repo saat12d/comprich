@@ -62,24 +62,31 @@
                 <div class="completed">Completed</div> -->
               </div>
               <div class="overlap-group-container">
-                <div class="overlap-group3">
-                  <img class="image-41" src="updated/img/image-41@2x.png" />
-                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                    Tiger Global Case Competition
+                <% for(let comp of user.signedUpFor){ %>
+                  <div class="overlap-group3">
+                    <!-- <img class="image-41" src="<%= comp %>" /> -->
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= comp.title %>
+                    </div>
+                    <div class="overlap-group">
+                      <% if(comp.verified){ %>
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
+                      <% } else { %>
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
+                      <% } %>
+                    </div>
                   </div>
-                  <div class="overlap-group">
-                    <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                  </div>
-                </div>
-                <div class="overlap-group4">
-                  <img class="image-41" src="updated/img/image-41-1@2x.png" />
-                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                    Tiger Global Case Competition
-                  </div>
-                  <div class="overlap-group">
-                    <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                  </div>
-                </div>
+
+                  <!-- <div class="won-section">
+                    <div class="tion josefinsans-semi-bold-black-35px">Tiger Global Case Competition</div>
+                    <div class="awards-won-first-pl josefinsans-bold-black-25px-2">
+                      <span class="josefinsans-bold-black-25px-2">Awards Won</span
+                      ><span class="josefinsans-normal-black-25px-2">: First Place<br /></span
+                      ><span class="josefinsans-bold-black-25px-2">Skills Gained</span
+                      ><span class="josefinsans-normal-black-25px-2">: Public Speaking, Financial Analysis</span>
+                    </div>
+                  </div> -->
+                <% } %>
               </div>
               <!-- <div class="overlap-group5">
                 <img class="image-41" src="updated/img/image-41@2x.png" />

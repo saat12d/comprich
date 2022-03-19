@@ -30,6 +30,7 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
+  margin: auto auto;
 }
 #qImg img {
   width: 200px;
@@ -41,7 +42,7 @@ body {
   width: auto;
   margin: 0 auto;
   margin-top: 5%;
-  /* position: absolute; */
+  position: absolute;
   display: block;
   text-align: center;
 }
