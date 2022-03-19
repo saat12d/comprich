@@ -428,3 +428,57 @@
   text-align: center;
   width: 148px;
 }
+
+
+/* added styles for cv form */
+  .fields {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 932px;
+  min-height: 550px;
+  position: absolute;
+  top: 526px;
+  width: 761px;
+}
+
+  .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 118px;
+  min-width: 765px;
+}
+
+  .username {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  width: 371px;
+}
+
+  .username-1 {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 37px;
+  width: 367px;
+}
+
+  .overlap-group6 {
+  align-items: flex-end;
+  background-image: url(../img/rectangle-11-4@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  height: 75px;
+  margin-top: 6px;
+  min-width: 367px;
+  padding: 23px 41px;
+}
+
+  .johndoe {
+  height: 27px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+  width: 238px;
+}
