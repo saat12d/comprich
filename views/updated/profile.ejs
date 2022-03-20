@@ -79,7 +79,16 @@
 
                     <div id="cv-form" style="display: block;">
                       <form action="/onlinecv" method="POST">
-                        <div class="fields">
+                        <div class="">Awards Won (if any):</div>
+                        <div>
+                            <input class="" type="text" name="awards" placeholder="Enter here">
+                        </div>
+                        <div class="">Skills Gained (if any):</div>
+                        <div class="">
+                            <input class="" type="text" name="skills" placeholder="UEnter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+                        </div>
+
+                        <!-- <div class="fields">
                           <div class="flex-row">
                             <div class="username">
                               <div class="username-1 josefinsans-normal-black-25px-2">Awards Won (if any):</div>
@@ -95,11 +104,11 @@
                               </div>
                             </div>
                             <!-- add hidden field with comp name -->
-                            <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
+                            <!-- <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
 
                           </div>
-                        </div>
-                        
+                        </div> -->
+                         -->
                         <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
   
                         <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">
