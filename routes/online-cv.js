@@ -27,6 +27,12 @@ router.post('/onlinecv', (req, res) => {
             skills: req.body.skills,
             competition: req.body.comp
         })
+        for(c of user.signedUpFor){
+            if(c.title == req.body.comp){
+                c.verified == true;
+                break;
+            }
+        }
         user.save();
         console.log(user);
         res.redirect("/onlinecv");
