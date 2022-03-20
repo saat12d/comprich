@@ -29,7 +29,7 @@ router.post('/onlinecv', (req, res) => {
         })
         for(c of user.signedUpFor){
             if(c.title == req.body.comp){
-                c.verified == true;
+                c.verified = true;
                 break;
             }
         }
