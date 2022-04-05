@@ -178,6 +178,6 @@ function scoreRender() {
     } else if (-0.13 > finalNumber) {
         personal_output = "Computer Science";
     }
-    scoreDiv.innerHTML += "<p>You are well suited towards <span>"+personal_output+"</span> competitions.</p><br><p>Head over to the competitions page to unlock your true potential!</p>";
+    scoreDiv.innerHTML += '<p style="left: 325px">You are well suited towards <span>'+personal_output+'</span> competitions.</p><br><p style="left: 325px">Head over to the competitions page to unlock your true potential!</p>';
     console.log(personal_output);
 }

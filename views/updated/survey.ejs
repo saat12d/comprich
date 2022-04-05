@@ -64,12 +64,17 @@
           <div id="scoreContainer" style="display: none"></div> -->
 
           <!-- NEW STUFF -->
-          <div class="quiz" style="display: none; width: auto; height: 58%;align-items: center; margin-top: 3%;">
+          <div id="quiz" style="display: none; width: auto; height: 58%;align-items: center; margin-top: 3%;">
+            
+            <div class="overlap-group10 josefinsans-normal-black-30px">
+              <div id="question"></div>
+            </div>
+
             <div class="overlap-group8 border-3-5px-black">
-              <div class="false josefinsans-normal-black-30px choice" id="A" onclick="checkAnswer(''), addA()"></div>
+              <div class="false josefinsans-normal-black-30px choice" id="A" onclick="checkAnswer(''), addA()" style="margin-top: -5px; border: none;"></div>
             </div>
             <div class="overlap-group9 border-3-5px-black">
-              <div class="place josefinsans-normal-black-30px choice" id="B" onclick="checkAnswer(''), addB()"></div>
+              <div class="place josefinsans-normal-black-30px choice" id="B" onclick="checkAnswer(''), addB()"  style="margin-top: -10px; border: none;"></div>
             </div>
             <div class="i-get-frustrated-ver josefinsans-normal-black-45px question">
             </div>
@@ -77,7 +82,7 @@
 
           <img class="saly-22-1" src="updated/img/saly-22-1@2x.png" />
           <img class="saly-22-copy-1" src="updated/img/saly-22-copy-1@2x.png" />
-          <div class="progress">
+          <div id="progress">
             <!-- <div class="ellipse-6"></div>
             <div class="ellipse"></div>
             <div class="ellipse"></div>
@@ -87,7 +92,8 @@
             <div class="ellipse-1 border-3-5px-black"></div>
             <div class="ellipse-1 border-3-5px-black"></div> -->
           </div>
-          
+          <div class=" josefinsans-normal-black-30px" id="scoreContainer" style="display: none"></div>
+
           <div class="header">
             <img class="logo-5" src="updated/img/logo-5@2x.png" />
             <div class="group-8 josefinsans-bold-black-25px">
