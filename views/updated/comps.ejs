@@ -88,7 +88,15 @@
                 <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" />
               </div>
             </a>
-            <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div>
+            <% if(currentUser){ %>
+              <!-- <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div> -->
+              <a href="#foryou" id="fy">
+                <div class="flex-col">
+                  <div class="all-upcoming josefinsans-semi-bold-black-35px">For You</div>
+                  <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" />
+                </div>
+              </a>
+            <% } %>
             <a href="#finished" id="finish">
               <div class="flex-col">
                 <div class="past-competitions josefinsans-semi-bold-black-35px-3">Past Competitions</div>
@@ -102,6 +110,12 @@
           <% let finished = [] %>
           <% for(let competition of competitions) { %>
               <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
+          <% } %>
+
+          <% if(currentUser){ %>
+            <% let foryou = upcoming %>
+            <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
+            <% console.log(foryou) %>
           <% } %>
 
 
