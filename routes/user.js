@@ -383,6 +383,22 @@ router.post("/:id/remove", middleware.isLoggedIn, (req, res) => {
     });
 });
 
+// REC QUIZ ROUTES
+
+router.get('/survey', middleware.isLoggedIn, (req, res) => {
+    res.render('updated/survey');
+})
+  
+
+router.post('/save-survey', middleware.isLoggedIn, async (req, res) => {
+    await User.findById(req.user._id, (err, user) => {
+        user.recCategory = req.body.survey_result
+        user.hasTakenRec = true;
+        user.save();
+    })
+    return res.redirect('/my-profile');
+})
+
 router.post('/recScore', async (req, res) => {
     await User.findById(req.user._id, (err, user) => {
         user.recScore = req.body.recScore;

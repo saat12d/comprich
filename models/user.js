@@ -61,7 +61,7 @@ const userSchema = new mongoose.Schema({
             awards: String
         }
     ],
-    recScore: Number,
+    recCategory: String,
     hasTakenRec: {type: Boolean, default: false}
 })
 

@@ -14,10 +14,11 @@ const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
+const saveButton = document.getElementById("saveButton");
+const resultsInput = document.getElementById("resultsInput");
 var finalNumber = 0;
 
-
-
+saveButton.style.top = "1000px"
 // create our questions
 let questions = [
     {
@@ -144,7 +145,7 @@ function checkAnswer() {
 
 // answer is complete
 function answerIsComplete() {
-    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
+    // document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
     
 }
 
@@ -162,6 +163,8 @@ function answerIsComplete() {
 function scoreRender() {
     quiz.style.display = "none"
     scoreDiv.style.display = "block";
+    saveButton.style.top = "0px"
+
     let personal_output = "";
     if (finalNumber > 0.4) {
         personal_output = "Art";
@@ -180,4 +183,5 @@ function scoreRender() {
     }
     scoreDiv.innerHTML += '<p style="left: 325px">You are well suited towards <span>'+personal_output+'</span> competitions.</p><br><p style="left: 325px">Head over to the competitions page to unlock your true potential!</p>';
     console.log(personal_output);
+    resultsInput.setAttribute('value', personal_output);
 }
