@@ -93,7 +93,7 @@
               <a href="#foryou" id="fy">
                 <div class="flex-col">
                   <div class="all-upcoming josefinsans-semi-bold-black-35px">For You</div>
-                  <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" />
+                  <!-- <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" /> -->
                 </div>
               </a>
             <% } %>
@@ -115,7 +115,8 @@
           <% if(currentUser){ %>
             <% let foryou = upcoming %>
             <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
-            <% console.log(foryou) %>
+            <%= console.log(foryou) %>
+            <% alert('reached') %>
           <% } %>
 
 
