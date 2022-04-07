@@ -144,29 +144,31 @@
               <% } %>
           </div>
 
-          <div class="home" id="forDisplay">
-            <% for(let i = 0; i < foryou.length; i+=3){ %>
-              <% if(foryou[i+2] == undefined || foryou[i + 1] == undefined || foryou[i] == undefined){ %>
-                <% break %>
-              <% } %>
-              <% let comps = [foryou[i], foryou[i + 1], foryou[i + 2]] %>
-              <div class="gallery" style="padding-left: 100px">
-                <% for(competition of comps){ %>
-                  <div class="overlap-group1">
-                    <img class="image-41" src="<%= competition.images[0].url %>" />
-                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      <%= competition.title %>
-                    </div>
-                    <a href="/competitions/<%= competition._id %>">
-                      <div class="overlap-groupx">
-                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                      </div>
-                    </a>
-                  </div>
+          <% if(foryou){ %>
+            <div class="home" id="forDisplay">
+              <% for(let i = 0; i < foryou.length; i+=3){ %>
+                <% if(foryou[i+2] == undefined || foryou[i + 1] == undefined || foryou[i] == undefined){ %>
+                  <% break %>
                 <% } %>
-              </div>
-              <% } %>
-          </div>
+                <% let comps = [foryou[i], foryou[i + 1], foryou[i + 2]] %>
+                <div class="gallery" style="padding-left: 100px">
+                  <% for(competition of comps){ %>
+                    <div class="overlap-group1">
+                      <img class="image-41" src="<%= competition.images[0].url %>" />
+                      <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                        <%= competition.title %>
+                      </div>
+                      <a href="/competitions/<%= competition._id %>">
+                        <div class="overlap-groupx">
+                          <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                        </div>
+                      </a>
+                    </div>
+                  <% } %>
+                </div>
+                <% } %>
+            </div>
+          <% } %>
 
           <div class="home" id="finishedDisplay">
             <% for(let i = 0; i < finished.length; i+=3){ %>
