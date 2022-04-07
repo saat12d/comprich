@@ -85,22 +85,23 @@
             <a href="#upcoming" id="up">
               <div class="flex-col">
                 <div class="all-upcoming josefinsans-semi-bold-black-35px">All Upcoming</div>
-                <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" />
+                <!-- <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" /> -->
               </div>
             </a>
             <% if(currentUser){ %>
               <!-- <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div> -->
               <a href="#foryou" id="fy">
                 <div class="flex-col">
-                  <div class="foryou josefinsans-semi-bold-black-35px">For You</div>
+                  <div class="foryou josefinsans-semi-bold-black-35px" style="left: 75px">For You</div>
                   <!-- <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" /> -->
                 </div>
               </a>
             <% } %>
+            
             <a href="#finished" id="finish">
               <div class="flex-col">
                 <div class="past-competitions josefinsans-semi-bold-black-35px-3">Past Competitions</div>
-                <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" />
+                <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
               </div>
             </a>
           </div>
@@ -168,8 +169,11 @@
                       <% } %>
                     </div>
                     <% } %>
-              <% } else { %>
-                <p class="josefinsans-normal-black-30px">Take recommendation quiz to get personalized competitions</p>
+              <% } else if (currentUser && !currentUser.hasTakenRec) { %>
+                <div style="padding-bottom: 300px">
+                  <p style="left: 150px; top: 100px" class="josefinsans-normal-black-45px">Take recommendation quiz <a style="color: blue; text-decoration: underline;" href="/survey">here</a> to get personalized competitions</p>
+
+                </div>
               <% } %>
 
             </div>
@@ -282,6 +286,10 @@
   $(document).ready(() => {
       $('#finishedDisplay').hide();
       $('#forDisplay').hide();
+
+      $('.foryou').css({
+            'color': ' var(--black-5)'
+          })
 
       $('#up').click(function(){
           $('#finishedDisplay').hide();
