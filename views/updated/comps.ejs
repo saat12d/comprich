@@ -92,7 +92,7 @@
               <!-- <div class="for-you josefinsans-semi-bold-black-35px-3">For You</div> -->
               <a href="#foryou" id="fy">
                 <div class="flex-col">
-                  <div class="all-upcoming josefinsans-semi-bold-black-35px">For You</div>
+                  <div class="foryou josefinsans-semi-bold-black-35px">For You</div>
                   <!-- <img class="line-3" id="upLine" src="updated/img/line-3@2x.svg" /> -->
                 </div>
               </a>
@@ -115,8 +115,8 @@
           <% if(currentUser){ %>
             <% let foryou = upcoming %>
             <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
-            <%= console.log(foryou) %>
-            <% alert('reached') %>
+            <% console.log(foryou) %>
+            
           <% } %>
 
 
@@ -127,6 +127,30 @@
                 <% break %>
               <% } %>
               <% let comps = [upcoming[i], upcoming[i + 1], upcoming[i + 2]] %>
+              <div class="gallery" style="padding-left: 100px">
+                <% for(competition of comps){ %>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="<%= competition.images[0].url %>" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= competition.title %>
+                    </div>
+                    <a href="/competitions/<%= competition._id %>">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                      </div>
+                    </a>
+                  </div>
+                <% } %>
+              </div>
+              <% } %>
+          </div>
+
+          <div class="home" id="forDisplay">
+            <% for(let i = 0; i < foryou.length; i+=3){ %>
+              <% if(foryou[i+2] == undefined || foryou[i + 1] == undefined || foryou[i] == undefined){ %>
+                <% break %>
+              <% } %>
+              <% let comps = [foryou[i], foryou[i + 1], foryou[i + 2]] %>
               <div class="gallery" style="padding-left: 100px">
                 <% for(competition of comps){ %>
                   <div class="overlap-group1">
@@ -252,11 +276,16 @@
 <script>
   $(document).ready(() => {
       $('#finishedDisplay').hide();
+      $('#forDisplay').hide();
 
       $('#up').click(function(){
           $('#finishedDisplay').hide();
+          $('#forDisplay').hide();
           $('#upcomingDisplay').show();
           $('.past-competitions').css({
+            'color': ' var(--black-5)'
+          })
+          $('.foryou').css({
             'color': ' var(--black-5)'
           })
           $('.all-upcoming').css({
@@ -268,6 +297,8 @@
       })
       $('#finish').click(function(){
           $('#upcomingDisplay').hide();
+          $('#forDisplay').hide();
+
           $('#finishedDisplay').show();
           $('.past-competitions').css({
             'color': ' var(--black)'
@@ -275,9 +306,29 @@
           $('.all-upcoming').css({
             'color': ' var(--black-5)'
           })
+          $('.foryou').css({
+            'color': ' var(--black-5)'
+          })
           $('#finishLine').show();
           $('#upLine').hide();
           // alert('clicked')
+      })
+      $('#fy').click(function(){
+        $('#finishedDisplay').hide();
+        $('#upcomingDisplay').hide();
+
+        $('#forDisplay').show();
+        $('#finishLine').hide();
+        $('#upLine').hide();
+        $('.foryou').css({
+            'color': ' var(--black)'
+          })
+        $('.all-upcoming').css({
+            'color': ' var(--black-5)'
+        })
+        $('.past-competitions').css({
+          'color': ' var(--black-5)'
+        })
       })
 
       //Get the button:
