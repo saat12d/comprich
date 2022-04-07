@@ -113,9 +113,18 @@
               <% competition.date < Date.now() ? finished.push(competition) : upcoming.push(competition) %>
           <% } %>
           <% let foryou = [] %>
+
           <% if(currentUser){ %>
+            <% let count = 0 %>
             <% let foryou = upcoming %>
-            <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
+            <% for(let comp of upcoming){ %>
+              <% for(let cat of comp.category){ %>
+                <% if(cat == currentUser.recCategory){ %>
+                  <% foryou[count] = comp %>
+                  <% count++ %>
+                <% } %>
+              <% } %>
+            <% } %>
             
           <% } %>
 
