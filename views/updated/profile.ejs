@@ -75,47 +75,27 @@
                           <div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
                         <!-- </button> -->
                     </div>
-
-                    <div id="cv-form" style="display: block;">
-                      <form action="/onlinecv" method="POST">
-                        <div class="">Awards Won (if any):</div>
-                        <div>
-                            <input class="" type="text" name="awards" placeholder="Enter here">
-                        </div>
-                        <div class="">Skills Gained (if any):</div>
-                        <div class="">
-                            <input class="" type="text" name="skills" placeholder="UEnter here" style="">
-                        </div>
-
-                        <!-- <div class="fields">
-                          <div class="flex-row">
-                            <div class="username">
-                              <div class="username-1 josefinsans-normal-black-25px-2">Awards Won (if any):</div>
-                              <div class="overlap-group6">
-                                  <input class="josefinsans-normal-black-25px" type="text" name="awards" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                              </div>
-                            </div>
-
-                            <div class="password">
-                              <div class="password-1 josefinsans-normal-black-25px-2">Skills Gained (if any):</div>
-                              <div class="overlap-group5">
-                                  <input class="josefinsans-normal-black-25px" type="text" name="skills" placeholder="UEnter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                              </div>
-                            </div>
-                            add hidden field with comp name
-                            <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
-
-                          </div>
-                        </div> -->
-                        <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
-  
-                        <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">
-                          Add to CV</button>
-                      </form>
-                    </div>
                     <% } %>
-
                 <% } %>
+
+                <div id="cv-form" style="display: block;">
+                  <form action="/onlinecv" method="POST">
+                    <div class="">Awards Won (if any):</div>
+                    <div>
+                        <input class="" type="text" name="awards" placeholder="Enter here">
+                    </div>
+                    <div class="">Skills Gained (if any):</div>
+                    <div class="">
+                        <input class="" type="text" name="skills" placeholder="UEnter here" style="">
+                    </div>
+
+                   
+                    <input style="display: none" type="text" class="form-control" id="skillsGained" name="comp" value="<%= comp.title %>">
+
+                    <button type="submit" class="btn btn-primary" style="margin: 8px; margin-left: 0px;">
+                      Add to CV</button>
+                  </form>
+                </div>
               </div>
               <!-- <div class="overlap-group5">
                 <img class="image-41" src="updated/img/image-41@2x.png" />
