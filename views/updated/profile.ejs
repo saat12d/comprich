@@ -61,9 +61,9 @@
                 <!-- <div class="saved">Saved</div>
                 <div class="completed">Completed</div> -->
               </div>
+              <% for(let comp of user.signedUpFor){ %>
               <div class="overlap-group-container">
-                <% for(let comp of user.signedUpFor){ %>
-                  <div style="display: block">
+                  <!-- <div style="display: block"> -->
                     <div class="tiger-global-case-competition josefinsans-normal-black-24px">
                       <%= comp.title %>
                     </div>
@@ -78,8 +78,9 @@
                     <% } %>
                   </div>
                     
-                <% } %>
               </div>
+              <% } %>
+
                 <div id="cv-form" style="display: block;">
                   <form action="/onlinecv" method="POST">
                     <div class="">Awards Won (if any):</div>
