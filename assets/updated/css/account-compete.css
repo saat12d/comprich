@@ -214,7 +214,7 @@
 .account-compete .overlap-group-container {
   align-items: flex-start;
   display: flex;
-  height: 500px;
+  height: 70px;
   margin-top: 34px;
   min-width: 744px;
 }
@@ -242,8 +242,7 @@
   margin-left: 1.48px;
   margin-top: 20px;
   min-height: 46px;
-  text-align: center;
-  width: 238px;
+  width: 400px;
 }
 
 .account-compete .overlap-group {
