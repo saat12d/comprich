@@ -241,7 +241,7 @@
   
   .hub .header {
     align-items: flex-end;
-    background-color: var(--white);
+    background-color: var(--black);
     box-shadow: 0px 20px 35px #0000000d;
     display: flex;
     height: 141px;
@@ -272,6 +272,7 @@
     margin-top: 1.87px;
     min-height: 19px;
     width: 135px;
+    color: var(--white)
   }
   
   .hub .hub-1 {
@@ -280,6 +281,8 @@
     margin-top: 0;
     min-height: 19px;
     width: 56px;
+    color: var(--white)
+
   }
   
   .hub .our-blog {
@@ -288,6 +291,8 @@
     margin-top: 0;
     min-height: 19px;
     width: 138px;
+    color: var(--white)
+
   }
   
   .hub .overlap-group-2 {
@@ -305,6 +310,7 @@
     letter-spacing: 0;
     min-height: 19px;
     width: 107px;
+    color: var(--white)
   }
   
   .hub .group-33 {
