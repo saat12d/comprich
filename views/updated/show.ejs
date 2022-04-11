@@ -35,11 +35,22 @@
         <div class="column-container">
           <div class="column-1">
             <img class="image-41" src="<%= comp.images[0].url %>" />
-            <a href="<%= comp.websiteLink %>">
-              <div class="overlap-group-1">
-                <div class="competition-page josefinsans-bold-black-25px">Competition Page</div>
-              </div>
-            </a>
+            <% if(comp.websiteLink !== ''){ %>
+              <a href="<%= comp.websiteLink %>">
+                <div class="overlap-group-1">
+                  <div class="competition-page josefinsans-bold-black-25px">Competition Page</div>
+                </div>
+              </a>
+            <% } %>
+
+            <% if(comp.smLink !== ''){ %>
+              <a href="<%= comp.smLink %>">
+                <div class="overlap-group-1">
+                  <div class="competition-page josefinsans-bold-black-25px">Social Media</div>
+                </div>
+              </a>
+            <% } %>
+
 
             <% let flag2 = false; %>
             <% for(let c of currentUser.signedUpFor){ %>
@@ -52,7 +63,7 @@
             <% if(comp.signUpLastDate > Date.now()){ %>
               <% if(!flag2){ %>
                   <form action="/competitions/<%= comp._id %>/signup" method="POST">
-                    <button style="border: none; background: none; outline: none;" target="_blank">
+                    <button style="border: none; background: none; outline: none; cursor: pointer" target="_blank">
                       <div class="application">
                         <img class="vector-3" src="/updated/img/vector-5@2x.svg" />
                         <div class="start-application josefinsans-bold-black-25px">Start Application</div>
@@ -78,14 +89,8 @@
           <div class="column-2">
             
             
-            <% if(comp.smLink){ %>
                 <li class="list-group-item"><a href="<%= comp.smLink %>" target="_blank">Competition Social Media</a></li>
-            <% } %>
-            <% if(comp.websiteLink !== ''){ %>
-                <li class="list-group-item">
-                    <a href="<%= comp.websiteLink %>" target="_blank">Competition Website</a>
-                </li>
-            <% } %>
+            
             <div class="group-51">
               <div class="due">
                 <img class="vector" src="/updated/img/vector-1@2x.svg" />
