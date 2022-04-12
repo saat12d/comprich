@@ -138,7 +138,11 @@
               <a href="/about"><div class="about-us-2">ABOUT US</div></a>
                 <a href="/competitions"><div class="hub">HUB</div></a>
                 <a href="/blog"><div class="our-blog">OUR BLOG</div></a>
-                <a href="/register"><div class="overlap-group-1"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
+                <% if(currentUser){ %>
+                  <a href="/my-profile"><div class="overlap-group-1"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></div></a>
+                <% } else { %>
+                  <a href="/login"><div class="overlap-group-1"><div class="sign-up josefinsans-bold-black-25px">LOGIN</div></div></a>
+                <% } %>
             </div>
           </div>
         </div>

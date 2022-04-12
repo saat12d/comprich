@@ -141,7 +141,7 @@ router.get("/logout", (req, res) => {
 });
 
 router.get("/forgot", middleware.isNotLoggedIn, (req, res) => {
-    res.render("user/forgot");
+    res.render("updated/forgot");
 });
 
 router.post("/forgot", (req, res, next) => {
