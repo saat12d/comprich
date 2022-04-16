@@ -666,13 +666,14 @@
 }
 
 .about .overlap-group-1 {
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
   height: 55px;
   margin-left: 58px;
-  min-width: 193px;
+  /* min-width: 193px; */
   padding: 18.1px 43px;
 }
 
@@ -892,4 +893,11 @@
   min-height: 81px;
   text-align: center;
   width: 693px;
+}
+
+.about .socials {
+  height: 46px;
+  margin-left: 2.5px;
+  margin-top: 39px;
+  width: 136px;
 }

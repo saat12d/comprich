@@ -71,13 +71,13 @@
 }
 
 .home .overlap-group-2 {
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
   height: 55px;
   margin-left: 58px;
-  min-width: 193px;
   padding: 1.5vh 2.2vw;
 }
 
@@ -168,13 +168,14 @@
 
 .home .overlap-group-3 {
   align-items: center;
+  text-align: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
   height: 79px;
   justify-content: flex-end;
   margin-top: 33px;
-  min-width: 304px;
+  /* min-width: 304px; */
   padding: 2vh 2.5vw;
 }
 
@@ -244,15 +245,16 @@
 }
 
 .home .overlap-group-4 {
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
   height: 77px;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   left: 768px;
-  min-width: 304px;
-  padding: 2vh 2.5vw;
+  /* min-width: 304px; */
+  padding: 2.5vh 2.5vw;
   position: absolute;
   top: 669px;
 }
@@ -442,7 +444,7 @@
   height: 500px;
   margin-right: 4.0px;
   margin-top: 65px;
-  min-width: 1417px;
+  /* min-width: 1417px; */
 }
 
 .home .frame {
