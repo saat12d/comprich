@@ -45,12 +45,13 @@
           <div class="first-name-4">
             <div class="year-grade josefinsans-normal-black-25px-2">Year/Grade</div>
             <div class="overlap-group">
-                <select id="year" class="josefinsans-normal-black-25px-2" name="user[yearLevel]" required>
+                <select id="year" class="josefinsans-normal-black-25px-2" name="user[yearLevel]" required style="border: none">
                     <option value="0">Select grade level</option>
                     <% for(let i = 6; i < 13; i++){ %>
                         <option value="<%= i + 1 %>">Year <%= i + 1 %> / Grade <%= i %></option>
                     <% } %>
                 </select>
+                <div style="width: 35px; margin-left: 30px"></div>
               <img class="frame" src="/updated/img/frame@2x.svg" />
             </div>
           </div>

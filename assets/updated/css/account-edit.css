@@ -529,7 +529,7 @@
 }
 
 .account-edit .overlap-group-1 {
-  align-items: flex-end;
+  align-items: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
