@@ -22,9 +22,7 @@ router.get('/about', (req, res) => {
     return res.render('updated/about.ejs');
 })
 
-router.get('/internships', (req, res) => {
-    return res.render('updated/internships.ejs')
-})
+
 
 router.post('/messages', (req, res) => {
     Message.create(req.body.message, (err, msg) => {

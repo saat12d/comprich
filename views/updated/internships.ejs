@@ -42,49 +42,31 @@
           </div>
           
           
-          
+          <% is = is.reverse() %>
 
 
 
           <div class="home" id="upcomingDisplay">
-            
+            <% for(let i = 0; i < is.length; i+=3){ %>
+              <% if(is[i+2] == undefined || is[i + 1] == undefined || is[i] == undefined){ %>
+                <% break %>
+              <% } %>
+              <% let interns = [is[i], is[i + 1], is[i + 2]] %>
               <div class="gallery" style="padding-left: 100px">
+                <% for(let i of is){ %>
                   <div class="overlap-group1">
-                    <img class="image-41" src="https://logos-world.net/wp-content/uploads/2021/02/HSBC-Symbol.png" />
+                    <img class="image-41" src="<%= i.companyLogo %>" />
                     <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      Internships
+                      <%= i.companyName %> - <%= i.internPosition %>
                     </div>
-                    <a href="/internships/">
+                    <a href="/internships/<%= i._id %>">
                       <div class="overlap-groupx">
                         <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
                       </div>
                     </a>
                   </div>
-
-                  <div class="overlap-group1">
-                    <img class="image-41" src="https://logos-world.net/wp-content/uploads/2021/02/HSBC-Symbol.png" />
-                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      Internships
-                    </div>
-                    <a href="/internships/">
-                      <div class="overlap-groupx">
-                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="overlap-group1">
-                    <img class="image-41" src="https://logos-world.net/wp-content/uploads/2021/02/HSBC-Symbol.png" />
-                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      Internships
-                    </div>
-                    <a href="/internships/">
-                      <div class="overlap-groupx">
-                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                      </div>
-                    </a>
-                  </div>
-                
+                <% } %>
+                <% } %>
               </div>
               
               
