@@ -6,28 +6,68 @@
     <link rel="shortcut icon" type="image/png" href="updated/img/comprichlogosmall.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="updated/css/internships.css" />
+    <link rel="stylesheet" type="text/css" href="updated/css/hub.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
-    <title>Comprich | Internships</title>
+    <title>Comprich | Competitions</title>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   </head>
-  <body style="margin: 0; background: black">
+  <style>
+    .item:hover{
+      transform: scale(1.15);
+      animation-timing-function: ease;
+    }
+  </style>
+  <body style="margin: 0; background: #fffefd">
     <input type="hidden" id="anPageName" name="page" value="hub" />
 
     <div class="container-center-horizontal">
-      <div class="hub screen">
+      <div class="hub screen" style="background-color: var(--black);">
         <div class="overlap-group6">
-          <div class="overlap-group7">
+          <div class="overlap-group7" style="height: 500px; " >
             <div class="rectangle-11"></div>
-            <div class="competition-hub josefinsans-semi-bold-white-80px">Internship Hub</div>
-            
+            <div class="competition-hub josefinsans-semi-bold-white-80px">Comprich Hub</div>
+            <!-- <div class="tools">
+              <!-- <div class="picked-for-you">
+                <div class="picked-for-you-1 josefinsans-semi-bold-black-35px">Picked for You</div>
+                <div class="frame">
+                  <div class="overlap-group"></div>
+                </div>
+              </div> -->
+              <!-- <a href="/survey"><img class="interest-quiz" src="updated/img/interest-quiz@2x.svg" /></a>
+              <a href="/onlinecv"><img class="online-cv" src="updated/img/online-cv@2x.svg" /></a> -->
+            <!-- </div> --> -->
+            <div class="group-55" style="top: 425px">
+              <div class="overlap-group1-1 item">
+                <div class="rectangle"></div>
+                <img class="saly-17" src="updated/img/saly-17@2x.png" />
+                <div class="start-your-own-competitive-journey josefinsans-semi-bold-black-35px">
+                  Start your own competitive journey
+                </div>
+                <a href="/competitions">
+                  <div class="overlap-group-3">
+                    <div class="open-profile josefinsans-bold-black-30px">COMPETITIONS</div>
+                  </div>
+                </a>
+
+              </div>
+              <div class="overlap-group2-1 item">
+                <div class="rectangle"></div>
+                <img class="saly-10" src="updated/img/saly-10@2x.png" />
+                <div class="share-your-wins josefinsans-semi-bold-black-35px">Foray into the adult world</div>
+                <a href="/internships">
+                  <div class="overlap-group-4">
+                    <div class="let-us-know josefinsans-bold-black-30px">INTERNSHIPS</div>
+                  </div>
+                </a>
+              </div>
+            </div>
             
             <div class="browse-opportunities josefinsans-semi-bold-white-25px">
               Browse opportunities around the world and use our tools to find what’s best for you.
             </div>
             <div class="header">
-              <a href="/home"><img class="logo-5" src="updated/img/COMPRICH-WHITE.png" /></a>
+              <a href="/home"><img class="logo-5" src="updated/img/logo-5@2x.png" /></a>
               <div class="group-8 josefinsans-bold-black-25px">
                 <a href="/about"><div class="about-us">ABOUT US</div></a>
                 <a href="/competitions"><div class="hub-1">HUB</div></a>
@@ -40,46 +80,9 @@
               </div>
             </div>
           </div>
-          
-          
-          <% is = is.reverse() %>
-
-
-
-          <div class="home" id="upcomingDisplay">
-            <% for(let i = 0; i < is.length; i+=3){ %>
-              <% if(is[i+2] == undefined || is[i + 1] == undefined || is[i] == undefined){ %>
-                <% break %>
-              <% } %>
-              <% let interns = [is[i], is[i + 1], is[i + 2]] %>
-              <div class="gallery" style="padding-left: 100px">
-                <% for(let i of is){ %>
-                  <div class="overlap-group1">
-                    <img class="image-41" src="<%= i.companyLogo %>" />
-                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      <%= i.companyName %> - <%= i.internPosition %>
-                    </div>
-                    <a href="/internships/<%= i._id %>">
-                      <div class="overlap-groupx">
-                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                      </div>
-                    </a>
-                  </div>
-                <% } %>
-                <% } %>
-              </div>
-              
-              
-          </div>
 
           
-            
-
-          
-
-          
-          <div class="group-container" style="max-height: 200px">
-            
+          <div class="group-container" style="max-height: 200px; margin-top: 0;">
             
             <div class="overlap-group5">
               <div class="flex-row">
@@ -102,7 +105,7 @@
                   <div class="home-about-contact josefinsans-normal-white-30px">
                     <a href="/home">Home</a><br />
                     <a href="/about">About</a><br />
-                    <a href="/contact">Contact</a></div>
+                    <a href="/about">Contact</a></div>
                 </div>
                 <div class="group-20">
                   <div class="services josefinsans-semi-bold-white-40px">Services</div>

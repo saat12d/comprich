@@ -12,6 +12,9 @@ router.get('/', middleware.isNotLoggedIn, (req, res) => {
     return res.redirect('/competitions');
 })
 
+router.get('/hub', (req, res) => {
+    return res.render('updated/hub');
+})
 
 router.get('/home', async (req, res) => {
     comps = await Competition.find({})

@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="/updated/img/comprichlogosmall.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="/updated/css/view-a-competition.css" />
+    <link rel="stylesheet" type="text/css" href="/updated/css/view-a-internship.css" />
     <link rel="stylesheet" type="text/css" href="/updated/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="/updated/css/globals.css" />
     <title>Comprich | <%= is.companyName %></title>
@@ -16,7 +16,7 @@
     <div class="container-center-horizontal">
       <div class="view-a-competition screen">
         <div class="header">
-          <a href="/home"><img class="logo-5" src="/updated/img/logo-5@2x.png" /></a>
+          <a href="/home"><img class="logo-5" src="/updated/img/COMPRICH-WHITE.png" /></a>
           <div class="group-8 josefinsans-bold-black-25px">
             <a href="/about"><div class="about-us">ABOUT US</div></a>
             <a href="/competitions"><div class="hub">HUB</div></a>
@@ -27,11 +27,11 @@
         <a href="/internships">
           <div class="back-button">
             <img class="vector-1" src="/updated/img/vector@2x.svg" />
-            <div class="back-to-all-competitions josefinsans-bold-black-25px">Back to all internships</div>
+            <div class="back-to-all-competitions josefinsans-bold-black-25px" style="color: var(--white)">Back to all internships</div>
           </div>
         </a>
         
-        <div class="tiger-global-case-competition josefinsans-semi-bold-black-80px"><%= is.companyName %></div>
+        <div class="tiger-global-case-competition josefinsans-semi-bold-white-80px"><%= is.companyName %></div>
         <div class="column-container">
           <div class="column-1">
             <img class="image-41" src="<%= is.companyLogo %>" />
@@ -44,14 +44,14 @@
                     <button style="border: none; background: none; outline: none; cursor: pointer" target="_blank">
                       <div class="application" style="margin-top: 50px">
                         <img class="vector-3" src="/updated/img/vector-5@2x.svg" />
-                        <div class="start-application josefinsans-bold-black-25px">Start Application</div>
+                        <div class="start-application josefinsans-bold-black-25px" style="color: var(--white)">Start Application</div>
                       </div>
                     </button>
                 </a>
               
             <% } else { %>
               <div class="application">
-                <div class="start-application josefinsans-bold-black-25px">Sign up date has passed.</div>
+                <div class="start-application josefinsans-bold-black-25px" style="color: var(--white)">Sign up date has passed.</div>
               </div>            
               <% } %>
 
@@ -62,38 +62,38 @@
                         
             <div class="group-51">
               <div class="due">
-                <img class="vector" src="/updated/img/vector-1@2x.svg" />
-                <div class="due-nov-9th-2021 josefinsans-bold-black-25px" style="max-width: 1000px">
-                  <span class="josefinsans-bold-black-25px" style="max-width: 1000px">Intern Position: </span
-                  ><span class="josefinsans-normal-black-25px" style="max-width: 1000px"> <%= is.internPosition %></span>
+                <img class="vector" src="/updated/img/vector-1@2x.svg" style="color: var(--white)"/>
+                <div class="due-nov-9th-2021 josefinsans-bold-black-25px" style="max-width: 1000px" style="color: var(--white)">
+                  <span class="josefinsans-bold-black-25px" style="color: var(--white)" style="max-width: 1000px">Intern Position: </span
+                  ><span class="josefinsans-normal-black-25px" style="color: var(--white)" style="max-width: 1000px"> <%= is.internPosition %></span>
                 </div>
               </div>
               <div class="location">
-                <img class="vector-4" src="/updated/img/vector-1@2x.svg" />
-                <div class="location-worldwide-online josefinsans-bold-black-25px">
-                  <span class="josefinsans-bold-black-25px">Internship Date: </span
-                  ><span class="josefinsans-normal-black-25px"><%= is.internDate %></span>
+                <img class="vector-4" src="/updated/img/vector-1@2x.svg" style="color: var(--white)" />
+                <div class="location-worldwide-online josefinsans-bold-black-25px" style="color: var(--white)">
+                  <span class="josefinsans-bold-black-25px" style="color: var(--white)">Internship Date: </span
+                  ><span class="josefinsans-normal-black-25px" style="color: var(--white)"><%= is.internDate %></span>
                 </div>
               </div>
               <div class="due" style="margin-top: 20px">
-                <img class="vector" src="/updated/img/vector-1@2x.svg" />
-                <div class="due-nov-9th-2021 josefinsans-bold-black-25px" style="max-width: 1000px">
-                  <span class="josefinsans-bold-black-25px" style="max-width: 1000px">Last Date to Sign Up: </span
-                  ><span class="josefinsans-normal-black-25px" style="max-width: 1000px"> <%= is.signUpDate.toDateString() %></span>
+                <img class="vector" src="/updated/img/vector-1@2x.svg" style="color: var(--white)"/>
+                <div class="due-nov-9th-2021 josefinsans-bold-black-25px" style="max-width: 1000px" style="color: var(--white)">
+                  <span class="josefinsans-bold-black-25px" style="max-width: 1000px" style="color: var(--white)">Last Date to Sign Up: </span
+                  ><span class="josefinsans-normal-black-25px" style="max-width: 1000px" style="color: var(--white)"> <%= is.signUpDate.toDateString() %></span>
                 </div>
               </div>
               <div class="category">
-                <img class="vector" src="/updated/img/vector-3@2x.svg" />
-                <div class="category-business-finance josefinsans-bold-black-25px">
-                  <span class="josefinsans-bold-black-25px">Age Requirement: </span>
-                  <span class="josefinsans-normal-black-25px" style="max-width: 1000px"> <%= is.ageRequirement %></span>
+                <img class="vector" src="/updated/img/vector-3@2x.svg" style="color: var(--white)"/>
+                <div class="category-business-finance josefinsans-bold-black-25px" style="color: var(--white)">
+                  <span class="josefinsans-bold-black-25px" style="color: var(--white)">Age Requirement: </span>
+                  <span class="josefinsans-normal-black-25px" style="max-width: 1000px" style="color: var(--white)"> <%= is.ageRequirement %></span>
                 </div>
               </div>
               <div class="price">
-                <img class="vector-5" src="/updated/img/vector-4@2x.svg" />
+                <img class="vector-5" src="/updated/img/vector-4@2x.svg" style="color: var(--white)"/>
                 <div class="price-us75-early">
-                  <span class="josefinsans-bold-black-25px">Stipend: </span>
-                  <span class="josefinsans-normal-black-25px">
+                  <span class="josefinsans-bold-black-25px" style="color: var(--white)">Stipend: </span>
+                  <span class="josefinsans-normal-black-25px" style="color: var(--white)">
                     <% if(is.reimbursement){ %>
                         <span><%= is.reimbursement %></span>
                     <% } else { %>
@@ -105,7 +105,7 @@
                 </div>
               </div>
             </div>
-            <div class="calling-all-high-ach josefinsans-normal-black-25px">
+            <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)">
               <%= is.desc %>
               <br /><br />
             </div>
@@ -116,7 +116,7 @@
             <a href="/internships">
                 <div class="view-all">
                     <div class="overlap-group-3">
-                      <div class="view-all-competitions josefinsans-bold-black-30px">VIEW ALL INTERNSHIPS</div>
+                      <div class="view-all-competitions josefinsans-bold-black-30px" >VIEW ALL INTERNSHIPS</div>
                     </div>
                   </div>
             </a>
