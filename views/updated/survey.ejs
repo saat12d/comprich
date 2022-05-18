@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1538, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="updated/img/comprichlogosmall.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
+    <title>Comprich | Rec Quiz</title>
     <link rel="stylesheet" type="text/css" href="updated/css/interest-quiz-intro.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/interest-quiz-questions.css" />
     <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
@@ -103,10 +104,16 @@
           <div class="header">
             <img class="logo-5" src="updated/img/logo-5@2x.png" />
             <div class="group-8 josefinsans-bold-black-25px">
-              <div class="about-us">ABOUT US</div>
-              <div class="hub">HUB</div>
-              <div class="our-blog">OUR BLOG</div>
-              <div class="overlap-group-1"><div class="hi-john josefinsans-bold-black-25px">HI JOHN!</div></div>
+              <a href="/hub"><div class="about-us">HUB</div></a>
+              <a href="/about"><div class="hub">ABOUT US</div></a>
+              <% if(currentUser){ %>
+                <a href="/logout"><div class="our-blog">LOGOUT</div></a>
+                <a href="/my-profile"><div class="overlap-group-1"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></div></a>
+              <% } else { %>
+                <a href="/login"><div class="our-blog">LOGIN</div></a>
+                <a href="/register"><div class="overlap-group-1"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
+              <% } %>
+
             </div>
           </div>
         </div>

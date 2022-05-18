@@ -54,10 +54,15 @@
           <div class="header">
             <a href="/home"><img class="logo-5" src="updated/img/logo-5@2x.png" /></a>
             <div class="group-8 josefinsans-bold-black-25px">
-                <a href="/about"><div class="about-us-">ABOUT US</div></a>
-                <a href="/competitions"><div class="hub">HUB</div></a>
-                <a href="/blog"><div class="our-blog">OUR BLOG</div></a>
+              <a href="/hub"><div class="about-us">HUB</div></a>
+              <a href="/about"><div class="hub">ABOUT US</div></a>
+              <% if(currentUser){ %>
+                <a href="/logout"><div class="our-blog">LOGOUT</div></a>
+                <a href="/my-profile"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></div></a>
+              <% } else { %>
+                <a href="/login"><div class="our-blog">LOGIN</div></a>
                 <a href="/register"><div class="overlap-group-2"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></div></a>
+              <% } %>
             </div>
           </div>
         </div>

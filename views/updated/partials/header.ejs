@@ -18,13 +18,16 @@
           <div class="header">
             <a href="/home"><img class="logo-5" src="updated/img/logo-5@2x.png" /></a>
             <div class="group-8 josefinsans-bold-black-25px">
-              <div class="about-us"><a href="/about">ABOUT US</a></div>
-              <div class="hub"><a href="/competitions">HUB</a></div>
-              <div class="our-blog"><a href="/blog">OUR BLOG</a></div>
+              <div class="about-us"><a href="/hub">HUB</a></div>
+              <div class="hub"><a href="/about">ABOUT US</a></div>
               <% if(currentUser){ %>
-                <div class="overlap-group-2"><a href="/login"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></a> </div>
+                <div class="our-blog"><a href="/logout">LOGOUT</a></div>
+                <div class="overlap-group-2"><a href="/my-profile"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></a> </div>
               <% } else { %>
-                <div class="overlap-group-2"><a href="/login"><div class="sign-up josefinsans-bold-black-25px">LOGIN</div></a> </div>
+                <div class="our-blog"><a href="/login">LOGIN</a></div>
+                <div class="overlap-group-2"><a href="/register"><div class="sign-up josefinsans-bold-black-25px">SIGN UP</div></a> </div>
               <% } %>
+
+            
             </div>
           </div>

@@ -40,7 +40,7 @@ router.post('/internships', upload.single('image'), async (req, res) => {
     })
 })
 
-router.get('/internships/:id', (req, res) => {
+router.get('/internships/:id', middleware.isLoggedIn, (req, res) => {
     Internship.findById(req.params.id, (err, internship) => {
         if(err){
             console.log(err);
