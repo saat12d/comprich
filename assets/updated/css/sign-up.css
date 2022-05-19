@@ -480,6 +480,6 @@ select {
   outline: none;
   font-family: inherit;
   font: inherit;
-  appearance: none;
+  /* appearance: none; */
   width: 100%;
 }
