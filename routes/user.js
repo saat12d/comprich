@@ -170,7 +170,7 @@ router.post("/forgot", (req, res, next) => {
             },
             function (token, user, done) {
                 let smtpTransport = nodemailer.createTransport({
-                    service: "Gmail",
+                    host: "comprich.org",
                     auth: {
                         user: process.env.GMAILACC,
                         pass: process.env.GMAILPW,
