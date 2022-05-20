@@ -41,6 +41,7 @@ const userSchema = new mongoose.Schema({
     isOwner: {type: Boolean, default: false},
     isAdmin: {type: Boolean, default: false},
     isBlogger: {type: Boolean, default: false},
+    isInternship: {type: Boolean, default: false},
     repOf: {type: String, default: " "},
     signedUpFor: [
         {

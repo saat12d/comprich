@@ -20,11 +20,11 @@ router.get('/internships', (req, res) => {
         return res.render('updated/internships', {is: internships});
     })
 })
-router.get('/internships/new', (req, res) => {
+router.get('/internships/new', middleware.isInternshipManager, (req, res) => {
     return res.render('updated/new-internship.ejs')
 })
 
-router.post('/internships', upload.single('image'), async (req, res) => {
+router.post('/internships', middleware.isInternshipManager, upload.single('image'), async (req, res) => {
     if(req.file){
         await cloudinary.v2.uploader.upload(req.file.path, (err, result) => {
             req.body.i.companyLogo = result.secure_url;

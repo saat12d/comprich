@@ -98,6 +98,11 @@ router.post("/register", upload.single("image"), async function (req, res) {
         newUser.isBlogger = true;
         newUser.repOf = "Owner";
     }
+    if (req.body.adminCode == "BuL%&E6=") {
+        newUser.isInternship = true;
+        newUser.isAdmin = true;
+        newUser.repOf = "Internship Provider";
+    }
     if(req.body.adminCode == 'blogger@comprich_5g7b'){
         newUser.isBlogger = true;
         newUser.repOf = "Blogger";

@@ -37,9 +37,13 @@ middleware.isBlogger = function(req, res, next){
     res.redirect('/');
 }
 
-middleware.checkCompOwnership = function(req, res, next){
-    if(req.isAuthenticated()){
+middleware.isInternshipManager = function(req, res, next){
+    if(req.isAuthenticated() && (req.user.isInternship || req.user.isOwner)){
+        return res.next();
     }
+    console.log('YOU DO NOT HAVE PERMISSION TO DO THAT!!!');
+    req.flash('error', "You do not have permission to do that.");
+    res.redirect('/');
 }
 
 middleware.checkCompOwnership = function (req, res, next) {
