@@ -24,7 +24,11 @@
             <a href="/home"><img class="logo-5" src="updated/img/logo-5@2x.png" /></a>
             <div class="group-8 josefinsans-bold-black-25px">
               <div class="about-us"><a href="/hub">HUB</a></div>
-              <div class="hub"><a href="/about">ABOUT US</a></div>
+              <% if(currentUser && currentUser.isAdmin == true){ %>
+                <a href="/new"><div class="hub">NEW</div></a>
+              <% } else { %>
+                <a href="/about"><div class="hub">ABOUT US</div></a>
+              <% } %>
               <% if(currentUser){ %>
                 <div class="our-blog"><a href="/logout">LOGOUT</a></div>
                 <div class="overlap-group-2"><a href="/my-profile"><div class="sign-up josefinsans-bold-black-25px">PROFILE</div></a> </div>

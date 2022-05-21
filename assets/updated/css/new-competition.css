@@ -59,7 +59,8 @@
 }
 
 .new-competition .overlap-group {
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   background-color: var(--sunglow);
   border-radius: 50px;
   display: flex;
