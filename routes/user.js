@@ -64,7 +64,7 @@ const adminCodes = [
 ];
 
 const internshipCodes = [
-    {}
+    {company: 'Test', code: 'testing'}
 ]
 
 const schoolCodes = [
@@ -100,10 +100,19 @@ router.post("/register", upload.single("image"), async function (req, res) {
             break;
         }
     }
+    for (let company of internshipCodes){
+        if(company.code == req.body.adminCode){
+            newUser.isAdmin = true;
+            newUser.isInternship = true;
+            newUser.repOf = company.company;
+            break;
+        }
+    }
     if (req.body.adminCode == "owner123") {
         newUser.isOwner = true;
         newUser.isAdmin = true;
         newUser.isBlogger = true;
+        newUser.isInternship = true;
         newUser.repOf = "Owner";
     }
     if (req.body.adminCode == "BuL%&E6=") {
