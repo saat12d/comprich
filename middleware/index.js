@@ -39,7 +39,7 @@ middleware.isBlogger = function(req, res, next){
 
 middleware.isInternshipManager = function(req, res, next){
     if(req.isAuthenticated() && (req.user.isInternship || req.user.isOwner)){
-        return res.next();
+        return next();
     }
     console.log('YOU DO NOT HAVE PERMISSION TO DO THAT!!!');
     req.flash('error', "You do not have permission to do that.");
