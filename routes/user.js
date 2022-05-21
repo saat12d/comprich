@@ -63,6 +63,14 @@ const adminCodes = [
     {club: 'TGCC', code: 'admin@tgcc_j3b27'}
 ];
 
+const internshipCodes = [
+    {}
+]
+
+const schoolCodes = [
+    {}
+]
+
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,

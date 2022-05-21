@@ -21,6 +21,10 @@ router.get('/home', async (req, res) => {
     return res.render('updated/index.ejs', {comps: comps});
 })
 
+router.get('/new', (req, res) => {
+    return res.render('updated/add-event');
+})
+
 router.get('/about', (req, res) => {
     return res.render('updated/about.ejs');
 })
