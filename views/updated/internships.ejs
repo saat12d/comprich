@@ -55,15 +55,22 @@
 
 
           <div class="home" id="upcomingDisplay">
-            <% for(let i = 0; i < is.length; i+=3){ %>
-              <% if(is[i+2] == undefined || is[i + 1] == undefined || is[i] == undefined){ %>
-                <% break %>
-              <% } %>
-              <% let interns = [is[i], is[i + 1], is[i + 2]] %>
+            <% let groupByN = (n, data) => { %>
+              <% let result = []; %>
+              <% for (let i = 0; i < data.length; i += n) result.push(data.slice(i, i + n)); %>
+              <% return result; %>
+            <% }; %>
+              <% interns = groupByN(3, is); %>
+              <% console.log(interns) %>
+
+
+            <% for(let row of interns){ %>
+              <% console.log(row) %>
+              <% console.log('------') %>
               <div class="gallery" style="padding-left: 100px">
-                <% for(let i of is){ %>
+                <% for(let i of row){ %>
                   <div class="overlap-group1">
-                    <img class="image-41" src="<%= i.companyLogo %>" />
+                    <img class="image-41" src="<%= i.companyLogo %>" style="height: 320px"/>
                     <div class="tiger-global-case-competition josefinsans-normal-black-24px">
                       <%= i.companyName %> - <%= i.internPosition %>
                     </div>
@@ -74,8 +81,9 @@
                     </a>
                   </div>
                 <% } %>
-                <% } %>
               </div>
+
+                <% } %>
               
               
           </div>
