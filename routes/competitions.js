@@ -220,7 +220,7 @@ router.get('/competitions', async (req, res) => {
     })
 })
 
-router.get('/new',  (req, res) => {
+router.get('/competitions/new',  (req, res) => {
     res.render('updated/new', { flag: true })
 })
 
