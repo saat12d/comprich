@@ -37,84 +37,50 @@
 
           </div>
         </div>
-        <div class="new-competition-1 josefinsans-semi-bold-black-80px">New Competition</div>
-        <form action="/competitions" method="POST" enctype="multipart/form-data">
+        <div class="new-competition-1 josefinsans-semi-bold-black-80px">Edit Competition</div>
+        <form action="/competitions/<%= comp._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="new-competition-item">
           <div class="name-of-competition josefinsans-normal-black-25px-2">Name of Competition</div>
           <div class="overlap-group8">
-            <input class="josefinsans-normal-black-25px" type="text" name="competition[title]" placeholder="Name" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+            <input class="josefinsans-normal-black-25px" type="text" name="competition[title]" value="<%= comp.title %>" placeholder="Name" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
         </div>
         </div>
         <div class="description">
           <div class="description-1 josefinsans-normal-black-25px-2">Description</div>
           <div class="overlap-group7">
-            <textarea name="competition[desc]" id="" class="josefinsans-normal-black-25px" rows="7" placeholder="Description" required style="border: none; width: 100%; height: 100%; outline: none;"></textarea>
+            <textarea name="competition[desc]" id="" class="josefinsans-normal-black-25px" rows="7"  placeholder="Description" required style="border: none; width: 100%; height: 100%; outline: none;"><%= comp.desc %></textarea>
         </div>
         </div>
-        <div class="category">
-          <div class="category-1 josefinsans-normal-black-25px-2">Category</div>
-          <div class="check-box-1">
-            <!-- <img class="outline" src="updated/img/outline@2x.svg" /> -->
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="MUN">
-
-            <div class="mun valign-text-middle josefinsans-normal-black-25px">MUN</div>
-          </div>
-          <div class="check-box-2">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Debate / Public Speaking">
-            <div class="debate-public-speaking valign-text-middle josefinsans-normal-black-25px">
-              Debate / Public Speaking
-            </div>
-          </div>
-          <div class="check-box">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Science">
-            <div class="science valign-text-middle josefinsans-normal-black-25px">Science</div>
-          </div>
-          <div class="check-box">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Writing">
-            <div class="writing valign-text-middle josefinsans-normal-black-25px">Writing</div>
-          </div>
-          <div class="check-box-3">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Business">
-            <div class="business-economics valign-text-middle josefinsans-normal-black-25px">Business / Economics</div>
-          </div>
-          <div class="check-box-4">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Art / Design">
-            <div class="art-design valign-text-middle josefinsans-normal-black-25px">Art / Design</div>
-          </div>
-          <div class="check-box-4">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Computer Science">
-            <div class="art-design valign-text-middle josefinsans-normal-black-25px">Computer Science</div>
-          </div>
-          <div class="check-box-5">
-            <input type="checkbox" class="mun josefinsans-normal-black-25px" id="1" name="competition[category]" value="Writing">
-            <div class="other valign-text-middle josefinsans-normal-black-25px">Other</div>
-          </div>
-        </div>
+        
         <div class="description">
             <div class="description-1 josefinsans-normal-black-25px-2">Details</div>
             <div class="overlap-group7">
-              <textarea name="competition[details]" id="" class="josefinsans-normal-black-25px" rows="7" placeholder="Details" required style="border: none; width: 100%; height: 100%; outline: none;"></textarea>
+              <textarea name="competition[details]" id="" class="josefinsans-normal-black-25px" rows="7" placeholder="Details" required style="border: none; width: 100%; height: 100%; outline: none;"><%= comp.details %></textarea>
           </div>
           </div>
         <div class="new-competition-item">
           <div class="location josefinsans-normal-black-25px-2">Location</div>
           <div class="overlap-group6">
-            <input class="josefinsans-normal-black-25px" type="text" name="competition[location]" placeholder="Location" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+            <input class="josefinsans-normal-black-25px" type="text" name="competition[location]" value="<%= comp.location %>" placeholder="Location" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
           </div>
         </div>
         <div class="new-competition-item">
           <div class="due-date josefinsans-normal-black-25px-2">Date</div>
           <div class="overlap-group5">
             <input type="date" name="competition[date]" placeholder="DD/MM/YYYY" required style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-
+          </div>
+          <div class="use-social-media-lin">
+            Please enter the date again
           </div>
         </div>
         <div class="new-competition-item">
             <div class="due-date josefinsans-normal-black-25px-2">Last Date to Sign Up</div>
             <div class="overlap-group5">
               <input type="date" name="competition[signUpLastDate]" placeholder="DD/MM/YYYY" required style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-  
             </div>
+            <div class="use-social-media-lin">
+                Please enter the date again
+              </div>
           </div>
         <div class="new-competition-item">
             <div class="due-date josefinsans-normal-black-25px-2">
@@ -131,14 +97,14 @@
         <div class="price">
           <div class="surname josefinsans-normal-black-25px-2">Price</div>
           <div class="overlap-group4">
-            <input class="josefinsans-normal-black-25px" type="text" name="competition[price]" placeholder="100 / AED 300" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+            <input class="josefinsans-normal-black-25px" type="text" name="competition[price]" value="<%= comp.price %>" placeholder="100 / AED 300" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
           </div>
           <div class="leave-blank-if-competition-is-free">Leave blank if competition is free</div>
         </div>
         <div class="competition-link">
             <div class="competition-link-1 josefinsans-normal-black-25px-2">Sign Up Link</div>
             <div class="overlap-group5">
-              <input class="josefinsans-normal-black-25px" type="text" name="competition[signupLink]" placeholder="Sign Up Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+              <input class="josefinsans-normal-black-25px" type="text" name="competition[signupLink]" value="<%= comp.signupLink %>" placeholder="Sign Up Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
             </div>
             <div class="use-social-media-lin">
               Please include https:// before your link to
@@ -148,7 +114,7 @@
         <div class="competition-link">
           <div class="competition-link-1 josefinsans-normal-black-25px-2">Competition Website Link</div>
           <div class="overlap-group5">
-            <input class="josefinsans-normal-black-25px" type="text" name="competition[websiteLink]" placeholder="Competition Website Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+            <input class="josefinsans-normal-black-25px" type="text" name="competition[websiteLink]" value="<%= comp.websiteLink %>" placeholder="Competition Website Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
           </div>
           <div class="use-social-media-lin">
             Please include https:// before your link to
@@ -158,7 +124,7 @@
         <div class="competition-link">
             <div class="competition-link-1 josefinsans-normal-black-25px-2">Social Media Link</div>
             <div class="overlap-group5">
-              <input class="josefinsans-normal-black-25px" type="text" name="competition[smLink]" placeholder="Social Media Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+              <input class="josefinsans-normal-black-25px" type="text" name="competition[smLink]" value="<%= comp.smLink %>" placeholder="Social Media Link" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
             </div>
             <div class="use-social-media-lin">
               Please include https:// before your link to
@@ -169,7 +135,7 @@
           <div class="add-button" style="cursor: pointer">
             <button style="border: none; background: none; outline: none" style="cursor: pointer">
                 <div class="overlap-group2" style="cursor: pointer">
-                    <div class="add josefinsans-bold-black-30px">ADD</div>
+                    <div class="add josefinsans-bold-black-30px">EDIT</div>
                 </div>
             </button>
           </div>

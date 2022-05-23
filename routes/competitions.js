@@ -307,7 +307,7 @@ router.get('/competitions/:id/edit', middleware.checkCompOwnership, (req, res) =
             console.log(err)
             return res.redirect('back')
         }
-        res.render('competitions/edit', { comp: foundComp })
+        res.render('updated/edit-comp', { comp: foundComp })
     })
 })
 
