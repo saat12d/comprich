@@ -44,6 +44,7 @@ router.get('/internships/:id', middleware.isLoggedIn, (req, res) => {
     Internship.findById(req.params.id, (err, internship) => {
         if(err){
             console.log(err);
+            console.log('Here 4')
             req.flash('error', err.message);
             res.redirect('/');
         }
@@ -65,6 +66,7 @@ router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
     Internship.findById(req.params.id, async (err, internship) => {
         if (err) {
             console.log(err)
+            console.log('Here 3')
             req.flash('error', err.message);
             return res.redirect('back')
         }
@@ -72,6 +74,7 @@ router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
             await cloudinary.v2.uploader.upload((err, result) => {
                 if(err){
                     console.log(err);
+                    console.log('Here 2')
                     req.flash('error', err.message);
                     res.redirect('/internships');
                 }
@@ -81,6 +84,7 @@ router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
         Internship.findByIdAndUpdate(req.params.id, req.body.i, (err, is) => {
             if (err) {
                 console.log(err)
+                console.log('Here 1')
                 return res.redirect('back')
             }
             res.redirect('/internships/' + is._id);
