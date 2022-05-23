@@ -32,7 +32,8 @@ const indexRoutes = require('./routes/index.js');
 const blogRoutes = require('./routes/blogs.js');
 const notiRoutes = require('./routes/notifications.js');
 const onlinecvRoutes = require('./routes/online-cv.js');
-const internRoutes = require('./routes/internship.js')
+const internRoutes = require('./routes/internship.js');
+const courseRoutes = require('./routes/courses.js');
 
 // mongoose.connect('mongodb://localhost:27017/comprich', {
 //     useNewUrlParser: true,
@@ -117,6 +118,7 @@ app.use('/', blogRoutes);
 app.use('/', internRoutes);
 // app.use('/', notiRoutes);
 app.use('/', onlinecvRoutes);
+app.use('/', courseRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('CompRich server started on port ' + process.env.PORT)
