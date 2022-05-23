@@ -50,4 +50,41 @@ router.get('/internships/:id', middleware.isLoggedIn, (req, res) => {
     })
 })
 
+router.get('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
+    Internship.findById(req.params.id, (err, internship) => {
+        if(err){
+            console.log(err);
+            req.flash('error', err.message);
+        }
+        return res.render('updated/edit-internship', {is: internship})
+    })
+})
+
+router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
+    Internship.findById(req.params.id, async (err, internship) => {
+        if (err) {
+            console.log(err)
+            req.flash('error', err.message);
+            return res.redirect('back')
+        }
+        if(req.file){
+            await cloudinary.v2.uploader.upload((err, result) => {
+                if(err){
+                    console.log(err);
+                    req.flash('error', err.message);
+                    res.redirect('/internships');
+                }
+                req.body.i.companyLogo = result.secure_url;
+            })
+        }
+        Internship.findByIdAndUpdate(req.params.id, req.body.i, (err, is) => {
+            if (err) {
+                console.log(err)
+                return res.redirect('back')
+            }
+            res.redirect('/internships/' + req.params.id)
+        })
+    })
+})
+
 module.exports = router;
