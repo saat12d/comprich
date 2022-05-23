@@ -120,6 +120,11 @@ app.use('/', internRoutes);
 app.use('/', onlinecvRoutes);
 app.use('/', courseRoutes);
 
+app.use('*', (req, res) => {
+  req.flash('error', 'Page does not exist');
+  res.redirect('/home');
+})
+
 app.listen(process.env.PORT, () => {
   console.log('CompRich server started on port ' + process.env.PORT)
 })
