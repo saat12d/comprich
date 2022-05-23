@@ -45,6 +45,7 @@ router.get('/internships/:id', middleware.isLoggedIn, (req, res) => {
         if(err){
             console.log(err);
             req.flash('error', err.message);
+            res.redirect('/');
         }
         return res.render('updated/show-internship', {is: internship})
     })
@@ -82,7 +83,7 @@ router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
                 console.log(err)
                 return res.redirect('back')
             }
-            res.redirect('/internships/' + req.params.id)
+            res.redirect('/internships/' + is._id);
         })
     })
 })
