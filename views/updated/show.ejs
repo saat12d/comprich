@@ -144,6 +144,14 @@
                 <div class="competition-page josefinsans-bold-black-25px">Edit Details</div>
               </div>
             </a>
+            <form method="POST" action="/competitions/<%= comp._id %>?_method=DELETE" style="display: inline;">
+              <button style="border: none; background: none; outline: none; cursor: pointer">
+                <div class="overlap-group-1">
+                  <div class="competition-page josefinsans-bold-black-25px">Delete competition</div>
+                </div>
+              </button>
+             </form>
+              
           </div>
         </div>
         <div class="overlap-group2">
