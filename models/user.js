@@ -43,6 +43,7 @@ const userSchema = new mongoose.Schema({
     isBlogger: {type: Boolean, default: false},
     isInternship: {type: Boolean, default: false},
     repOf: {type: String, default: " "},
+    internRepOf: {type: String, default: " "},
     signedUpFor: [
         {
             id: {

@@ -115,7 +115,7 @@ router.post("/register", upload.single("image"), async function (req, res) {
         if(company.code == req.body.adminCode){
             newUser.isAdmin = true;
             newUser.isInternship = true;
-            newUser.repOf = company.company;
+            newUser.internRepOf = company.company;
             break;
         }
     }

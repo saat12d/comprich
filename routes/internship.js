@@ -34,6 +34,7 @@ router.post('/internships', middleware.isInternshipManager, upload.single('image
             req.body.i.companyLogo = result.secure_url;
         })
     }
+    req.body.i.fromCompany = req.user.repOf;
     Internship.create(req.body.i, (err, intern) => {
         if(err){
             console.log(err);

@@ -9,7 +9,8 @@ const internshipSchema = new mongoose.Schema({
     signUpDate: Date,
     reimbursement: String,
     signUpForm: String,
-    desc: String
+    desc: String,
+    fromCompany: String
 })
 
 module.exports = mongoose.model('Internship', internshipSchema);

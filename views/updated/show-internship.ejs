@@ -112,6 +112,20 @@
               <%= is.desc %>
               <br /><br />
             </div>
+            <% if((currentUser && currentUser.isOwner || currentUser.internRepOf.toLowerCase() == is.fromCompany.toLowerCase()) ){ %>
+              <a href="/internships/<%= is._id %>/edit" target="_blank">
+                <div class="overlap-group-1">
+                  <div class="competition-page josefinsans-bold-black-25px" style="color: white">Edit Details</div>
+                </div>
+              </a>
+              <form method="POST" action="/internships/<%= is._id %>?_method=DELETE" style="display: inline;">
+                <button style="border: none; background: none; outline: none; cursor: pointer; padding: 0;">
+                  <div class="overlap-group-1" style="background-color: #f64949e8">
+                    <div class="competition-page josefinsans-bold-black-25px">Delete</div>
+                  </div>
+                </button>
+              </form>
+             <% } %>
           </div>
         </div>
         
