@@ -64,6 +64,7 @@ router.get('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
 })
 
 router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
+    console.log('reached bitch')
     Internship.findById(req.params.id, async (err, internship) => {
         if (err) {
             console.log(err)
