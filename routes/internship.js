@@ -88,6 +88,7 @@ router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
             if (err) {
                 console.log(err)
                 alert('Here 1')
+                req.flash('error', err.message);
                 return res.redirect('back')
             }
             console.log('AFTER')
