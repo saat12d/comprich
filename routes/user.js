@@ -65,7 +65,17 @@ const adminCodes = [
 ];
 
 const internshipCodes = [
-    {company: 'Test', code: 'testing'}
+    {company: 'Test', code: 'testing'},
+    {company: 'Banqmark', code: 'is_admin@bm-h2du8'},
+    {company: 'BCT', code: 'is_admin@bct-9bd3e'},
+    {company: 'Gowling', code: 'is_admin@gl-hd32a'},
+    {company: 'KPMG', code: 'is_admin@kpmg-bx21n3'},
+    {company: 'Brighter Prep', code: 'is_admin@bp-b2h34'},
+    {company: 'Lighthouse Canton', code: 'is_admin@lc-b1ju8'},
+    {company: 'Brand Folio', code: 'is_admin@bf-cp63x'},
+    {company: 'Samsonite', code: 'is_admin@sams-b2vz94'},
+    {company: 'Rocky Real Estate', code: 'is_admin@rre-84hpe2'},
+    {company: 'Publicis', code: 'is_admin@ps-wk3d5'}
 ]
 
 const schoolCodes = [

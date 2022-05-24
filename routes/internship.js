@@ -79,11 +79,12 @@ router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
                     req.flash('error', err.message);
                     res.redirect('/internships');
                 }
-                req.body.i.companyLogo = result.secure_url;
+                internship.companyLogo = result.secure_url;
             })
         }
         console.log('BEFORE')
         console.log(internship);
+        
         Internship.findByIdAndUpdate(internship._id, req.body.i, (err, is) => {
             if (err) {
                 console.log(err)
