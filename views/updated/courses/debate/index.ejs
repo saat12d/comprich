@@ -3,85 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1538, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="updated/img/comprichlogosmall.png" />
+    <link rel="shortcut icon" type="image/png" href="/updated/img/comprichlogosmall.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="updated/css/hub.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
-    <title>Comprich | Competitions</title>
+    <link rel="stylesheet" type="text/css" href="/updated/css/hub.css" />
+    <link rel="stylesheet" type="text/css" href="/updated/css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="/updated/css/globals.css" />
+    <title>Comprich | Debate Course</title>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   </head>
-  <style>
-    .item:hover{
-      transform: scale(1.15);
-      animation-timing-function: ease;
-    }
-  </style>
-    <%- include('partials/flash') %>
+  <%- include('../../partials/flash') %>
 
   <body style="margin: 0; background: #fffefd">
     <input type="hidden" id="anPageName" name="page" value="hub" />
 
     <div class="container-center-horizontal">
-      <div class="hub screen" style="background-color: var(--black);">
+      <div class="hub screen">
         <div class="overlap-group6">
-          <div class="overlap-group7" style="height: 500px; " >
-            <div class="rectangle-11"></div>
-            <div class="competition-hub josefinsans-semi-bold-white-80px">Comprich Hub</div>
-            <!-- <div class="tools">
-              <!-- <div class="picked-for-you">
-                <div class="picked-for-you-1 josefinsans-semi-bold-black-35px">Picked for You</div>
-                <div class="frame">
-                  <div class="overlap-group"></div>
-                </div>
-              </div> -->
-              <!-- <a href="/survey"><img class="interest-quiz" src="updated/img/interest-quiz@2x.svg" /></a>
-              <a href="/onlinecv"><img class="online-cv" src="updated/img/online-cv@2x.svg" /></a> -->
-            <!-- </div> --> -->
-            <div class="group-55" style="top: 425px">
-              <div class="overlap-group1-1 item">
-                <div class="rectangle"></div>
-                <img class="saly-17" src="updated/img/saly-17@2x.png" />
-                <div class="start-your-own-competitive-journey josefinsans-semi-bold-black-35px">
-                  Start your own competitive journey
-                </div>
-                <a href="/competitions">
-                  <div class="overlap-group-3">
-                    <div class="open-profile josefinsans-bold-black-30px">COMPETITIONS</div>
-                  </div>
-                </a>
-
-              </div>
-              <div class="overlap-group2-1 item">
-                <div class="rectangle"></div>
-                <img class="saly-10" src="updated/img/saly-10@2x.png" />
-                <div class="share-your-wins josefinsans-semi-bold-black-35px">Explore internships</div>
-                <a href="/internships">
-                  <div class="overlap-group-4">
-                    <div class="let-us-know josefinsans-bold-black-30px">INTERNSHIPS</div>
-                  </div>
-                </a>
-              </div>
-              <div class="overlap-group2-1 item">
-                <div class="rectangle"></div>
-                <img class="saly-10" src="updated/img/saly-10@2x.png" />
-                <div class="share-your-wins josefinsans-semi-bold-black-35px">Explore internships</div>
-                <a href="/internships">
-                  <div class="overlap-group-4">
-                    <div class="let-us-know josefinsans-bold-black-30px">INTERNSHIPS</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-           
+          <div class="overlap-group7" style="height: 550px">
+            <div class="rectangle-11" style="height: 550px"></div>
+            <div class="competition-hub josefinsans-semi-bold-white-80px">Debate</div>
             
             <div class="browse-opportunities josefinsans-semi-bold-white-25px">
               Browse opportunities around the world and use our tools to find what’s best for you.
             </div>
             <div class="header">
-              <a href="/home"><img class="logo-5" src="updated/img/logo-5@2x.png" /></a>
+              <a href="/home"><img class="logo-5" src="/updated/img/logo-5@2x.png" /></a>
               <div class="group-8 josefinsans-bold-black-25px">
                 <a href="/hub"><div class="about-us">HUB</div></a>
                 <% if(currentUser && currentUser.isAdmin == true){ %>
@@ -99,24 +47,137 @@
               </div>
             </div>
           </div>
+          
+          
+          
+
+
+
+          <div class="home" id="upcomingDisplay">
+            
+              <div class="gallery" style="padding-left: 100px">
+                  <div class="overlap-group1">
+                    <img class="image-41" src="" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      Lecture 1
+                    </div>
+                    <a href="/courses/debate/1">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      Lecture 2
+                    </div>
+                    <a href="/courses/debate/2">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      Lecture 3
+                    </div>
+                    <a href="/courses/debate/3">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                      </div>
+                    </a>
+                  </div>
+              </div>
+
+              <div class="gallery" style="padding-left: 100px">
+                <div class="overlap-group1">
+                  <img class="image-41" src="" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    Lecture 4
+                  </div>
+                  <a href="/courses/debate/4">
+                    <div class="overlap-groupx">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="overlap-group1">
+                  <img class="image-41" src="" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    Lecture 5
+                  </div>
+                  <a href="/courses/debate/5">
+                    <div class="overlap-groupx">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="overlap-group1">
+                  <img class="image-41" src="" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    Lecture 6
+                  </div>
+                  <a href="/courses/debate/6">
+                    <div class="overlap-groupx">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+
+            <div class="gallery" style="padding-left: 100px">
+                <div class="overlap-group1">
+                  <img class="image-41" src="" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    Lecture 7
+                  </div>
+                  <a href="/courses/debate/7">
+                    <div class="overlap-groupx">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="overlap-group1">
+                  <img class="image-41" src="" />
+                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                    Lecture 8
+                  </div>
+                  <a href="/courses/debate/8">
+                    <div class="overlap-groupx">
+                      <div class="learn-more josefinsans-semi-bold-white-18px">Go to video</div>
+                    </div>
+                  </a>
+                </div>
+                
+            </div>
+          </div>
 
           
-          <div class="group-container" style="max-height: 200px; margin-top: 0;">
+            
+
+
+          
+
+          
+          <div class="group-container" style="margin-top: 0; height: 0">
+            
             
             <div class="overlap-group5">
               <div class="flex-row">
-                <img class="logo-1" src="updated/img/logo-1@2x.png" />
+                <img class="logo-1" src="/updated/img/logo-1@2x.png" />
                 <div class="overlap-group-6">
                   <a href="/register"><div class="get-started josefinsans-bold-black-30px">GET STARTED</div></a>
                 </div>
               </div>
-              <img class="vector-10" src="updated/img/vector-10@1x.svg" />
+              <img class="vector-10" src="/updated/img/vector-10@1x.svg" />
               <div class="group-container-1">
                 <div class="group-17">
                   <div class="follow-us josefinsans-semi-bold-white-40px">Follow Us</div>
                   <div class="sm-links">
-                    <a href=" https://www.instagram.com/comprichapp/?hl=en" target="_blank"><img class="socials" src="updated/img/Instagram.svg" style="display: inline"/></a>
-                    <a href=" https://www.linkedin.com/company/comprich/" target="_blank"><img class="socials" src="updated/img/LinkedIn.svg" style="display: inline;"/></a>
+                    <a href=" https://www.instagram.com/comprichapp/?hl=en" target="_blank"><img class="socials" src="/updated/img/Instagram.svg" style="display: inline"/></a>
+                    <a href=" https://www.linkedin.com/company/comprich/" target="_blank"><img class="socials" src="/updated/img/LinkedIn.svg" style="display: inline;"/></a>
                   </div>
                 </div>
                 <div class="group-18">

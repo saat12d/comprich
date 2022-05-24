@@ -405,6 +405,20 @@
   top: 0;
 }
 
+.hub .group-556 {
+  align-items: flex-start;
+  background-color: var(--black);
+  border-radius: 40px;
+  display: flex;
+  height: 570px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 1538px;
+  padding: 67px 121px;
+  /* position: absolute; */
+  top: 0;
+}
+
 .hub .overlap-group1-1 {
   height: 383px;
   position: relative;
