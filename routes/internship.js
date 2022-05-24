@@ -89,7 +89,7 @@ router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
         }
         console.log('BEFORE')
         console.log(internship);
-        Internship.findByIdAndUpdate(internships._id, req.body.in, (err, is) => {
+        Internship.findByIdAndUpdate(internship._id, req.body.in, (err, is) => {
             if (err) {
                 console.log(err)
                 alert('Here 1')
