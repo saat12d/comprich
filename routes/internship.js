@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
+const bodyParser = require('body-parser')
 
 const middleware = require('../middleware/index')
 
@@ -10,6 +11,8 @@ const Internship = require('../models/internship.js')
 const upload = require('../multer.js');
 const cloudinary = require('cloudinary')
 const methodOverride = require('method-override')
+
+app.use(bodyParser.urlencoded({ extended: true }))
 
 
 router.get('/internships', (req, res) => {
