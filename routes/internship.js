@@ -12,7 +12,7 @@ const upload = require('../multer.js');
 const cloudinary = require('cloudinary')
 const methodOverride = require('method-override')
 
-app.use(bodyParser.urlencoded({ extended: true }))
+router.use(bodyParser.urlencoded({ extended: true }))
 
 
 router.get('/internships', (req, res) => {
