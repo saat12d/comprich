@@ -12,7 +12,7 @@ const upload = require('../multer.js');
 const cloudinary = require('cloudinary')
 const methodOverride = require('method-override')
 
-router.use(bodyParser.urlencoded({ extended: true }))
+let bp = bodyParser.urlencoded({ extended: false });
 
 
 router.get('/internships', (req, res) => {
@@ -66,7 +66,7 @@ router.get('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
     })
 })
 
-router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
+router.put('/internships/:id', middleware.isLoggedIn, bp,  async (req, res) => {
     console.log('reached bitch')
     console.log(req.body);
     await Internship.findById(req.params.id, async (err, internship) => {
