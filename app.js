@@ -60,6 +60,7 @@ mongoose.connect('mongodb+srv://Saatvik:comp@richDBUser@comprich.jp7iu.mongodb.n
 app.use(express.static(__dirname + '/assets'))
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
 app.use(flash())
 app.use(methodOverride('_method'))
 app.use(secure)
