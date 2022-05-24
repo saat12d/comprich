@@ -85,7 +85,8 @@ router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
         }
         console.log('BEFORE')
         console.log(internship);
-        
+    })
+
         Internship.findByIdAndUpdate(internship._id, req.body.i, (err, is) => {
             if (err) {
                 console.log(err)
@@ -97,7 +98,6 @@ router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
             console.log(is)
             res.redirect('/internships/' + is._id);
         })
-    })
 })
 
 module.exports = router;
