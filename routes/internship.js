@@ -89,20 +89,19 @@ router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
         }
         console.log('BEFORE')
         console.log(internship);
-    })
-
-    Internship.findByIdAndUpdate(req.params.id, req.body.in, (err, is) => {
-        if (err) {
-            console.log(err)
-            alert('Here 1')
-            req.flash('error', err.message);
-            return res.redirect('back')
-        }
-        console.log('AFTER')
-        console.log(is)
-        console.log('INPUT');
-        console.log(req.body.in);
-        res.redirect('/internships/' + is._id);
+        Internship.findByIdAndUpdate(internships._id, req.body.in, (err, is) => {
+            if (err) {
+                console.log(err)
+                alert('Here 1')
+                req.flash('error', err.message);
+                return res.redirect('back')
+            }
+            console.log('AFTER')
+            console.log(is)
+            console.log('INPUT');
+            console.log(req.body.in);
+            return res.redirect('/internships/' + is._id);
+        })
     })
 })
 
