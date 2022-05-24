@@ -83,14 +83,14 @@ router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
                     req.flash('error', err.message);
                     res.redirect('/internships');
                 }
-                internship.companyLogo = result.secure_url;
+                req.body.in.companyLogo = result.secure_url;
             })
         }
         console.log('BEFORE')
         console.log(internship);
     })
 
-    Internship.findByIdAndUpdate(req.params.id, req.body.i, (err, is) => {
+    Internship.findByIdAndUpdate(req.params.id, req.body.in, (err, is) => {
         if (err) {
             console.log(err)
             alert('Here 1')
