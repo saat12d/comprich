@@ -100,7 +100,7 @@ router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
         console.log('AFTER')
         console.log(is)
         console.log('INPUT');
-        console.log(req.body.i);
+        console.log(req.body.in);
         res.redirect('/internships/' + is._id);
     })
 })
