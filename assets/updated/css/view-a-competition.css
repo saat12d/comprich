@@ -39,7 +39,7 @@
   letter-spacing: 0;
   margin-top: 1.87px;
   min-height: 19px;
-  width: 135px;
+  /* width: 135px; */
 }
 
 .view-a-competition .hub {
@@ -47,7 +47,7 @@
   margin-left: 58px;
   margin-top: 0;
   min-height: 19px;
-  width: 56px;
+  /* width: 56px; */
 }
 
 .view-a-competition .our-blog {
@@ -55,7 +55,7 @@
   margin-left: 58px;
   margin-top: 0;
   min-height: 19px;
-  width: 138px;
+  /* width: 138px; */
 }
 
 .view-a-competition .overlap-group {
