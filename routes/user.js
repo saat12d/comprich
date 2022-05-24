@@ -148,7 +148,7 @@ router.get("/login", (req, res) => {
 router.post(
     "/login",
     passport.authenticate("local", {
-        successRedirect: "/competitions",
+        successRedirect: "/hub",
         failureRedirect: "/login",
         failureFlash: true,
         successFlash: "Welcome to Comprich",
