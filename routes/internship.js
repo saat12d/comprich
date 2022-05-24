@@ -63,9 +63,9 @@ router.get('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
     })
 })
 
-router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
+router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
     console.log('reached bitch')
-    Internship.findById(req.params.id, async (err, internship) => {
+    await Internship.findById(req.params.id, async (err, internship) => {
         if (err) {
             console.log(err)
             alert('here 3')
@@ -87,17 +87,17 @@ router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
         console.log(internship);
     })
 
-        Internship.findByIdAndUpdate(internship._id, req.body.i, (err, is) => {
-            if (err) {
-                console.log(err)
-                alert('Here 1')
-                req.flash('error', err.message);
-                return res.redirect('back')
-            }
-            console.log('AFTER')
-            console.log(is)
-            res.redirect('/internships/' + is._id);
-        })
+    Internship.findByIdAndUpdate(req.params.id, req.body.i, (err, is) => {
+        if (err) {
+            console.log(err)
+            alert('Here 1')
+            req.flash('error', err.message);
+            return res.redirect('back')
+        }
+        console.log('AFTER')
+        console.log(is)
+        res.redirect('/internships/' + is._id);
+    })
 })
 
 module.exports = router;
