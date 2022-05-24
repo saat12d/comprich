@@ -9,6 +9,7 @@ const Internship = require('../models/internship.js')
 
 const upload = require('../multer.js');
 const cloudinary = require('cloudinary')
+const methodOverride = require('method-override')
 
 
 router.get('/internships', (req, res) => {
@@ -62,7 +63,7 @@ router.get('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
     })
 })
 
-router.put('/internships/:id/edit', middleware.isLoggedIn, (req, res) => {
+router.put('/internships/:id', middleware.isLoggedIn, (req, res) => {
     Internship.findById(req.params.id, async (err, internship) => {
         if (err) {
             console.log(err)
