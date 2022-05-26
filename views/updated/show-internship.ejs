@@ -121,7 +121,6 @@
               <%= is.desc %>
               <br /><br />
             </div>
-            <!-- <% if((currentUser && currentUser.isOwner || currentUser.internRepOf.toLowerCase() == is.fromCompany.toLowerCase() || currentUser.repOf.toLowerCase() == is.fromCompany.toLowerCase()) ){ %> -->
             <% if((currentUser && (currentUser.isOwner || currentUser.isInternship) ){ %>
               <a href="/internships/<%= is._id %>/edit">
                 <div class="overlap-group-1">
