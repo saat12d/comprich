@@ -65,7 +65,7 @@ const adminCodes = [
 ];
 
 const internshipCodes = [
-    {company: 'Test', code: 'testing'},
+    {company: 'Testing4', code: 'testing'},
     {company: 'Banqmark', code: 'is_admin@bm-h2du8'},
     {company: 'BCT', code: 'is_admin@bct-9bd3e'},
     {company: 'Gowling', code: 'is_admin@gl-hd32a'},
