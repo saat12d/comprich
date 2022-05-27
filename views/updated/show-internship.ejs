@@ -43,7 +43,11 @@
           </div>
         </a>
         
-        <div class="tiger-global-case-competition josefinsans-semi-bold-white-80px"><%= is.companyName %></div>
+        <% if(is.companyName.length() > 30){ %>
+          <div class="tiger-global-case-competition josefinsans-semi-bold-white-80px" style="font-size: var(--font-size-xxxl);"><%= is.companyName %></div>
+        <% } else { %>
+          <div class="tiger-global-case-competition josefinsans-semi-bold-white-80px"><%= is.companyName %></div>
+        <% } %>
         <div class="column-container">
           <div class="column-1">
             <img class="image-41" src="<%= is.companyLogo %>" />
