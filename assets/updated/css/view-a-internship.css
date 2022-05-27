@@ -7,7 +7,7 @@ html {
   align-items: flex-start;
   background-color: var(--black);
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   /* height: 2169px; */
   overflow: hidden;
   width: 1538px;
