@@ -1,14 +1,14 @@
 /* screen - about */
 
 .about {
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--romance);
   display: flex;
   flex-direction: column;
   /* height: 4606px; */
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
-  margin: 0 auto;
+  margin-left: -20px;
 }
 
 .about .overlap-group8 {
