@@ -12,7 +12,7 @@
 }
 
 .about .overlap-group8 {
-  height: 4036px;
+  height: 3500px;
   margin-left: -653.44px;
   margin-top: -406px;
   position: relative;
@@ -437,7 +437,7 @@
   left: 893px;
   min-height: 764px;
   position: absolute;
-  top: 3252px;
+  top: 2600px;
   width: 1067px;
 }
 
@@ -448,6 +448,7 @@
   min-height: 123px;
   text-align: center;
   width: 609px;
+  margin: 0 auto;
 }
 
 .about .flex-row-1 {
