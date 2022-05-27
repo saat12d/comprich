@@ -3,12 +3,16 @@ html {
   background-color: var(--black);
 }
 
+body {
+  background-color: var(--black);
+}
+
 .view-a-competition {
   align-items: center;
   background-color: var(--black);
   display: flex;
   flex-direction: column;
-  height: 2169px;
+  /* height: 2169px; */
   overflow: hidden;
   width: 1538px;
 }
