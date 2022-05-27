@@ -4,7 +4,7 @@ html {
 }
 
 .view-a-competition {
-  align-items: flex-start;
+  align-items: center;
   background-color: var(--black);
   display: flex;
   flex-direction: column;
