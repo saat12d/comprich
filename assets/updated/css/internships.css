@@ -8,9 +8,9 @@
     background-color: var(--black);
     display: flex;
     /* height: 3786px; */
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
   
   .hub .overlap-group6 {
