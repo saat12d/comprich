@@ -3,7 +3,7 @@
 /* screen - hub */
 
 .hub {
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--black);
     display: flex;
     /* height: 3786px; */
