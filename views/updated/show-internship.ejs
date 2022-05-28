@@ -52,15 +52,7 @@
           <div class="column-1">
             <img class="image-41" src="<%= is.companyLogo %>" />
             
-            <% function validateEmail (emailAdress) %>
-            <% { %>
-              <% let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ %>
-              <% if (emailAdress.match(regexEmail)) { %>
-                <% return true  %>
-              <% } else { %>
-                <% return false  %>
-              <% } %>
-            <% } %>
+           
             
 
             <% if(is.signUpDate > Date.now()){ %>
@@ -76,7 +68,6 @@
                     </div>
                   </a>
                 <% } %>
-                  
               
             <% } else { %>
               <div class="application">
@@ -217,4 +208,15 @@
       </div>
     </div>
   </body>
+  <script>
+    function validateEmail (emailAdress)
+      {
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailAdress.match(regexEmail)) {
+          return true; 
+        } else {
+          return false; 
+        }
+      }
+  </script>
 </html>
