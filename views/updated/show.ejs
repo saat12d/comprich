@@ -43,7 +43,11 @@
           </div>
         </a>
         
-        <div class="tiger-global-case-competition josefinsans-semi-bold-black-80px"><%= comp.title %></div>
+        <% if(comp.title.length > 30){ %>
+          <div class="tiger-global-case-competition josefinsans-semi-bold-black-80px" style="font-size: var(--font-size-xxxl);"><%= comp.title %></div>
+        <% } else { %>
+          <div class="tiger-global-case-competition josefinsans-semi-bold-black-80px"><%= comp.title %></div>
+        <% } %>
         <div class="column-container">
           <div class="column-1">
             <img class="image-41" src="<%= comp.images[0].url %>" />
