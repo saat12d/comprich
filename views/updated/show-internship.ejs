@@ -164,7 +164,7 @@
             <% desc = replaceAll(desc, '\n', '<br>') %>
             <%= console.log(desc) %>
             <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)" id="desc">
-              <%= is.desc %>
+              <%= JSON.stringify(is.desc) %>
               <br /><br />
             </div>
             <% if((currentUser && (currentUser.isOwner || currentUser.isInternship) )){ %>
@@ -241,7 +241,15 @@
   </body>
   <script>
 
-    document.getElementById(desc).innerHTML = JSON.stringify(document.getElementById(desc).textContent)
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+
+    function replaceAll(str, find, replace) {
+      return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+
+    document.getElementById(desc).innerHTML = document.getElementById(desc).textContent;
 
     function validateEmail (emailAdress){
         let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
