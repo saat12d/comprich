@@ -150,8 +150,7 @@
                 </div>
               </div>
             </div>
-            <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)">
-              <%= is.desc %>
+            <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)" id="desc">
               <br /><br />
             </div>
             <% if((currentUser && (currentUser.isOwner || currentUser.isInternship) )){ %>
@@ -227,6 +226,8 @@
     </div>
   </body>
   <script>
+    document.getElementById('desc').innerHTML = is.desc
+
     function validateEmail (emailAdress){
         let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (emailAdress.match(regexEmail)) {
