@@ -4,7 +4,7 @@
   align-items: flex-start;
   background-color: var(--romance);
   display: flex;
-  height: 996px;
+  /* height: 996px; */
   overflow: hidden;
   width: 1538px;
 }
