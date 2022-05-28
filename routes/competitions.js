@@ -349,44 +349,6 @@ router.put('/competitions/:id', middleware.checkCompOwnership, upload.array('ima
     })
 })
 
-router.put('/internships/:id', middleware.isLoggedIn, async (req, res) => {
-    console.log('reached bitch')
-    console.log(req.body);
-    Internship.findById(req.params.id, async (err, internship) => {
-        if (err) {
-            console.log(err)
-            alert('here 3')
-            req.flash('error', err.message);
-            return res.redirect('back')
-        }
-        if(req.file){
-            await cloudinary.v2.uploader.upload((err, result) => {
-                if(err){
-                    console.log(err);
-                    alert('here 2')
-                    req.flash('error', err.message);
-                    res.redirect('/internships');
-                }
-                req.body.in.companyLogo = result.secure_url;
-            })
-        }
-        console.log('BEFORE')
-        console.log(internship);
-        Internship.findByIdAndUpdate(internship._id, req.body.in, (err, is) => {
-            if (err) {
-                console.log(err)
-                alert('Here 1')
-                req.flash('error', err.message);
-                return res.redirect('back')
-            }
-            console.log('AFTER')
-            console.log(is)
-            console.log('INPUT');
-            console.log(req.body.in);
-            return res.redirect('/internships/' + is._id);
-        })
-    })
-})
 
 
 router.delete('/competitions/:id', middleware.checkCompOwnership, async function (req, res) {
