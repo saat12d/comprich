@@ -150,8 +150,11 @@
                 </div>
               </div>
             </div>
+            <% let desc = JSON.stringify(is.desc) %>
+            <%= console.log(desc) %>
+            <% desc = desc.replace('\n', '<br>') %>
             <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)" id="desc">
-              <%= JSON.stringify(is.desc).replace('\n', '<br>') %>
+              <%= desc %>
               <br /><br />
             </div>
             <% if((currentUser && (currentUser.isOwner || currentUser.isInternship) )){ %>
