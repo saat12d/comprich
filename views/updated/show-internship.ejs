@@ -164,7 +164,7 @@
             <% desc = replaceAll(desc, '\n', '<br>') %>
             <%= console.log(desc) %>
             <div class="calling-all-high-ach josefinsans-normal-black-25px" style="color: var(--white)" id="desc">
-              <%= JSON.stringify(is.desc) %>
+              <%= is.desc %>
               <br /><br />
             </div>
             <% if((currentUser && (currentUser.isOwner || currentUser.isInternship) )){ %>
