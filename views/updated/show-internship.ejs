@@ -249,7 +249,7 @@
       return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
     }
 
-    document.getElementById(desc).innerHTML = document.getElementById(desc).textContent;
+    document.getElementById(desc).innerHTML = replaceAll(document.getElementById(desc).textContent, '\n', '<br>');
 
     function validateEmail (emailAdress){
         let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
