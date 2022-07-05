@@ -61,7 +61,8 @@ const adminCodes = [
     {club: 'Global Investor Challenge', code: 'admin@gic_hz2f9'},
     {club: 'Finatic', code: 'admin@fin_x3a93'},
     {club: 'TGCC', code: 'admin@tgcc_j3b27'},
-    {club: 'Uber Hackathon', code: 'admin@uber_h2d47'}
+    {club: 'Uber Hackathon', code: 'admin@uber_h2d47'},
+    {club: 'MUNX', code: 'admin@munx_h2sd5'}
 ];
 
 const internshipCodes = [
