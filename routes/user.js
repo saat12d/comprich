@@ -76,7 +76,8 @@ const internshipCodes = [
     {company: 'Brand Folio', code: 'is_admin@bf-cp63x'},
     {company: 'Samsonite', code: 'is_admin@sams-b2vz94'},
     {company: 'Rocky Real Estate', code: 'is_admin@rre-84hpe2'},
-    {company: 'Publicis', code: 'is_admin@ps-wk3d5'}
+    {company: 'Publicis', code: 'is_admin@ps-wk3d5'},
+    {company: 'Consulate Review', code: 'is_admin@cr-b8p23'}
 ]
 
 const schoolCodes = [
