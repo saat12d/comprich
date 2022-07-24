@@ -1,162 +1,162 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1538, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="/updated/img/comprichlogosmall.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="updated/css/account-compete.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
-    <title>Account | Compete</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1538, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="/updated/img/comprichlogosmall.png" />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="photo" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="updated/css/account-compete.css" />
+  <link rel="stylesheet" type="text/css" href="updated/css/styleguide.css" />
+  <link rel="stylesheet" type="text/css" href="updated/css/globals.css" />
+  <title>Account | Compete</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EG7SGSS2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EG7SGSS2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-E7EG7SGSS2');
-    </script>
-  </head>
-  <%- include('partials/flash') %>
+    gtag('config', 'G-E7EG7SGSS2');
+  </script>
+</head>
+<%- include('partials/flash') %>
 
-  <body style="margin: 0; background: #fffefd">
-    <input type="hidden" id="anPageName" name="page" value="account-compete" />
-    <div class="container-center-horizontal">
-      <div class="account-compete screen">
-        <div class="overlap-group6">
-          <img class="blob" src="updated/img/blob@1x.svg" />
-          <div class="frame-7">
-            <div class="group-38">
-              <a href="/hub"><img class="logo-4" src="updated/img/logo-4@2x.png" /></a>
-              <a href="/my-profile">
-                  <div class="dashboard">
-                    <img class="frame" src="updated/img/frame-3@2x.svg" />
-                    <div class="compete josefinsans-semi-bold-sunglow-24px">Compete</div>
-                </div>
-              </a>
-              <a href="/onlinecv">
-                <div class="cv">
-                    <img class="frame" src="updated/img/frame-4@2x.svg" />
-                    <div class="cv-1 josefinsans-semi-bold-white-24px">CV</div>
-                </div>
-              </a>
-              <a href="/my-profile/edit">
-                <div class="account">
-                    <img class="frame" src="updated/img/frame-1@2x.svg" />
-                    <div class="account-1 josefinsans-semi-bold-white-24px">Account</div>
-                  </div>
-              </a>
-              <!-- <div class="settings">
-                <img class="frame" src="updated/img/frame@2x.svg" />
-                <div class="settings-1 josefinsans-semi-bold-white-24px">Settings</div>
-              </div> -->
-
-              <a href="/logout">
-                <div class="log-out">
-                    <img class="frame" src="updated/img/frame-2@2x.svg" />
-                    <div class="log-out-1 josefinsans-semi-bold-white-24px">Log Out</div>
-                </div>
-              </a>
+<body style="margin: 0; background: #fffefd">
+<input type="hidden" id="anPageName" name="page" value="account-compete" />
+<div class="container-center-horizontal">
+  <div class="account-compete screen">
+    <div class="overlap-group6">
+      <img class="blob" src="updated/img/blob@1x.svg" />
+      <div class="frame-7">
+        <div class="group-38">
+          <a href="/hub"><img class="logo-4" src="updated/img/logo-4@2x.png" /></a>
+          <a href="/my-profile">
+            <div class="dashboard">
+              <img class="frame" src="updated/img/frame-3@2x.svg" />
+              <div class="compete josefinsans-semi-bold-sunglow-24px">Compete</div>
             </div>
-            <div class="flex-col">
-              <div class="hello-john josefinsans-semi-bold-black-80px">Hello <%= user.firstName %>!</div>
-              <div class="competitions valign-text-middle josefinsans-semi-bold-black-50px">Competitions</div>
-              <div class="group-33 josefinsans-semi-bold-black-35px-3">
-                <div class="flex-col-1">
-                  <div class="enrolled josefinsans-semi-bold-black-35px">Enrolled</div>
-                  <img class="line-3" src="updated/img/line-3@2x.svg" />
-                </div>
-                <!-- <div class="saved">Saved</div>
-                <div class="completed">Completed</div> -->
+          </a>
+          <a href="/onlinecv">
+            <div class="cv">
+              <img class="frame" src="updated/img/frame-4@2x.svg" />
+              <div class="cv-1 josefinsans-semi-bold-white-24px">CV</div>
+            </div>
+          </a>
+          <a href="/my-profile/edit">
+            <div class="account">
+              <img class="frame" src="updated/img/frame-1@2x.svg" />
+              <div class="account-1 josefinsans-semi-bold-white-24px">Account</div>
+            </div>
+          </a>
+          <!-- <div class="settings">
+            <img class="frame" src="updated/img/frame@2x.svg" />
+            <div class="settings-1 josefinsans-semi-bold-white-24px">Settings</div>
+          </div> -->
+
+          <a href="/logout">
+            <div class="log-out">
+              <img class="frame" src="updated/img/frame-2@2x.svg" />
+              <div class="log-out-1 josefinsans-semi-bold-white-24px">Log Out</div>
+            </div>
+          </a>
+        </div>
+        <div class="flex-col">
+          <div class="hello-john josefinsans-semi-bold-black-80px">Hello <%= user.firstName %>!</div>
+          <div class="competitions valign-text-middle josefinsans-semi-bold-black-50px">Competitions</div>
+          <div class="group-33 josefinsans-semi-bold-black-35px-3">
+            <div class="flex-col-1">
+              <div class="enrolled josefinsans-semi-bold-black-35px">Enrolled</div>
+              <img class="line-3" src="updated/img/line-3@2x.svg" />
+            </div>
+            <!-- <div class="saved">Saved</div>
+            <div class="completed">Completed</div> -->
+          </div>
+          <% for(let comp of user.signedUpFor){ %>
+            <div class="overlap-group-container">
+              <!-- <div style="display: block"> -->
+              <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                <%= comp.title %>
               </div>
-              <% for(let comp of user.signedUpFor){ %>
-              <div class="overlap-group-container">
-                  <!-- <div style="display: block"> -->
-                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                      <%= comp.title %>
-                    </div>
-                    <div class="overlap-group">
-                      <% if(comp.verified){ %>
-                        <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
-                      <% } else { %>
-                        <!-- <button style="cursor: pointer; outline: none; background" id="cv-form-button"> -->
-                          <div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
-                        <!-- </button> -->
-                    </div>
-                    <% } %>
-                  <!-- </div> -->
-                    <% if(!comp.verified){ %>
-                      <div id="cv-form" style="display: none;">
-                        <form action="/onlinecv" method="POST" style="left: 100px; top: 50px;">
-                          
-                          <div class="username">
-                            <div class="username-1 josefinsans-normal-black-25px-2">Awards Won (if any):</div>
-                            <div class="overlap-group16">
-                                <input class="josefinsans-normal-black-25px" type="text" name="awards" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                            </div>
-                          </div>                        
-                          <div class="password">
-                            <div class="password-1 josefinsans-normal-black-25px-2">Skills Gained (if any):</div>
-                            <div class="overlap-group17">
-                                <input class="josefinsans-normal-black-25px" type="text" name="skills" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                            </div>
-                          </div>                        
-                          <div class="overlap-group">
-                            <button type="submit" class="learn more  josefinsans-semi-bold-white-18px" style=" border: none; background: none; outline: none;">
-                            Add to CV</button>
-                          </div>     
-                        </form>
-                      </div>
-                    <% } %>
-              </div>
+              <div class="overlap-group">
+                <% if(comp.verified){ %>
+                  <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
+                <% } else { %>
+                  <!-- <button style="cursor: pointer; outline: none; background" id="cv-form-button"> -->
+                  <div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
+                  <!-- </button> -->
               </div>
               <% } %>
+              <!-- </div> -->
+              <% if(!comp.verified){ %>
+                <div id="cv-form" style="display: none;">
+                  <form action="/onlinecv" method="POST" style="left: 100px; top: 50px;">
 
-                
-              </div>
-              <!-- <div class="overlap-group5">
-                <img class="image-41" src="updated/img/image-41@2x.png" />
-                <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                  Tiger Global Case Competition
+                    <div class="username">
+                      <div class="username-1 josefinsans-normal-black-25px-2">Awards Won (if any):</div>
+                      <div class="overlap-group16">
+                        <input class="josefinsans-normal-black-25px" type="text" name="awards" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+                      </div>
+                    </div>
+                    <div class="password">
+                      <div class="password-1 josefinsans-normal-black-25px-2">Skills Gained (if any):</div>
+                      <div class="overlap-group17">
+                        <input class="josefinsans-normal-black-25px" type="text" name="skills" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
+                      </div>
+                    </div>
+                    <div class="overlap-group">
+                      <button type="submit" class="learn more  josefinsans-semi-bold-white-18px" style=" border: none; background: none; outline: none;">
+                        Add to CV</button>
+                    </div>
+                  </form>
                 </div>
-                <div class="overlap-group">
-                  <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
-                </div>
-              </div> -->
+              <% } %>
             </div>
-            <div class="group-container">
-              <div class="overlap-group1">
-                <div class="rectangle-16"></div>
-                <div class="overlap-group-2"><div class="get-link josefinsans-bold-white-30px">GET LINK</div></div>
-                <button style="background: none; border: none; outline: none; cursor: pointer" onclick="myFunction()">
-                  <div class="invite-friends josefinsans-semi-bold-black-35px">Invite Friends</div>
-                </button>
-                <img class="saly-3" src="updated/img/saly-3@2x.png" />
-              </div>
-              <div class="group-35">
-                <div class="overlap-group2">
-                  <div class="interest-quiz josefinsans-semi-bold-black-35px">Interest Quiz</div>
-                  <a href="/survey"><div class="overlap-group-1"><div class="place josefinsans-bold-black-30px">START</div></div></a>
-                </div>
-                <div class="overlap-group1-1">
-                  <div class="online-cv josefinsans-semi-bold-black-35px">Online CV</div>
-                  <a href="/onlinecv"><div class="overlap-group-1"><div class="update josefinsans-bold-black-30px">UPDATE</div></div></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <% } %>
+        </div>
+
+
+      </div>
+      <!-- <div class="overlap-group5">
+        <img class="image-41" src="updated/img/image-41@2x.png" />
+        <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+          Tiger Global Case Competition
+        </div>
+        <div class="overlap-group">
+          <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+        </div>
+      </div> -->
+    </div>
+    <div class="group-container">
+      <div class="overlap-group1">
+        <div class="rectangle-16"></div>
+        <div class="overlap-group-2"><div class="get-link josefinsans-bold-white-30px">GET LINK</div></div>
+        <button style="background: none; border: none; outline: none; cursor: pointer" onclick="myFunction()">
+          <div class="invite-friends josefinsans-semi-bold-black-35px">Invite Friends</div>
+        </button>
+        <img class="saly-3" src="updated/img/saly-3@2x.png" />
+      </div>
+      <div class="group-35">
+        <div class="overlap-group2">
+          <div class="interest-quiz josefinsans-semi-bold-black-35px">Interest Quiz</div>
+          <a href="/survey"><div class="overlap-group-1"><div class="place josefinsans-bold-black-30px">START</div></div></a>
+        </div>
+        <div class="overlap-group1-1">
+          <div class="online-cv josefinsans-semi-bold-black-35px">Online CV</div>
+          <a href="/onlinecv"><div class="overlap-group-1"><div class="update josefinsans-bold-black-30px">UPDATE</div></div></a>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</div>
+</div>
+</body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
   $(document).ready(() => {
     $('#cv-form').hide();
     $('#cv-form-button').click(e => {
@@ -165,16 +165,16 @@
     })
   })
 
-    // button = document.getElementById("cv-form-button");
-    // cvform = document.getElementById("cv-form");
+  // button = document.getElementById("cv-form-button");
+  // cvform = document.getElementById("cv-form");
 
-    function myFunction() {
-        /* Copy the text inside the text field */
-      navigator.clipboard.writeText("www.comprich.org");
-    
-      /* Alert the copied text */
-      alert("Link copied to clipboard");
-    }
+  function myFunction() {
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText("www.comprich.org");
 
-  </script>
+    /* Alert the copied text */
+    alert("Link copied to clipboard");
+  }
+
+</script>
 </html>
