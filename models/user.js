@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema({
     ],
     cv: [
         {
-            competition: String,
+            competition: {type: String, require: true},
             comp_id: String,
             date: Date,
             skills: String,

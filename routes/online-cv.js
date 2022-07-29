@@ -22,13 +22,15 @@ router.post('/onlinecv', (req, res) => {
             console.log(err);
             return res.redirect("back");
         }
+        console.log(req.body.comp)
+        console.log(req.body)
         user.cv.push({
             awards: req.body.awards,
             skills: req.body.skills,
-            competition: req.body.comp
+            competition: req.body.comp_title
         })
         for(c of user.signedUpFor){
-            if(c.title == req.body.comp){
+            if(c.title == req.body.comp_title){
                 c.verified = true;
                 break;
             }
