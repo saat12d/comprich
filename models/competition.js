@@ -10,6 +10,7 @@ const competitionSchema = new mongoose.Schema({
     dateDecided: {type: Boolean, default: true},
     date: Date,
     price: { type: String, default: 'None' },
+    interschool: {type: Boolean, default: true},
     signupLink: String,
     smLink: String,
     websiteLink: { type: String, default: 'none' },

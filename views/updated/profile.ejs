@@ -28,7 +28,7 @@
 <input type="hidden" id="anPageName" name="page" value="account-compete" />
 <div class="container-center-horizontal">
   <div class="account-compete screen">
-    <div class="overlap-group6">
+    <div class="overlap-group6" style="width: 1800px">
       <img class="blob" src="updated/img/blob@1x.svg" />
       <div class="frame-7">
         <div class="group-38">
@@ -80,44 +80,21 @@
               <div class="tiger-global-case-competition josefinsans-normal-black-24px">
                 <%= comp.title %>
               </div>
-              <div class="overlap-group">
-                <% if(comp.verified){ %>
+              <% if(comp.verified){ %>
+                <div class="overlap-group" style="background-color: rgb(155, 150, 150);">
                   <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
-                <% } else { %>
-                  <!-- <button style="cursor: pointer; outline: none; background" id="cv-form-button"> -->
-                  <div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
-                  <!-- </button> -->
-              </div>
-              <% } %>
-              <!-- </div> -->
-              <% if(!comp.verified){ %>
-                <div id="cv-form" style="display: none;">
-                  <form action="/onlinecv" method="POST" style="left: 50px; top: 20px;">
-
-                    <div class="username">
-                      <div class="username-1 josefinsans-normal-black-25px-2">Awards Won (if any):</div>
-                      <div class="overlap-group16">
-                        <input class="josefinsans-normal-black-25px" type="text" name="awards" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                      </div>
-                    </div>
-                    <div class="password">
-                      <div class="password-1 josefinsans-normal-black-25px-2">Skills Gained (if any):</div>
-                      <div class="overlap-group17">
-                        <input class="josefinsans-normal-black-25px" type="text" name="skills" placeholder="Enter here" style="border: none; margin-left: none; outline: none; height: 100%; width: 100%; font-size: 1.5em;">
-                      </div>
-                    </div>
-                    <div style="display: hidden">
-                      <input type="text" value="<%= comp.title %>" name="comp_title">
-                    </div>
-                    <div class="overlap-group">
-                      <button type="submit" class="learn more  josefinsans-semi-bold-white-18px" style=" border: none; background: none; outline: none;">
-                        Add to CV</button>
-                    </div>
-                  </form>
                 </div>
-              <% } %>
+              <% } else { %>
+                <div class="overlap-group">
+                  <a href="/add-to-cv/<%= comp._id %>"><div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div></a>
+                </div>
+                  <% } %>
+              <!-- </div> -->
             </div>
-        <% } %>
+          <!-- </div> -->
+          <% } %>
+              
+            
         </div>
 
 

@@ -138,7 +138,7 @@
           <% if(currentUser){ %>
             <% let count = 0 %>
             <% let foryou = upcoming %>
-            <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
+            <% foryou = foryou.filter(comp => !comp.category.includes(currentUser.recCategory)) %>
             <% console.log(currentUser.recCategory) %>
             
           <% } %>

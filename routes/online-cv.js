@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const User = require("../models/user");
+const Competition = require('../models/competition')
 
 const middleware = require("../middleware/index");
 
@@ -38,6 +39,18 @@ router.post('/onlinecv', (req, res) => {
         user.save();
         console.log(user);
         res.redirect("/onlinecv");
+    })
+})
+
+router.get('/add-to-cv/:test', (req, res) => {
+    Competition.findById(req.params.test, (err, foundComp) => {
+        if(err){
+            console.log(err)
+            req.flash('error', err.message)
+            return res.redirect('back')
+        }
+        console.log(foundComp)
+        return res.render('updated/add-to-cv', {comp: foundComp})
     })
 })
 
