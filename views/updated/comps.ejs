@@ -125,6 +125,12 @@
                 <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
               </div>
             </a>
+            <a href="#school" id="finish">
+              <div class="flex-col" style="width: 0">
+                <div class="past-competitions josefinsans-semi-bold-black-35px-3" style="margin-left: 180px">School Network</div>
+                <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
+              </div>
+            </a>
           </div>
           
           <% competitions.reverse() %>
@@ -138,7 +144,7 @@
           <% if(currentUser){ %>
             <% let count = 0 %>
             <% let foryou = upcoming %>
-            <% foryou = foryou.filter(comp => !comp.category.includes(currentUser.recCategory)) %>
+            <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
             <% console.log(currentUser.recCategory) %>
             
           <% } %>
