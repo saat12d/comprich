@@ -264,6 +264,8 @@
   margin-left: 15px;
   margin-top: 13px;
   width: 29px;
+  filter: invert(22%) sepia(90%) saturate(7219%) hue-rotate(2deg)
+    brightness(100%) contrast(97%);
 }
 
 .account-compete .learn-more {

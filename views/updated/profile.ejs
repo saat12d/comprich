@@ -145,7 +145,20 @@
       e.preventDefault();
       $('#cv-form').toggle();
     })
+    $('img.icon').css('opacity', 0);
+
+    $('img.icon')
+    .mouseover(function(e) {
+      e.preventDefault();
+      $(this).css('opacity', 1);
+    })
+    .mouseout(function(e) {
+      e.preventDefault();
+      $(this).css('opacity', 0);
+    })
   })
+
+    
 
   // button = document.getElementById("cv-form-button");
   // cvform = document.getElementById("cv-form");
