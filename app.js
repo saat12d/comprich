@@ -119,6 +119,21 @@ app.use('/', blogRoutes);
 app.use('/', internRoutes);
 // app.use('/', notiRoutes);
 app.use('/', onlinecvRoutes);
+
+
+app.get('/add-to-cv/:id', middleware.isLoggedIn, async (req, res) => {
+    await Competition.findById(req.params.id, (err, foundComp) => {
+        if(err){
+            console.log(err)
+            req.flash('error', err.message)
+            return res.redirect('back')
+        }
+        console.log(foundComp)
+        console.log(req.params.id);
+        res.render('updated/add-to-cv', {comp: foundComp})
+    })
+    
+})
 app.use('/', courseRoutes);
 
 app.use('*', (req, res) => {

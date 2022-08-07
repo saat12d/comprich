@@ -302,6 +302,20 @@ router.get('/competitions/:id', middleware.isLoggedIn,  (req, res) => {
     })
 })
 
+// router.get('/add-to-cv/:id', middleware.isLoggedIn, (req, res) => {
+    // Competition.findById(req.params.id, (err, foundComp) => {
+    //     if(err){
+    //         console.log(err)
+    //         req.flash('error', err.message)
+    //         return res.redirect('back')
+    //     }
+    //     console.log(foundComp)
+    //     console.log(req.params.id);
+    //     res.render('updated/add-to-cv', {comp: foundComp})
+    // })
+    
+// })
+
 router.get('/competitions/:id/edit', middleware.checkCompOwnership, (req, res) => {
     Competition.findById(req.params.id, (err, foundComp) => {
         if (err) {
