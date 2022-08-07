@@ -89,6 +89,8 @@
                   <a href="/add-to-cv/<%= comp._id %>"><div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div></a>
                 </div>
                   <% } %>
+              <img class="icon" src="updated/img/trash-solid.svg" alt="Delete icon">
+              
               <!-- </div> -->
             </div>
           <!-- </div> -->
@@ -143,7 +145,20 @@
       e.preventDefault();
       $('#cv-form').toggle();
     })
+    $('img.icon').css('opacity', 0);
+
+    $('img.icon')
+    .mouseover(function(e) {
+      e.preventDefault();
+      $(this).css('opacity', 1);
+    })
+    .mouseout(function(e) {
+      e.preventDefault();
+      $(this).css('opacity', 0);
+    })
   })
+
+    
 
   // button = document.getElementById("cv-form-button");
   // cvform = document.getElementById("cv-form");
