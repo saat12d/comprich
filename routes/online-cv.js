@@ -42,14 +42,15 @@ router.post('/onlinecv', (req, res) => {
     })
 })
 
-router.get('/add-to-cv/:test', (req, res) => {
-    Competition.findById(req.params.test, (err, foundComp) => {
+router.get('/add-to-cv/:title', middleware.isLoggedIn, async (req, res) => {
+    await Competition.find({ title: req.params.title}, (err, foundComp) => {
         if(err){
             console.log(err)
             req.flash('error', err.message)
             return res.redirect('back')
         }
         console.log(foundComp)
+        console.log(req.params.title);
         return res.render('updated/add-to-cv', {comp: foundComp})
     })
 })
