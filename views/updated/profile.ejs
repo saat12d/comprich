@@ -75,7 +75,7 @@
             <div class="completed">Completed</div> -->
           </div>
           <% for(let comp of user.signedUpFor){ %>
-            <div class="overlap-group-container">
+            <div class="overlap-group-container comp-container">
               <!-- <div style="display: block"> -->
               <div class="tiger-global-case-competition josefinsans-normal-black-24px">
                 <%= comp.title %>
@@ -147,14 +147,14 @@
     })
     $('img.icon').css('opacity', 0);
 
-    $('img.icon')
+    $('div.comp-container')
     .mouseover(function(e) {
       e.preventDefault();
-      $(this).css('opacity', 1);
+      $(this).find('img.icon').css('opacity', 1);
     })
     .mouseout(function(e) {
       e.preventDefault();
-      $(this).css('opacity', 0);
+      $(this).find('img.icon').css('opacity', 0);
     })
   })
 
