@@ -442,6 +442,14 @@ router.post('/recScore', async (req, res) => {
     return res.redirect('/competitions');
 })
 
+// ADMIN ROUTES
+
+router.get('/admin', middleware.isLoggedIn, (req, res) => {
+    Competition.find({fromClubName: req.user.repOf}, (err, comps) => {
+        res.render('updated/dashboard', {comps: comps});
+    })
+})
+
 function remove(arr, user) {
     outArr = [];
     for (let sign of arr) {
