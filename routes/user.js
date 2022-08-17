@@ -450,6 +450,29 @@ router.get('/admin', middleware.isLoggedIn, (req, res) => {
     })
 })
 
+// CV FORM
+
+router.get('/add-to-cv/:id/:title', middleware.isLoggedIn, async (req, res) => {
+    console.log(req.params.id);
+    console.log(req.params.title);
+    res.render('updated/add-to-cv', {title: req.params.title, id: req.params.id}); 
+})
+
+router.post('/add-to-cv', middleware.isLoggedIn, (req, res) => {
+    console.log(req.body.cv);
+    User.findById(req.user._id, (err, user) => {
+        user.cv.push(req.body.cv);
+        for(comp of user.signedUpFor){
+            if(comp.title = req.body.cv.competition){
+                comp.verified = true;
+            }
+        }
+        user.save();
+    })
+    res.redirect('/onlinecv')
+    // console.log(req.user.cv);
+})
+
 function remove(arr, user) {
     outArr = [];
     for (let sign of arr) {
