@@ -62,7 +62,8 @@ const adminCodes = [
     {club: 'Finatic', code: 'admin@fin_x3a93'},
     {club: 'TGCC', code: 'admin@tgcc_j3b27'},
     {club: 'Uber Hackathon', code: 'admin@uber_h2d47'},
-    {club: 'MUNX', code: 'admin@munx_h2sd5'}
+    {club: 'MUNX', code: 'admin@munx_h2sd5'},
+    {club: 'SAFEMUN', code: 'admin@sfm_b2kd5'}
 ];
 
 const internshipCodes = [
@@ -458,19 +459,20 @@ router.get('/add-to-cv/:id/:title', middleware.isLoggedIn, async (req, res) => {
     res.render('updated/add-to-cv', {title: req.params.title, id: req.params.id}); 
 })
 
-router.post('/add-to-cv', middleware.isLoggedIn, (req, res) => {
+router.post('/add-to-cv', middleware.isLoggedIn, async (req, res) => {
     console.log(req.body.cv);
-    User.findById(req.user._id, (err, user) => {
+    await User.findById(req.user._id, (err, user) => {
         user.cv.push(req.body.cv);
         for(comp of user.signedUpFor){
-            if(comp.title = req.body.cv.competition){
+            if(comp.title == req.body.cv.competition){
                 comp.verified = true;
             }
         }
+        console.log(user)
         user.save();
     })
     res.redirect('/onlinecv')
-    // console.log(req.user.cv);
+    console.log(req.user.cv);
 })
 
 function remove(arr, user) {
