@@ -85,11 +85,15 @@
                   <div class="learn-more josefinsans-semi-bold-white-18px">Added to CV</div>
                 </div>
               <% } else { %>
+                <a href="/add-to-cv/<%= comp._id %>/<%= comp.title %>">
                 <div class="overlap-group">
-                  <a href="/add-to-cv/<%= comp._id %>/<%= comp.title %>"><div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div></a>
+                  <div id="cv-form-button" style="cursor: pointer" class="learn-more josefinsans-semi-bold-white-18px">Add to CV</div>
                 </div>
+                </a>
                   <% } %>
-              <img class="icon" src="updated/img/trash-solid.svg" alt="Delete icon">
+                  <a href="/<%= comp._id %>/remove">
+                    <img class="icon" src="updated/img/trash-solid.svg" alt="Delete icon">
+                  </a>
               
               <!-- </div> -->
             </div>

@@ -453,6 +453,10 @@ router.get('/admin', middleware.isLoggedIn, (req, res) => {
 
 // CV FORM
 
+router.get('/add-to-cv', middleware.isLoggedIn, async (req, res) => {
+    res.render('updated/add-to-cv-wc')
+})
+
 router.get('/add-to-cv/:id/:title', middleware.isLoggedIn, async (req, res) => {
     console.log(req.params.id);
     console.log(req.params.title);
