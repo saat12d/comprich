@@ -615,6 +615,35 @@
   width: 1418px;
 }
 
+.view-a-competition {
+  align-items: center;
+  background-color: var(--romance);
+  display: flex;
+  flex-direction: column;
+  height: 2169px;
+  overflow: hidden;
+  width: 1538px;
+}
+
+.back-to-all-competitions {
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-left: 14px;
+  min-height: 28px;
+  white-space: nowrap;
+  width: 287px;
+}
+
+.back-button {
+  align-items: center;
+  align-self: flex-start;
+  display: flex;
+  height: 28px;
+  margin-left: 103px;
+  margin-top: 66px;
+  min-width: 327px;
+}
+
 .hub .group-container-1 {
   align-items: flex-start;
   display: flex;
