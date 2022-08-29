@@ -25,7 +25,7 @@
 .home .header {
   align-items: flex-end;
   background-color: var(--white);
-  box-shadow: 0px 20px 35px #0000000d;
+  box-shadow: 0 20px 35px #0000000d;
   display: flex;
   height: 141px;
   justify-content: flex-end;
@@ -408,6 +408,15 @@
   width: 1421px;
 }
 
+.home .latest-competitions .gallery .overlap-group1 .image-41 {
+  height: 348px;
+  margin-left: 0.28px;
+  object-fit: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  width: 348px;
+}
+
 .home .overlap-group4 {
   height: 181px;
   margin-right: 4.0px;
@@ -579,7 +588,7 @@
   align-items: center;
   background-color: var(--white);
   border-radius: 40px;
-  box-shadow: 0px -20px 35px #0000000d;
+  box-shadow: 0 -20px 35px #0000000d;
   display: flex;
   flex-direction: column;
   left: 0;
