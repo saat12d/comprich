@@ -4,7 +4,7 @@
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  height: 1141px;
+  height: 1241px;
   overflow: hidden;
   width: 1538px;
 }
@@ -27,7 +27,7 @@
 
 .sign-up .rectangle-21 {
   background-color: var(--black);
-  height: 1000px;
+  height: 1200px;
   left: 255px;
   position: absolute;
   top: 347px;
@@ -40,7 +40,7 @@
   line-height: 28px;
   position: absolute;
   text-align: center;
-  top: 1242px;
+  top: 1342px;
   white-space: nowrap;
 }
 
@@ -54,7 +54,7 @@
   min-width: 271px;
   padding: 0 11.3px;
   position: absolute;
-  top: 1133px;
+  top: 1233px;
 }
 
 .sign-up .sign-up-1 {

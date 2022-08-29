@@ -127,7 +127,7 @@
             </a>
             <a href="#school" id="finish">
               <div class="flex-col" style="width: 0">
-                <div class="past-competitions josefinsans-semi-bold-black-35px-3" style="margin-left: 180px">School Network</div>
+                <div class="schooln josefinsans-semi-bold-black-35px-3" style="margin-left: 180px; width: 300px">School Network</div>
                 <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
               </div>
             </a>
@@ -148,7 +148,7 @@
             <% console.log(currentUser.recCategory) %>
             
           <% } %>
-
+          <% schoolComps.reverse() %>
 
 
           <div class="home" id="upcomingDisplay">
@@ -214,6 +214,30 @@
                 <% break %>
               <% } %>
               <% let comps = [finished[i], finished[i + 1], finished[i + 2]] %>
+              <div class="gallery" style="padding-left: 100px">
+                <% for(competition of comps){ %>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="<%= competition.images[0].url %>" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= competition.title %>
+                    </div>
+                    <a href="/competitions/<%= competition._id %>">
+                      <div class="overlap-groupx">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                      </div>
+                    </a>
+                  </div>
+                <% } %>
+              </div>
+              <% } %>
+          </div>
+
+          <div class="home" id="schoolDisplay">
+            <% for(let i = 0; i < schoolComps.length; i+=3){ %>
+              <% if(schoolComps[i+2] == undefined || schoolComps[i + 1] == undefined || schoolComps[i] == undefined){ %>
+                <% break %>
+              <% } %>
+              <% let comps = [schoolComps[i], schoolComps[i + 1], schoolComps[i + 2]] %>
               <div class="gallery" style="padding-left: 100px">
                 <% for(competition of comps){ %>
                   <div class="overlap-group1">
@@ -318,6 +342,8 @@
   $(document).ready(() => {
       $('#finishedDisplay').hide();
       $('#forDisplay').hide();
+      $('#schoolDisplay').hide();
+
 
       $('.foryou').css({
             'color': ' var(--black-5)'
@@ -326,6 +352,8 @@
       $('#up').click(function(){
           $('#finishedDisplay').hide();
           $('#forDisplay').hide();
+          $('#schoolDisplay').hide();
+
           $('#upcomingDisplay').show();
           $('.past-competitions').css({
             'color': ' var(--black-5)'
@@ -338,11 +366,16 @@
           })
           $('#finishLine').hide();
           $('#upLine').show();
+          $('.schooln').css({
+          'color': ' var(--black-5)'
+          })
           // alert('clicked');
       })
       $('#finish').click(function(){
           $('#upcomingDisplay').hide();
           $('#forDisplay').hide();
+          $('#schoolDisplay').hide();
+
 
           $('#finishedDisplay').show();
           $('.past-competitions').css({
@@ -354,6 +387,9 @@
           $('.foryou').css({
             'color': ' var(--black-5)'
           })
+          $('.schooln').css({
+          'color': ' var(--black-5)'
+          })
           $('#finishLine').show();
           $('#upLine').hide();
           // alert('clicked')
@@ -361,6 +397,7 @@
       $('#fy').click(function(){
         $('#finishedDisplay').hide();
         $('#upcomingDisplay').hide();
+        $('#schoolDisplay').hide();
 
         $('#forDisplay').show();
         $('#finishLine').hide();
@@ -374,6 +411,29 @@
         $('.past-competitions').css({
           'color': ' var(--black-5)'
         })
+        $('.schooln').css({
+          'color': ' var(--black-5)'
+        })
+      })
+      $('#school').click(function(){
+        $('#finishedDisplay').hide();
+        $('#upcomingDisplay').hide();
+        $('#forDisplay').hide();
+
+        $('#schoolDisplay').show();
+        $('.foryou').css({
+            'color': ' var(--black-5)'
+          })
+        $('.all-upcoming').css({
+            'color': ' var(--black-5)'
+        })
+        $('.past-competitions').css({
+          'color': ' var(--black-5)'
+        })
+        $('.schooln').css({
+          'color': ' var(--black)'
+        })
+
       })
 
       //Get the button:

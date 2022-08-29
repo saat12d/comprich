@@ -210,6 +210,15 @@ router.get('/competitions', async (req, res) => {
     //         return res.redirect('back')
     //     }
     // })
+    let schoolComps = [];
+    if(req.user){
+        for(let comp of renderComps){
+            if(comp.school == req.user.school){
+                schoolComps.push(comp);
+            }
+        }
+    }
+
 
     Rating.find({}, (err, rating) => {
         if (err) {
@@ -217,7 +226,7 @@ router.get('/competitions', async (req, res) => {
             console.log('ERROR: ' + err.message)
             return res.redirect('back')
         }
-        res.render('updated/comps', { competitions: renderComps, ratings: rating })
+        res.render('updated/comps', { competitions: renderComps, ratings: rating, schoolComps: schoolComps })
     })
 })
 

@@ -68,13 +68,20 @@
               <!-- <img class="frame" src="/updated/img/frame@2x.svg" /> -->
             </div>
           </div>
-          <!-- <div class="last-name-3">
-            <div class="country josefinsans-normal-black-25px-2">Country</div>
+          <div class="last-name-3">
+            <div class="country josefinsans-normal-black-25px-2">School</div>
             <div class="overlap-group">
-              <div class="place valign-text-middle josefinsans-normal-black-25px">United States</div>
-              <img class="frame" src="/updated/img/frame@2x.svg" />
+              <select id="year" class="josefinsans-normal-black-25px-2" name="user[school]" required style="border: none">
+                <% if(currentUser.school != null){ %>
+                  <option value="<%= currentUser.school %>"><%= currentUser.school %></option>
+                <% } else { %>
+                  <option value="">Select school</option>
+                <% } %>
+                  <option value="GEMS Modern Academy"></option>
+              </select>
+              <div style="width: 35px; margin-left: 30px"></div>
             </div>
-          </div> -->
+          </div>
           <button style="cursor: pointer"><div class="overlap-group7"><div class="save josefinsans-bold-black-30px">SAVE</div></div></button>
         
         </form>

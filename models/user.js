@@ -44,6 +44,7 @@ const userSchema = new mongoose.Schema({
     isInternship: {type: Boolean, default: false},
     repOf: {type: String, default: " "},
     internRepOf: {type: String, default: " "},
+    repOfSchool: String,
     signedUpFor: [
         {
             id: {
