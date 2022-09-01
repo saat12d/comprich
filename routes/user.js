@@ -63,7 +63,8 @@ const adminCodes = [
     {club: 'TGCC', code: 'admin@tgcc_j3b27'},
     {club: 'Uber Hackathon', code: 'admin@uber_h2d47'},
     {club: 'MUNX', code: 'admin@munx_h2sd5'},
-    {club: 'SAFEMUN', code: 'admin@sfm_b2kd5'}
+    {club: 'SAFEMUN', code: 'admin@sfm_b2kd5'},
+    {club: 'TECMUN', code: 'admin@tcm_8d76g'}
 ];
 
 const internshipCodes = [
