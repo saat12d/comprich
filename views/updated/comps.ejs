@@ -125,12 +125,15 @@
                 <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
               </div>
             </a>
-            <a href="#school" id="finish">
-              <div class="flex-col" style="width: 0">
-                <div class="schooln josefinsans-semi-bold-black-35px-3" style="margin-left: 180px; width: 300px">School Network</div>
-                <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
-              </div>
-            </a>
+            <% if(currentUser){ %>
+              <a href="#school" id="sch">
+                <div class="flex-col" style="width: 0">
+                  <div class="schooln josefinsans-semi-bold-black-35px-3" style="margin-left: 180px; width: 300px">School Network</div>
+                  <!-- <img class="line-3" id="finishLine" src="updated/img/line-3@2x.svg" style="display: none;" /> -->
+                </div>
+              </a>
+            <% } %>
+            
           </div>
           
           <% competitions.reverse() %>
@@ -145,10 +148,10 @@
             <% let count = 0 %>
             <% let foryou = upcoming %>
             <% foryou = foryou.filter(comp => comp.category.includes(currentUser.recCategory)) %>
-            <% console.log(currentUser.recCategory) %>
             
           <% } %>
           <% schoolComps.reverse() %>
+          <% console.log(schoolComps) %>
 
 
           <div class="home" id="upcomingDisplay">
@@ -232,14 +235,21 @@
               <% } %>
           </div>
 
-          <div class="home" id="schoolDisplay">
+          <div class="home" id="schoolDisplay" style="min-height: 200px;">
             <% for(let i = 0; i < schoolComps.length; i+=3){ %>
+              <% console.log('SCHOOL COMPS HERE') %>
+              <% console.log(schoolComps) %>
               <% if(schoolComps[i+2] == undefined || schoolComps[i + 1] == undefined || schoolComps[i] == undefined){ %>
                 <% break %>
               <% } %>
               <% let comps = [schoolComps[i], schoolComps[i + 1], schoolComps[i + 2]] %>
+
+              <% console.log('HERE') %>
+              <% console.log(comps) %>
               <div class="gallery" style="padding-left: 100px">
                 <% for(competition of comps){ %>
+                  <% console.log('-______') %>
+                  <% console.log(comps) %>
                   <div class="overlap-group1">
                     <img class="image-41" src="<%= competition.images[0].url %>" />
                     <div class="tiger-global-case-competition josefinsans-normal-black-24px">
@@ -310,13 +320,15 @@
                   <div class="home-about-contact josefinsans-normal-white-30px">
                     <a href="/home">Home</a><br />
                     <a href="/about">About</a><br />
-                    <!-- <a href="/about">Contact</a></div> -->
+                    <!-- <a href="/about">Contact</a> -->
+                  </div>
                 </div>
                 <div class="group-20">
                   <div class="services josefinsans-semi-bold-white-40px">Services</div>
                   <div class="hub-blog josefinsans-normal-white-30px">
                     <a href="/competitions">Hub</a><br />
-                    <!-- <a href="/blog">Blog</a></div> -->
+                    <!-- <a href="/blog">Blog</a> -->
+                  </div>
                 </div>
                 <div class="group-19">
                   <div class="company josefinsans-semi-bold-white-40px">Company</div>
@@ -415,7 +427,8 @@
           'color': ' var(--black-5)'
         })
       })
-      $('#school').click(function(){
+
+      $('#sch').click(function(){
         $('#finishedDisplay').hide();
         $('#upcomingDisplay').hide();
         $('#forDisplay').hide();

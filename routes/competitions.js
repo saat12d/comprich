@@ -150,12 +150,25 @@ router.get('/home', (req, res) => {
 
 router.get('/competitions', async (req, res) => {
     let renderComps;
+    let schoolComps;
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
         await Competition.find({$or: [{title: regex}, {desc: regex}, {location: regex}, {details: regex},]}).then(foundComps => {
             renderComps = [];
             for(let comp of foundComps){
-                renderComps.push(comp)
+                if(comp.school == "Interschool" || comp.school == ""){
+                    renderComps.push(comp)
+                }
+            }
+            schoolComps = [];
+            if(req.user){
+                for(let comp of foundComps){
+                    if(comp.school == req.user.school){
+                        console.log(comp.school)
+                        console.log(req.user.school)    
+                        schoolComps.push(comp);
+                    }
+                }
             }
             console.log('searching...')
         }).catch((err) => {
@@ -169,7 +182,19 @@ router.get('/competitions', async (req, res) => {
         await Competition.find({}).then(comps => {
             renderComps = []
             for (const comp of comps) {
-                renderComps.push(comp)
+                if(comp.school == "Interschool" || comp.school == ""){
+                    renderComps.push(comp)
+                }
+            }
+            schoolComps = [];
+            if(req.user){
+                for(let comp of comps){
+                    if(comp.school == req.user.school){
+                        console.log(comp.school)
+                        console.log(req.user.school)    
+                        schoolComps.push(comp);
+                    }
+                }
             }
         }).catch((err) => {
             if (err) {
@@ -210,14 +235,7 @@ router.get('/competitions', async (req, res) => {
     //         return res.redirect('back')
     //     }
     // })
-    let schoolComps = [];
-    if(req.user){
-        for(let comp of renderComps){
-            if(comp.school == req.user.school){
-                schoolComps.push(comp);
-            }
-        }
-    }
+    
 
 
     Rating.find({}, (err, rating) => {

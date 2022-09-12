@@ -79,20 +79,21 @@
             </div>
             <div class="gallery">
               <% comps.reverse() %>
+              <% comps = comps.filter(c => c.school == 'Interschool') %>
               <!-- <img class="frame" src="updated/img/frame@2x.svg" /> -->
               <div style="width: 80px"></div>
               <% for(let i = 0; i < 3; i++){ %>
-                <div class="overlap-group1">
-                  <img class="image-41" src="<%= comps[i].images[0].url %>" />
-                  <div class="tiger-global-case-competition josefinsans-normal-black-24px">
-                    <%= comps[i].title %>
-                  </div>
-                  <a href="/competitions/<%= comps[i]._id %>">
-                    <div class="overlap-group">
-                      <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                  <div class="overlap-group1">
+                    <img class="image-41" src="<%= comps[i].images[0].url %>" />
+                    <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                      <%= comps[i].title %>
                     </div>
-                  </a>
-                </div>
+                    <a href="/competitions/<%= comps[i]._id %>">
+                      <div class="overlap-group">
+                        <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                      </div>
+                    </a>
+                  </div>
               <% } %>
               
               <div style="width: 80px; margin-left: 35px"></div>
