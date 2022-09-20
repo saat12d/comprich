@@ -153,15 +153,12 @@
           <% schoolComps.reverse() %>
           <% console.log(schoolComps) %>
 
+          
 
           <div class="home" id="upcomingDisplay">
-            <% for(let i = 0; i < upcoming.length; i+=3){ %>
-              <% if(upcoming[i+2] == undefined || upcoming[i + 1] == undefined || upcoming[i] == undefined){ %>
-                <% break %>
-              <% } %>
-              <% let comps = [upcoming[i], upcoming[i + 1], upcoming[i + 2]] %>
+            <% if(upcoming.length < 3){ %>
               <div class="gallery" style="padding-left: 100px">
-                <% for(competition of comps){ %>
+                <% for(competition of upcoming){ %>
                   <div class="overlap-group1">
                     <img class="image-41" src="<%= competition.images[0].url %>" />
                     <div class="tiger-global-case-competition josefinsans-normal-black-24px">
@@ -175,6 +172,28 @@
                   </div>
                 <% } %>
               </div>
+            <% } else { %>
+              <% for(let i = 0; i < upcoming.length; i+=3){ %>
+                <% if(upcoming[i+2] == undefined || upcoming[i + 1] == undefined || upcoming[i] == undefined){ %>
+                  <% break %>
+                <% } %>
+                <% let comps = [upcoming[i], upcoming[i + 1], upcoming[i + 2]] %>
+                <div class="gallery" style="padding-left: 100px">
+                  <% for(competition of comps){ %>
+                    <div class="overlap-group1">
+                      <img class="image-41" src="<%= competition.images[0].url %>" />
+                      <div class="tiger-global-case-competition josefinsans-normal-black-24px">
+                        <%= competition.title %>
+                      </div>
+                      <a href="/competitions/<%= competition._id %>">
+                        <div class="overlap-groupx">
+                          <div class="learn-more josefinsans-semi-bold-white-18px">LEARN MORE</div>
+                        </div>
+                      </a>
+                    </div>
+                  <% } %>
+                </div>
+                <% } %>
               <% } %>
           </div>
 

@@ -220,10 +220,13 @@ router.get('/competitions', async (req, res) => {
             renderComps = areFree(renderComps)
         }
     }
-
+    let sorted = false;
     if (req.query.sort && req.query.sort !== '0') {
         console.log('in sort')
         renderComps = sortByCategory(renderComps, req.query.sort)
+        console.log('SORTED')
+        sorted = true;
+        // console.log(renderComps);
     }
 
     // Rating.find({}).then((rating) => {
@@ -244,7 +247,7 @@ router.get('/competitions', async (req, res) => {
             console.log('ERROR: ' + err.message)
             return res.redirect('back')
         }
-        res.render('updated/comps', { competitions: renderComps, ratings: rating, schoolComps: schoolComps })
+        res.render('updated/comps', { competitions: renderComps, ratings: rating, schoolComps: schoolComps, sorted: sorted })
     })
 })
 
