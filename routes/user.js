@@ -84,7 +84,7 @@ const internshipCodes = [
 ]
 
 const schoolCodes = [
-    {}
+    {school: 'Unionville-Chadds Ford School District', code: 's_admin@ucsfd-395h'}
 ]
 
 cloudinary.config({
@@ -122,6 +122,15 @@ router.post("/register", upload.single("image"), async function (req, res) {
             newUser.isInternship = true;
             newUser.internRepOf = company.company;
             break;
+        }
+    }
+    for(let school of schoolCodes){
+        if(school.code == req.body.adminCode){
+            newUser.isAdmin = true;
+            newUser.isInternship = true;
+            newUser.repOf = school.school
+            newUser.repOfSchool = school.school
+
         }
     }
     if (req.body.adminCode == "owner123") {
