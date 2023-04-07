@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
-const locus = require('locus')
 const dotenv = require('dotenv')
 const async = require('async')
 const nodemailer = require('nodemailer')
@@ -84,8 +83,8 @@ app.use(session({
   secret: 'Tata nano is a legend and the all-powerful',
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  cookie: { maxAge: 180 * 60 * 1000, secure: true }
+  // store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  // cookie: { maxAge: 180 * 60 * 1000, secure: true }
 }))
 app.use(passport.initialize())
 app.use(passport.session())
@@ -121,19 +120,7 @@ app.use('/', internRoutes);
 app.use('/', onlinecvRoutes);
 
 
-app.get('/add-to-cv/:id', middleware.isLoggedIn, async (req, res) => {
-    await Competition.findById(req.params.id, (err, foundComp) => {
-        if(err){
-            console.log(err)
-            req.flash('error', err.message)
-            return res.redirect('back')
-        }
-        console.log(foundComp)
-        console.log(req.params.id);
-        res.render('updated/add-to-cv', {comp: foundComp})
-    })
-    
-})
+
 app.use('/', courseRoutes);
 
 app.use('*', (req, res) => {

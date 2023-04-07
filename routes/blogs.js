@@ -3,7 +3,6 @@ const router = express.Router({mergeParams: true});
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
-const locus = require('locus');
 
 const middleware = require('../middleware/index');
 

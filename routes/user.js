@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const flash = require("connect-flash");
-const locus = require("locus");
 const dotenv = require("dotenv");
 const async = require("async");
 const nodemailer = require("nodemailer");
@@ -65,7 +64,9 @@ const adminCodes = [
     {club: 'MUNX', code: 'admin@munx_h2sd5'},
     {club: 'SAFEMUN', code: 'admin@sfm_b2kd5'},
     {club: 'TECMUN', code: 'admin@tcm_8d76g'},
-    {club: 'PGCC', code: 'admin@pgcc_bh5t7'}
+    {club: 'PGCC', code: 'admin@pgcc_bh5t7'},
+    {club: 'Harvard Youth Leadership Conference', code: 'admin@hyc_jw211'},
+    {club: 'Violet Ventures', code: 'admin@vv_u5tg3'}
 ];
 
 const internshipCodes = [
